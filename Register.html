@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Đăng ký tài khoản - The Verdant Archive</title>
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;300;400;500;600;700;800;900&amp;family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="/Styles/Register.css" rel="stylesheet" />
+</head>
+<body>
+<main class="main-wrapper">
+    <a href="index.html">
+        <button aria-label="Close" class="btn-close-custom" type="button">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+    </a>
+<!-- Left Side: Hero Image & Branding -->
+    <section class="hero-side">
+        <img alt="Ruộng bậc thang Mù Cang Chải" class="hero-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiPNYi0ln221GFvLUMorR0AarTJYYjIlW_3I3Pyq8_C2C45OJdh42chWOLKnUCm4TTYVvvCFY_Njctt30GnchcJff3KJdB2cUlOoBV1dqP_aH9_uWIATuaq4UkFtmRzLOvYWQZTdVgDQet_NpEFNiEI4qOy-Ms2ThyoQKe57l5W5UQcBlMCXt4LnGA10mWjI5dW2xXn8FCuL9keKpmF77QjIL912_nbV6Q1jjW23YRS0JAIxnwya92wulKYrcXvcyzevC128Xyh-3J"/>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="brand-logo">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size: 2.5rem;">auto_awesome</span>
+                <span class="font-headline">The Verdant Archive</span>
+            </div>
+            <div style="max-width: 450px;">
+                <h2 class="font-headline" style="font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem;">Bắt đầu hành trình di sản của bạn.</h2>
+                <p style="font-size: 1.15rem; line-height: 1.6; opacity: 0.9;">
+                    Tham gia cộng đồng những người lữ hành tinh hoa, khám phá những góc khuất tuyệt mỹ của Việt Nam thông qua lăng kính nghệ thuật.
+                </p>
+            </div>
+            <div class="footer-links">
+                <span>Editorial</span>
+                <div class="footer-line"></div>
+                <span>Wanderlust</span>
+                <div class="footer-line"></div>
+                <span>Vietnam</span>
+            </div>
+        </div>
+    </section>
+<!-- Right Side: Registration Form -->
+    <section class="form-side">
+        <div class="form-container">
+            <div class="mb-5">
+<!-- Mobile Logo -->
+                <div class="d-lg-none mb-4">
+                    <div class="brand-logo text-primary-custom" style="font-size: 1.25rem;">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                        <span class="font-headline">The Verdant Archive</span>
+                    </div>
+                </div>
+                <h1 class="font-headline mb-2" style="font-weight: 800; font-size: 2.5rem;">Đăng ký tài khoản</h1>
+                <p style="color: var(--text-variant);">Cùng kiến tạo những kỉ niệm đáng nhớ tại Việt Nam.</p>
+            </div>
+            <form>
+<!-- Full Name -->
+                <div class="input-group-custom">
+                    <label for="full_name">Họ và tên</label>
+                    <div class="input-field-wrapper">
+                        <span class="material-symbols-outlined">person</span>
+                        <input class="form-control-custom" id="full_name" placeholder="Nguyễn Văn A" type="text"/>
+                    </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col-md-6">
+<!-- Email -->
+                        <div class="input-group-custom">
+                            <label for="email">Email</label>
+                            <div class="input-field-wrapper">
+                                <span class="material-symbols-outlined">mail</span>
+                                <input class="form-control-custom" id="email" placeholder="email@vi-du.com" type="email"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+<!-- Phone -->
+                        <div class="input-group-custom">
+                            <label for="phone">Số điện thoại</label>
+                            <div class="input-field-wrapper">
+                                <span class="material-symbols-outlined">call</span>
+                                <input class="form-control-custom" id="phone" placeholder="090 123 4567" type="tel"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!-- Password -->
+                <div class="input-group-custom">
+                    <label for="password">Mật khẩu</label>
+                    <div class="input-field-wrapper">
+                        <span class="material-symbols-outlined">lock</span>
+                        <input class="form-control-custom" id="password" placeholder="••••••••" type="password"/>
+                    </div>
+                </div>
+<!-- Confirm Password -->
+                <div class="input-group-custom">
+                    <label for="confirm_password">Xác nhận mật khẩu</label>
+                    <div class="input-field-wrapper">
+                        <span class="material-symbols-outlined">verified_user</span>
+                        <input class="form-control-custom" id="confirm_password" placeholder="••••••••" type="password"/>
+                    </div>
+                </div>
+<!-- Terms -->
+                <div class="form-check mb-4">
+                    <input class="form-check-input" id="terms" type="checkbox"/>
+                    <label class="form-check-label" for="terms" style="font-size: 0.85rem; color: var(--text-variant); line-height: 1.4;">
+                    Tôi đồng ý với các <a class="text-primary-custom" href="#">điều khoản sử dụng</a> 
+                    và <a class="text-primary-custom" href="#">chính sách bảo mật</a> của The Verdant Archive.</label>
+                </div>
+<!-- Actions -->
+                <div class="mb-4">
+                    <button class="btn btn-editorial" type="submit">Đăng ký ngay
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                </div>
+                <div class="divider">
+                    <span>Hoặc</span>
+                </div>
+                <div class="row g-3 mb-5">
+                    <div class="col-6">
+                        <button class="btn btn-social" type="button">
+                            <img alt="Google" height="20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm-IEaAO1hPgs1hgweHDCzWIXC1XtD4GkOvdnlgothff1l7kNxw9ruQXzCTpj6yfyxJxShpOPwVQhf0pPJNkbRl9dBp_jZSQsyUraYSUkfAJXIgRaRH3N4aFooQmcYholGoEsnFy5mPSNQU7GyX07hPY0hArOn2oPwbAWeHqBzelJuxuXDLMrv89HSMImdIzQww5yx_JmKH3Ti_YSJofQnWVDpVTGUnCkNwj7Wq626Lk6ITCFLdDmCkv30uULPlKByR3_O0ndy17P_" width="20"/>
+                            <span>Google</span>
+                        </button>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn btn-social" type="button">
+                            <img alt="Facebook" height="20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_XFvoGq8Vkzd3gsUnWbqElEEoF4_z4uAXXaJqA0uFrl8a8FY4z1pLw4SEvQrjmAgu6baBKpFF1k1UC-sOlynVnQrRxSLuQHvI42oaixs2R4gB0hi26Rvlksise-449QDzaKQo9rT6D8BGAq-9yJPTtjbcj-TmI6i3JajOLjdTbr6O5zgT1p4RtSvxDHRsznWeVusnQwwKXl-hsUkpuWy9OXF0iBhWmtxFt4S8AJmZn0vMUP63D6AOAVXpzYJdzQJ7piRPzHdm_my6" width="20"/>
+                            <span>Facebook</span>
+                        </button>
+                    </div>
+                </div>
+                <p class="text-center" style="font-size: 0.9rem; color: var(--text-variant);">
+                    Đã có tài khoản? <a class="text-primary-custom" href="Login.html">Đăng nhập tại đây</a>
+                </p>
+            </form>
+        </div>
+    </section>
+</main>
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
