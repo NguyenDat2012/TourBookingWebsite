@@ -1,0 +1,218 @@
+:root {
+    --primary-color: #006954;
+    --primary-hover: #00846b;
+    --surface-bg: #fcf9f4;
+    --surface-container: #f0ede8;
+    --surface-low: #f6f3ee;
+    --on-surface: #1c1c19;
+    --on-surface-variant: #3d4945;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--surface-bg);
+    color: var(--on-surface);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+h1, h2, h3, .font-headline {
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.main-card {
+    position: relative;
+    background-color: var(--white);
+    border: none;
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(28, 28, 25, 0.06);
+    max-width: 1140px;
+    width: 100%;
+}
+
+.editorial-side {
+    position: relative;
+    min-height: 700px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 3rem;
+    color: var(--white);
+}
+
+.editorial-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(28, 28, 25, 0.6), transparent);
+    z-index: 1;
+}
+
+.editorial-content {
+    position: relative;
+    z-index: 2;
+}
+
+.form-side {
+    padding: 3rem 4rem;
+    background-color: var(--white);
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-color);
+    font-weight: 900;
+    font-size: 1.25rem;
+    text-decoration: none;
+    margin-bottom: 2.5rem;
+}
+
+.label-caps {
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--on-surface-variant);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.form-control {
+    background-color: var(--surface-low);
+    border: none;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    background-color: var(--white);
+    box-shadow: none;
+    border-bottom: 2px solid var(--primary-color);
+    border-radius: 0.75rem 0.75rem 0 0;
+}
+
+.btn-editorial {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%);
+    color: var(--white);
+    border: none;
+    border-radius: 50px;
+    padding: 1rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 105, 84, 0.2);
+}
+
+.btn-editorial:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(0, 105, 84, 0.25);
+    color: var(--white);
+}
+
+.divider {
+    position: relative;
+    text-align: center;
+    margin: 2.5rem 0;
+}
+
+.divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: var(--surface-container);
+    z-index: 1;
+}
+
+.divider span {
+    background-color: var(--white);
+    padding: 0 1rem;
+    position: relative;
+    z-index: 2;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--on-surface-variant);
+}
+
+.btn-social {
+    background-color: var(--surface-low);
+    border: 1px solid transparent;
+    border-radius: 50px;
+    padding: 0.75rem;
+    font-weight: 700;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.btn-social:hover {
+    background-color: var(--surface-container);
+    border-color: rgba(0,0,0,0.05);
+}
+
+.form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.link-primary {
+    color: var(--primary-color) !important;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.link-primary:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 991.98px) {
+    .editorial-side {
+        display: none;
+    }
+    .form-side {
+        padding: 2.5rem;
+    }
+}
+
+.btn-close-custom {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 10;
+    background: var(--white);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--on-surface-variant);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-close-custom:hover {
+    background-color: var(--surface-low);
+    color: var(--on-surface);
+    transform: scale(1.05);
+}
+
