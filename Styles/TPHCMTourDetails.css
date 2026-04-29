@@ -1,0 +1,181 @@
+:root {
+    --primary: #265fa2;
+    --secondary: #0d9488;
+    --tertiary: #f59e0b;
+    --surface-container: #f8f9fa;
+    --on-secondary-container: #134e4a;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #ffffff;
+}
+
+/* Navbar */
+.navbar-custom {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #eee;
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: var(--primary) !important;
+}
+
+.search-container {
+    background: #f3f4f6;
+    padding: 8px 16px;
+    border-radius: 50px;
+    width: 300px;
+}
+
+.search-container input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 14px;
+    margin-left: 8px;
+    width: 100%;
+}
+
+/* Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 16px;
+    height: 500px;
+    margin-bottom: 40px;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 100%;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.view-all-card {
+    background: #222;
+    color: white;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Itinerary */
+.itinerary-item {
+    position: relative;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    border-left: 2px dashed #e5e7eb;
+}
+
+.itinerary-dot {
+    position: absolute;
+    left: -9px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    background: var(--primary);
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px var(--primary);
+}
+
+.itinerary-dot.inactive {
+    background: #d1d5db;
+    box-shadow: 0 0 0 2px #d1d5db;
+}
+
+.day-label {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--primary);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.itinerary-card {
+    background: white;
+    border: 1px solid #f1f5f9;
+    padding: 20px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+/* Booking Card */
+.booking-card {
+    position: sticky;
+    top: 100px;
+    border: 1px solid #eee;
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.input-group-custom {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+}
+
+.input-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #6b7280;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.btn-primary-custom {
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    background: #1e4b82;
+    transform: translateY(-2px);
+}
+
+.badge-discount {
+    background: #fee2e2;
+    color: #ef4444;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.tapered-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #eee, transparent);
+    margin: 20px 0;
+}

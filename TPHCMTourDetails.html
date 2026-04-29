@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Khám phá Thành phố Hồ Chí Minh</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="Styles/TPHCMTourDetails.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container-xxl">
+        <a class="navbar-brand" href="index.html">The Verdant Archive</a>
+        <div class="search-container d-none d-md-flex ms-4">
+            <span class="material-symbols-outlined text-muted" style="font-size: 18px">search</span>
+            <input placeholder="Tìm kiếm điểm đến..." type="text"/>
+        </div>
+        <button class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link active" href="ListTour.html">Destinations</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Experiences</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Journals</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Plan</a></li>
+            </ul>
+            <div class="d-flex align-items-center gap-3">
+                <a class="text-decoration-none text-dark fw-bold px-3" href="Login.html">Đăng nhập</a>
+                <a class="nav-link me-3 d-none d-lg-block" href="Register.html">Đăng ký</a>
+                <button class="btn btn-primary-custom shadow-sm">Book Now</button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main class="container-xxl" style="padding-top: 120px;">
+    <section class="gallery-grid">
+        <div class="gallery-main">
+            <div class="gallery-item">
+                <img alt="Nha-Tho-Duc-Ba" src="/Img/TPHCMTour/Nha_tho_Duc_Ba.png"/>
+                <div class="overlay-gradient"></div>
+            </div>
+        </div>
+        <div class="gallery-side">
+            <div class="gallery-item" style="height: 50%;">
+                <img alt="Dinh-Doc-Lap" src="/Img/TPHCMTour/Dinh_Doc_Lap.png"/>
+            </div>
+            <div class="d-flex gap-3" style="height: 50%;">
+                <div class="gallery-item flex-grow-1">
+                    <img alt="Bitexco-Night" src="/Img/TPHCMTour/BiTexCo.png"/>
+                </div>
+                <div class="view-all-card flex-grow-1">
+                    <span class="fs-2 fw-bold">+15</span>
+                    <span class="text-uppercase fw-bold" style="font-size: 10px; letter-spacing: 1px;">Xem ảnh Sài Gòn</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="row g-5">
+        <div class="col-lg-8">
+            <div class="mb-4">
+                <span class="badge rounded-pill text-uppercase mb-2" style="background-color: rgba(38, 95, 162, 0.1); color: #265fa2; font-size: 10px; padding: 6px 12px;">Urban Energy</span>
+                <div class="d-inline-block ms-3" style="color: #f59e0b">
+                    <span class="material-symbols-outlined fs-6" style="font-variation-settings: 'FILL' 1">star</span>
+                    <span class="material-symbols-outlined fs-6" style="font-variation-settings: 'FILL' 1">star</span>
+                    <span class="material-symbols-outlined fs-6" style="font-variation-settings: 'FILL' 1">star</span>
+                    <span class="material-symbols-outlined fs-6" style="font-variation-settings: 'FILL' 1">star</span>
+                    <span class="material-symbols-outlined fs-6" style="font-variation-settings: 'FILL' 1">star</span>
+                    <span class="ms-2 fw-semibold text-muted small">4.8 (215 đánh giá)</span>
+                </div>
+            </div>
+            <h1 class="display-4 fw-extrabold mb-4">Sài Gòn Chuyển Động: Hòn Ngọc Viễn Đông Rực Rỡ</h1>
+            <p class="lead text-muted mb-5">
+                Trải nghiệm nhịp sống sôi động của thành phố lớn nhất Việt Nam. Từ những kiến trúc Pháp cổ kính đến những tòa nhà chọc trời, cùng sự giao thoa văn hóa ẩm thực đường phố độc đáo.
+            </p>
+
+            <div class="mb-5">
+                <h2 class="h3 fw-bold d-flex align-items-center mb-4">
+                    Lịch trình chi tiết<span class="section-divider ms-4"></span>
+                </h2>
+                
+                <div class="itinerary-item">
+                    <div class="itinerary-dot"></div>
+                    <span class="day-label">Ngày 1</span>
+                    <h3 class="h4 fw-bold">Chào Sài Gòn – Ngắm hoàng hôn trên sông</h3>
+                    <p class="text-muted">Đón khách tại Tân Sơn Nhất. Check-in khách sạn trung tâm Quận 1. Chiều tối trải nghiệm xe bus 2 tầng ngắm phố phường và ăn tối trên du thuyền sông Sài Gòn.</p>
+                    <div class="itinerary-card">
+                        <span class="material-symbols-outlined fs-1" style="color: #265fa2">directions_bus</span>
+                        <div>
+                            <h4 class="h6 fw-bold mb-1">Trải nghiệm nổi bật</h4>
+                            <p class="small text-muted mb-0">Ngắm toàn cảnh thành phố rực rỡ ánh đèn từ sông Sài Gòn.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="itinerary-item">
+                    <div class="itinerary-dot inactive"></div>
+                    <span class="day-label">Ngày 2</span>
+                    <h3 class="h4 fw-bold">Ký ức Lịch sử – Kiến trúc Di sản</h3>
+                    <p class="text-muted">Tham quan Dinh Độc Lập, Nhà thờ Đức Bà, Bưu điện Thành phố. Buổi chiều ghé thăm Bảo tàng Chứng tích Chiến tranh và mua sắm tại chợ Bến Thành.</p>
+                </div>
+
+                <div class="itinerary-item">
+                    <div class="itinerary-dot inactive"></div>
+                    <span class="day-label">Ngày 3</span>
+                    <h3 class="h4 fw-bold">Địa đạo Củ Chi – Đất thép thành đồng</h3>
+                    <p class="text-muted">Di chuyển đến Củ Chi khám phá hệ thống địa đạo kỳ vĩ dưới lòng đất. Trải nghiệm bắn súng quân dụng và thưởng thức khoai mì chấm muối mè đặc sản.</p>
+                </div>
+
+                <div class="itinerary-item border-0">
+                    <div class="itinerary-dot inactive"></div>
+                    <span class="day-label">Ngày 4</span>
+                    <h3 class="h4 fw-bold">Chợ Lớn – Văn hóa Hoa giữa lòng Việt</h3>
+                    <p class="text-muted">Khám phá khu Chợ Lớn (Quận 5), tham quan Chùa Bà Thiên Hậu với những vòng nhang trầm đặc trưng. Thưởng thức điểm tâm (Dimsum) đúng điệu Sài Gòn.</p>
+                </div>
+            </div>
+
+            <div class="p-5 rounded-4" style="background-color: #f8f9fa">
+                <h3 class="h4 fw-bold mb-4 d-flex align-items-center gap-2">
+                    <span class="material-symbols-outlined" style="color: #265fa2">info</span>Chính sách & Lưu ý
+                </h3>
+                <div class="row">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <h4 class="small fw-bold text-uppercase mb-3" style="letter-spacing: 1px">Chính sách hủy</h4>
+                        <ul class="list-unstyled small text-muted">
+                            <li class="mb-2"><span class="fw-bold me-2" style="color: #265fa2">•</span> Hủy trước 5 ngày: Hoàn tiền 100%.</li>
+                            <li class="mb-2"><span class="fw-bold me-2" style="color: #265fa2">•</span> Hủy từ 2-5 ngày: Hoàn tiền 50%.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="small fw-bold text-uppercase mb-3" style="letter-spacing: 1px">Lưu ý</h4>
+                        <ul class="list-unstyled small text-muted">
+                            <li class="mb-2"><span class="fw-bold me-2" style="color: #0d9488">•</span> Nên mang kem chống nắng & mũ.</li>
+                            <li class="mb-2"><span class="fw-bold me-2" style="color: #0d9488">•</span> Đề phòng cướp giật nơi đông người.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="booking-card">
+                <div class="d-flex justify-content-between align-items-end mb-4">
+                    <div>
+                        <span class="small text-muted d-block mb-1">Giá từ</span>
+                        <span class="h1 fw-extrabold mb-0" style="color: #265fa2">7.200.000₫</span>
+                        <span class="small text-muted">/khách</span>
+                    </div>
+                    <div class="badge-discount">-10% Flash Sale</div>
+                </div>
+                <div class="input-group-custom">
+                    <label class="input-label">Ngày khởi hành</label>
+                    <div class="d-flex justify-content-between align-items-center cursor-pointer">
+                        <span class="fw-semibold">Chọn ngày</span>
+                        <input type="date" id="datePicker" style="border: none; outline: none;">
+                    </div>
+                </div>
+                <div class="input-group-custom">
+                    <label class="input-label">Số lượng khách</label>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center gap-3">
+                            <button id="minusBtn" class="btn btn-outline-secondary btn-sm rounded-circle" style="width: 32px; height: 32px;">-</button>
+                            <span id="guestCount" class="fw-bold">1</span>
+                            <button id="plusBtn" class="btn btn-outline-secondary btn-sm rounded-circle" style="width: 32px; height: 32px;">+</button>
+                        </div>
+                        <span class="material-symbols-outlined text-muted">group</span>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <div class="d-flex justify-content-between small text-muted mb-2">
+                        <span id="guestText">Người lớn (x1)</span>
+                        <span id="guestPrice" class="fw-bold text-dark">7.200.000₫</span>
+                    </div>
+                    <div class="d-flex justify-content-between small text-muted mb-2">
+                        <span>Phí dịch vụ</span>
+                        <span class="fw-bold text-dark" id="serviceFee">300.000₫</span>
+                    </div>
+                    <div class="tapered-divider"></div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="h5 fw-bold mb-0">Tổng tiền</span>
+                        <span id="totalPrice" class="h3 fw-extrabold mb-0" style="color: #265fa2">7.500.000₫</span>
+                    </div>
+                </div>
+                <a href="BookingForm.html?tour=saigon&price=7500000" class="text-decoration-none">
+                    <button class="btn btn-primary-custom w-100 py-3 mt-4 fs-5 shadow">Đặt ngay Sài Gòn</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    </footer>
+
+<script>
+    const pricePerPerson = 7200000; // Giá tour SG rẻ hơn tí
+    const serviceFee = 300000;
+    let count = 1;
+
+    const guestCount = document.getElementById("guestCount");
+    const guestText = document.getElementById("guestText");
+    const guestPrice = document.getElementById("guestPrice");
+    const totalPrice = document.getElementById("totalPrice");
+
+    function formatMoney(number) {
+        return number.toLocaleString("vi-VN") + "₫";
+    }
+
+    function updateUI() {
+        let totalGuestPrice = count * pricePerPerson;
+        let total = totalGuestPrice + serviceFee;
+        guestCount.innerText = count;
+        guestText.innerText = `Người lớn (x${count})`;
+        guestPrice.innerText = formatMoney(totalGuestPrice);
+        totalPrice.innerText = formatMoney(total);
+    }
+
+    document.getElementById("plusBtn").onclick = () => { count++; updateUI(); };
+    document.getElementById("minusBtn").onclick = () => { if (count > 1) { count--; updateUI(); } };
+</script>
+</body>
+</html>
