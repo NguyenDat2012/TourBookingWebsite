@@ -159,7 +159,7 @@
                     <div class="d-flex justify-content-between align-items-center cursor-pointer">
                         <span class="fw-semibold">Chọn ngày</span>
                         
-                        <input type="date" id="datePicker" style="border: none; outline: none;">
+                        <input type="date" id="datePicker" style="border: none; outline: none; background: transparent;">
                     </div>
                 </div>
                 <div class="input-group-custom">
@@ -258,6 +258,8 @@
     //calendar
     const dateInput = document.getElementById("datePicker");
     const label = document.getElementById("label");
+    const today = new Date().toISOString().split("T")[0];
+    dateInput.min = today;
 
     function openDate() {
         dateInput.showPicker(); // mở calendar
