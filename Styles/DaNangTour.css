@@ -6,3 +6,37 @@
 .text-shadow-sm {
     text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+
+.badge-discount {
+    background-color: rgba(113, 87, 60, 0.1);
+    color: #71573c;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.input-group-custom {
+    background-color: #f6f3ee;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.input-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #3d4945;
+    margin-bottom: 0.25rem;
+}
+
+.tapered-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, #e5e2dd 50%, transparent 100%);
+    margin: 1.5rem 0;
+}
