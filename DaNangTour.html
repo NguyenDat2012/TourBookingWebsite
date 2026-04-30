@@ -1,413 +1,339 @@
 <!DOCTYPE html>
-<html class="light" lang="vi">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<html lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Khám phá Đà Nẵng | The Verdant Archive</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
-    <link href="Styles/DaNangTour.css" rel="stylesheet" />
-    <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-              "surface-bright": "#fcf9f4",
-              "on-secondary": "#ffffff",
-              "on-tertiary-fixed": "#291803",
-              "on-primary-container": "#f5fff9",
-              "tertiary-fixed-dim": "#e3c19f",
-              "primary-fixed-dim": "#70d9bb",
-              "tertiary": "#71573c",
-              "on-error-container": "#93000a",
-              "on-tertiary": "#ffffff",
-              "surface-container-low": "#f6f3ee",
-              "surface-dim": "#dcdad5",
-              "surface-container": "#f0ede8",
-              "secondary-fixed-dim": "#a6c8ff",
-              "secondary-container": "#83b5fe",
-              "surface-tint": "#006b56",
-              "primary-fixed": "#8df6d6",
-              "on-tertiary-container": "#fffbff",
-              "on-background": "#1c1c19",
-              "on-surface": "#1c1c19",
-              "on-error": "#ffffff",
-              "on-tertiary-fixed-variant": "#5a4229",
-              "secondary": "#265fa2",
-              "on-surface-variant": "#3d4945",
-              "on-secondary-fixed-variant": "#004786",
-              "on-secondary-fixed": "#001c3a",
-              "tertiary-container": "#8b6f53",
-              "secondary-fixed": "#d4e3ff",
-              "primary-container": "#00846b",
-              "inverse-surface": "#31302d",
-              "error-container": "#ffdad6",
-              "surface": "#fcf9f4",
-              "on-primary-fixed-variant": "#005141",
-              "inverse-on-surface": "#f3f0eb",
-              "inverse-primary": "#70d9bb",
-              "error": "#ba1a1a",
-              "outline": "#6d7a74",
-              "surface-container-lowest": "#ffffff",
-              "surface-container-high": "#ebe8e3",
-              "outline-variant": "#bdc9c3",
-              "on-primary": "#ffffff",
-              "surface-variant": "#e5e2dd",
-              "background": "#fcf9f4",
-              "surface-container-highest": "#e5e2dd",
-              "tertiary-fixed": "#ffddbb",
-              "on-secondary-container": "#004684",
-              "on-primary-fixed": "#002018",
-              "primary": "#006954"
-            },
-            "borderRadius": {
-              "DEFAULT": "0.25rem",
-              "lg": "0.5rem",
-              "xl": "0.75rem",
-              "full": "9999px"
-            },
-            "fontFamily": {
-              "headline": ["Be Vietnam Pro"],
-              "display": ["Be Vietnam Pro"],
-              "body": ["Plus Jakarta Sans"],
-              "label": ["Plus Jakarta Sans"]
-            }
-          },
-        },
-      }
-    </script>
-  </head>
-  <body class="bg-surface font-body text-on-surface antialiased">
-    <!-- TopNavBar -->
-    <nav class="fixed top-0 w-full z-50 h-20 bg-[#fcf9f4]/80 backdrop-blur-xl dark:bg-zinc-900/80 shadow-sm dark:shadow-none transition-all duration-300">
-      <div class="flex justify-between items-center max-w-[1440px] mx-auto px-8 md:px-16 w-full h-full">
-        <div class="font-['Be_Vietnam_Pro'] font-extrabold text-2xl text-[#006954] dark:text-[#00896F] tracking-tighter">
-          The Verdant Archive
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="Styles/DaNangTour.css" rel="stylesheet">
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container-xxl">
+        <a class="navbar-brand" href="index.html">The Verdant Archive</a>
+        <div class="search-container d-none d-md-flex ms-4">
+            <span class="material-symbols-outlined text-muted" style="font-size: 18px">search</span>
+            <input placeholder="Tìm kiếm điểm đến..." type="text"/>
         </div>
-        <div class="hidden md:flex items-center space-x-8 font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-wide">
-          <a class="text-[#006954] dark:text-[#00896F] border-b-2 border-[#006954] dark:border-[#00896F] pb-1" href="#">Destinations</a>
-          <a class="text-[#1c1c19] dark:text-zinc-300 opacity-70 hover:opacity-100 hover:text-[#006954] transition-all duration-300" href="#">Experiences</a>
-          <a class="text-[#1c1c19] dark:text-zinc-300 opacity-70 hover:opacity-100 hover:text-[#006954] transition-all duration-300" href="#">Journals</a>
-          <a class="text-[#1c1c19] dark:text-zinc-300 opacity-70 hover:opacity-100 hover:text-[#006954] transition-all duration-300" href="#">Plan</a>
-        </div>
-        <div class="flex items-center space-x-6">
-          <button class="text-sm font-medium text-[#1c1c19]/70 hover:text-[#006954] transition-colors">Sign In</button>
-          <button class="bg-[#006954] text-white px-6 py-2.5 rounded-full text-sm font-semibold scale-95 active:scale-90 transition-transform shadow-md">Register</button>
-        </div>
-      </div>
-    </nav>
-    <main class="pt-20">
-      <!-- Hero Gallery Section -->
-      <section class="max-w-[1440px] mx-auto px-4 md:px-8 py-8">
-        <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-[500px] md:h-[700px]">
-          <div class="md:col-span-2 md:row-span-2 relative overflow-hidden rounded-3xl group">
-            <img alt="Da Nang Skyline" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Wide panoramic shot of Da Nang skyline at night with the lit up Dragon Bridge and city lights reflecting on the Han River" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkvtdlHWAg1C48YOPDu0Clqn5Z0RR7l9YSgVSWtubq2RZy_xrRAAjwOS_y3yhZyJpn_b3RI5Hjy1We-MxYJlEwKhz2p0vT2TKZMa1HFGxQx-ksK675qjzRNhFg-z3r-B_lQI9AToQ7lHZzEEZ4aN8sASfJzVnkKXa-crUVSSgabF6xK_VM-yhYz9NCcQGFLxhaAXzSFBDncVgp224AA1OB6i_CKtGWGKH9P_0DjbyHJOZX_vNaNJvab1dlwbllkDNWIO8MQ0VSbvWW" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-            <div class="absolute bottom-8 left-8 text-white">
-              <span class="bg-primary px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block">Featured Journey</span>
-              <h1 class="font-display font-extrabold text-3xl md:text-5xl leading-tight">Khám phá Đà Nẵng: Thành phố của những cây cầu &amp; Biển xanh vẫy gọi</h1>
-            </div>
-          </div>
-          <div class="md:col-span-2 relative overflow-hidden rounded-3xl group">
-            <img alt="Ba Na Hills Golden Bridge" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close up of the Golden Bridge in Ba Na Hills with massive stone hands holding the walkway amidst misty mountains" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMhnT7hkMgcy9OqVkyw-ZPAUiESSXahy_P-DL-NB_EsQnBuKqFPiHVvmYEd6urFg9_ZIBmD3RpkM69r2UNB3HxZqx0cvvsEV3Btmr5xQ3RS2iG2_b9laY1F2ujPwy78ws-EK494Dy24a0ZBdehTC0dBkXhxkeqbsy15oX9SH-JdmzyfaGWom_m3AV7s3lPj40wmBsZ-UsGKF6f7N8qdZod_lDbFRMncnmLNMlzItTp28EI0gEStzaW9PnC4jw8I3E_C_x_x1F9Kuoz" />
-            <div class="absolute inset-0 bg-black/10"></div>
-          </div>
-          <div class="md:col-span-1 relative overflow-hidden rounded-3xl group">
-            <img alt="Marble Mountains" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Scenic view of the Marble Mountains in Da Nang with ancient pagodas nestled among lush green cliffs and limestone formations" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeQG9rl9tSWOc8xVxnUMEnQLOxM_avFA_-lY3yud47MUs7aK8GwgEt07hpqrT2nkR635EeYkPLyTB_IguggI8R7lvN76T0IIEyQFb7rSUghMa5MkdkeS-Aa5S3gOCv7baxFuNUqg_wNtzAFGBfQpwF4qI1Zk4-3cWmQSaqrLNI55ODvgPBDClnGacyxp43_130CPbrNFrD67ORlIYOVfJXwlYtInyUjLuemJNFxVWi9fmuRms8veY6Ynmsx1BXp9l1o1Smm_iFwcUc" />
-          </div>
-          <div class="md:col-span-1 relative overflow-hidden rounded-3xl group">
-            <img alt="My Khe Beach" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Serene aerial view of My Khe beach with turquoise water and white sand under bright tropical sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdxsPprFTbrj8jqAm8veEi7USnIn0xUg9vYHKetLglA_k81hAXza4SIT4LqHftwk9t5nnZ-BZcilxEaGt0IcRlpeMjaTthXa1jwQ47TOB4T8QRd6gqL4Wo4t-gP9RGk0NTX2JjRPdP9ipl7YONp2MbQsj8V5B6LmEaaa83B8yUgqaMlc8yo8P4AYir5JnFFfduAV1JVcqkBDB_f7ZGpEwe2wIFj4Gh7beNY_2xKCdd5PTkurfbvM_zh_1spTHdqE34vVFdPD28kQXG" />
-            <div class="absolute inset-0 bg-black/20 flex items-center justify-center cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity">
-              <span class="text-white font-bold text-lg">+12 Photos</span>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Main Content Area -->
-      <section class="max-w-[1440px] mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 pb-24">
-        <!-- Left Column: Details -->
-        <div class="lg:col-span-8">
-          <!-- Overview Icons -->
-          <div class="flex flex-wrap gap-8 py-8 border-b border-outline-variant/30 mb-12">
-            <div class="flex items-center gap-3">
-              <div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary">
-                <span class="material-symbols-outlined">schedule</span>
-              </div>
-              <div>
-                <p class="text-xs text-on-surface-variant font-medium">Duration</p>
-                <p class="font-semibold">5 Days 4 Nights</p>
-              </div>
-            </div>
-            <div class="flex items-center gap-3">
-              <div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary">
-                <span class="material-symbols-outlined">group</span>
-              </div>
-              <div>
-                <p class="text-xs text-on-surface-variant font-medium">Group Size</p>
-                <p class="font-semibold">Up to 12 people</p>
-              </div>
-            </div>
-            <div class="flex items-center gap-3">
-              <div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary">
-                <span class="material-symbols-outlined">language</span>
-              </div>
-              <div>
-                <p class="text-xs text-on-surface-variant font-medium">Language</p>
-                <p class="font-semibold">Vietnamese, English</p>
-              </div>
-            </div>
-          </div>
-          <!-- Itinerary Section -->
-          <h2 class="font-display font-bold text-3xl mb-8">Hành Trình Chi Tiết</h2>
-          <div class="space-y-12 relative">
-            <!-- Timeline Line -->
-            <div class="absolute left-6 top-8 bottom-0 w-px bg-gradient-to-b from-primary/30 to-transparent"></div>
-            <!-- Day 1 -->
-            <div class="relative pl-16">
-              <div class="absolute left-0 top-0 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center z-10 font-bold shadow-lg shadow-primary/20">01</div>
-              <h3 class="font-display font-bold text-xl mb-3">Chào đón tới Đà Nẵng - Biển Mỹ Khê - Cầu Rồng về đêm</h3>
-              <p class="text-on-surface-variant leading-relaxed mb-4">Bắt đầu hành trình tại sân bay Đà Nẵng. Buổi chiều thư giãn tại bãi biển Mỹ Khê - một trong sáu bãi biển quyến rũ nhất hành tinh. Buổi tối chiêm ngưỡng Cầu Rồng phun lửa và nước đầy ngoạn mục.</p>
-              <div class="grid grid-cols-2 gap-4">
-                <div class="rounded-2xl overflow-hidden h-40">
-                  <img alt="Dinner" class="w-full h-full object-cover" data-alt="Traditional Vietnamese food spread including seafood and local Da Nang specialties" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7uXpqDShJd-q06hNxGyQkEAgId_w34g5fzYcouN86W23tdn8yYDtdwR8wYQDzemWrrqXb2YLG4hBTuqK1_nqVicjAfAbFZIHaZbXCV9OijmMZCjTQ9GZwV1zCw5qNALhE9e2K_VheduLDMucOeTf7-F2HWu1rHQkAiAeK2kf5uwovSeAHRoJkh9W8ToVqrT28yel3nMD7_Eo11OAR8Rp3V_DfNTHI5h-s1or9TBjiUxhySCV17YBb7Pak-sgHbBPJOJwKLQIt6Lrw" />
-                </div>
-                <div class="rounded-2xl bg-surface-container p-6 flex flex-col justify-center">
-                  <span class="material-symbols-outlined text-tertiary mb-2">restaurant</span>
-                  <p class="text-sm font-semibold">Special Dinner</p>
-                  <p class="text-xs text-on-surface-variant">Thưởng thức đặc sản Mì Quảng &amp; Bánh tráng cuốn thịt heo</p>
-                </div>
-              </div>
-            </div>
-            <!-- Day 2 -->
-            <div class="relative pl-16">
-              <div class="absolute left-0 top-0 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center z-10 font-bold shadow-lg shadow-primary/20">02</div>
-              <h3 class="font-display font-bold text-xl mb-3">Bà Nà Hills - Cầu Vàng - Làng Pháp</h3>
-              <p class="text-on-surface-variant leading-relaxed mb-4">Trải nghiệm hệ thống cáp treo đạt nhiều kỷ lục thế giới. Check-in tại Cầu Vàng biểu tượng và lạc bước trong không gian kiến trúc Pháp cổ kính lãng mạn tại đỉnh núi Chúa.</p>
-            </div>
-            <!-- Day 3 -->
-            <div class="relative pl-16">
-              <div class="absolute left-0 top-0 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center z-10 font-bold shadow-lg shadow-primary/20">03</div>
-              <h3 class="font-display font-bold text-xl mb-3">Ngũ Hành Sơn - Chùa Linh Ứng - Bán đảo Sơn Trà</h3>
-              <p class="text-on-surface-variant leading-relaxed mb-4">Khám phá hệ thống hang động kỳ bí tại Ngũ Hành Sơn. Sau đó di chuyển đến Bán đảo Sơn Trà viếng Chùa Linh Ứng và ngắm nhìn Tượng Phật Bà Quan Âm cao nhất Việt Nam hướng ra biển Đông.</p>
-            </div>
-            <!-- Day 4 -->
-            <div class="relative pl-16">
-              <div class="absolute left-0 top-0 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center z-10 font-bold shadow-lg shadow-primary/20">04</div>
-              <h3 class="font-display font-bold text-xl mb-3">Phố cổ Hội An - Rừng dừa Bảy Mẫu</h3>
-              <p class="text-on-surface-variant leading-relaxed mb-4">Trải nghiệm chèo thúng tại Rừng dừa Bảy Mẫu đầy thú vị. Buổi chiều tối thả mình vào không gian lung linh hoa đăng của Phố cổ Hội An - Di sản văn hóa thế giới.</p>
-            </div>
-            <!-- Day 5 -->
-            <div class="relative pl-16">
-              <div class="absolute left-0 top-0 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center z-10 font-bold shadow-lg shadow-primary/20">05</div>
-              <h3 class="font-display font-bold text-xl mb-3">Mua sắm Chợ Hàn - Tiễn đoàn</h3>
-              <p class="text-on-surface-variant leading-relaxed mb-4">Ghé thăm Chợ Hàn sầm uất để mua đặc sản miền Trung làm quà. Xe tiễn quý khách ra sân bay, kết thúc hành trình khám phá thành phố đáng sống nhất Việt Nam.</p>
-            </div>
-          </div>
-          <!-- Policies Section -->
-          <div class="mt-20 p-8 rounded-[2rem] bg-surface-container-low border border-outline-variant/20">
-            <h4 class="font-display font-bold text-xl mb-6">Thông Tin Quan Trọng</h4>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <div class="flex items-center gap-2 mb-3">
-                  <span class="material-symbols-outlined text-primary text-lg">info</span>
-                  <span class="font-bold text-sm uppercase tracking-wide">Lưu ý</span>
-                </div>
-                <ul class="space-y-2 text-sm text-on-surface-variant">
-                  <li>• Mang theo trang phục lịch sự khi viếng chùa.</li>
-                  <li>• Kem chống nắng và giày đi bộ là cần thiết.</li>
-                  <li>• Chương trình có thể thay đổi thứ tự điểm đến.</li>
-                </ul>
-              </div>
-              <div>
-                <div class="flex items-center gap-2 mb-3">
-                  <span class="material-symbols-outlined text-error text-lg">cancel</span>
-                  <span class="font-bold text-sm uppercase tracking-wide">Chính sách hủy</span>
-                </div>
-                <ul class="space-y-2 text-sm text-on-surface-variant">
-                  <li>• Hủy trước 7 ngày: Hoàn tiền 100%.</li>
-                  <li>• Hủy từ 3-7 ngày: Hoàn tiền 50%.</li>
-                  <li>• Hủy trong vòng 48h: Không hoàn tiền.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Right Column: Sidebar -->
-        <div class="lg:col-span-4">
-          <div class="sticky top-28 bg-surface-container-lowest p-8 rounded-[2.5rem] shadow-2xl shadow-on-surface/5 border border-outline-variant/10">
-            <!-- Price Section with Badge -->
-            <div class="flex justify-between items-end mb-8">
-              <div>
-                <span class="text-sm text-on-surface-variant block mb-1">Giá từ</span>
-                <div class="flex items-baseline gap-1">
-                  <span id="unitPriceDisplay" class="text-5xl font-extrabold mb-0 text-primary">8.500.000</span>
-                  <span class="text-sm text-on-surface-variant">đ</span>
-                </div>
-                <span class="text-sm text-on-surface-variant block">/khách</span>
-              </div>
-              <div class="badge-discount">-15% Early Bird</div>
-    </div>
-
-    <div class="space-y-4">
-        <!-- Start Date -->
-        <div class="input-group-custom">
-            <label class="input-label">Ngày khởi hành</label>
-            <div class="flex items-center justify-between cursor-pointer">
-                <span class="font-semibold text-on-surface">Chọn ngày</span>
-                <span class="material-symbols-outlined text-on-surface-variant/60">calendar_today</span>
-            </div>
-        </div>
-
-        <!-- Guest Count -->
-        <div class="input-group-custom">
-            <label class="input-label">Số lượng khách</label>
-            <div class="flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                    <button id="btnMinus" class="w-8 h-8 flex items-center justify-center bg-white border border-on-surface-variant/30 rounded-full shadow-sm text-primary hover:bg-primary hover:text-white transition-colors font-bold">−</button>
-                    <span id="guestCount" class="font-bold text-sm">02</span>
-                    <button id="btnPlus" class="w-8 h-8 flex items-center justify-center bg-white border border-on-surface-variant/30 rounded-full shadow-sm text-primary hover:bg-primary hover:text-white transition-colors font-bold">+</button>
-                </div>
-                <span class="material-symbols-outlined text-on-surface-variant/60">group</span>
-            </div>
-        </div>
-
-        <!-- Price Breakdown -->
-        <div class="space-y-3 pt-4">
-          <div class="flex justify-between items-center text-sm">
-            <span class="text-on-surface-variant">Người lớn (x<span id="adultCount">2</span>)</span>
-            <span class="font-semibold text-on-surface"><span id="adultPrice">17.000.000</span>đ</span>
-          </div>
-          <div class="flex justify-between items-center text-sm">
-            <span class="text-on-surface-variant">Phí dịch vụ</span>
-            <span class="font-semibold text-on-surface">500.000đ</span>
-          </div>
-          <div class="tapered-divider"></div>
-          <div class="flex justify-between items-center">
-            <span class="font-semibold text-on-surface">Tổng tiền</span>
-            <span class="text-2xl font-extrabold text-primary"><span id="totalPriceDisplay">17.500.000</span>đ</span>
-          </div>
-        </div>
-
-        <!-- Book Button -->
-        <button id="bookNowBtn" class="w-full bg-primary text-white py-4 px-6 rounded-full font-bold text-base shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all mt-4">
-          Đặt ngay hôm nay
+        <button class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
         </button>
-        <p class="text-center text-xs text-on-surface-variant/70 mt-3 px-4 leading-relaxed">
-          Đảm bảo giá tốt nhất & Thanh toán an toàn
-        </p>
-      </div>
-
-      <!-- Travel Insurance Info -->
-      <div class="mt-4 p-4 rounded-3xl flex gap-3" style="background-color: rgba(38, 95, 162, 0.05)">
-        <span class="material-symbols-outlined flex-shrink-0" style="color: #265fa2; font-variation-settings: 'FILL' 1">verified_user</span>
-        <div>
-          <h4 class="font-semibold text-sm mb-1" style="color: #004684">Bảo hiểm du lịch trọn gói</h4>
-          <p class="text-xs mb-0" style="color: rgba(0, 70, 132, 0.8)">Mọi chuyến đi được bảo hiểm lên đến 100tr.</p>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link active" href="ListTour.html">Destinations</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Experiences</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Journals</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Plan</a></li>
+            </ul>
+            <div class="d-flex align-items-center gap-3">
+                <a class="text-decoration-none text-dark fw-bold px-3" href="Login.html">Đăng nhập</a>
+                <a class="nav-link me-3 d-none d-lg-block" href="Register.html">Đăng ký</a>
+                <button class="btn btn-primary-custom shadow-sm">Book Now</button>
+            </div>
         </div>
-      </div>
     </div>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // Khai báo các biến
-        const unitPrice = 8500000;
-        const servicefee = 500000;
-        let count = 2; // Mặc định 2 khách
-
-        const guestCountDisplay = document.getElementById('guestCount');
-        const adultCountDisplay = document.getElementById('adultCount');
-        const adultPriceDisplay = document.getElementById('adultPrice');
-        const totalPriceDisplay = document.getElementById('totalPriceDisplay');
-        const unitPriceDisplay = document.getElementById('unitPriceDisplay');
-        const btnPlus = document.getElementById('btnPlus');
-        const btnMinus = document.getElementById('btnMinus');
-        const bookNowBtn = document.getElementById('bookNowBtn');
-
-        // Hàm cập nhật tiền
-        function updateUI() {
-          // Cập nhật số lượng khách (với leading zero)
-          guestCountDisplay.innerText = String(count).padStart(2, '0');
-          adultCountDisplay.innerText = count;
-
-          // Tính toán giá
-          const adultPrice = count * unitPrice;
-          const total = adultPrice + servicefee;
-
-          // Định dạng số có dấu chấm (8.500.000)
-          unitPriceDisplay.innerText = unitPrice.toLocaleString('vi-VN');
-          adultPriceDisplay.innerText = adultPrice.toLocaleString('vi-VN');
-          totalPriceDisplay.innerText = total.toLocaleString('vi-VN');
-        }
-
-        // Sự kiện nút cộng
-        btnPlus.addEventListener('click', () => {
-          count++;
-          updateUI();
-        });
-
-        // Sự kiện nút trừ
-        btnMinus.addEventListener('click', () => {
-            if (count > 1) {
-                count--;
-                updateUI();
-            }
-        });
-
-        // Nút Book Now
-        bookNowBtn.addEventListener('click', () => {
-          alert(`Xác nhận đặt tour cho ${count} khách. \nTổng tiền: ${totalPriceDisplay.innerText} VNĐ`);
-        });
-
-        // Khởi tạo UI
-        updateUI();
-      });
-    </script>
-  </div>
-  </section>
-  </main>
-  <!-- Footer -->
-  <footer class="w-full pt-20 pb-10 mt-auto border-t-[0.5px] border-[#006954]/10 bg-[#f6f3ee] dark:bg-zinc-950">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-[1440px] mx-auto px-8 md:px-16">
-      <div class="col-span-1 md:col-span-1">
-        <div class="font-['Be_Vietnam_Pro'] font-bold text-xl text-[#006954] dark:text-[#00896F] mb-6">
-          The Verdant Archive
+</nav>
+<main class="container-xxl" style="padding-top: 120px;">
+<!-- Gallery -->
+    <section class="gallery-grid">
+        <div class="gallery-main">
+            <div class="gallery-item">
+                <img alt="Da Nang Skyline" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkvtdlHWAg1C48YOPDu0Clqn5Z0RR7l9YSgVSWtubq2RZy_xrRAAjwOS_y3yhZyJpn_b3RI5Hjy1We-MxYJlEwKhz2p0vT2TKZMa1HFGxQx-ksK675qjzRNhFg-z3r-B_lQI9AToQ7lHZzEEZ4aN8sASfJzVnkKXa-crUVSSgabF6xK_VM-yhYz9NCcQGFLxhaAXzSFBDncVgp224AA1OB6i_CKtGWGKH9P_0DjbyHJOZX_vNaNJvab1dlwbllkDNWIO8MQ0VSbvWW"/>
+                <div class="overlay-gradient"></div>
+            </div>
         </div>
-        <p class="font-['Plus_Jakarta_Sans'] text-sm leading-relaxed text-[#1c1c19]/60 dark:text-zinc-400">
-          Ghi lại những khoảnh khắc rực rỡ nhất trong hành trình khám phá vẻ đẹp bất tận của dải đất hình chữ S.
-        </p>
-      </div>
-      <div>
-<h5 class="font-bold text-[#006954] mb-6">Explore</h5>
-<ul class="space-y-4">
-<li><a class="text-[#1c1c19]/60 dark:text-zinc-400 hover:translate-x-1 hover:text-[#006954] transition-transform duration-200 block text-sm" href="#">Destinations</a></li>
-<li><a class="text-[#1c1c19]/60 dark:text-zinc-400 hover:translate-x-1 hover:text-[#006954] transition-transform duration-200 block text-sm" href="#">Experiences</a></li>
-<li><a class="text-[#1c1c19]/60 dark:text-zinc-400 hover:translate-x-1 hover:text-[#006954] transition-transform duration-200 block text-sm" href="#">Travel Journals</a></li>
-</ul>
-</div>
-<div>
-<h5 class="font-bold text-[#006954] mb-6">Quick Links</h5>
-<ul class="space-y-4">
-<li><a class="text-[#1c1c19]/60 dark:text-zinc-400 hover:translate-x-1 hover:text-[#006954] transition-transform duration-200 block text-sm" href="#">Planning Tool</a></li>
-<li><a class="text-[#1c1c19]/60 dark:text-zinc-400 hover:translate-x-1 hover:text-[#006954] transition-transform duration-200 block text-sm" href="#">Contact Support</a></li>
-<li><a class="text-[#1c1c19]/60 dark:text-zinc-400 hover:translate-x-1 hover:text-[#006954] transition-transform duration-200 block text-sm" href="#">Privacy Policy</a></li>
-</ul>
-</div>
-<div>
-<h5 class="font-bold text-[#006954] mb-6">Liên hệ</h5>
-<ul class="space-y-4">
-<li><a class="text-[#1c1c19]/60 dark:text-zinc-400 hover:translate-x-1 hover:text-[#006954] transition-transform duration-200 block text-sm" href="#">Contact</a></li>
-<li class="flex gap-3">
-<span class="material-symbols-outlined cursor-pointer text-[#006954]">social_leaderboard</span>
-<span class="material-symbols-outlined cursor-pointer text-[#006954]">retweet</span>
-</li>
-</ul>
-</div>
-</div>
-<div class="max-w-[1440px] mx-auto px-8 md:px-16 mt-16 pt-8 border-t border-[#006954]/5">
-<p class="font-['Plus_Jakarta_Sans'] text-sm leading-relaxed text-[#1c1c19]/40 dark:text-zinc-500 text-center">
-                © 2024 The Verdant Archive. Crafted for the Editorial Odyssey.
+        <div class="gallery-side">
+            <div class="gallery-item" style="height: 50%;">
+                <img alt="Ba Na Hills Golden Bridge" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMhnT7hkMgcy9OqVkyw-ZPAUiESSXahy_P-DL-NB_EsQnBuKqFPiHVvmYEd6urFg9_ZIBmD3RpkM69r2UNB3HxZqx0cvvsEV3Btmr5xQ3RS2iG2_b9laY1F2ujPwy78ws-EK494Dy24a0ZBdehTC0dBkXhxkeqbsy15oX9SH-JdmzyfaGWom_m3AV7s3lPj40wmBsZ-UsGKF6f7N8qdZod_lDbFRMncnmLNMlzItTp28EI0gEStzaW9PnC4jw8I3E_C_x_x1F9Kuoz"/>
+            </div>
+            <div class="d-flex gap-3" style="height: 50%;">
+                <div class="gallery-item flex-grow-1">
+                    <img alt="Marble Mountains" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeQG9rl9tSWOc8xVxnUMEnQLOxM_avFA_-lY3yud47MUs7aK8GwgEt07hpqrT2nkR635EeYkPLyTB_IguggI8R7lvN76T0IIEyQFb7rSUghMa5MkdkeS-Aa5S3gOCv7baxFuNUqg_wNtzAFGBfQpwF4qI1Zk4-3cWmQSaqrLNI55ODvgPBDClnGacyxp43_130CPbrNFrD67ORlIYOVfJXwlYtInyUjLuemJNFxVWi9fmuRms8veY6Ynmsx1BXp9l1o1Smm_iFwcUc"/>
+                </div>
+                <div class="view-all-card flex-grow-1">
+                    <span class="fs-2 fw-bold">+12</span>
+                    <span class="text-uppercase fw-bold" style="font-size: 10px; letter-spacing: 1px;">Xem tất cả hình ảnh</span>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Content Area -->
+    <div class="row g-5">
+        <div class="col-lg-8">
+            <div class="mb-4">
+                <span class="badge rounded-pill text-uppercase mb-2" style="background-color: rgba(0, 105, 84, 0.1); color: var(--primary); font-size: 10px; padding: 6px 12px;">Featured Journey</span>
+                <div class="d-inline-block ms-3" style="color: var(--tertiary)">
+                    <span class="material-symbols-outlined fs-6" style="font-variation-settings: 'FILL' 1">star</span>
+                    <span class="material-symbols-outlined fs-6" style="font-variation-settings: 'FILL' 1">star</span>
+                    <span class="material-symbols-outlined fs-6" style="font-variation-settings: 'FILL' 1">star</span>
+                    <span class="material-symbols-outlined fs-6" style="font-variation-settings: 'FILL' 1">star</span>
+                    <span class="material-symbols-outlined fs-6" style="font-variation-settings: 'FILL' 1">star</span>
+                    <span class="ms-2 fw-semibold text-muted small">4.9 (256 đánh giá)</span>
+                </div>
+            </div>
+            <h1 class="display-4 fw-extrabold mb-4">Khám phá Đà Nẵng: Thành phố của những cây cầu &amp; Biển xanh vẫy gọi</h1>
+            <p class="lead text-muted mb-5">
+                Hành trình 5 ngày 4 đêm đưa bạn khám phá Đà Nẵng - thành phố bề ngoài hiện đại nhưng có tâm hồn bình dị của những cũ kỹ. Từ Cầu Rồng phun lửa về đêm đến Cầu Vàng huyền thoại ở Ba Nà Hills, từ bãi biển Mỹ Khê đẹp nhất hành tinh đến Phố cổ Hội An quyến rũ với đèn lồng lung linh.
             </p>
-</div>
+            <div class="mb-5">
+                <h2 class="h3 fw-bold d-flex align-items-center mb-4">
+                    Lịch trình chi tiết<span class="section-divider ms-4"></span>
+                </h2>
+                <div class="itinerary-item">
+                    <div class="itinerary-dot"></div>
+                    <span class="day-label">Ngày 1</span>
+                    <h3 class="h4 fw-bold">Chào đón tới Đà Nẵng - Biển Mỹ Khê - Cầu Rồng về đêm</h3>
+                    <p class="text-muted">Bắt đầu hành trình tại sân bay Đà Nẵng. Buổi chiều thư giãn tại bãi biển Mỹ Khê - một trong sáu bãi biển quyến rũ nhất hành tinh. Buổi tối chiêm ngưỡng Cầu Rồng phun lửa và nước đầy ngoạn mục.</p>
+                    <div class="itinerary-card">
+                        <span class="material-symbols-outlined fs-1" style="color: var(--primary)">restaurant</span>
+                        <div>
+                            <h4 class="h6 fw-bold mb-1">Bữa tối đặc biệt</h4>
+                            <p class="small text-muted mb-0">Thưởng thức đặc sản Mì Quảng &amp; Bánh tráng cuốn thịt heo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="itinerary-item">
+                    <div class="itinerary-dot inactive"></div>
+                    <span class="day-label">Ngày 2</span>
+                    <h3 class="h4 fw-bold">Bà Nà Hills - Cầu Vàng - Làng Pháp</h3>
+                    <p class="text-muted">Trải nghiệm hệ thống cáp treo đạt nhiều kỷ lục thế giới. Check-in tại Cầu Vàng biểu tượng và lạc bước trong không gian kiến trúc Pháp cổ kính lãng mạn tại đỉnh núi Chúa.</p>
+                </div>
+                <div class="itinerary-item">
+                    <div class="itinerary-dot inactive"></div>
+                    <span class="day-label">Ngày 3</span>
+                    <h3 class="h4 fw-bold">Ngũ Hành Sơn - Chùa Linh Ứng - Bán đảo Sơn Trà</h3>
+                    <p class="text-muted">Khám phá hệ thống hang động kỳ bí tại Ngũ Hành Sơn. Sau đó di chuyển đến Bán đảo Sơn Trà viếng Chùa Linh Ứng và ngắm nhìn Tượng Phật Bà Quan Âm cao nhất Việt Nam hướng ra biển Đông.</p>
+                </div>
+                <div class="itinerary-item">
+                    <div class="itinerary-dot inactive"></div>
+                    <span class="day-label">Ngày 4</span>
+                    <h3 class="h4 fw-bold">Phố cổ Hội An - Rừng dừa Bảy Mẫu</h3>
+                    <p class="text-muted">Trải nghiệm chèo thúng tại Rừng dừa Bảy Mẫu đầy thú vị. Buổi chiều tối thả mình vào không gian lung linh hoa đăng của Phố cổ Hội An - Di sản văn hóa thế giới.</p>
+                </div>
+                <div class="itinerary-item border-0">
+                    <div class="itinerary-dot inactive"></div>
+                    <span class="day-label">Ngày 5</span>
+                    <h3 class="h4 fw-bold">Mua sắm Chợ Hàn - Tiễn đoàn</h3>
+                    <p class="text-muted">Ghé thăm Chợ Hàn sầm uất để mua đặc sản miền Trung làm quà. Xe tiễn quý khách ra sân bay, kết thúc hành trình khám phá thành phố đáng sống nhất Việt Nam.</p>
+                </div>
+            </div>
+<!-- Policies -->
+            <div class="p-5 rounded-4" style="background-color: var(--surface-container)">
+                <h3 class="h4 fw-bold mb-4 d-flex align-items-center gap-2">
+                    <span class="material-symbols-outlined" style="color: var(--primary)">info</span>Chính sách &amp; Lưu ý
+                </h3>
+                <div class="row">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <h4 class="small fw-bold text-uppercase mb-3" style="letter-spacing: 1px">Chính sách hủy</h4>
+                        <ul class="list-unstyled small text-muted">
+                            <li class="mb-2"><span class="fw-bold me-2" style="color: var(--primary)">•</span> Hủy trước 7 ngày: Hoàn tiền 100%.</li>
+                            <li class="mb-2"><span class="fw-bold me-2" style="color: var(--primary)">•</span> Hủy từ 3-7 ngày: Hoàn tiền 50%.</li>
+                            <li class="mb-2"><span class="fw-bold me-2" style="color: var(--primary)">•</span> Hủy trong vòng 48h: Không hoàn tiền.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="small fw-bold text-uppercase mb-3" style="letter-spacing: 1px">Lưu ý quan trọng</h4>
+                        <ul class="list-unstyled small text-muted">
+                            <li class="mb-2"><span class="fw-bold me-2" style="color: var(--secondary)">•</span> Mang theo trang phục lịch sự khi viếng chùa.</li>
+                            <li class="mb-2"><span class="fw-bold me-2" style="color: var(--secondary)">•</span> Kem chống nắng và giày đi bộ là cần thiết.</li>
+                            <li class="mb-2"><span class="fw-bold me-2" style="color: var(--secondary)">•</span> Chương trình có thể thay đổi thứ tự điểm đến.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- Booking Widget Column -->
+        <div class="col-lg-4">
+            <div class="booking-card">
+                <div class="d-flex justify-content-between align-items-end mb-4">
+                    <div>
+                        <span class="small text-muted d-block mb-1">Giá từ</span>
+                        <span class="h1 fw-extrabold mb-0" style="color: var(--primary)" id="unitPriceDisplay">8.500.000</span>
+                        <span class="small text-muted">₫/khách</span>
+                    </div>
+                    <div class="badge-discount">-15% Early Bird</div>
+                </div>
+                <div class="input-group-custom" id="dateTrigger">
+                      <label class="input-label">Ngày khởi hành</label>
+                      <div class="d-flex justify-content-between align-items-center">
+                          <input 
+                              type="text" 
+                              id="datePicker"
+                              placeholder="Chọn ngày"
+                              readonly
+                              style="
+                                  border: none;
+                                  outline: none;
+                                  background: transparent;
+                                  font-weight: 600;
+                                  width: 100%;
+                                  cursor: pointer;
+                                  color: var(--on-surface-variant);
+                              "
+                          />
+
+                          <span class="material-symbols-outlined text-muted">calendar_today</span>
+                      </div>
+                  </div>
+                <div class="input-group-custom">
+                    <label class="input-label">Số lượng khách</label>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center gap-3">
+                            <button class="btn btn-outline-secondary btn-sm rounded-circle d-flex align-items-center justify-content-center" id="btnMinus" style="width: 32px; height: 32px;">−</button>
+                            <span class="fw-bold" id="guestCount">02</span>
+                            <button class="btn btn-outline-secondary btn-sm rounded-circle d-flex align-items-center justify-content-center" id="btnPlus" style="width: 32px; height: 32px;">+</button>
+                        </div>
+                        <span class="material-symbols-outlined text-muted">group</span>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <div class="d-flex justify-content-between small text-muted mb-2">
+                        <span>Người lớn (x<span id="adultCount">2</span>)</span>
+                        <span class="fw-bold text-dark"><span id="adultPrice">17.000.000</span>₫</span>
+                    </div>
+                    <div class="d-flex justify-content-between small text-muted mb-2">
+                        <span>Phí dịch vụ</span>
+                        <span class="fw-bold text-dark">500.000₫</span>
+                    </div>
+                    <div class="tapered-divider"></div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="h5 fw-bold mb-0">Tổng tiền</span>
+                        <span class="h3 fw-extrabold mb-0" style="color: var(--primary)"><span id="totalPriceDisplay">17.500.000</span>₫</span>
+                    </div>
+                </div>
+                <button class="btn btn-primary-custom w-100 py-3 mt-4 fs-5 shadow" id="bookNowBtn">Đặt ngay hôm nay</button>
+                <p class="text-center mt-3 mb-0 small text-muted fw-medium">Đảm bảo giá tốt nhất &amp; Thanh toán an toàn</p>
+            </div>
+            <div class="mt-4 p-4 rounded-4 d-flex gap-3" style="background-color: rgba(0, 105, 84, 0.05)">
+                <span class="material-symbols-outlined" style="color: var(--primary); font-variation-settings: 'FILL' 1">verified_user</span>
+                <div>
+                    <h4 class="h6 fw-bold mb-1" style="color: var(--primary)">Bảo hiểm du lịch trọn gói</h4>
+                    <p class="small mb-0" style="color: rgba(0, 105, 84, 0.8)">Mọi chuyến đi được bảo hiểm lên đến 100tr.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="container-xxl">
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="h5 fw-bold mb-3" style="color: var(--primary)">The Verdant Archive</div>
+                <p class="small text-muted">Ghi lại những khoảnh khắc rực rỡ nhất trong hành trình khám phá vẻ đẹp bất tận của dải đất hình chữ S.</p>
+            </div>
+            <div class="col-md-3 ms-auto">
+                <h6 class="small fw-bold text-uppercase mb-3" style="letter-spacing: 1px">Khám phá</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a class="footer-link" href="#">Destinations</a></li>
+                    <li><a class="footer-link" href="#">Experiences</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h6 class="small fw-bold text-uppercase mb-3" style="letter-spacing: 1px">Pháp lý</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a class="footer-link" href="#">Terms of Service</a></li>
+                    <li><a class="footer-link" href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h6 class="small fw-bold text-uppercase mb-3" style="letter-spacing: 1px">Liên hệ</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-3"><a class="footer-link" href="#">Contact</a></li>
+                    <li class="d-flex gap-3">
+                        <span class="material-symbols-outlined" style="color: var(--primary); cursor: pointer">social_leaderboard</span>
+                        <span class="material-symbols-outlined" style="color: var(--primary); cursor: pointer">retweet</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-top mt-5 pt-4 text-center small text-muted">
+            © 2024 The Verdant Archive. Crafted for the Editorial Odyssey.
+        </div>
+    </div>
 </footer>
-</body></html>
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/vn.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+  const unitPrice = 8500000;
+  const serviceFee = 500000;
+  let count = 2;
+  let selectedDate = '';
+
+  function fmt(n) {
+    return n.toLocaleString('vi-VN');
+  }
+
+  function updateUI() {
+    document.getElementById('guestCount').innerText = String(count).padStart(2, '0');
+    document.getElementById('adultCount').innerText = count;
+
+    const total = count * unitPrice + serviceFee;
+
+    document.getElementById('adultPrice').innerText = fmt(count * unitPrice);
+    document.getElementById('totalPriceDisplay').innerText = fmt(total);
+    document.getElementById('unitPriceDisplay').innerText = fmt(unitPrice);
+  }
+
+  // ===== DATE PICKER =====
+  const fp = flatpickr("#datePicker", {
+    minDate: "today",
+    dateFormat: "d/m/Y",
+    locale: "vn",
+    disableMobile: true,
+
+    onChange: function(selectedDates, dateStr) {
+      selectedDate = dateStr;
+
+      const input = document.getElementById("datePicker");
+      input.value = dateStr;
+      input.style.color = "var(--primary)";
+    }
+  });
+
+  document.getElementById("dateTrigger").addEventListener("click", function () {
+    fp.open();
+  });
+
+  // ===== + - =====
+  document.getElementById('btnPlus').onclick = function () {
+    count++;
+    updateUI();
+  };
+
+  document.getElementById('btnMinus').onclick = function () {
+    if (count > 1) {
+      count--;
+      updateUI();
+    }
+  };
+
+  // ===== BOOK NOW =====
+  document.getElementById('bookNowBtn').onclick = function () {
+
+    if (!selectedDate) {
+      alert("Vui lòng chọn ngày khởi hành!");
+      return;
+    }
+
+    alert(
+      "Xác nhận đặt tour!\n" +
+      "Ngày: " + selectedDate + "\n" +
+      "Số khách: " + count + "\n" +
+      "Tổng tiền: " + fmt(count * unitPrice + serviceFee) + "₫"
+    );
+  };
+
+  updateUI();
+});
+</script>
+</body>
+</html>
