@@ -1,69 +1,253 @@
 <!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Thông tin đặt tour - The Verdant Archive</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="Styles/TPHCMTourDetails.css" rel="stylesheet"> <style>
-        .form-container { background: #fff; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-top: 50px; }
-        .form-control { border-radius: 10px; padding: 12px; border: 1px solid #ddd; }
-        .form-control:focus { border-color: var(--primary); box-shadow: none; }
-    </style>
-</head>
-<body style="background-color: #f4f7f6;">
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-lg-7">
-            <div class="form-container">
-                <h2 class="fw-bold mb-4" style="color: var(--primary);">Thông Tin Đặt Tour</h2>
-                <form id="bookingForm">
-                    <div class="row g-3">
-                        <div class="col-md-12">
-                            <label class="form-label fw-bold">Họ và Tên</label>
-                            <input type="text" class="form-control" placeholder="Nguyễn Văn A" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label class="form-label fw-bold">Số điện thoại</label>
-                            <input type="tel" class="form-control" placeholder="090 123 4567" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label class="form-label fw-bold">Email</label>
-                            <input type="email" class="form-control" placeholder="name@example.com" required>
-                        </div>
-                        <div class="col-md-12">
-                            <label class="form-label fw-bold">Yêu cầu đặc biệt</label>
-                            <textarea class="form-control" rows="3" placeholder="Ăn chay, dị ứng, đón tại khách sạn..."></textarea>
-                        </div>
-                        <div class="col-md-12 mt-4">
-                            <div class="p-3 rounded-3" style="background: #eef2f7;">
-                                <h6 class="fw-bold mb-1">Phương thức thanh toán</h6>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="payment" id="momo" checked>
-                                    <label class="form-check-label" for="momo">Chuyển khoản / Ví điện tử</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="payment" id="cod">
-                                    <label class="form-check-label" for="cod">Thanh toán tại văn phòng</label>
-                                </div>
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Thanh Toán | The Verdant Archive</title>
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="Styles/BookingForm.css" />
+</head>
+<body>
+<!-- TopNavBar -->
+    <nav class="navbar navbar-expand-md fixed-top">
+        <div class="container-fluid max-w-screen-2xl">
+            <a class="navbar-brand brand-text" href="index.html">The Verdant Archive</a>
+            <button class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0 ms-md-4">
+                    <li class="nav-item"><a class="nav-link" href="ListTour.html">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Experiences</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Journals</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Plan</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a class="nav-link me-3 d-none d-lg-block" href="Login.html">Đăng nhập</a>
+                    <a class="nav-link me-3 d-none d-lg-block" href="Register.html">Đăng ký</a>
+                    <button class="btn btn-book">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="checkout-container">
+        <header class="mb-5">
+            <p class="text-uppercase small fw-bold tracking-widest mb-1" style="color: var(--tertiary); letter-spacing: 0.1em;">Thủ tục thanh toán</p>
+            <h1 class="display-5 fw-bold">Hoàn thiện hành trình của bạn</h1>
+        </header>
+        <div class="row g-5">
+<!-- Left Column: Checkout Steps -->
+            <div class="col-lg-7">
+<!-- Step 1: Customer Information -->
+                <section class="mb-5">
+                    <div class="d-flex align-items-center gap-3 mb-4">
+                        <span class="step-badge">1</span>
+                        <h2 class="h4 fw-bold mb-0">Thông tin khách hàng</h2>
+                    </div>
+                    <div class="form-section">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Họ và tên</label>
+                                <input class="form-control" placeholder="Nguyễn Văn A" type="text"/>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Số điện thoại</label>
+                                <input class="form-control" placeholder="090 123 4567" type="tel"/>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Địa chỉ Email</label>
+                                <input class="form-control" placeholder="example@verdant.com" type="email"/>
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary-custom w-100 py-3 mt-4 fs-5">Xác nhận đặt tour</button>
-                    <a href="TPHCMTourDetails.html" class="d-block text-center mt-3 text-muted text-decoration-none">Quay lại chi tiết tour</a>
-                </form>
+                </section>
+<!-- Step 2: Payment Method Selection -->
+                <section class="mb-5">
+                    <div class="d-flex align-items-center gap-3 mb-4">
+                        <span class="step-badge">2</span>
+                        <h2 class="h4 fw-bold mb-0">Phương thức thanh toán</h2>
+                    </div>
+                    <div class="row g-3 mb-4">
+                        <div class="col-sm-4">
+                            <label class="w-100 h-100">
+                                <input checked="" class="payment-option-input" name="payment" type="radio"/>
+                                <div class="payment-option-card">
+                                    <span class="material-symbols-outlined fs-2 mb-2" style="color: var(--primary)">credit_card</span>
+                                    <div class="small fw-bold">Thẻ tín dụng</div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="w-100 h-100">
+                                <input class="payment-option-input" name="payment" type="radio"/>
+                                <div class="payment-option-card">
+                                    <span class="material-symbols-outlined fs-2 mb-2" style="color: var(--secondary)">account_balance</span>
+                                    <div class="small fw-bold">Chuyển khoản</div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="w-100 h-100">
+                                <input class="payment-option-input" name="payment" type="radio"/>
+                                <div class="payment-option-card">
+                                    <span class="material-symbols-outlined fs-2 mb-2" style="color: var(--tertiary)">account_balance_wallet</span>
+                                    <div class="small fw-bold">Ví điện tử</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+<!-- Credit Card Details Form -->
+                    <div class="form-section">
+                        <div class="mb-3">
+                            <label class="form-label">Số thẻ</label>
+                            <div class="position-relative">
+                                <input class="form-control" placeholder="**** **** **** ****" type="text"/>
+                                <span class="material-symbols-outlined position-absolute top-50 end-0 translate-middle-y me-3 text-muted">credit_card</span>
+                            </div>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <label class="form-label">Ngày hết hạn</label>
+                                <input class="form-control" placeholder="MM/YY" type="text"/>
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label">CVV</label>
+                                <input class="form-control" placeholder="***" type="password"/>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+<!-- Right Column: Order Summary -->
+            <div class="col-lg-5">
+                <aside class="order-summary-card">
+                    <div class="order-summary-inner">
+                        <h2 class="h4 fw-bold mb-4">Tóm tắt đơn hàng</h2>
+                        <div class="summary-image-container">
+                            <img id="tourImage" class="summary-image">
+                            
+                        </div>
+                        <div class="mb-4">
+                            <h3 id="tourTitle" class="h5 fw-bold mb-1"></h3>
+                            <div class="small text-muted d-flex align-items-center gap-1">
+                                <span class="material-symbols-outlined fs-6">calendar_month</span>
+                                <span id="tourDate"></span>
+                            </div>
+                        </div>
+                        <div class="dashed-divider"></div>
+                        <div class="mb-4 small text-muted">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span id="tourGuest"></span>
+                                <span id="tourPrice"></span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Phụ phí dịch vụ</span>
+                                <span id="tourFee"></span>
+                            </div>
+                        </div>
+                        <div class="solid-divider"></div>
+                        <div class="d-flex justify-content-between align-items-end mb-4">
+                            <div>
+                                <span class="text-uppercase fw-bold text-muted" style="font-size: 0.65rem; letter-spacing: 0.1rem;">Tổng cộng</span>
+                                <div id="tourTotal" class="h2 fw-bold mb-0"></div>
+                            </div>
+                            <span class="fst-italic text-muted" style="font-size: 0.6rem;">Đã bao gồm thuế VAT</span>
+                        </div>
+                        <button class="btn btn-confirm mb-3">Hoàn tất đặt tour</button>
+                        <p class="text-center text-muted mb-0" style="font-size: 0.65rem; line-height: 1.4;">
+                            Bằng cách nhấp vào "Hoàn tất đặt tour", bạn đồng ý với các <a class="text-dark text-decoration-underline" href="#">Điều khoản dịch vụ</a> và <a class="text-dark text-decoration-underline" href="#">Chính sách bảo mật</a> của The Verdant Archive.
+                        </p>
+                    </div>
+                </aside>
+                <div class="mt-4 text-center opacity-50">
+                    <span class="material-symbols-outlined fs-6">verified_user</span>
+                    <span class="text-uppercase fw-bold ms-2" style="font-size: 0.65rem; letter-spacing: 0.15rem;">Thanh toán bảo mật 256-bit SSL</span>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-
+    </main>
+    <footer class="footer">
+        <div class="container-fluid px-md-5">
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="h5 fw-bold mb-4" style="color: var(--primary)">The Verdant Archive</div>
+                    <p class="text-muted small">Khám phá những góc khuất tinh tế nhất của Việt Nam qua lăng kính biên tập viên du lịch chuyên nghiệp.</p>
+                </div>
+                <div class="col-md-3">
+                    <h4 class="h6 fw-bold mb-3">Khám phá</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a class="footer-link" href="#">About Us</a></li>
+                        <li class="mb-2"><a class="footer-link" href="#">Sustainable Travel</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4 class="h6 fw-bold mb-3">Pháp lý</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a class="footer-link" href="#">Terms of Service</a></li>
+                        <li class="mb-2"><a class="footer-link" href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4 class="h6 fw-bold mb-3">Liên hệ</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a class="footer-link" href="#">Contact</a></li>
+                        <li class="text-muted small">support@verdant.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-top mt-5 pt-4 text-center">
+                <p class="text-muted small mb-0">© 2024 The Verdant Archive. Crafted for the Editorial Odyssey.</p>
+            </div>
+        </div>
+    </footer>
+<!-- Bootstrap 5 Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    document.getElementById('bookingForm').onsubmit = function(e) {
-        e.preventDefault();
-        alert('Cảm ơn ông! Thông tin đã được gửi. Chúng tôi sẽ liên hệ sớm nhất!');
-        window.location.href = 'index.html'; // Quay về trang chủ sau khi xong
-    };
-</script>
-</body>
-</html>
+        // Vanilla JS for simple interactions
+        document.querySelectorAll('.payment-option-input').forEach(input => {
+            input.addEventListener('change', (e) => {
+                // You could add logic here to toggle visibility of payment forms
+                console.log('Selected payment method:', e.target.closest('label').querySelector('.small').innerText);
+            });
+        });
+
+        // Booking button click handler
+        document.querySelector('.btn-confirm').addEventListener('click', function() {
+            this.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Đang xử lý...';
+            setTimeout(() => {
+                alert('Đang chuyển hướng tới cổng thanh toán an toàn...');
+                this.innerText = 'Hoàn tất đặt tour';
+            }, 1500);
+        });
+
+
+        function formatMoney(number) {
+            return number.toLocaleString("vi-VN") + "₫";
+        }
+
+        const data = JSON.parse(localStorage.getItem("bookingData"));
+
+        if (data) {
+
+            document.getElementById("tourImage").src = data.image;
+            document.getElementById("tourTitle").innerText = data.title;
+            document.getElementById("tourDate").innerText = "Khởi hành: " + data.date;
+
+            document.getElementById("tourGuest").innerText =
+                "Gói cao cấp (" + data.guest + " người lớn)";
+
+            document.getElementById("tourPrice").innerText =
+                formatMoney(data.price);
+
+            document.getElementById("tourFee").innerText =
+                formatMoney(data.fee);
+
+            document.getElementById("tourTotal").innerText =
+                formatMoney(data.total);
+        }
+    </script>
+</body></html>
