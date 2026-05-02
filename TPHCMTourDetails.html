@@ -31,7 +31,7 @@
                 <li class="nav-item"><a class="nav-link" href="#">Plan</a></li>
             </ul>
             <div class="d-flex align-items-center gap-3">
-                <a class="text-decoration-none text-dark fw-bold px-3" href="Login.html">Đăng nhập</a>
+                <a class="nav-link me-3 d-none d-lg-block" href="Login.html">Đăng nhập</a>
                 <a class="nav-link me-3 d-none d-lg-block" href="Register.html">Đăng ký</a>
                 <button class="btn btn-primary-custom shadow-sm">Book Now</button>
             </div>
@@ -186,9 +186,9 @@
                         <span id="totalPrice" class="h3 fw-extrabold mb-0" style="color: var(--primary)">7.500.000₫</span>
                     </div>
                 </div>
-                <a href="BookingForm.html" class="text-decoration-none">
-                    <button class="btn btn-primary-custom w-100 py-3 mt-4 fs-5 shadow">Đặt ngay Sài Gòn</button>
-                </a>
+                <button id="bookNowBtn" class="btn btn-primary-custom w-100 py-3 mt-4 fs-5 shadow">
+                    Đặt ngay hôm nay
+                </button>
                 <p class="text-center mt-3 mb-0 small text-muted fw-medium">Đảm bảo giá tốt nhất &amp; Thanh toán an toàn</p>
             </div>
             <div class="mt-4 p-4 rounded-4 d-flex gap-3" style="background-color: var(--surface-container)">
@@ -265,6 +265,37 @@
     }
     document.getElementById("plusBtn").onclick = () => { count++; updateUI(); };
     document.getElementById("minusBtn").onclick = () => { if (count > 1) { count--; updateUI(); } };
+
+
+    //Gửi đến file BookingForm
+    const bookBtn = document.getElementById("bookNowBtn");
+
+    bookBtn.onclick = function () {
+
+        const selectedDate = document.getElementById("datePicker").value;
+
+        if (selectedDate === "") {
+            alert("Vui lòng chọn ngày khởi hành!");
+            return;
+        }
+
+        let totalGuestPrice = count * pricePerPerson;
+        let total = totalGuestPrice + serviceFee;
+
+        const bookingData = {
+            image: "/Img/TPHCMTour/Nha_tho_Duc_Ba.png",
+            title: "Khám phá TP.HCM: Hòn ngọc Viễn Đông rực rỡ",
+            date: selectedDate,
+            guest: count,
+            price: totalGuestPrice,
+            fee: serviceFee,
+            total: total
+        };
+
+        localStorage.setItem("bookingData", JSON.stringify(bookingData));
+
+        window.location.href = "BookingForm.html";
+    };
 </script>
 </body>
 </html>
