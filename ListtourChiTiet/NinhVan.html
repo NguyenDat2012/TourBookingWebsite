@@ -47,19 +47,19 @@
         <div class="gallery-main">
             <div class="gallery-item">
                 <!-- Ảnh chính Ninh Vân Bay -->
-                <img alt="Ninh Vân Bay Overview" src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?q=80&w=2000&auto=format&fit=crop"/>
+                <img alt="Ninh Vân Bay" src="/Img/NinhVanTour/Ninh-Van-Bay.png"/>
                 <div class="overlay-gradient"></div>
             </div>
         </div>
         <div class="gallery-side">
             <div class="gallery-item" style="height: 50%;">
                 <!-- Ảnh Resort/Biệt thự biển -->
-                <img alt="Ninh Van Resort" src="https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=1000&auto=format&fit=crop"/>
+                <img alt="Ninh Van Resort" src="/Img/NinhVanTour/Ninh-Van-Resort.png"/>
             </div>
             <div class="d-flex gap-3" style="height: 50%;">
                 <div class="gallery-item flex-grow-1">
                     <!-- Ảnh hoạt động biển -->
-                    <img alt="Ninh Van Beach" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1000&auto=format&fit=crop"/>
+                    <img alt="Ninh Van Beach" src="/Img/NinhVanTour/Ninh-Van-Beach.png"/>
                 </div>
                 <div class="view-all-card flex-grow-1">
                     <span class="fs-2 fw-bold">+12</span>
@@ -172,30 +172,21 @@
                 </div>
 
                 <!-- Date Picker -->
-                <div class="input-group-custom" id="dateTrigger">
-                    <label class="input-label">Ngày khởi hành</label>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <input
-                            type="text"
-                            id="datePicker"
-                            placeholder="Chọn ngày nghỉ"
-                            readonly
-                            style="border: none; outline: none; background: transparent; font-weight: 600; width: 100%; cursor: pointer; color: var(--on-surface-variant);"
-                        />
-                        <span class="material-symbols-outlined text-muted">calendar_today</span>
+                <div class="input-group-custom">
+                    <div class="input-label">Ngày khởi hành</div>
+                    <div class="d-flex justify-content-between align-items-center cursor-pointer">
+                        <span class="fw-semibold">Chọn ngày</span>
+                        <input type="date" id="datePicker" style="border: none; outline: none; background: transparent;">
                     </div>
                 </div>
 
-                <!-- Guest Counter -->
                 <div class="input-group-custom">
                     <label class="input-label">Số lượng khách</label>
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="d-flex align-items-center gap-3">
-                            <button class="btn btn-outline-secondary btn-sm rounded-circle d-flex align-items-center justify-content-center"
-                                    id="btnMinus" style="width: 32px; height: 32px;">−</button>
-                            <span class="fw-bold" id="guestCount">01</span>
-                            <button class="btn btn-outline-secondary btn-sm rounded-circle d-flex align-items-center justify-content-center"
-                                    id="btnPlus" style="width: 32px; height: 32px;">+</button>
+                            <button id="minusBtn" class="btn btn-outline-secondary btn-sm rounded-circle" style="width: 32px; height: 32px;">-</button>
+                            <span id="guestCount" class="fw-bold">1</span>
+                            <button id="plusBtn" class="btn btn-outline-secondary btn-sm rounded-circle" style="width: 32px; height: 32px;">+</button>
                         </div>
                         <span class="material-symbols-outlined text-muted">group</span>
                     </div>
@@ -204,19 +195,17 @@
                 <!-- Price Summary -->
                 <div class="mt-4">
                     <div class="d-flex justify-content-between small text-muted mb-2">
-                        <span>Giá gói Luxury (x<span id="adultCount">1</span>)</span>
-                        <span class="fw-bold text-dark"><span id="adultPrice">24.500.000</span>₫</span>
+                        <span id="guestText">Người lớn (x1)</span>
+                        <span id="guestPrice" class="fw-bold text-dark">24.500.000₫</span>
                     </div>
                     <div class="d-flex justify-content-between small text-muted mb-2">
-                        <span>Phí đưa đón cano</span>
-                        <span class="fw-bold text-dark">0₫ (Free)</span>
+                        <span>Phí dịch vụ</span>
+                        <span class="fw-bold text-dark" id="serviceFee">0₫</span>
                     </div>
                     <div class="tapered-divider"></div>
                     <div class="d-flex justify-content-between align-items-center">
-                        <span class="h5 fw-bold mb-0">Tổng cộng</span>
-                        <span class="h3 fw-extrabold mb-0" style="color: var(--primary)">
-                            <span id="totalPriceDisplay">24.500.000</span>₫
-                        </span>
+                        <span class="h5 fw-bold mb-0">Tổng tiền</span>
+                        <span id="totalPrice" class="h3 fw-extrabold mb-0" style="color: var(--primary)">24.500.000₫</span>
                     </div>
                 </div>
 
@@ -283,48 +272,64 @@
 <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/vn.js"></script>
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-    const unitPrice = 24500000; // Cập nhật giá Ninh Vân
-    const serviceFee = 0; // Đặt phí dịch vụ về 0 hoặc theo ý bạn
-    let count = 1;
-    let selectedDate = '';
+//Calendar
+    const dateInput = document.getElementById("datePicker");
+    const today = new Date().toISOString().split("T")[0];
+    dateInput.min = today;
 
-    function fmt(n) { return n.toLocaleString('vi-VN'); }
+    // Sửa con số này cho từng file: HaLong (4500000), Fansipan (2850000), HoiAn (1200000)
+    const pricePerPerson = 24500000; 
+    const serviceFee = 0;
+    let count = 1;
+
+    const guestCount = document.getElementById("guestCount");
+    const guestText = document.getElementById("guestText");
+    const guestPrice = document.getElementById("guestPrice");
+    const totalPrice = document.getElementById("totalPrice");
+
+    function formatMoney(number) { return number.toLocaleString("vi-VN") + "₫"; }
 
     function updateUI() {
-        document.getElementById('guestCount').innerText = String(count).padStart(2, '0');
-        document.getElementById('adultCount').innerText = count;
-        const total = count * unitPrice + serviceFee;
-        document.getElementById('adultPrice').innerText = fmt(count * unitPrice);
-        document.getElementById('totalPriceDisplay').innerText = fmt(total);
-        document.getElementById('unitPriceDisplay').innerText = fmt(unitPrice);
+        let totalGuestPrice = count * pricePerPerson;
+        let total = totalGuestPrice + serviceFee;
+        if(guestCount) guestCount.innerText = count;
+        if(guestText) guestText.innerText = `Người lớn (x${count})`;
+        if(guestPrice) guestPrice.innerText = formatMoney(totalGuestPrice);
+        if(totalPrice) totalPrice.innerText = formatMoney(total);
     }
 
-    const fp = flatpickr("#datePicker", {
-        minDate: "today",
-        dateFormat: "d/m/Y",
-        locale: "vn",
-        disableMobile: true,
-        onChange: function (selectedDates, dateStr) {
-            selectedDate = dateStr;
-            const input = document.getElementById("datePicker");
-            input.value = dateStr;
-            input.style.color = "var(--primary)";
+    document.getElementById("plusBtn").onclick = () => { count++; updateUI(); };
+    document.getElementById("minusBtn").onclick = () => { if (count > 1) { count--; updateUI(); } };
+
+    //Gửi đến file BookingForm
+    const bookBtn = document.getElementById("bookNowBtn");
+
+    bookBtn.onclick = function () {
+
+        const selectedDate = document.getElementById("datePicker").value;
+
+        if (selectedDate === "") {
+            alert("Vui lòng chọn ngày khởi hành!");
+            return;
         }
-    });
 
-    document.getElementById("dateTrigger").addEventListener("click", function () { fp.open(); });
+        let totalGuestPrice = count * pricePerPerson;
+        let total = totalGuestPrice + serviceFee;
 
-    document.getElementById('btnPlus').onclick = function () { count++; updateUI(); };
-    document.getElementById('btnMinus').onclick = function () { if (count > 1) { count--; updateUI(); } };
+        const bookingData = {
+            image: "/Img/NinhVanTour/Ninh-Van-Bay.png",
+            title: "Ninh Vân Bay: Tuyệt Tác Thiên Nhiên & Nghỉ Dưỡng Biệt Lập",
+            date: selectedDate,
+            guest: count,
+            price: totalGuestPrice,
+            fee: serviceFee,
+            total: total
+        };
 
-    document.getElementById('bookNowBtn').onclick = function () {
-        if (!selectedDate) { alert("Vui lòng chọn ngày khởi hành!"); return; }
-        alert("Xác nhận đặt tour!\n" + "Tour: Ninh Vân Bay Luxury Escape\n" + "Ngày: " + selectedDate + "\n" + "Tổng tiền: " + fmt(count * unitPrice + serviceFee) + "₫");
+        localStorage.setItem("bookingData", JSON.stringify(bookingData));
+
+        window.location.href = "/BookingForm.html";
     };
-
-    updateUI();
-});
 </script>
 </body>
 </html>

@@ -46,17 +46,17 @@
     <section class="gallery-grid">
         <div class="gallery-main">
             <div class="gallery-item">
-                <img alt="Vịnh Hạ Long" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyWCDdmy6zuvowVBoQSvtKSJGzsPPDDtdYw4EqnpQlgN_DUWKSubAf0P9fkMI0qYXKodO0iFzJUi8hFVJw7oveq7y4elSEDIHf2oFJWmPxHmQkOE-Z1skoaBVESORSP-Ox73DwjGLSj8HNP7mAZ10JqMZWBzuX8_HRBXpgZpJfYJKgdTHovi1gA5Z-C8HDoIhZhm1X3YZruX3s4E9Pr1F6FwvMxKQWB_KVXv-reijV4b8yoltc8MMVGxk-JnQKl0nRL1wKcHCgraWz"/>
+                <img alt="Vịnh Hạ Long" src="/Img/VinhHaLong-LanHa/Vinh-Ha-Long.png"/>
                 <div class="overlay-gradient"></div>
             </div>
         </div>
         <div class="gallery-side">
             <div class="gallery-item" style="height: 50%;">
-                <img alt="Du thuyền Hạ Long" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOiHh7by5kWjjIx600zQ0haAYSqRW0qib68DSSj7QfOaz6-s0F9c93EzDpVuMrmfh0nWm79Egvk-T3X75ZvKziZB1u8r2ENXiceUdhr3A_aZwiMyKEVzU0PjC_O_zeFcionE28tDlx3FuHtlbMj4Q1UGJVudXdTBNWtpxTek1Uoodx0oFxUDuR0s4ObmNr_VDnWrZ05ewLovmxJUy-On_UwJvfpBimsiTte2Dlu2hLX4hfl1Q6QyKDYiHNXy1du-UelQmUwvLv_YAT"/>
+                <img alt="Vinh Lan Hạ" src="/Img/VinhHaLong-LanHa/Vinh-Lan-Ha.png"/>
             </div>
             <div class="d-flex gap-3" style="height: 50%;">
                 <div class="gallery-item flex-grow-1">
-                    <img alt="Hang Sửng Sốt" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdcvai1ROVkTSzhZgVvGzZs6AaHduO2iH_kTmiljVRpN4Qx5tQDU78Y77EbglDLKVJ-kJhSw7d9TJpDWbaO9yJNB3W5PUvYijfZhO8UjRZwQplzkxX43ppvK57neQbQzRHH3fxRcZ40kjwVhAbUVjyy-CufT19_JD-e-rYZ_D_1sWKYVNwjzf5fZ0bSYEcGXrazK1zExGCCujXluGaR19dvt9f4Asid4tVJoGIkm6rzZe5YjcBsclP-eo7EeCHphWUeoHyxlp_flQk"/>
+                    <img alt="Đảo Ti Tốp" src="/Img/VinhHaLong-LanHa/Dao-Ti-Top.png"/>
                 </div>
                 <div class="view-all-card flex-grow-1">
                     <span class="fs-2 fw-bold">+18</span>
@@ -87,7 +87,7 @@
             </div>
 
             <h1 class="display-4 fw-extrabold mb-4">
-                Huyền Thoại Vịnh Hạ Long &amp; Lan Hạ: Di Sản Thiên Nhiên Thế Giới
+                Huyền Thoại Vịnh Hạ Long & Lan Hạ: Di Sản Thiên Nhiên Thế Giới
             </h1>
             <p class="lead text-muted mb-5">
                 Hành trình 3 ngày 2 đêm trên du thuyền 6 sao đưa bạn khám phá Vịnh Hạ Long — kỳ quan thiên nhiên thế giới với hơn 1.600 hòn đảo đá vôi sừng sững giữa làn nước xanh ngọc bích. Từ hang động kỳ bí triệu năm tuổi đến làng chài yên bình trên mặt nước, từ hoàng hôn đỏ rực trên vịnh đến bữa hải sản tươi sống ngay trên boong tàu.
@@ -169,38 +169,21 @@
                 </div>
 
                 <!-- Date Picker -->
-                <div class="input-group-custom" id="dateTrigger">
-                    <label class="input-label">Ngày khởi hành</label>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <input
-                            type="text"
-                            id="datePicker"
-                            placeholder="Chọn ngày"
-                            readonly
-                            style="
-                                border: none;
-                                outline: none;
-                                background: transparent;
-                                font-weight: 600;
-                                width: 100%;
-                                cursor: pointer;
-                                color: var(--on-surface-variant);
-                            "
-                        />
-                        <span class="material-symbols-outlined text-muted">calendar_today</span>
+                <div class="input-group-custom">
+                    <div class="input-label">Ngày khởi hành</div>
+                    <div class="d-flex justify-content-between align-items-center cursor-pointer">
+                        <span class="fw-semibold">Chọn ngày</span>
+                        <input type="date" id="datePicker" style="border: none; outline: none; background: transparent;">
                     </div>
                 </div>
 
-                <!-- Guest Counter -->
                 <div class="input-group-custom">
                     <label class="input-label">Số lượng khách</label>
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="d-flex align-items-center gap-3">
-                            <button class="btn btn-outline-secondary btn-sm rounded-circle d-flex align-items-center justify-content-center"
-                                    id="btnMinus" style="width: 32px; height: 32px;">−</button>
-                            <span class="fw-bold" id="guestCount">01</span>
-                            <button class="btn btn-outline-secondary btn-sm rounded-circle d-flex align-items-center justify-content-center"
-                                    id="btnPlus" style="width: 32px; height: 32px;">+</button>
+                            <button id="minusBtn" class="btn btn-outline-secondary btn-sm rounded-circle" style="width: 32px; height: 32px;">-</button>
+                            <span id="guestCount" class="fw-bold">1</span>
+                            <button id="plusBtn" class="btn btn-outline-secondary btn-sm rounded-circle" style="width: 32px; height: 32px;">+</button>
                         </div>
                         <span class="material-symbols-outlined text-muted">group</span>
                     </div>
@@ -209,19 +192,17 @@
                 <!-- Price Summary -->
                 <div class="mt-4">
                     <div class="d-flex justify-content-between small text-muted mb-2">
-                        <span>Người lớn (x<span id="adultCount">1</span>)</span>
-                        <span class="fw-bold text-dark"><span id="adultPrice">15.800.000</span>₫</span>
+                        <span id="guestText">Người lớn (x1)</span>
+                        <span id="guestPrice" class="fw-bold text-dark">15.800.000₫</span>
                     </div>
                     <div class="d-flex justify-content-between small text-muted mb-2">
                         <span>Phí dịch vụ</span>
-                        <span class="fw-bold text-dark">500.000₫</span>
+                        <span class="fw-bold text-dark" id="serviceFee">0₫</span>
                     </div>
                     <div class="tapered-divider"></div>
                     <div class="d-flex justify-content-between align-items-center">
                         <span class="h5 fw-bold mb-0">Tổng tiền</span>
-                        <span class="h3 fw-extrabold mb-0" style="color: var(--primary)">
-                            <span id="totalPriceDisplay">16.300.000</span>₫
-                        </span>
+                        <span id="totalPrice" class="h3 fw-extrabold mb-0" style="color: var(--primary)">15.800.000₫</span>
                     </div>
                 </div>
 
@@ -292,70 +273,64 @@
 <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/vn.js"></script>
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
+//Calendar
+    const dateInput = document.getElementById("datePicker");
+    const today = new Date().toISOString().split("T")[0];
+    dateInput.min = today;
 
-    const unitPrice = 15800000;
-    const serviceFee = 500000;
+    // Sửa con số này cho từng file: HaLong (4500000), Fansipan (2850000), HoiAn (1200000)
+    const pricePerPerson = 15800000; 
+    const serviceFee = 0;
     let count = 1;
-    let selectedDate = '';
 
-    function fmt(n) {
-        return n.toLocaleString('vi-VN');
-    }
+    const guestCount = document.getElementById("guestCount");
+    const guestText = document.getElementById("guestText");
+    const guestPrice = document.getElementById("guestPrice");
+    const totalPrice = document.getElementById("totalPrice");
+
+    function formatMoney(number) { return number.toLocaleString("vi-VN") + "₫"; }
 
     function updateUI() {
-        document.getElementById('guestCount').innerText = String(count).padStart(2, '0');
-        document.getElementById('adultCount').innerText = count;
-        const total = count * unitPrice + serviceFee;
-        document.getElementById('adultPrice').innerText = fmt(count * unitPrice);
-        document.getElementById('totalPriceDisplay').innerText = fmt(total);
-        document.getElementById('unitPriceDisplay').innerText = fmt(unitPrice);
+        let totalGuestPrice = count * pricePerPerson;
+        let total = totalGuestPrice + serviceFee;
+        if(guestCount) guestCount.innerText = count;
+        if(guestText) guestText.innerText = `Người lớn (x${count})`;
+        if(guestPrice) guestPrice.innerText = formatMoney(totalGuestPrice);
+        if(totalPrice) totalPrice.innerText = formatMoney(total);
     }
 
-    // Date Picker
-    const fp = flatpickr("#datePicker", {
-        minDate: "today",
-        dateFormat: "d/m/Y",
-        locale: "vn",
-        disableMobile: true,
-        onChange: function (selectedDates, dateStr) {
-            selectedDate = dateStr;
-            const input = document.getElementById("datePicker");
-            input.value = dateStr;
-            input.style.color = "var(--primary)";
-        }
-    });
+    document.getElementById("plusBtn").onclick = () => { count++; updateUI(); };
+    document.getElementById("minusBtn").onclick = () => { if (count > 1) { count--; updateUI(); } };
 
-    document.getElementById("dateTrigger").addEventListener("click", function () {
-        fp.open();
-    });
+    //Gửi đến file BookingForm
+    const bookBtn = document.getElementById("bookNowBtn");
 
-    // Guest counter
-    document.getElementById('btnPlus').onclick = function () {
-        count++;
-        updateUI();
-    };
-    document.getElementById('btnMinus').onclick = function () {
-        if (count > 1) { count--; updateUI(); }
-    };
+    bookBtn.onclick = function () {
 
-    // Book Now
-    document.getElementById('bookNowBtn').onclick = function () {
-        if (!selectedDate) {
+        const selectedDate = document.getElementById("datePicker").value;
+
+        if (selectedDate === "") {
             alert("Vui lòng chọn ngày khởi hành!");
             return;
         }
-        alert(
-            "Xác nhận đặt tour!\n" +
-            "Tour: Huyền Thoại Vịnh Hạ Long & Lan Hạ\n" +
-            "Ngày: " + selectedDate + "\n" +
-            "Số khách: " + count + "\n" +
-            "Tổng tiền: " + fmt(count * unitPrice + serviceFee) + "₫"
-        );
-    };
 
-    updateUI();
-});
+        let totalGuestPrice = count * pricePerPerson;
+        let total = totalGuestPrice + serviceFee;
+
+        const bookingData = {
+            image: "/Img/VinhHaLong-LanHa/Vinh-Lan-Ha.png",
+            title: "Huyền Thoại Vịnh Hạ Long & Lan Hạ: Di Sản Thiên Nhiên Thế Giới",
+            date: selectedDate,
+            guest: count,
+            price: totalGuestPrice,
+            fee: serviceFee,
+            total: total
+        };
+
+        localStorage.setItem("bookingData", JSON.stringify(bookingData));
+
+        window.location.href = "/BookingForm.html";
+    };
 </script>
 </body>
 </html>
