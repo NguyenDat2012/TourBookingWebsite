@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Du Thuyền Cao Cấp 5* Hạ Long</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="Styles/ListourChiTiet/HaLongTourDetails.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+        <div class="container-xxl">
+        <a class="navbar-brand" href="index.html">The Verdant Archive</a>
+        <div class="search-container d-none d-md-flex ms-4">
+            <span class="material-symbols-outlined text-muted" style="font-size: 18px">search</span>
+            <input placeholder="Tìm kiếm điểm đến..." type="text"/>
+        </div>
+        <button class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link active" href="ListTour.html">Destinations</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Experiences</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Journals</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Plan</a></li>
+            </ul>
+            <div class="d-flex align-items-center gap-3">
+                <a class="nav-link me-3 d-none d-lg-block" href="Login.html">Đăng nhập</a>
+                <a class="nav-link me-3 d-none d-lg-block" href="Register.html">Đăng ký</a>
+                <button class="btn btn-primary-custom shadow-sm">Book Now</button>
+            </div>
+        </div>
+    </div>
+    </nav>
+
+    <main class="container-xxl" style="padding-top: 100px;">
+        <section class="gallery-grid">
+            <div class="gallery-main">
+                <div class="gallery-item"><img alt="Ha Long" src="/Img/HaLongTour/HaLongTour.png"/></div>
+            </div>
+            <div class="gallery-side">
+                <div class="gallery-item" style="height: 50%;"><img alt="Cave" src="/Img/HaLongTour/HaLongCave.png"/></div>
+                <div class="gallery-item flex-grow-1" style="height: 50%;"><img alt="Kayak" src="/Img/HaLongTour/Kayak.png"/></div>
+            </div>
+        </section>
+
+        <div class="row g-5">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-extrabold mb-4">Du Thuyền Cao Cấp 5* Vịnh Hạ Long</h1>
+                <p class="lead text-muted mb-5">Khám phá kỳ quan thiên nhiên thế giới trên du thuyền đạt tiêu chuẩn quốc tế, tận hưởng không gian sang trọng giữa lòng di sản.</p>
+                <div class="mb-5">
+                    <h2 class="h3 fw-bold mb-4">Lịch trình chi tiết</h2>
+                    <div class="itinerary-item">
+                        <div class="itinerary-dot"></div><span class="day-label">Ngày 1</span>
+                        <h3 class="h4 fw-bold">Vịnh Lan Hạ - Chèo Kayak</h3>
+                        <p class="text-muted">Đón khách tại bến, làm thủ tục nhận phòng. Buổi chiều tham gia chèo thuyền Kayak tại khu vực hang Sáng Tối.</p>
+                    </div>
+                    <div class="itinerary-item border-0">
+                        <div class="itinerary-dot inactive"></div><span class="day-label">Ngày 2</span>
+                        <h3 class="h4 fw-bold">Hang Sửng Sốt - Đảo Ti Tốp</h3>
+                        <p class="text-muted">Tham quan hang động kỳ vĩ nhất vịnh và chinh phục đỉnh núi Ti Tốp để ngắm toàn cảnh di sản từ trên cao.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="booking-card">
+                <div class="d-flex justify-content-between align-items-end mb-4">
+                    <div>
+                        <span class="small text-muted d-block mb-1">Giá từ</span>
+                        <span class="h1 fw-extrabold mb-0" style="color: var(--primary)">4.500.000₫</span>
+                        <span class="small text-muted">/khách</span>
+                    </div>
+                    <div class="badge-discount">-10% Flash Sale</div>
+                </div>
+                <div class="input-group-custom">
+                    <label class="input-label">Ngày khởi hành</label>
+                    <div class="d-flex justify-content-between align-items-center cursor-pointer">
+                        <span class="fw-semibold">Chọn ngày</span>
+                        <input type="date" id="datePicker" style="border: none; outline: none; background: transparent;">
+                    </div>
+                </div>
+                <div class="input-group-custom">
+                    <label class="input-label">Số lượng khách</label>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center gap-3">
+                            <button id="minusBtn" class="btn btn-outline-secondary btn-sm rounded-circle" style="width: 32px; height: 32px;">-</button>
+                            <span id="guestCount" class="fw-bold">1</span>
+                            <button id="plusBtn" class="btn btn-outline-secondary btn-sm rounded-circle" style="width: 32px; height: 32px;">+</button>
+                        </div>
+                        <span class="material-symbols-outlined text-muted">group</span>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <div class="d-flex justify-content-between small text-muted mb-2">
+                        <span id="guestText">Người lớn (x1)</span>
+                        <span id="guestPrice" class="fw-bold text-dark">4.500.000₫</span>
+                    </div>
+                    <div class="d-flex justify-content-between small text-muted mb-2">
+                        <span>Phí dịch vụ</span>
+                        <span class="fw-bold text-dark" id="serviceFee">300.000₫</span>
+                    </div>
+                    <div class="tapered-divider"></div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="h5 fw-bold mb-0">Tổng tiền</span>
+                        <span id="totalPrice" class="h3 fw-extrabold mb-0" style="color: var(--primary)">4.800.000₫</span>
+                    </div>
+                </div>
+                <button id="bookNowBtn" class="btn btn-primary-custom w-100 py-3 mt-4 fs-5 shadow">
+                    Đặt ngay hôm nay
+                </button>
+                <p class="text-center mt-3 mb-0 small text-muted fw-medium">Đảm bảo giá tốt nhất &amp; Thanh toán an toàn</p>
+            </div>
+            <div class="mt-4 p-4 rounded-4 d-flex gap-3" style="background-color: var(--surface-container)">
+                <span class="material-symbols-outlined" style="color: var(--secondary); font-variation-settings: 'FILL' 1">verified_user</span>
+                <div>
+                    <h4 class="h6 fw-bold mb-1" style="color: var(--on-secondary-container)">Bảo hiểm du lịch trọn gói</h4>
+                    <p class="small mb-0" style="color: rgba(0, 70, 132, 0.8)">Mọi chuyến đi được bảo hiểm lên đến 100tr.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer - Giữ nguyên layout Hà Nội & TPHCM -->
+<footer class="py-5" style="background-color: var(--surface-container); border-top: 1px solid #eee;">
+    <div class="container-xxl">
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="h5 fw-bold mb-3" style="color: var(--primary)">The Verdant Archive</div>
+                <p class="small text-muted">Nâng tầm trải nghiệm du lịch di sản Việt Nam với những hành trình đậm chất nghệ thuật và tâm hồn.</p>
+            </div>
+            <div class="col-md-3 ms-auto">
+                <h6 class="small fw-bold text-uppercase mb-3" style="letter-spacing: 1px">Khám phá</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a class="footer-link text-decoration-none text-muted small" href="#">About Us</a></li>
+                    <li><a class="footer-link text-decoration-none text-muted small" href="#">Sustainable Travel</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h6 class="small fw-bold text-uppercase mb-3" style="letter-spacing: 1px">Pháp lý</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a class="footer-link text-decoration-none text-muted small" href="#">Terms of Service</a></li>
+                    <li><a class="footer-link text-decoration-none text-muted small" href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h6 class="small fw-bold text-uppercase mb-3" style="letter-spacing: 1px">Liên hệ</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-3"><a class="footer-link text-decoration-none text-muted small" href="#">Contact</a></li>
+                    <li class="d-flex gap-3">
+                        <span class="material-symbols-outlined" style="color: var(--primary); cursor: pointer">social_leaderboard</span>
+                        <span class="material-symbols-outlined" style="color: var(--primary); cursor: pointer">retweet</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-top mt-5 pt-4 text-center small text-muted">
+            © 2024 The Verdant Archive. Crafted for the Editorial Odyssey.
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Sửa con số này cho từng file: HaLong (4500000), Fansipan (2850000), HoiAn (1200000)
+    const pricePerPerson = 4500000; 
+    const serviceFee = 300000;
+    let count = 1;
+
+    const guestCount = document.getElementById("guestCount");
+    const guestText = document.getElementById("guestText");
+    const guestPrice = document.getElementById("guestPrice");
+    const totalPrice = document.getElementById("totalPrice");
+
+    function formatMoney(number) { return number.toLocaleString("vi-VN") + "₫"; }
+
+    function updateUI() {
+        let totalGuestPrice = count * pricePerPerson;
+        let total = totalGuestPrice + serviceFee;
+        if(guestCount) guestCount.innerText = count;
+        if(guestText) guestText.innerText = `Người lớn (x${count})`;
+        if(guestPrice) guestPrice.innerText = formatMoney(totalGuestPrice);
+        if(totalPrice) totalPrice.innerText = formatMoney(total);
+    }
+
+    document.getElementById("plusBtn").onclick = () => { count++; updateUI(); };
+    document.getElementById("minusBtn").onclick = () => { if (count > 1) { count--; updateUI(); } };
+</script>
+</body>
+</html>
