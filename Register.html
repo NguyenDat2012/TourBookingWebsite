@@ -57,7 +57,7 @@
                 <h1 class="font-headline mb-2" style="font-weight: 800; font-size: 2.5rem;">Đăng ký tài khoản</h1>
                 <p style="color: var(--text-variant);">Cùng kiến tạo những kỉ niệm đáng nhớ tại Việt Nam.</p>
             </div>
-            <form>
+            <form id="RegisterForm">
 <!-- Full Name -->
                 <div class="input-group-custom">
                     <label for="full_name">Họ và tên</label>
@@ -113,9 +113,9 @@
                 </div>
 <!-- Actions -->
                 <div class="mb-4">
-                    <a href="Login.html" class="btn btn-editorial" type="submit">Đăng ký ngay
+                    <button class="btn btn-editorial" type="submit">Đăng ký ngay
                         <span class="material-symbols-outlined">arrow_forward</span>
-                    </a>
+                    </button>
                 </div>
                 <div class="divider">
                     <span>Hoặc</span>
@@ -143,5 +143,43 @@
 </main>
 <!-- Bootstrap 5 JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="Script/main.js"></script>
+<script>
+
+    document.getElementById('RegisterForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const phone = document.getElementById('phone').value.trim();
+        const pass = document.getElementById('password').value;
+        const confirmPass = document.getElementById('confirm_password').value;
+        const fullName = document.getElementById('full_name').value;
+        const email = document.getElementById('email').value;
+
+        if (pass !== confirmPass) {
+            alert("Mật khẩu không khớp!");
+            return;
+        }
+
+        let users = JSON.parse(localStorage.getItem('users')) || {};
+
+        // KIỂM TRA KEY: Nếu số điện thoại đã tồn tại trong Object
+        if (users[phone]) {
+            alert("Số điện thoại này đã được đăng ký!");
+            return;
+        }
+
+        // GHI MỚI VÀO OBJECT VỚI KEY LÀ PHONE
+        users[phone] = {
+            password: pass,
+            role: 'user',
+            fullname: fullName,
+            email: email
+        };
+
+        localStorage.setItem('users', JSON.stringify(users));
+        alert("Đăng ký thành công! Hãy đăng nhập.");
+        window.location.href = "Login.html";
+    });
+</script>
 </body>
 </html>
