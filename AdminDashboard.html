@@ -1,277 +1,306 @@
 <!DOCTYPE html>
 
-<html lang="en"><head>
+<html lang="vi"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>The Verdant Archive - Bookings Management</title>
+<title>The Verdant Archive - Quản Trị Viên</title>
 <!-- Bootstrap 5 CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Typography -->
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700;900&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <style>
         :root {
-            --primary: #006954;
+            --primary-color: #006954;
             --primary-container: #00846b;
-            --secondary: #265fa2;
-            --tertiary: #71573c;
-            --background: #fcf9f4;
-            --surface: #fcf9f4;
-            --surface-container-low: #f6f3ee;
+            --on-primary-container: #f5fff9;
+            --background-color: #fcf9f4;
             --surface-container: #f0ede8;
-            --surface-container-highest: #e5e2dd;
-            --on-surface: #1c1c19;
-            --on-surface-variant: #3d4945;
-            --outline-variant: #bdc9c3;
-            --error: #ba1a1a;
-            --shadow-subtle: 0 20px 40px rgba(28,28,25,0.03);
-            --sidebar-width: 256px;
+            --surface-container-low: #f6f3ee;
+            --surface-container-lowest: #ffffff;
+            --text-on-surface: #1c1c19;
+            --text-outline: #6d7a74;
+            --error-color: #ba1a1a;
+            --secondary-color: #265fa2;
         }
 
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--background);
-            color: var(--on-surface);
+            background-color: var(--background-color);
+            color: var(--text-on-surface);
+            margin: 0;
             overflow-x: hidden;
         }
 
-        h1, h2, h3, .font-headline {
+        h1, h2, h3, h4, h5, .font-headline {
             font-family: 'Be Vietnam Pro', sans-serif;
         }
 
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            vertical-align: middle;
-        }
-
-        /* Sidebar Styling */
-        #sidebar {
-            width: var(--sidebar-width);
+        .sidebar {
+            width: 260px;
             height: 100vh;
             position: fixed;
             left: 0;
             top: 0;
-            background-color: var(--surface);
-            border-right: none;
-            box-shadow: 20px 0 40px rgba(28,28,25,0.03);
-            z-index: 1050;
+            background-color: var(--background-color);
+            border-right: 1px solid rgba(0,0,0,0.05);
+            z-index: 1000;
+            box-shadow: 10px 0 30px rgba(28, 28, 25, 0.03);
             padding: 2rem 1rem;
             display: flex;
             flex-direction: column;
         }
 
-        .nav-link {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 0.75rem 1rem;
-            color: #6c757d;
-            font-weight: 700;
-            font-family: 'Be Vietnam Pro';
-            border-radius: 0.5rem;
-            transition: all 0.2s;
-            text-decoration: none;
-            margin-bottom: 0.5rem;
-        }
-
-        .nav-link:hover {
-            background-color: rgba(0,0,0,0.05);
-            color: var(--primary);
-        }
-
-        .nav-link.active {
-            background-color: var(--primary);
-            color: white !important;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        /* Main Content Styling */
-        main {
-            margin-left: var(--sidebar-width);
+        .main-content {
+            margin-left: 260px;
             padding-top: 80px;
+            min-height: 100vh;
         }
 
-        /* Header Styling */
-        header {
+        .top-app-bar {
             position: fixed;
             top: 0;
             right: 0;
-            left: var(--sidebar-width);
+            width: calc(100% - 260px);
             height: 80px;
-            background: rgba(252, 249, 244, 0.8);
+            background-color: rgba(252, 249, 244, 0.8);
             backdrop-filter: blur(20px);
-            z-index: 1040;
+            z-index: 999;
             display: flex;
             align-items: center;
             padding: 0 2rem;
-            justify-content: space-between;
         }
 
-        .search-bar {
-            background: #f1f3f5;
-            border-radius: 50px;
-            padding: 0.5rem 1rem;
-            width: 384px;
+        .nav-link {
             display: flex;
             align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            color: var(--text-outline);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            transition: all 0.2s;
+            margin-bottom: 4px;
         }
 
-        .search-bar input {
-            background: transparent;
+        .nav-link.active {
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: 0 4px 12px rgba(0, 105, 84, 0.2);
+        }
+
+        .nav-link:hover:not(.active) {
+            background-color: rgba(0, 0, 0, 0.05);
+            color: var(--primary-color);
+        }
+
+        .btn-create-tour {
+            background-color: var(--primary-container);
+            color: var(--on-primary-container);
+            border-radius: 50px;
+            font-weight: 700;
+            padding: 12px;
+            margin: 20px 8px;
             border: none;
-            outline: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 0.875rem;
+        }
+
+        .search-container {
+            position: relative;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .search-input {
+            background-color: var(--surface-container-low);
+            border: none;
+            border-radius: 50px;
+            padding: 10px 20px 10px 45px;
             font-size: 0.875rem;
             width: 100%;
-            margin-left: 0.5rem;
         }
 
-        /* Card Bento Grid */
+        .search-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-outline);
+            font-size: 20px;
+        }
+
         .stat-card {
-            background: white;
-            border-radius: 2rem;
+            background-color: var(--surface-container-lowest);
+            border-radius: 24px;
             padding: 2rem;
             border: none;
-            box-shadow: var(--shadow-subtle);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
             position: relative;
             overflow: hidden;
             height: 100%;
         }
 
+        .stat-card.dark {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
         .stat-card .bg-icon {
             position: absolute;
-            right: -1rem;
-            bottom: -1rem;
+            right: -20px;
+            bottom: -20px;
             font-size: 120px;
             opacity: 0.05;
-            transition: transform 0.5s;
+            transform: rotate(15deg);
         }
 
-        .stat-card:hover .bg-icon {
-            transform: scale(1.1);
+        .stat-card.dark .bg-icon {
+            opacity: 0.15;
         }
 
-        /* Table Styling */
-        .content-card {
-            background: white;
-            border-radius: 2.5rem;
-            box-shadow: 0 20px 40px rgba(28,28,25,0.04);
+        .editorial-table {
+            background-color: var(--surface-container-lowest);
+            border-radius: 24px;
             overflow: hidden;
-            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
         }
 
-        .table thead th {
-            background-color: #f8f9fa;
-            text-transform: uppercase;
-            font-size: 0.7rem;
-            font-weight: 900;
-            letter-spacing: 0.05em;
-            color: #6c757d;
-            padding: 1.25rem 2rem;
-            border-bottom: 1px solid #f1f3f5;
-        }
-
-        .table tbody td {
-            padding: 1.5rem 2rem;
-            vertical-align: middle;
-            border-bottom: 1px solid #f8f9fa;
-        }
-
-        /* Badges */
-        .status-badge {
+        .editorial-table thead th {
+            background-color: var(--surface-container-low);
             font-size: 10px;
-            font-weight: 900;
-            padding: 0.25rem 0.75rem;
-            border-radius: 50px;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.35rem;
+            letter-spacing: 0.1em;
+            color: var(--text-outline);
+            padding: 1rem 1.5rem;
+            border: none;
         }
 
-        .badge-completed { background: #d1fae5; color: #065f46; }
-        .badge-pending { background: #fef3c7; color: #92400e; }
-        .badge-cancelled { background: #f3f4f6; color: #4b5563; }
+        .editorial-table tbody td {
+            padding: 1.25rem 1.5rem;
+            vertical-align: middle;
+            border-bottom: 1px solid rgba(0,0,0,0.03);
+            font-size: 0.875rem;
+        }
 
-        .dot { height: 6px; width: 6px; border-radius: 50%; display: inline-block; }
-        .dot-completed { background-color: #10b981; }
-        .dot-pending { background-color: #f59e0b; }
-        .dot-cancelled { background-color: #9ca3af; }
+        .badge-status {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 50px;
+        }
 
-        /* FAB */
+        .badge-paid { background-color: rgba(0, 105, 84, 0.1); color: var(--primary-color); }
+        .badge-pending { background-color: rgba(38, 95, 162, 0.1); color: var(--secondary-color); }
+        .badge-waiting { background-color: #ffdad6; color: #93000a; }
+
+        .experience-card {
+            border-radius: 24px;
+            overflow: hidden;
+            height: 400px;
+            position: relative;
+            color: white;
+        }
+
+        .experience-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .experience-card .overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(28,28,25,0.9), transparent);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .task-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            border-radius: 16px;
+            transition: background 0.2s;
+            cursor: pointer;
+        }
+
+        .task-item:hover {
+            background-color: var(--surface-container-low);
+        }
+
+        .task-check {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--text-outline);
+            border-radius: 4px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .task-check.checked {
+            border-color: var(--primary-color);
+            background-color: var(--primary-color);
+        }
+
+        .task-check.urgent {
+            border-color: var(--error-color);
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #bdc9c3, transparent);
+            margin: 0.5rem 0;
+        }
+
         .fab {
             position: fixed;
             bottom: 2rem;
             right: 2rem;
             width: 64px;
             height: 64px;
-            border-radius: 50%;
-            background-color: var(--primary);
+            background-color: var(--primary-color);
             color: white;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 20px 40px rgba(0, 105, 84, 0.3);
+            box-shadow: 0 10px 20px rgba(0, 105, 84, 0.3);
             border: none;
             transition: transform 0.2s;
-            z-index: 1000;
+            z-index: 1001;
         }
 
-        .fab:hover { transform: scale(1.05); color: white; }
-
-        /* Custom buttons/controls */
-        .btn-primary-custom {
-            background-color: var(--primary);
-            color: white;
-            border-radius: 50px;
-            font-weight: 700;
-            padding: 0.75rem 1.5rem;
-            border: none;
+        .fab:hover {
+            transform: scale(1.05);
         }
 
-        .filter-select {
-            background-color: var(--surface-container-low);
-            border: none;
-            border-radius: 50px;
-            padding: 20px;
-            font-weight: 700;
-            font-size: 0.875rem;
-        }
-
-        .pagination-custom .page-link {
-            border: none;
-            border-radius: 50% !important;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 2px;
-            font-weight: 700;
-            color: #1c1c19;
-            background: transparent;
-        }
-
-        .pagination-custom .page-item.active .page-link {
-            background-color: var(--primary);
-            color: white;
-        }
-
-        /* Avatar */
-        .avatar-circle {
+        .user-avatar {
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 0.75rem;
+            object-fit: cover;
+            border: 2px solid rgba(0, 105, 84, 0.1);
         }
+
+        .material-symbols-outlined {
+            vertical-align: middle;
+        }
+
         .dropdown-toggle::after {
             display: none !important;
         }
 
-        
+
         .dropdown-item:active {
             background-color: #fff1f0;
         }
@@ -279,284 +308,372 @@
         #userProfile button:hover {
             opacity: 0.8;
         }
+
+        @media (max-width: 991px) {
+            .sidebar { transform: translateX(-100%); }
+            .main-content { margin-left: 0; }
+            .top-app-bar { width: 100%; }
+        }
     </style>
 </head>
 <body>
 <!-- Sidebar -->
-<aside id="sidebar">
-<div class="mb-5 px-3">
-<h1 class="h5 mb-0 fw-black" style="color: var(--primary);">The Verdant Archive</h1>
-<p class="text-uppercase small text-muted fw-bold mb-0" style="letter-spacing: 0.1em; font-size: 10px;">Management Portal</p>
-</div>
-<nav class="nav flex-column flex-grow-1">
-<a class="nav-link" href="#">
-<span class="material-symbols-outlined">dashboard</span> Dashboard
+    <aside class="sidebar">
+        <div class="px-3 mb-5">
+            <h1 class="h5 fw-black text-primary mb-0" style="color: var(--primary-color) !important;">The Verdant Archive</h1>
+            <small class="text-uppercase fw-bold text-muted" style="letter-spacing: 2px; font-size: 10px;">Management Portal</small>
+        </div>
+        <nav class="flex-grow-1">
+            <a class="nav-link active" href="#">
+                <span class="material-symbols-outlined">dashboard</span>
+                Dashboard
             </a>
-<a class="nav-link" href="#">
-<span class="material-symbols-outlined">map</span> Manage Tours
+            <a class="nav-link" href="#">
+            <span class="material-symbols-outlined">map</span>
+                            Manage Tours
             </a>
-<a class="nav-link active" href="#">
-<span class="material-symbols-outlined">event_available</span> Bookings
+            <a class="nav-link" href="AdminTourBooking.html">
+                <span class="material-symbols-outlined">event_available</span>
+                Bookings
             </a>
-<a class="nav-link" href="#">
-<span class="material-symbols-outlined">group</span> Customer Relations
+            <a class="nav-link" href="#">
+                <span class="material-symbols-outlined">group</span>
+                            Customer Relations
             </a>
-<a class="nav-link" href="#">
-<span class="material-symbols-outlined">payments</span> Financial Reports
+            <a class="nav-link" href="#">
+                <span class="material-symbols-outlined">payments</span>
+                            Financial Reports
             </a>
-</nav>
-<div class="mt-auto border-top pt-4 px-2">
-<button class="btn btn-primary-custom w-100 mb-3 d-flex align-items-center justify-content-center gap-2">
-<span class="material-symbols-outlined small">add</span> Create New Tour
-            </button>
-<a class="nav-link py-2 small text-muted" href="#">
-<span class="material-symbols-outlined">settings</span> Settings
+        </nav>
+        <button class="btn btn-create-tour shadow-sm">
+            <span class="material-symbols-outlined" style="font-size: 18px;">add</span>
+                        Create New Tour
+        </button>
+        <div class="mt-4">
+            <a class="nav-link py-2 opacity-75" href="#">
+                <span class="material-symbols-outlined">settings</span>
+                            Settings
             </a>
-<a class="nav-link py-2 small text-muted" href="#">
-<span class="material-symbols-outlined">help_outline</span> Support
+            <a class="nav-link py-2 opacity-75" href="#">
+                <span class="material-symbols-outlined">help_outline</span>
+                                Support
             </a>
-</div>
-</aside>
-<main>
+        </div>
+    </aside>
 <!-- Header -->
-<header>
-<div class="search-bar">
-<span class="material-symbols-outlined text-muted">search</span>
-<input placeholder="Search bookings, customers..." type="text"/>
-</div>
-<div class="d-flex align-items-center gap-4">
-<div class="d-flex align-items-center gap-3 border-end pe-4">
-<button class="btn p-0 text-muted position-relative">
-<span class="material-symbols-outlined">notifications</span>
-<span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle"></span>
-</button>
-<button class="btn p-0 text-muted">
-<span class="material-symbols-outlined">dark_mode</span>
-</button>
-</div>
-<div class="dropdown" id="userProfile">
-    <button class="btn d-flex align-items-center gap-2 border-0 p-0 shadow-none dropdown-toggle" 
-            type="button" 
-            data-bs-toggle="dropdown">
-        <span class="material-symbols-outlined" style="font-size: 24px;">account_circle</span>
-        <span id="navUserName" class="fw-bold small" style="font-size: 13px;"></span>
-    </button>
+    <header class="top-app-bar">
+        <div class="d-flex align-items-center w-100 justify-content-between">
+            <div class="search-container">
+                <span class="material-symbols-outlined search-icon">search</span>
+                <input class="search-input" placeholder="Tìm kiếm hành trình, khách hàng..." type="text"/>
+            </div>
+            <div class="d-flex align-items-center gap-4">
+                <div class="d-flex gap-3">
+                    <button class="btn btn-link text-dark p-2 position-relative">
+                        <span class="material-symbols-outlined">notifications</span>
+                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle" style="margin-top: 12px; margin-left: -12px;"></span>
+                    </button>
+                    <button class="btn btn-link text-dark p-2">
+                        <span class="material-symbols-outlined">dark_mode</span>
+                    </button>
+                </div>
+                <div class="dropdown" id="userProfile">
+                    <button class="btn d-flex align-items-center gap-2 border-0 p-0 shadow-none dropdown-toggle" 
+                    type="button" 
+                    data-bs-toggle="dropdown">
+                        <span class="material-symbols-outlined" style="font-size: 24px;">account_circle</span>
+                        <span id="navUserName" class="fw-bold small" style="font-size: 13px;"></span>
+                    </button>
 
-    <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2">
-        <li>
-            <a class="dropdown-item py-2 text-danger d-flex align-items-center gap-2" 
-               href="javascript:void(0)" 
-               onclick="logout()">
-                <span class="material-symbols-outlined" style="font-size: 18px;">logout</span>
-                <span>Đăng xuất</span>
-            </a>
-        </li>
-    </ul>
-</div>
-</div>
-</header>
-<!-- Page Content -->
-<div class="container-fluid px-5 py-4">
-<!-- Stats Grid -->
-<div class="row g-4 mb-5">
-<div class="col-md-4">
-<div class="stat-card">
-<span class="text-uppercase fw-bold text-primary small d-block mb-2" style="letter-spacing: 0.1em; font-size: 10px;">Total Revenue</span>
-<h2 class="fw-black display-6 mb-3">$142,850</h2>
-<div class="d-flex align-items-center gap-1 text-success fw-bold small">
-<span class="material-symbols-outlined fs-6">trending_up</span> +12.5% vs last month
+                    <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2">
+                        <li>
+                            <a class="dropdown-item py-2 text-danger d-flex align-items-center gap-2" 
+                            href="javascript:void(0)" 
+                            onclick="logout()">
+                                <span class="material-symbols-outlined" style="font-size: 18px;">logout</span>
+                                <span>Đăng xuất</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+<!-- Main Content -->
+        <main class="main-content">
+            <div class="container-fluid px-lg-5 py-4">
+<!-- Welcome Header -->
+                <div class="row mb-5 align-items-end">
+                    <div class="col">
+                        <span class="text-primary text-uppercase fw-bold small" style="letter-spacing: 3px;">Tổng quan hệ thống</span>
+                        <h2 class="display-5 fw-black mt-2">Xin chào, <span class="text-primary" style="color: var(--primary-color) !important;">Quản trị viên</span>.</h2>
+                    </div>
+                    <div class="col-auto text-end pb-2">
+                        <p class="text-muted fw-medium mb-0" id="currentDate"></p>
+                    </div>
+                </div>
+<!-- Summary Cards -->
+                <div class="row g-4 mb-5">
+                    <div class="col-md-4">
+                        <div class="stat-card">
+                            <p class="text-uppercase fw-bold text-muted small mb-4" style="letter-spacing: 2px;">Doanh Thu Tháng</p>
+                            <h3 class="fw-black mb-1">240,500,000<small class="text-muted fw-normal" style="font-size: 14px;">VND</small></h3>
+                            <div class="d-flex align-items-center gap-1 text-primary small fw-bold">
+                                <span class="material-symbols-outlined" style="font-size: 18px;">trending_up</span>
+                                                        +12.4% so với tháng trước
+                            </div>
+                            <span class="material-symbols-outlined bg-icon">payments</span>
                         </div>
-<span class="material-symbols-outlined bg-icon">payments</span>
-</div>
-</div>
-<div class="col-md-4">
-<div class="stat-card">
-<span class="text-uppercase fw-bold text-secondary small d-block mb-2" style="letter-spacing: 0.1em; font-size: 10px;">Total Bookings</span>
-<h2 class="fw-black display-6 mb-3">1,284</h2>
-<div class="d-flex align-items-center gap-1 text-secondary fw-bold small">
-<span class="material-symbols-outlined fs-6">confirmation_number</span> 84 new this week
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stat-card" style="background-color: var(--surface-container);">
+                            <p class="text-uppercase fw-bold text-muted small mb-4" style="letter-spacing: 2px;">Tổng Lượt Đặt</p>
+                            <h3 class="fw-black mb-1">482</h3>
+                            <div class="d-flex align-items-center gap-1 text-secondary small fw-bold">
+                                <span class="material-symbols-outlined" style="font-size: 18px;">confirmation_number</span>
+                                                            86 chuyến khởi hành sắp tới
+                            </div>
+                            <span class="material-symbols-outlined bg-icon">travel_explore</span>
                         </div>
-<span class="material-symbols-outlined bg-icon">explore</span>
-</div>
-</div>
-<div class="col-md-4">
-<div class="stat-card">
-<span class="text-uppercase fw-bold text-tertiary small d-block mb-2" style="letter-spacing: 0.1em; font-size: 10px;">Pending Payments</span>
-<h2 class="fw-black display-6 mb-3">$8,420</h2>
-<div class="d-flex align-items-center gap-1 text-danger fw-bold small">
-<span class="material-symbols-outlined fs-6">schedule</span> 14 accounts overdue
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stat-card dark">
+                            <p class="text-uppercase fw-bold opacity-75 small mb-4" style="letter-spacing: 2px;">Thanh Toán Chờ</p>
+                            <h3 class="fw-black mb-1">18 Phiếu</h3>
+                            <div class="d-flex align-items-center gap-1 small fw-bold" style="color: #8df6d6;">
+                                <span class="material-symbols-outlined" style="font-size: 18px;">priority_high</span>
+                                                        Yêu cầu xử lý ngay lập tức
+                            </div>
+                            <span class="material-symbols-outlined bg-icon">hourglass_empty</span>
                         </div>
-<span class="material-symbols-outlined bg-icon">pending_actions</span>
-</div>
-</div>
-</div>
-<!-- Main Table Section -->
-<div class="content-card">
-<div class="p-3 d-flex flex-wrap align-items-center justify-content-between gap-2 border-bottom">
-    <div>
-        <h3 class="fw-bold h6 mb-0">Bookings Archive</h3>
-        <p class="text-muted" style="font-size: 11px;">1,284 travelers</p>
-    </div>
-    
-    <div class="d-flex align-items-center gap-2">
-        <select class="form-select form-select-sm filter-select" style="width: 200px; font-size: 12px;">
-            <option>All Status</option>
-            <option>Completed</option>
-            <option>Pending</option>
-        </select>
-
-        <button class="btn btn-sm border d-flex align-items-center gap-2" style="font-size: 12px; height: 32px;">
-            <span class="material-symbols-outlined" style="font-size: 16px;">calendar_today</span> 
-            Oct 1 - Oct 31
+                    </div>
+                </div>
+<!-- Main Interactive Section -->
+                <div class="row g-5">
+<!-- Bookings Archive -->
+                    <div class="col-lg-8">
+                        <div class="editorial-table h-100">
+                            <div class="p-4 d-flex justify-content-between align-items-center">
+                                <h4 class="fw-bold mb-0">Lưu Trữ Đặt Chỗ</h4>
+                                <a class="text-primary fw-bold small text-decoration-none text-uppercase" href="#" style="letter-spacing: 1px;">
+                                                                Xem tất cả <span class="material-symbols-outlined fs-6">arrow_forward</span>
+                                </a>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>Khách Hàng</th>
+                                            <th>Hành Trình</th>
+                                            <th>Khởi Hành</th>
+                                            <th>Tổng Chi</th>
+                                            <th>Trạng Thái</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="rounded-circle d-flex align-items-center justify-content-center fw-bold small" style="width: 32px; height: 32px; background: #d4e3ff; color: #001c3a;">NA</div>
+                                                    <span class="fw-bold">Nguyễn An</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-muted">Đà Nẵng - Ngũ Hành Sơn</td>
+                                            <td class="text-muted">15/06/2024</td>
+                                            <td class="fw-bold">12.5M</td>
+                                            <td><span class="badge-status badge-paid">Đã thanh toán</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="rounded-circle d-flex align-items-center justify-content-center fw-bold small" style="width: 32px; height: 32px; background: #ffddbb; color: #291803;">LM</div>
+                                                    <span class="fw-bold">Lê Minh</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-muted">Vịnh Hạ Long Luxury Cruise</td>
+                                            <td class="text-muted">18/06/2024</td>
+                                            <td class="fw-bold">25.0M</td>
+                                            <td><span class="badge-status badge-pending">Chờ xử lý</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="rounded-circle d-flex align-items-center justify-content-center fw-bold small" style="width: 32px; height: 32px; background: #e5e2dd; color: #3d4945;">TH</div>
+                                                    <span class="fw-bold">Trần Hòa</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-muted">Phố cổ Hội An &amp; Mỹ Sơn</td>
+                                            <td class="text-muted">20/06/2024</td>
+                                            <td class="fw-bold">8.2M</td>
+                                            <td><span class="badge-status badge-paid">Đã thanh toán</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="rounded-circle d-flex align-items-center justify-content-center fw-bold small" style="width: 32px; height: 32px; background: #ffdad6; color: #93000a;">PH</div>
+                                                    <span class="fw-bold">Phạm Hùng</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-muted">Chinh phục Đỉnh Fansipan</td>
+                                            <td class="text-muted">22/06/2024</td>
+                                            <td class="fw-bold">15.8M</td>
+                                            <td><span class="badge-status badge-waiting">Chờ thanh toán</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="rounded-circle d-flex align-items-center justify-content-center fw-bold small" style="width: 32px; height: 32px; background: #d4e3ff; color: #001c3a;">HY</div>
+                                                    <span class="fw-bold">Hoàng Yến</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-muted">Hà Nội - Nghìn Năm Văn Hiến</td>
+                                            <td class="text-muted">25/06/2024</td>
+                                            <td class="fw-bold">5.5M</td>
+                                            <td><span class="badge-status badge-paid">Đã thanh toán</span></td>
+                                        </tr>
+                                        </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+<!-- Featured Experience & Alerts -->
+                    <div class="col-lg-4">
+                        <div class="d-flex flex-column gap-4 h-100">
+                            <div class="experience-card shadow">
+                                <img alt="Sapa" src="Img/FansipanTour/Sapa.png"/>
+                                <div class="overlay">
+                                    <span class="badge bg-primary mb-3 align-self-start fw-bold text-uppercase py-1 px-3" style="font-size: 9px; letter-spacing: 1px;">Trải nghiệm nổi bật</span>
+                                    <h5 class="fw-black fs-3 mb-1">Vẻ đẹp Sapa</h5>
+                                    <p class="small opacity-75 mb-4">Tỉ lệ lấp đầy: 94% • Đánh giá: 4.9/5</p>
+                                    <button class="btn btn-light w-100 rounded-pill fw-bold py-2 shadow-sm">Quản lý hành trình</button>
+                                </div>
+                            </div>
+                            <div class="stat-card p-4" style="background-color: var(--surface-container-low);">
+                                <h6 class="text-uppercase fw-bold text-muted mb-4" style="font-size: 11px; letter-spacing: 2px;">Thông báo hệ thống</h6>
+                                <div class="d-flex flex-column gap-3">
+                                    <div class="d-flex gap-3 align-items-start">
+                                        <div class="rounded-circle bg-danger mt-1" style="width: 8px; height: 8px; flex-shrink: 0;"></div>
+                                        <div>
+                                            <p class="mb-0 fw-bold small">Yêu cầu hoàn tiền mới</p>
+                                            <p class="mb-0 text-muted" style="font-size: 11px;">Tour Đà Lạt - Mã #BK-2930</p>
+                                        </div>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="d-flex gap-3 align-items-start">
+                                        <div class="rounded-circle bg-secondary mt-1" style="width: 8px; height: 8px; flex-shrink: 0;"></div>
+                                        <div>
+                                            <p class="mb-0 fw-bold small">Cập nhật API Thanh Toán</p>
+                                            <p class="mb-0 text-muted" style="font-size: 11px;">Dự kiến bảo trì lúc 02:00 sáng</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!-- Bottom Trends and Tasks -->
+                <div class="row g-5 mt-4 pb-5">
+<!-- Chart Section -->
+                    <div class="col-lg-8">
+                        <div class="stat-card" style="background-color: var(--surface-container-low);">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h4 class="fw-bold mb-0">Biểu đồ xu hướng đặt tour</h4>
+                                <div class="d-flex gap-2">
+                                    <span class="badge-status badge-paid">Hàng tuần</span>
+                                    <span class="badge-status" style="background: var(--surface-container-high); color: var(--text-outline);">Hàng tháng</span>
+                                </div>
+                            </div>
+                            <div class="rounded-4 overflow-hidden border border-dashed text-center d-flex align-items-center justify-content-center bg-white" style="height: 300px;">
+                                <img alt="Chart Placeholder" class="img-fluid opacity-50 fill-img" src="Img/Admin/screen.png"/>
+                            </div>
+                        </div>
+                    </div>
+<!-- Tasks Section -->
+                    <div class="col-lg-4">
+                        <div class="stat-card d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h4 class="fw-bold mb-0">Công việc cần làm</h4>
+                                <button class="btn btn-link text-primary p-0"><span class="material-symbols-outlined">add</span></button>
+                            </div>
+                            <div class="flex-grow-1">
+                                <div class="task-item">
+                                    <div class="task-check checked d-flex align-items-center justify-content-center">
+                                        <span class="material-symbols-outlined text-white" style="font-size: 14px;">check</span>
+                                    </div>
+                                    <div>
+                                        <p class="mb-0 fw-bold small">Xác nhận tour Fansipan cho đoàn 10 người</p>
+                                        <p class="mb-0 text-muted" style="font-size: 10px;">Hạn chót: Hôm nay</p>
+                                    </div>
+                                </div>
+                                <div class="divider"></div>
+                                <div class="task-item">
+                                    <div class="task-check"></div>
+                                    <div>
+                                        <p class="mb-0 fw-bold small">Gửi lịch trình chi tiết tour Hội An - Đà Nẵng</p>
+                                        <p class="mb-0 text-muted" style="font-size: 10px;">Hạn chót: Ngày mai</p>
+                                    </div>
+                                </div>
+                                <div class="divider"></div>
+                                <div class="task-item">
+                                    <div class="task-check urgent d-flex align-items-center justify-content-center">
+                                        <span class="material-symbols-outlined text-danger" style="font-size: 14px;">priority_high</span>
+                                    </div>
+                                    <div>
+                                        <p class="mb-0 fw-bold small">Kiểm tra thanh toán cọc tour Hà Nội</p>
+                                        <p class="mb-0 text-danger fw-bold text-uppercase" style="font-size: 9px; letter-spacing: 1px;">Khẩn cấp</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="mt-4 text-decoration-none text-primary fw-bold small text-uppercase d-flex align-items-center gap-2" href="#" style="letter-spacing: 1px;">
+                            Xem toàn bộ danh sách <span class="material-symbols-outlined fs-6">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+<!-- Floating Action Button -->
+        <button class="fab" id="fabBtn">
+            <span class="material-symbols-outlined" style="font-size: 32px;">add</span>
         </button>
-
-        <button class="btn btn-primary-custom d-flex align-items-center justify-content-center p-0 rounded-circle" 
-                style="width: 32px; height: 32px;">
-            <span class="material-symbols-outlined" style="font-size: 18px;">filter_list</span>
-        </button>
-    </div>
-</div>
-<div class="table-responsive">
-<table class="table mb-0">
-<thead>
-<tr>
-<th>Customer</th>
-<th>Tour Experience</th>
-<th>Departure</th>
-<th class="text-end">Amount</th>
-<th>Payment Status</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<!-- Row 1 -->
-<tr>
-<td>
-<div class="d-flex align-items-center gap-3">
-<div class="avatar-circle" style="background: rgba(0, 105, 84, 0.1); color: var(--primary);">NH</div>
-<div>
-<div class="fw-bold small">Nguyen Hoang</div>
-<div class="text-muted" style="font-size: 11px;">hoang.n@example.com</div>
-</div>
-</div>
-</td>
-<td>
-<div class="d-flex align-items-center gap-3">
-<img alt="Ha Long Bay" class="rounded" height="32" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc3yn4v26kEhvKxy2nIAy2F3gUsYnRacDvcpyV8QzQw0luf_0l3DQ4UmSXLNvRPu040tgQJwAD-0DdUJj8wpfrUe-AWNbTf5utOG8Oo1Ugvw47JkCuvLfaAyiMvD1eEpH678LlbvFtdJEScGvhNQChyefCDW8nEUqMMH7osMGiQDPp4G85DmPyF95McwyqeFKe5uIOp5UMMos0SYf1KsIFfFUD1YUTZDweA-g2LlldpOMgJu54vrPdV6_KYEjzzu1mIeUx-fyfK9Ca" width="48"/>
-<span class="small fw-semibold">Ha Long Bay Sunset Cruise</span>
-</div>
-</td>
-<td>
-<div class="fw-bold small">Oct 24, 2023</div>
-<div class="text-muted text-uppercase" style="font-size: 9px; letter-spacing: 0.05em;">3 Days, 2 Nights</div>
-</td>
-<td class="text-end fw-bold small">$1,240</td>
-<td>
-<span class="status-badge badge-completed">
-<span class="dot dot-completed"></span> Completed
-                                    </span>
-</td>
-<td class="text-end">
-<button class="btn btn-link p-0 text-muted"><span class="material-symbols-outlined">more_vert</span></button>
-</td>
-</tr>
-<!-- Row 2 -->
-<tr>
-<td>
-<div class="d-flex align-items-center gap-3">
-<div class="avatar-circle" style="background: rgba(38, 95, 162, 0.1); color: var(--secondary);">EP</div>
-<div>
-<div class="fw-bold small">Elena Petrov</div>
-<div class="text-muted" style="font-size: 11px;">e.petrov@domain.com</div>
-</div>
-</div>
-</td>
-<td>
-<div class="d-flex align-items-center gap-3">
-<img alt="Sapa" class="rounded" height="32" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxge9eh78XBkutOMxOGc7cWZOvK5g87jAUQIlmMJKc5J2z2Ovffe8sc35mhaXPYXWf01YN5nbF6xH8eeXsgms-Frn-Hsi644pgxXn8ZAsCTYQpkbC_dug194W7yUYuBfvYAoxUHnYqT8KyqGO_z46Bvwu4Knk3T-ILig05rPzzsa-GSQzeQfRU7vndC2X1Itsrp5HC-rdK0Wo7UDmqjakP1JzlWzQD17AppZB3lQySy50QBKydie4Iy5ZgkELWNSiGubwii6FTAKcb" width="48"/>
-<span class="small fw-semibold">Highland Sapa Trekking</span>
-</div>
-</td>
-<td>
-<div class="fw-bold small">Oct 28, 2023</div>
-<div class="text-muted text-uppercase" style="font-size: 9px; letter-spacing: 0.05em;">5 Days, 4 Nights</div>
-</td>
-<td class="text-end fw-bold small">$2,150</td>
-<td>
-<span class="status-badge badge-pending">
-<span class="dot dot-pending"></span> Pending
-                                    </span>
-</td>
-<td class="text-end">
-<button class="btn btn-link p-0 text-muted"><span class="material-symbols-outlined">more_vert</span></button>
-</td>
-</tr>
-<!-- Row 3 -->
-<tr>
-<td>
-<div class="d-flex align-items-center gap-3">
-<div class="avatar-circle" style="background: rgba(113, 87, 60, 0.1); color: var(--tertiary);">JS</div>
-<div>
-<div class="fw-bold small">James Smith</div>
-<div class="text-muted" style="font-size: 11px;">jsmith@web.uk</div>
-</div>
-</div>
-</td>
-<td>
-<div class="d-flex align-items-center gap-3">
-<img alt="Hoi An" class="rounded" height="32" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-TQObyVKFEaVzgD0Na6E3a6r6zB0yw9e9fZWc03nDvwbhH8G1eb6DIYSN8wbmbOAbKw1aGuqjnozhkDOmhQJTnrzcmxx4K5zUaKNM9FZDf9HK1oawqHXBFs-SrkVWcxsNiPfO2jDrrxWhWjATFlcjCmiKhT-e6UrpnM9o2HLl849-9Xg8yVpiCVNdNIQGBTxr9ult4X0ymKEiWWj1Gr56wPOV10p4U5Egt2M6A62q7-Nr_OVX2g8rvVxmDEjRyInX0koC7eap1Mu5" width="48"/>
-<span class="small fw-semibold">Hoi An Culinary Walk</span>
-</div>
-</td>
-<td>
-<div class="fw-bold small">Oct 15, 2023</div>
-<div class="text-muted text-uppercase" style="font-size: 9px; letter-spacing: 0.05em;">1 Day Express</div>
-</td>
-<td class="text-end fw-bold small">$450</td>
-<td>
-<span class="status-badge badge-cancelled">
-<span class="dot dot-cancelled"></span> Cancelled
-                                    </span>
-</td>
-<td class="text-end">
-<button class="btn btn-link p-0 text-muted"><span class="material-symbols-outlined">more_vert</span></button>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<!-- Pagination Area -->
-<div class="p-4 bg-light border-top d-flex align-items-center justify-content-between">
-<p class="text-muted small mb-0 fw-medium">Showing 1 to 4 of 1,284 entries</p>
-<nav>
-<ul class="pagination pagination-custom mb-0 align-items-center">
-<li class="page-item"><a class="page-link" href="#"><span class="material-symbols-outlined">chevron_left</span></a></li>
-<li class="page-item active"><a class="page-link" href="#">1</a></li>
-<li class="page-item"><a class="page-link" href="#">2</a></li>
-<li class="page-item"><a class="page-link" href="#">3</a></li>
-<li class="page-item disabled px-2"><span class="text-muted small">...</span></li>
-<li class="page-item"><a class="page-link" href="#">321</a></li>
-<li class="page-item"><a class="page-link" href="#"><span class="material-symbols-outlined">chevron_right</span></a></li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
-<!-- FAB -->
-<button class="fab">
-<span class="material-symbols-outlined fs-2">add</span>
-</button>
-</main>
-<!-- Bootstrap 5 Bundle with Popper -->
+<!-- Bootstrap 5 Bundle JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="Script/main.js"></script>
+<!-- Vanilla JS Logic -->
+ <script src="Script/main.js"></script>
 <script>
-        // Vanilla JavaScript for basic interactions if needed
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', function(e) {
-                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-                this.classList.add('active');
-            });
+    const today = new Date();
+
+    const thu = [
+        "Chủ Nhật",
+        "Thứ Hai",
+        "Thứ Ba",
+        "Thứ Tư",
+        "Thứ Năm",
+        "Thứ Sáu",
+        "Thứ Bảy"
+    ];
+
+    let text = `${thu[today.getDay()]}, ${today.getDate()} Tháng ${today.getMonth()+1}, ${today.getFullYear()}`;
+    document.getElementById("currentDate").innerText = text;
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // FAB Animation on click
+        const fab = document.getElementById('fabBtn');
+        fab.addEventListener('mousedown', () => fab.style.transform = 'scale(0.95)');
+        fab.addEventListener('mouseup', () => fab.style.transform = 'scale(1.05)');
+        fab.addEventListener('mouseleave', () => fab.style.transform = 'scale(1)');
+
+
+        // Search input simple interaction
+        const searchInput = document.querySelector('.search-input');
+        searchInput.addEventListener('focus', function() {
+            this.style.boxShadow = '0 0 0 4px rgba(0, 105, 84, 0.1)';
+            this.style.backgroundColor = '#ffffff';
         });
-</script>
+        searchInput.addEventListener('blur', function() {
+            this.style.boxShadow = 'none';
+            this.style.backgroundColor = 'var(--surface-container-low)';
+        });
+    });
+    </script>
 </body></html>
