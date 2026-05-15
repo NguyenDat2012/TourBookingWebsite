@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title id="pageTitle">Chi tiết Tour</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="Styles/TourDetails.css" rel="stylesheet">
+</head>
+<body>
+     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+        <div class="container-xxl">
+        <a class="navbar-brand" href="index.html">The Verdant Archive</a>
+        <div class="search-container d-none d-md-flex ms-4">
+            <span class="material-symbols-outlined text-muted" style="font-size: 18px">search</span>
+            <input placeholder="Tìm kiếm điểm đến..." type="text"/>
+        </div>
+        <button class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link active" href="ListTour.html">Destinations</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Experiences</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Journals</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Plan</a></li>
+            </ul>
+            <div class="d-flex align-items-center gap-3">
+                <a class="nav-link me-3 d-none d-lg-block" href="Login.html">Đăng nhập</a>
+                <a class="nav-link me-3 d-none d-lg-block" href="Register.html">Đăng ký</a>
+                <button class="btn btn-primary-custom shadow-sm">Book Now</button>
+            </div>
+        </div>
+    </div>
+    </nav>
+
+    <main class="container-xxl" style="padding-top: 100px;">
+        <section class="gallery-grid">
+            <div class="gallery-main">
+                <div class="gallery-item"><img id="mainImg" src="" alt="Main Image"/></div>
+            </div>
+            <div class="gallery-side">
+                <div class="gallery-item" style="height: 50%;"><img id="subImg1" src="" alt="Sub 1"/></div>
+                <div class="gallery-item flex-grow-1" style="height: 50%;"><img id="subImg2" src="" alt="Sub 2"/></div>
+            </div>
+        </section>
+
+        <div class="row g-5 mt-2">
+            <div class="col-lg-8">
+                <h1 id="tourTitle" class="display-4 fw-extrabold mb-4"></h1>
+                <p id="tourDesc" class="lead text-muted mb-5"></p>
+                
+                <div id="itineraryContent">
+                    </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="booking-card">
+                    <span class="small text-muted d-block mb-1">Giá từ</span>
+                    <span id="tourPrice" class="h1 fw-extrabold" style="color: var(--primary)"></span>
+                    
+                    <div class="mt-4 p-3 border rounded bg-light">
+                        <small class="text-muted text-uppercase fw-bold">Ngày khởi hành mặc định</small>
+                        <div id="defaultDate" class="fw-bold text-dark"></div>
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-between mt-4">
+                        <span>Số lượng khách</span>
+                        <div class="d-flex align-items-center gap-3">
+                            <button class="btn btn-outline-secondary rounded-circle" id="minusBtn">-</button>
+                            <span id="guestCount" class="fw-bold">1</span>
+                            <button class="btn btn-outline-secondary rounded-circle" id="plusBtn">+</button>
+                        </div>
+                    </div>
+                    <div class="tapered-divider"></div>
+                    <div class="d-flex justify-content-between h4 fw-bold">
+                        <span>Tổng cộng</span>
+                        <span id="totalPrice" style="color: var(--primary)"></span>
+                    </div>
+                    <button class="btn btn-primary-custom w-100 py-3 mt-3">Xác nhận đặt tour</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-5" style="background-color: var(--surface-container); border-top: 1px solid #eee;">
+    <div class="container-xxl">
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="h5 fw-bold mb-3" style="color: var(--primary)">The Verdant Archive</div>
+                <p class="small text-muted">Nâng tầm trải nghiệm du lịch di sản Việt Nam với những hành trình đậm chất nghệ thuật và tâm hồn.</p>
+            </div>
+            <div class="col-md-3 ms-auto">
+                <h6 class="small fw-bold text-uppercase mb-3" style="letter-spacing: 1px">Khám phá</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a class="footer-link text-decoration-none text-muted small" href="#">About Us</a></li>
+                    <li><a class="footer-link text-decoration-none text-muted small" href="#">Sustainable Travel</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h6 class="small fw-bold text-uppercase mb-3" style="letter-spacing: 1px">Pháp lý</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a class="footer-link text-decoration-none text-muted small" href="#">Terms of Service</a></li>
+                    <li><a class="footer-link text-decoration-none text-muted small" href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h6 class="small fw-bold text-uppercase mb-3" style="letter-spacing: 1px">Liên hệ</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-3"><a class="footer-link text-decoration-none text-muted small" href="#">Contact</a></li>
+                    <li class="d-flex gap-3">
+                        <span class="material-symbols-outlined" style="color: var(--primary); cursor: pointer">social_leaderboard</span>
+                        <span class="material-symbols-outlined" style="color: var(--primary); cursor: pointer">retweet</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-top mt-5 pt-4 text-center small text-muted">
+            © 2024 The Verdant Archive. Crafted for the Editorial Odyssey.
+        </div>
+    </div>
+</footer>
+
+    <script>
+        const toursData = {
+            "ha-long": {
+                title: "Du Thuyền Cao Cấp Vịnh Hạ Long",
+                desc: "Trải nghiệm kỳ quan thiên nhiên thế giới trên du thuyền 5 sao sang trọng.",
+                price: 4500000,
+                imgs: ["/Img/HaLongTour/HaLongTour.png", "/Img/HaLongTour/HaLongCave.png", "/Img/HaLongTour/Kayak.png"],
+                itinerary: [
+                    { day: "Ngày 1", title: "Vịnh Lan Hạ", content: "Chèo thuyền Kayak và ngắm hoàng hôn trên biển." },
+                    { day: "Ngày 2", title: "Hang Sửng Sốt", content: "Khám phá hang động lớn nhất vịnh Hạ Long." }
+                ]
+            },
+            "fansipan": {
+                title: "Chinh Phục Đỉnh Fansipan",
+                desc: "Chạm tay vào nóc nhà Đông Dương và khám phá bản sắc Sapa.",
+                price: 2850000,
+                imgs: ["/Img/FansipanTour/FansipanTour.png", "/Img/FansipanTour/Sapa.png", "/Img/FansipanTour/MocChau.png"],
+                itinerary: [
+                    { day: "Ngày 1", title: "Bản Cát Cát", content: "Tìm hiểu văn hóa người H'Mông." },
+                    { day: "Ngày 2", title: "Đỉnh Fansipan", content: "Đi cáp treo chinh phục độ cao 3.143m." }
+                ]
+            },
+            "hoi-an": {
+                title: "Di Sản Phố Cổ Hội An",
+                desc: "Ngược dòng thời gian về với phố cổ đèn lồng rực rỡ.",
+                price: 1200000,
+                imgs: ["/Img/HoiAnTour/HoiAn.png", "/Img/HoiAnTour/MySon.png", "/Img/HoiAnTour/RungDuaBayMau.png"],
+                itinerary: [
+                    { day: "Sáng", title: "Thánh địa Mỹ Sơn", content: "Tham quan di tích Chăm Pa cổ." },
+                    { day: "Tối", title: "Phố cổ Hội An", content: "Thả hoa đăng trên sông Hoài." }
+                ]
+            },
+            "ha-noi": {
+                title: "Khám phá Hà Nội: Tinh hoa Thủ đô ngàn năm",
+                desc: "Hành trình tìm về dấu ấn lịch sử với Hồ Gươm cổ kính, Văn Miếu trang nghiêm và ẩm thực tinh tế của vùng đất kinh kỳ.",
+                price: 8500000,
+                imgs: ["/Img/HaNoiTour/Hoan-Kiem-Lake-Title.png", "/Img/HaNoiTour/van-mieu.png", "/Img/HaNoiTour/Ho-hoan-kiem.png"],
+                itinerary: [
+                    { day: "Ngày 1", title: "Dấu ấn Hoàng Thành", content: "Tham quan Lăng Bác, Hoàng Thành Thăng Long và thưởng thức Phở Hà Nội." },
+                    { day: "Ngày 2", title: "Văn Miếu - Hồ Tây", content: "Khám phá Văn Miếu Quốc Tử Giám và ngắm hoàng hôn bên Hồ Tây thơ mộng." }
+                ]
+            },
+            "da-nang": {
+                title: "Đà Nẵng: Thành phố của những cây cầu",
+                desc: "Trải nghiệm sự kết hợp hoàn hảo giữa biển xanh vẫy gọi và những công trình kiến trúc hiện đại bậc nhất miền Trung.",
+                price: 6200000,
+                imgs: ["/Img/DaNangTour/Cau-Vang-BaNaHill.png", "/Img/DaNangTour/Cau-Rong.png", "/Img/DaNangTour/Mi-Quang.png"],
+                itinerary: [
+                    { day: "Ngày 1", title: "Bà Nà Hills", content: "Chinh phục Cầu Vàng và làng Pháp giữa mây ngàn." },
+                    { day: "Ngày 2", title: "Bán đảo Sơn Trà", content: "Viếng chùa Linh Ứng và tắm biển Mỹ Khê - một trong những bãi biển đẹp nhất hành tinh." }
+                ]
+            },
+            "tphcm": {
+                title: "TP.HCM: Hòn ngọc Viễn Đông rực rỡ",
+                desc: "Hòa mình vào nhịp sống năng động của thành phố không ngủ, nơi giao thoa giữa nét cổ điển Pháp và sự hiện đại phương Đông.",
+                price: 5500000,
+                imgs: ["/Img/TPHCMTour/Nha_tho_Duc_Ba.png", "/Img/TPHCMTour/Dinh_Doc_Lap.png", "/Img/TPHCMTour/BiTexCo.png"],
+                itinerary: [
+                    { day: "Ngày 1", title: "Sài Gòn Di Sản", content: "Tham quan Nhà thờ Đức Bà, Bưu điện Thành phố và Dinh Độc Lập." },
+                    { day: "Ngày 2", title: "Sài Gòn Hiện Đại", content: "Khám phá Landmark 81, du thuyền trên sông Sài Gòn và phố đi bộ Nguyễn Huệ." }
+                ]
+            }
+        };
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const tourId = urlParams.get('id') || "ha-long";
+        const data = toursData[tourId];
+
+        if (data) {
+            document.getElementById('pageTitle').innerText = data.title;
+            document.getElementById('tourTitle').innerText = data.title;
+            document.getElementById('tourDesc').innerText = data.desc;
+            document.getElementById('tourPrice').innerText = data.price.toLocaleString() + "₫";
+            document.getElementById('mainImg').src = data.imgs[0];
+            document.getElementById('subImg1').src = data.imgs[1];
+            document.getElementById('subImg2').src = data.imgs[2];
+
+            // Đổ lịch trình (Giữ nguyên cấu trúc CSS cũ)
+            let itinHtml = "";
+            data.itinerary.forEach(item => {
+                itinHtml += `
+                    <div class="itinerary-item">
+                        <div class="itinerary-dot"></div>
+                        <h3 class="h4 fw-bold">${item.day}: ${item.title}</h3>
+                        <p class="text-muted">${item.content}</p>
+                    </div>`;
+            });
+            document.getElementById('itineraryContent').innerHTML = itinHtml;
+
+            // Ngày mặc định (7 ngày sau)
+            const d = new Date(); d.setDate(d.getDate() + 7);
+            document.getElementById('defaultDate').innerText = d.toLocaleDateString('vi-VN');
+
+            // Tính tiền
+            let count = 1;
+            const updateUI = () => {
+                document.getElementById('guestCount').innerText = count;
+                document.getElementById('totalPrice').innerText = (count * data.price).toLocaleString() + "₫";
+            };
+            document.getElementById('plusBtn').onclick = () => { count++; updateUI(); };
+            document.getElementById('minusBtn').onclick = () => { if(count > 1) { count--; updateUI(); } };
+            updateUI();
+        }
+    </script>
+</body>
+</html>
