@@ -1,14 +1,23 @@
 // 1. Tự động nạp dữ liệu từ JSON vào LocalStorage nếu chưa có
 async function initUserData() {
-    if (!localStorage.getItem('users')) {
-        try {
+    try {
+        // Thằng này lo phần users
+        if (!localStorage.getItem('users')) {
             const response = await fetch('data/users.json');
             const defaultUsers = await response.json();
             localStorage.setItem('users', JSON.stringify(defaultUsers));
-            console.log("Đã nạp dữ liệu mẫu từ JSON vào LocalStorage.");
-        } catch (error) {
-            console.error("Lỗi khi nạp file JSON:", error);
+            console.log("-> Đã nạp dữ liệu users thành công.");
         }
+
+        // Thằng này ĐỘC LẬP lo phần toursConfig
+        if (!localStorage.getItem('toursConfig')) {
+            const response1 = await fetch('data/toursConfig.json');
+            const defaultToursConfig = await response1.json();
+            localStorage.setItem('toursConfig', JSON.stringify(defaultToursConfig));
+            console.log("-> Đã nạp dữ liệu toursConfig thành công.");
+        }
+    } catch (error) {
+        console.error("Lỗi khi nạp file JSON:", error);
     }
 }
 

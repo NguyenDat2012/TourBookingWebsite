@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title id="pageTitle">Chi tiết Tour | The Verdant Archive</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="Styles/TourDetails.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container-xxl">
+        <a class="navbar-brand" href="index.html">The Verdant Archive</a>
+        <div class="search-container d-none d-md-flex ms-4">
+            <span class="material-symbols-outlined text-muted" style="font-size: 18px">search</span>
+            <input placeholder="Tìm kiếm điểm đến..." type="text"/>
+        </div>
+        <button class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link active" href="ListTour.html">Destinations</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Experiences</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Journals</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Plan</a></li>
+            </ul>
+            <div class="d-flex align-items-center gap-3">
+                <a class="nav-link me-3 d-none d-lg-block" href="Login.html">Đăng nhập</a>
+                <a class="nav-link me-3 d-none d-lg-block" href="Register.html">Đăng ký</a>
+                <button class="btn btn-primary-custom shadow-sm">Book Now</button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <main class="container-xxl" style="padding-top: 100px;">
+        <section class="gallery-grid">
+            <div class="gallery-main">
+                <div class="gallery-item"><img id="mainImg" src="" alt="Main Image"/></div>
+            </div>
+            <div class="gallery-side">
+                <div class="gallery-item" style="height: 50%;"><img id="subImg1" src="" alt="Sub 1"/></div>
+                <div class="gallery-item flex-grow-1" style="height: 50%;"><img id="subImg2" src="" alt="Sub 2"/></div>
+            </div>
+        </section>
+
+        <div class="row g-5 mt-2">
+            <div class="col-lg-8">
+                
+                <div id="tour-ha-noi" class="tour-content-block d-none">
+                    <h1 class="display-4 fw-extrabold mb-4">Khám phá Hà Nội: Tinh hoa Thủ đô ngàn năm văn hiến</h1>
+                    <p class="lead text-muted mb-5">
+                        Hành trình 5 ngày 4 đêm đưa bạn khám phá trọn vẹn vẻ đẹp cổ kính và hiện đại của Hà Nội. Từ những di tích lịch sử lâu đời, phố cổ nhộn nhịp đến ẩm thực đặc sắc và không gian văn hóa đậm chất Việt.
+                    </p>
+                    <div class="mb-5">
+                        <h2 class="h3 fw-bold d-flex align-items-center mb-4">
+                            Lịch trình chi tiết<span class="section-divider ms-4"></span>
+                        </h2>
+                        <div class="itinerary-item">
+                            <div class="itinerary-dot"></div>
+                            <span class="day-label">Ngày 1</span>
+                            <h3 class="h4 fw-bold">Đón sân bay Nội Bài – Khám phá Hồ Hoàn Kiếm</h3>
+                            <p class="text-muted">Xe và hướng dẫn viên đón khách tại sân bay Nội Bài, di chuyển về trung tâm Hà Nội. Nhận phòng khách sạn, nghỉ ngơi.</p>
+                            <div class="itinerary-card">
+                                <span class="material-symbols-outlined fs-1" style="color: var(--primary)">restaurant</span>
+                                <div>
+                                    <h4 class="h6 fw-bold mb-1">Trải nghiệm nổi bật</h4>
+                                    <p class="small text-muted mb-0">Khám phá phố cổ về đêm và thưởng thức ẩm thực Hà Nội.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-dot inactive"></div>
+                            <span class="day-label">Ngày 2</span>
+                            <h3 class="h4 fw-bold">Lăng Bác – Văn Miếu – Hồ Tây</h3>
+                            <p class="text-muted">Buổi sáng tham quan Lăng Chủ tịch Hồ Chí Minh, Phủ Chủ tịch, Chùa Một Cột. Tiếp tục đến Văn Miếu – Quốc Tử Giám, trường đại học đầu tiên của Việt Nam.<br>
+                            Buổi chiều tham quan Hồ Tây, chùa Trấn Quốc – ngôi chùa cổ kính nhất Hà Nội.</p>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-dot inactive"></div>
+                            <span class="day-label">Ngày 3</span>
+                            <h3 class="h4 fw-bold">Hà Nội – Vịnh Hạ Long</h3>
+                            <p class="text-muted">Khởi hành đi Hạ Long (khoảng 2.5–3 tiếng). Đến nơi, lên tàu tham quan vịnh, chiêm ngưỡng hàng nghìn đảo đá vôi kỳ vĩ. Tham gia các hoạt động: chèo kayak, tham quan hang động, tắm biển.</p>
+                        </div>
+                        <div class="itinerary-item border-0">
+                            <div class="itinerary-dot inactive"></div>
+                            <span class="day-label">Ngày 4</span>
+                            <h3 class="h4 fw-bold">Hạ Long – Hà Nội – Phố đi bộ</h3>
+                            <p class="text-muted">Buổi sáng ngắm bình minh trên vịnh, ăn sáng và quay về Hà Nội.<br>
+                            Buổi tối tự do khám phá phố đi bộ Hồ Gươm (nếu vào cuối tuần), xem biểu diễn nghệ thuật đường phố.</p>
+                        </div>
+                    </div>
+                    <div class="p-5 rounded-4" style="background-color: var(--surface-container)">
+                        <h3 class="h4 fw-bold mb-4 d-flex align-items-center gap-2">
+                            <span class="material-symbols-outlined" style="color: var(--primary)">info</span>Chính sách &amp; Lưu ý
+                        </h3>
+                        <div class="row">
+                            <div class="col-md-6 mb-4 mb-md-0">
+                                <h4 class="small fw-bold text-uppercase mb-3" style="letter-spacing: 1px">Chính sách hủy</h4>
+                                <ul class="list-unstyled small text-muted">
+                                    <li class="mb-2"><span class="fw-bold me-2" style="color: var(--primary)">•</span> Hủy trước 7 ngày: Hoàn tiền 100%.</li>
+                                    <li class="mb-2"><span class="fw-bold me-2" style="color: var(--primary)">•</span> Hủy từ 3-7 ngày: Hoàn tiền 50%.</li>
+                                    <li class="mb-2"><span class="fw-bold me-2" style="color: var(--primary)">•</span> Hủy dưới 3 ngày: Không hoàn tiền.</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h4 class="small fw-bold text-uppercase mb-3" style="letter-spacing: 1px">Lưu ý quan trọng</h4>
+                                <ul class="list-unstyled small text-muted">
+                                    <li class="mb-2"><span class="fw-bold me-2" style="color: var(--secondary)">•</span> Vui lòng mang theo CMND/CCCD.</li>
+                                    <li class="mb-2"><span class="fw-bold me-2" style="color: var(--secondary)">•</span> Trang phục lịch sự khi tham quan đền chùa.</li>
+                                    <li class="mb-2"><span class="fw-bold me-2" style="color: var(--secondary)">•</span> Lịch trình có thể thay đổi tùy thời tiết.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tour-da-nang" class="tour-content-block d-none">
+                    <h1 class="display-4 fw-extrabold mb-4">Khám phá Đà Nẵng: Thành phố của những cây cầu &amp; Biển xanh vẫy gọi</h1>
+                <p class="lead text-muted mb-5">
+                    Hành trình 5 ngày 4 đêm đưa bạn khám phá Đà Nẵng - thành phố bề ngoài hiện đại nhưng có tâm hồn bình dị của những cũ kỹ. Từ Cầu Rồng phun lửa về đêm đến Cầu Vàng huyền thoại ở Ba Nà Hills, từ bãi biển Mỹ Khê đẹp nhất hành tinh đến Phố cổ Hội An quyến rũ với đèn lồng lung linh.
+                </p>
+                <div class="mb-5">
+                    <h2 class="h3 fw-bold d-flex align-items-center mb-4">
+                        Lịch trình chi tiết<span class="section-divider ms-4"></span>
+                    </h2>
+                    <div class="itinerary-item">
+                        <div class="itinerary-dot"></div>
+                        <span class="day-label">Ngày 1</span>
+                        <h3 class="h4 fw-bold">Chào đón tới Đà Nẵng - Biển Mỹ Khê - Cầu Rồng về đêm</h3>
+                        <p class="text-muted">Bắt đầu hành trình tại sân bay Đà Nẵng. Buổi chiều thư giãn tại bãi biển Mỹ Khê - một trong sáu bãi biển quyến rũ nhất hành tinh. Buổi tối chiêm ngưỡng Cầu Rồng phun lửa và nước đầy ngoạn mục.</p>
+                        <div class="itinerary-card">
+                            <span class="material-symbols-outlined fs-1" style="color: var(--primary)">restaurant</span>
+                            <div>
+                                <h4 class="h6 fw-bold mb-1">Bữa tối đặc biệt</h4>
+                                <p class="small text-muted mb-0">Thưởng thức đặc sản Mì Quảng &amp; Bánh tráng cuốn thịt heo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="itinerary-item">
+                        <div class="itinerary-dot inactive"></div>
+                        <span class="day-label">Ngày 2</span>
+                        <h3 class="h4 fw-bold">Bà Nà Hills - Cầu Vàng - Làng Pháp</h3>
+                        <p class="text-muted">Trải nghiệm hệ thống cáp treo đạt nhiều kỷ lục thế giới. Check-in tại Cầu Vàng biểu tượng và lạc bước trong không gian kiến trúc Pháp cổ kính lãng mạn tại đỉnh núi Chúa.</p>
+                    </div>
+                    <div class="itinerary-item">
+                        <div class="itinerary-dot inactive"></div>
+                        <span class="day-label">Ngày 3</span>
+                        <h3 class="h4 fw-bold">Ngũ Hành Sơn - Chùa Linh Ứng - Bán đảo Sơn Trà</h3>
+                        <p class="text-muted">Khám phá hệ thống hang động kỳ bí tại Ngũ Hành Sơn. Sau đó di chuyển đến Bán đảo Sơn Trà viếng Chùa Linh Ứng và ngắm nhìn Tượng Phật Bà Quan Âm cao nhất Việt Nam hướng ra biển Đông.</p>
+                    </div>
+                    <div class="itinerary-item">
+                        <div class="itinerary-dot inactive"></div>
+                        <span class="day-label">Ngày 4</span>
+                        <h3 class="h4 fw-bold">Phố cổ Hội An - Rừng dừa Bảy Mẫu</h3>
+                        <p class="text-muted">Trải nghiệm chèo thúng tại Rừng dừa Bảy Mẫu đầy thú vị. Buổi chiều tối thả mình vào không gian lung linh hoa đăng của Phố cổ Hội An - Di sản văn hóa thế giới.</p>
+                    </div>
+                    <div class="itinerary-item border-0">
+                        <div class="itinerary-dot inactive"></div>
+                        <span class="day-label">Ngày 5</span>
+                        <h3 class="h4 fw-bold">Mua sắm Chợ Hàn - Tiễn đoàn</h3>
+                        <p class="text-muted">Ghé thăm Chợ Hàn sầm uất để mua đặc sản miền Trung làm quà. Xe tiễn quý khách ra sân bay, kết thúc hành trình khám phá thành phố đáng sống nhất Việt Nam.</p>
+                    </div>
+                    </div>
+                </div>
+
+                <div id="tour-tphcm" class="tour-content-block d-none">
+                    <h1 class="display-4 fw-extrabold mb-4">Khám phá TP.HCM: Hòn ngọc Viễn Đông rực rỡ</h1>
+                <p class="lead text-muted mb-5">
+                    Hành trình 4 ngày 3 đêm đưa bạn hòa mình vào nhịp sống sôi động bậc nhất Việt Nam. Từ những công trình kiến trúc Pháp di sản đến sự hiện đại của những tòa nhà chọc trời và ẩm thực đường phố đa dạng.
+                </p>
+                <div class="mb-5">
+                    <h2 class="h3 fw-bold d-flex align-items-center mb-4">
+                        Lịch trình chi tiết<span class="section-divider ms-4"></span>
+                    </h2>
+                    <div class="itinerary-item">
+                        <div class="itinerary-dot"></div>
+                        <span class="day-label">Ngày 1</span>
+                        <h3 class="h4 fw-bold">Đón khách – Sắc màu Sài Gòn về đêm</h3>
+                        <p class="text-muted">Đón đoàn tại sân bay Tân Sơn Nhất, di chuyển về nhận phòng khách sạn. Buổi tối trải nghiệm xe bus hai tầng ngắm phố phường và ăn tối bên sông Sài Gòn.</p>
+                        <div class="itinerary-card">
+                            <span class="material-symbols-outlined fs-1" style="color: var(--primary)">restaurant</span>
+                            <div>
+                                <h4 class="h6 fw-bold mb-1">Trải nghiệm nổi bật</h4>
+                                <p class="small text-muted mb-0">Thưởng thức ẩm thực miền Nam và ngắm Bitexco rực rỡ.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="itinerary-item">
+                        <div class="itinerary-dot inactive"></div>
+                        <span class="day-label">Ngày 2</span>
+                        <h3 class="h4 fw-bold">Dinh Độc Lập – Nhà thờ Đức Bà – Chợ Bến Thành</h3>
+                        <p class="text-muted">Tham quan các biểu tượng lịch sử: Dinh Độc Lập, Bưu điện Thành phố và Nhà thờ Đức Bà. Chiều tự do mua sắm đặc sản tại chợ Bến Thành.</p>
+                    </div>
+                    <div class="itinerary-item">
+                        <div class="itinerary-dot inactive"></div>
+                        <span class="day-label">Ngày 3</span>
+                        <h3 class="h4 fw-bold">Địa đạo Củ Chi – Đất thép thành đồng</h3>
+                        <p class="text-muted">Khởi hành đi Củ Chi (khoảng 1.5 - 2 tiếng). Khám phá hệ thống đường hầm bí ẩn dưới lòng đất và tìm hiểu về lịch sử hào hùng của vùng đất thép.</p>
+                    </div>
+                    <div class="itinerary-item border-0">
+                        <div class="itinerary-dot inactive"></div>
+                        <span class="day-label">Ngày 4</span>
+                        <h3 class="h4 fw-bold">Chợ Lớn – Tạm biệt Thành phố</h3>
+                        <p class="text-muted">Tham quan khu Chợ Lớn, chùa Bà Thiên Hậu. Thưởng thức điểm tâm phong cách người Hoa trước khi xe đưa đoàn ra sân bay trở về.</p>
+                    </div>
+                </div>
+
+                </div>
+
+                <div id="tour-ha-long" class="tour-content-block d-none">
+                    <h1 class="display-4 fw-extrabold mb-4">Du Thuyền Cao Cấp 5* Vịnh Hạ Long</h1>
+                    <p class="lead text-muted mb-5">
+                        Khám phá kỳ quan thiên nhiên thế giới trên du thuyền đạt tiêu chuẩn quốc tế, tận hưởng không gian sang trọng giữa lòng di sản.
+                    </p>
+                    <div class="mb-5">
+                        <h2 class="h3 fw-bold d-flex align-items-center mb-4">
+                            Lịch trình chi tiết<span class="section-divider ms-4"></span>
+                        </h2>
+                        <div class="itinerary-item">
+                            <div class="itinerary-dot"></div>
+                            <span class="day-label">Ngày 1</span>
+                            <h3 class="h4 fw-bold">Vịnh Lan Hạ - Chèo Kayak</h3>
+                            <p class="text-muted">Đón khách tại bến, làm thủ tục nhận phòng. Buổi chiều tham gia chèo thuyền Kayak tại khu vực hang Sáng Tối.</p>
+                        </div>
+                        <div class="itinerary-item border-0">
+                            <div class="itinerary-dot inactive"></div>
+                            <span class="day-label">Ngày 2</span>
+                            <h3 class="h4 fw-bold">Hang Sửng Sốt - Đảo Ti Tốp</h3>
+                            <p class="text-muted">Tham quan hang động kỳ vĩ nhất vịnh và chinh phục đỉnh núi Ti Tốp để ngắm toàn cảnh di sản từ trên cao.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tour-hoi-an" class="tour-content-block d-none">
+                    <h1 class="display-4 fw-extrabold mb-4">Khám Phá Phố Cổ Hội An & Mỹ Sơn</h1>
+                    <p class="lead text-muted mb-5">
+                        Hành trình tìm về những giá trị văn hóa ngàn năm tại Quảng Nam, từ đền tháp Chăm Pa đến phố cổ rực rỡ đèn lồng.
+                    </p>
+                    <div class="mb-5">
+                        <h2 class="h3 fw-bold d-flex align-items-center mb-4">
+                            Lịch trình chi tiết<span class="section-divider ms-4"></span>
+                        </h2>
+                        <div class="itinerary-item">
+                            <div class="itinerary-dot"></div>
+                            <span class="day-label">Sáng</span>
+                            <h3 class="h4 fw-bold">Thánh địa Mỹ Sơn</h3>
+                            <p class="text-muted">Tham quan quần thể đền tháp Chăm Pa cổ kính giữa thung lũng xanh mướt.</p>
+                        </div>
+                        <div class="itinerary-item border-0">
+                            <div class="itinerary-dot inactive"></div>
+                            <span class="day-label">Chiều</span>
+                            <h3 class="h4 fw-bold">Phố Cổ Hội An</h3>
+                            <p class="text-muted">Dạo bước qua những con phố nhỏ, ngắm Chùa Cầu và trải nghiệm thả hoa đăng trên sông Hoài.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tour-fansipan" class="tour-content-block d-none">
+                    <h1 class="display-4 fw-extrabold mb-4">Chinh Phục Đỉnh Fansipan & Bản Cát Cát</h1>
+                    <p class="lead text-muted mb-5">
+                        Chạm tay vào "Nóc nhà Đông Dương" và trải nghiệm nét đẹp văn hóa vùng cao độc đáo tại Sapa.
+                    </p>
+                    <div class="mb-5">
+                        <h2 class="h3 fw-bold d-flex align-items-center mb-4">
+                            Lịch trình chi tiết<span class="section-divider ms-4"></span>
+                        </h2>
+                        <div class="itinerary-item">
+                            <div class="itinerary-dot"></div>
+                            <span class="day-label">Ngày 1</span>
+                            <h3 class="h4 fw-bold">Sapa - Bản Cát Cát</h3>
+                            <p class="text-muted">Tham quan bản làng cổ kính của người H'Mông, tìm hiểu nghề dệt vải và ngắm thác nước tuyệt đẹp.</p>
+                        </div>
+                        <div class="itinerary-item border-0">
+                            <div class="itinerary-dot inactive"></div>
+                            <span class="day-label">Ngày 2</span>
+                            <h3 class="h4 fw-bold">Cáp Treo Fansipan</h3>
+                            <p class="text-muted">Vượt mây bằng cáp treo hiện đại nhất thế giới để chinh phục đỉnh núi cao 3.143m.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+            <div class="booking-card">
+                <div class="d-flex justify-content-between align-items-end mb-4">
+                    <div>
+                        <span class="small text-muted d-block mb-1">Giá từ</span>
+                        <span class="h1 fw-extrabold mb-0" style="color: var(--primary)">8.500.000₫</span>
+                        <span class="small text-muted">/khách</span>
+                    </div>
+                    <div class="badge-discount">-15% Early Bird</div>
+                </div>
+                <div class="input-group-custom">
+                    <label class="input-label">Ngày khởi hành</label>
+                    <div class="d-flex justify-content-between align-items-center cursor-pointer">
+                        <span class="fw-semibold">Chọn ngày</span>
+                        <input type="date" id="datePicker" style="border: none; outline: none; background: transparent;">
+                    </div>
+                </div>
+                <div class="input-group-custom">
+                    <label class="input-label">Số lượng khách</label>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center gap-3">
+                            <button id="minusBtn" class="btn btn-outline-secondary btn-sm rounded-circle" style="width: 32px; height: 32px;">-</button>
+                            <span id="guestCount" class="fw-bold">1</span>
+                            <button id="plusBtn" class="btn btn-outline-secondary btn-sm rounded-circle" style="width: 32px; height: 32px;">+</button>
+                        </div>
+                        <span class="material-symbols-outlined text-muted">group</span>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <div class="d-flex justify-content-between small text-muted mb-2">
+                        <span id="guestText">Người lớn (x1)</span>
+                        <span id="guestPrice" class="fw-bold text-dark">8.500.000₫</span>
+                    </div>
+
+                    <div class="d-flex justify-content-between small text-muted mb-2">
+                        <span>Phí dịch vụ</span>
+                        <span class="fw-bold text-dark" id="serviceFee">500.000₫</span>
+                    </div>
+
+                    <div class="tapered-divider"></div>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="h5 fw-bold mb-0">Tổng tiền</span>
+                        <span id="totalPrice" class="h3 fw-extrabold mb-0" style="color: var(--primary)">9.000.000₫</span>
+                    </div>
+                </div>
+                <button id="bookNowBtn" class="btn btn-primary-custom w-100 py-3 mt-4 fs-5 shadow">
+                    Đặt ngay hôm nay
+                </button>
+                <p class="text-center mt-3 mb-0 small text-muted fw-medium">Đảm bảo giá tốt nhất &amp; Thanh toán an toàn</p>
+            </div>
+            <div class="mt-4 p-4 rounded-4 d-flex gap-3" style="background-color: rgba(38, 95, 162, 0.05)">
+                <span class="material-symbols-outlined" style="color: var(--secondary); font-variation-settings: 'FILL' 1">verified_user</span>
+                <div>
+                    <h4 class="h6 fw-bold mb-1" style="color: var(--on-secondary-container)">Bảo hiểm du lịch trọn gói</h4>
+                    <p class="small mb-0" style="color: rgba(0, 70, 132, 0.8)">Mọi chuyến đi được bảo hiểm lên đến 100tr.</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <footer>
+    <div class="container-xxl">
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="h5 fw-bold mb-3" style="color: var(--primary)">The Verdant Archive</div>
+                <p class="small text-muted">Nâng tầm trải nghiệm du lịch di sản Việt Nam với những hành trình đậm chất nghệ thuật và tâm hồn.</p>
+            </div>
+            <div class="col-md-3 ms-auto">
+                <h6 class="small fw-bold text-uppercase mb-3" style="letter-spacing: 1px">Khám phá</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a class="footer-link" href="#">About Us</a></li>
+                    <li><a class="footer-link" href="#">Sustainable Travel</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h6 class="small fw-bold text-uppercase mb-3" style="letter-spacing: 1px">Pháp lý</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a class="footer-link" href="#">Terms of Service</a></li>
+                    <li><a class="footer-link" href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h6 class="small fw-bold text-uppercase mb-3" style="letter-spacing: 1px">Liên hệ</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-3"><a class="footer-link" href="#">Contact</a></li>
+                    <li class="d-flex gap-3">
+                        <span class="material-symbols-outlined" style="color: var(--primary); cursor: pointer">social_leaderboard</span>
+                        <span class="material-symbols-outlined" style="color: var(--primary); cursor: pointer">retweet</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-top mt-5 pt-4 text-center small text-muted">
+            © 2024 The Verdant Archive. Crafted for the Editorial Odyssey.
+        </div>
+    </div>
+</footer>
+<script src="Script/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    // 1. Cấu hình Dữ liệu Động CHÍNH XÁC theo file gốc của từng tour
+    const toursConfig = JSON.parse(localStorage.getItem('toursConfig')) || {};
+
+    // 2. Lấy ID từ URL (?id=da-nang), mặc định nếu gõ trực tiếp file là ha-noi
+    const urlParams = new URLSearchParams(window.location.search);
+    const tourId = urlParams.get('id') || "ha-noi"; 
+    const config = toursConfig[tourId];
+
+    if (config) {
+        // [Ẩn/Hiện Nội dung] Kích hoạt hiển thị khối nội dung chữ tương ứng
+        const targetBlock = document.getElementById("tour-" + tourId);
+        if (targetBlock) {
+            targetBlock.classList.remove("d-none");
+        }
+
+        // [Gallery Ảnh] Đổi 3 hình ảnh động theo tour được chọn
+        if(document.getElementById('mainImg')) document.getElementById('mainImg').src = config.imgs[0];
+        if(document.getElementById('subImg1')) document.getElementById('subImg1').src = config.imgs[1];
+        if(document.getElementById('subImg2')) document.getElementById('subImg2').src = config.imgs[2];
+
+        // [Lịch chọn ngày] Giới hạn ngày chọn tối thiểu là ngày hôm nay
+        const dateInput = document.getElementById("datePicker");
+        if (dateInput) {
+            const today = new Date().toISOString().split("T")[0];
+            dateInput.min = today;
+        }
+
+        // 3. Khởi tạo các biến tính toán lấy ĐỘNG từ object config ra (Không gán cứng số nữa)
+        let count = 1;
+        const pricePerPerson = config.price;
+        const serviceFee = config.serviceFee;
+
+        // Lấy các thẻ hiển thị trong thẻ booking-card của ông
+        const guestCount = document.getElementById("guestCount");
+        const guestText = document.getElementById("guestText");
+        const guestPrice = document.getElementById("guestPrice");
+        const serviceFeeDisplay = document.getElementById("serviceFee");
+        const totalPrice = document.getElementById("totalPrice");
+        const mainPriceDisplay = document.querySelector(".booking-card .h1.fw-extrabold");
+
+        // Hàm format tiền tệ VNĐ chuẩn
+        function formatMoney(number) {
+            return number.toLocaleString("vi-VN") + "₫";
+        }
+
+        // Hàm cập nhật giao diện tính toán tiền
+        function updateUI() {
+            let totalGuestPrice = count * pricePerPerson;
+            let total = totalGuestPrice + serviceFee;
+
+            if (guestCount) guestCount.innerText = count;
+            if (guestText) guestText.innerText = `Người lớn (x${count})`;
+            if (guestPrice) guestPrice.innerText = formatMoney(totalGuestPrice);
+            if (serviceFeeDisplay) serviceFeeDisplay.innerText = formatMoney(serviceFee);
+            if (totalPrice) totalPrice.innerText = formatMoney(total);
+            
+            // Cập nhật lại ô "Giá từ" ở trên đầu để nó không bị kẹt ở chữ 8.500.000₫ ban đầu
+            if (mainPriceDisplay) mainPriceDisplay.innerText = formatMoney(pricePerPerson);
+        }
+
+        // 4. Đăng ký sự kiện click cho các nút cộng trừ số lượng khách
+        const plusBtn = document.getElementById("plusBtn");
+        const minusBtn = document.getElementById("minusBtn");
+
+        if (plusBtn) {
+            plusBtn.onclick = function () {
+                count++;
+                updateUI();
+            };
+        }
+
+        if (minusBtn) {
+            minusBtn.onclick = function () {
+                if (count > 1) {
+                    count--;
+                    updateUI();
+                }
+            };
+        }
+
+        // Chạy cập nhật giao diện lần đầu ngay khi tải trang để render giá chuẩn của tour đó
+        updateUI();
+
+        // 5. Xử lý logic gửi dữ liệu đi đến file BookingForm.html khi bấm "Đặt ngay hôm nay"
+        const bookBtn = document.getElementById("bookNowBtn");
+
+        if (bookBtn) {
+            bookBtn.onclick = function () {
+                const selectedDate = document.getElementById("datePicker").value;
+
+                if (selectedDate === "") {
+                    alert("Vui lòng chọn ngày khởi hành!");
+                    return;
+                }
+
+                let totalGuestPrice = count * pricePerPerson;
+                let total = totalGuestPrice + serviceFee;
+
+                const bookingData = {
+                    image: config.imgs[0], 
+                    title: config.title,   
+                    date: selectedDate,
+                    guest: count,
+                    price: totalGuestPrice,
+                    fee: serviceFee,
+                    total: total
+                };
+
+                // Lưu dữ liệu động này vào LocalStorage và chuyển trang
+                localStorage.setItem("bookingData", JSON.stringify(bookingData));
+                window.location.href = "BookingForm.html";
+            };
+        }
+    } else {
+        alert("Không tìm thấy dữ liệu tour phù hợp!");
+        window.location.href = "index.html";
+    }
+});
+    </script>
+</body>
+</html>
