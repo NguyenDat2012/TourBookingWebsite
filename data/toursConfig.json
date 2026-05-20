@@ -1,0 +1,38 @@
+{
+    "ha-noi": { 
+            "price": 8500000, 
+            "serviceFee": 500000,
+            "title": "Khám phá Hà Nội: Tinh hoa Thủ đô ngàn năm văn hiến",
+            "imgs": ["/Img/HaNoiTour/Hoan-Kiem-Lake-Title.png", "/Img/HaNoiTour/Van-Mieu.png", "/Img/HaNoiTour/Ho-hoan-kiem.png"] 
+        },
+    "da-nang": { 
+        "price": 6200000, 
+        "serviceFee": 500000, 
+        "title": "Khám phá Đà Nẵng: Thành phố của những cây cầu và Biển xanh vẫy gọi",
+        "imgs": ["/Img/DaNangTour/Dragon-Bridge-Title.png", "/Img/DaNangTour/Cau-Vang-BaNaHill.png", "/Img/DaNangTour/Mi-Quang.png"] 
+    },
+    "tphcm": { 
+        "price": 5500000, 
+        "serviceFee": 500000, 
+        "title": "Khám phá TP.HCM: Hòn ngọc Viễn Đông rực rỡ",
+        "imgs": ["/Img/TPHCMTour/Nha_tho_Duc_Ba.png", "/Img/TPHCMTour/Dinh_Doc_Lap.png", "/Img/TPHCMTour/BiTexCo.png"] 
+    },
+    "ha-long": { 
+        "price": 4500000, 
+        "serviceFee": 500000, 
+        "tile": "Du Thuyền Cao Cấp 5* Vịnh Hạ Long",
+        "imgs": ["/Img/HaLongTour/HaLongTour.png", "/Img/HaLongTour/HaLongCave.png", "/Img/HaLongTour/Kayak.png"] 
+    },
+    "hoi-an": { 
+        "price": 1200000, 
+        "serviceFee": 500000, 
+        "title": "Khám Phá Phố Cổ Hội An & Mỹ Sơn",
+        "imgs": ["/Img/HoiAnTour/HoiAn.png", "/Img/HoiAnTour/MySon.png", "/Img/HoiAnTour/RungDuaBayMau.png"] 
+    },
+    "fansipan": { 
+        "price": 2850000, 
+        "serviceFee": 500000, 
+        "title": "Chinh Phục Đỉnh Fansipan & Bản Cát Cát",
+        "imgs": ["/Img/FansipanTour/FansipanTour.png", "/Img/FansipanTour/Sapa.png", "/Img/FansipanTour/MocChau.png"] 
+    }
+}

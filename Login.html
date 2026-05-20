@@ -42,8 +42,9 @@
             <p class="text-muted mb-5">Đăng nhập vào nhật ký hành trình của bạn.</p>
             <form id="loginForm">
                 <div class="mb-4">
-                    <label class="label-caps" for="email">Địa chỉ Email</label>
-                    <input class="form-control" id="email" placeholder="name@example.com" required="" type="email"/>
+                    <label class="label-caps" for="phone">Số điện thoại</label>
+                    <input class="form-control" id="phone" placeholder="+84xxxxxxxxx" required="" type="tel"/>
+                    <div id="loginFeedback" class="text-danger small mt-2 d-none"></div>
                 </div>
                 <div class="mb-4">
                     <div class="d-flex justify-content-between align-items-center mb-1">
@@ -84,25 +85,50 @@
 <div style="position: fixed; bottom: 0; left: 0; z-index: -1; width: 400px; height: 400px; background: rgba(38, 95, 162, 0.05); border-radius: 50%; filter: blur(100px);"></div>
 <!-- Bootstrap 5 JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="Script/main.js"></script>
 <script>
-        // Vanilla JS Form Handling
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
+        document.getElementById('loginForm').addEventListener('submit', async function(e) {
             e.preventDefault();
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
             
-            console.log('Login attempt with:', email);
-            // Basic animation feedback
+            const phone = document.getElementById('phone').value.trim();
+            const pass = document.getElementById('password').value;
+            const feedback = document.getElementById('loginFeedback');
             const btn = this.querySelector('button[type="submit"]');
+
+            // Hiệu ứng loading
             const originalText = btn.innerHTML;
-            btn.innerHTML = 'Đang xử lý...';
+            btn.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Đang xác thực...';
             btn.disabled = true;
-            
+            feedback.classList.add('d-none');
+
+            // Giả lập thời gian xử lý mạng nhịp nhàng
             setTimeout(() => {
-                alert('Chức năng đăng nhập đang được phát triển!');
-                btn.innerHTML = originalText;
-                btn.disabled = false;
-            }, 1000);
+                const users = JSON.parse(localStorage.getItem('users')) || {};
+                const userData = users[phone];
+
+                if (userData && userData.password === pass) {
+                    // ĐĂNG NHẬP THÀNH CÔNG
+                    const now = new Date().getTime();//Lấy thời gian đăng nhập hiện tại
+                    localStorage.setItem('currentUser', JSON.stringify({ phone: phone, ...userData, loginTime: now }));
+                    
+                    if (userData.role === 'admin') {
+                        window.location.href = "AdminDashboard.html";
+                    } else {
+                        window.location.href = "index.html";
+                    }
+                } else {
+                    // THÔNG BÁO LỖI CHO KHÁCH
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                    
+                    feedback.innerHTML = '<span class="material-symbols-outlined style="font-size:14px; vertical-align:middle">error</span> Số điện thoại hoặc mật khẩu không chính xác.';
+                    feedback.classList.remove('d-none');
+                    
+                    // Hiệu ứng rung nhẹ ô input để khách chú ý
+                    document.getElementById('phone').classList.add('is-invalid');
+                    document.getElementById('password').classList.add('is-invalid');
+                }
+            }, 800);
         });
     </script>
 </body>

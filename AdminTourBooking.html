@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Verdant Archive - Bookings Management</title>
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="Styles/AdminTourBooking.css" rel="stylesheet">
+</head>
+<body>
+<!-- Sidebar -->
+    <aside id="sidebar">
+        <div class="mb-5 px-3">
+            <h1 class="h5 mb-0 fw-black" style="color: var(--primary);">The Verdant Archive</h1>
+            <p class="text-uppercase small text-muted fw-bold mb-0" style="letter-spacing: 0.1em; font-size: 10px;">Management Portal</p>
+        </div>
+        <nav class="nav flex-column flex-grow-1">
+            <a class="nav-link" href="AdminDashboard.html">
+                <span class="material-symbols-outlined">dashboard</span> Dashboard
+            </a>
+            <a class="nav-link" href="#">
+                <span class="material-symbols-outlined">map</span> Manage Tours
+            </a>
+            <a class="nav-link active" href="#">
+                <span class="material-symbols-outlined">event_available</span> Bookings
+            </a>
+            <a class="nav-link" href="#">
+                <span class="material-symbols-outlined">group</span> Customer Relations
+            </a>
+            <a class="nav-link" href="#">
+                <span class="material-symbols-outlined">payments</span> Financial Reports
+            </a>
+        </nav>
+        <div class="mt-auto border-top pt-4 px-2">
+            <button class="btn btn-primary-custom w-100 mb-3 d-flex align-items-center justify-content-center gap-2">
+                <span class="material-symbols-outlined small">add</span> Create New Tour
+            </button>
+            <a class="nav-link py-2 small text-muted" href="#">
+                <span class="material-symbols-outlined">settings</span> Settings
+            </a>
+            <a class="nav-link py-2 small text-muted" href="#">
+                <span class="material-symbols-outlined">help_outline</span> Support
+            </a>
+        </div>
+    </aside>
+    <main>
+<!-- Header -->
+        <header>
+            <div class="search-bar">
+                <span class="material-symbols-outlined text-muted">search</span>
+                <input placeholder="Search bookings, customers..." type="text"/>
+            </div>
+            <div class="d-flex align-items-center gap-4">
+                <div class="d-flex align-items-center gap-3 border-end pe-4">
+                    <button class="btn p-0 text-muted position-relative">
+                        <span class="material-symbols-outlined">notifications</span>
+                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle"></span>
+                    </button>
+                    <button class="btn p-0 text-muted">
+                        <span class="material-symbols-outlined">dark_mode</span>
+                    </button>
+                </div>
+                <div class="dropdown" id="userProfile">
+                    <button class="btn d-flex align-items-center gap-2 border-0 p-0 shadow-none dropdown-toggle" 
+                    type="button" 
+                    data-bs-toggle="dropdown">
+                        <span class="material-symbols-outlined" style="font-size: 24px;">account_circle</span>
+                        <span id="navUserName" class="fw-bold small" style="font-size: 13px;"></span>
+                    </button>
+
+                    <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2">
+                        <li>
+                            <a class="dropdown-item py-2 text-danger d-flex align-items-center gap-2" 
+                            href="javascript:void(0)" 
+                            onclick="logout()">
+                                <span class="material-symbols-outlined" style="font-size: 18px;">logout</span>
+                                <span>Đăng xuất</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+<!-- Page Content -->
+        <div class="container-fluid px-5 py-4">
+<!-- Stats Grid -->
+            <div class="row g-4 mb-5">
+                <div class="col-md-4">
+                    <div class="stat-card">
+                        <span class="text-uppercase fw-bold text-primary small d-block mb-2" style="letter-spacing: 0.1em; font-size: 10px;">Tổng doanh thu</span>
+                        <h2 class="fw-black display-6 mb-3">42,850,500,000 <small class="text-muted fw-normal" style="font-size: 14px;">VND</small></h2>
+                        <div class="d-flex align-items-center gap-1 text-success fw-bold small">
+                            <span class="material-symbols-outlined fs-6">trending_up</span> +12.4% so với tháng trước
+                        </div>
+                        <span class="material-symbols-outlined bg-icon">payments</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-card">
+                        <span class="text-uppercase fw-bold text-secondary small d-block mb-2" style="letter-spacing: 0.1em; font-size: 10px;">Tổng số lượng đặt tour</span>
+                        <h2 class="fw-black display-6 mb-3">1,284</h2>
+                        <div class="d-flex align-items-center gap-1 text-secondary fw-bold small">
+                            <span class="material-symbols-outlined fs-6">confirmation_number</span> 20 đơn đặt mới
+                        </div>
+                        <span class="material-symbols-outlined bg-icon">explore</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-card">
+                        <span class="text-uppercase fw-bold text-tertiary small d-block mb-2" style="letter-spacing: 0.1em; font-size: 10px;">Thanh toán đang chờ xử lý</span>
+                        <h2 class="fw-black display-6 mb-3">8,420.</h2>
+                        <div class="d-flex align-items-center gap-1 text-danger fw-bold small">
+                            <span class="material-symbols-outlined fs-6">schedule</span> 14 tài khoản quá hạn
+                        </div>
+                        <span class="material-symbols-outlined bg-icon">pending_actions</span>
+                    </div>
+                </div>
+            </div>
+<!-- Main Table Section -->
+            <div class="content-card">
+                <div class="p-3 d-flex flex-wrap align-items-center justify-content-between gap-2 border-bottom">
+                    <div>
+                        <h3 class="fw-bold h6 mb-0">Lưu trữ đơn đặt</h3>
+                        <p class="text-muted" style="font-size: 11px;">1,284 đơn</p>
+                    </div>
+    
+                    <div class="d-flex align-items-center gap-2">
+                        <select class="form-select form-select-sm filter-select" style="width: 200px; font-size: 12px;">
+                            <option>Tất cả trạng thái</option>
+                            <option>Đã thanh toán</option>
+                            <option>Chờ xử lý</option>
+                            <option>Hủy bỏ</option>
+                        </select>
+
+                        <button class="btn btn-sm border d-flex align-items-center gap-2" style="font-size: 12px; height: 32px;">
+                            <span class="material-symbols-outlined" style="font-size: 16px;">calendar_today</span> 
+                            2/10 - 31/10
+                        </button>
+
+                        <button class="btn btn-primary-custom d-flex align-items-center justify-content-center p-0 rounded-circle" 
+                                style="width: 32px; height: 32px;">
+                            <span class="material-symbols-outlined" style="font-size: 18px;">filter_list</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table mb-0">
+                        <thead>
+                            <tr>
+                                <th>Khách hàng</th>
+                                <th>Hành trình</th>
+                                <th>Khởi hành</th>
+                                <th class="text-end">Tổng chi</th>
+                                <th>Trạng thái</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <!-- Row 1 -->
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="avatar-circle" style="background: rgba(0, 105, 84, 0.1); color: var(--primary);">NH</div>
+                                        <div>
+                                            <div class="fw-bold small">Nguyen Hoang</div>
+                                            <div class="text-muted" style="font-size: 11px;">hoang.n@example.com</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <img alt="Ha Long Bay" class="rounded" height="32" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc3yn4v26kEhvKxy2nIAy2F3gUsYnRacDvcpyV8QzQw0luf_0l3DQ4UmSXLNvRPu040tgQJwAD-0DdUJj8wpfrUe-AWNbTf5utOG8Oo1Ugvw47JkCuvLfaAyiMvD1eEpH678LlbvFtdJEScGvhNQChyefCDW8nEUqMMH7osMGiQDPp4G85DmPyF95McwyqeFKe5uIOp5UMMos0SYf1KsIFfFUD1YUTZDweA-g2LlldpOMgJu54vrPdV6_KYEjzzu1mIeUx-fyfK9Ca" width="48"/>
+                                        <span class="small fw-semibold">Huyền Thoại Vịnh Hạ Long & Lan Hạ</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="fw-bold small">24/10/2025</div>
+                                    <div class="text-muted text-uppercase" style="font-size: 9px; letter-spacing: 0.05em;">3 Ngày, 2 đêm</div>
+                                </td>
+                                <td class="text-end fw-bold small">15.800.000 vnđ</td>
+                                <td>
+                                    <span class="status-badge badge-completed">
+                                        <span class="dot dot-completed"></span> Đã thanh toán
+                                    </span>
+                                </td>
+                                <td class="text-end">
+                                    <button class="btn btn-link p-0 text-muted"><span class="material-symbols-outlined">more_vert</span></button>
+                                </td>
+                            </tr>
+                        <!-- Row 2 -->
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="avatar-circle" style="background: rgba(38, 95, 162, 0.1); color: var(--secondary);">EP</div>
+                                        <div>
+                                            <div class="fw-bold small">Elena Petrov</div>
+                                            <div class="text-muted" style="font-size: 11px;">e.petrov@domain.com</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <img alt="Sapa" class="rounded" height="32" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxge9eh78XBkutOMxOGc7cWZOvK5g87jAUQIlmMJKc5J2z2Ovffe8sc35mhaXPYXWf01YN5nbF6xH8eeXsgms-Frn-Hsi644pgxXn8ZAsCTYQpkbC_dug194W7yUYuBfvYAoxUHnYqT8KyqGO_z46Bvwu4Knk3T-ILig05rPzzsa-GSQzeQfRU7vndC2X1Itsrp5HC-rdK0Wo7UDmqjakP1JzlWzQD17AppZB3lQySy50QBKydie4Iy5ZgkELWNSiGubwii6FTAKcb" width="48"/>
+                                        <span class="small fw-semibold">Chạm Đỉnh Fansipan & Dấu Ấn Cố Đô Huế</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="fw-bold small">20/06/2025</div>
+                                    <div class="text-muted text-uppercase" style="font-size: 9px; letter-spacing: 0.05em;">3 ngày</div>
+                                </td>
+                                <td class="text-end fw-bold small">12.950.000 vnđ</td>
+                                <td>
+                                    <span class="status-badge badge-pending">
+                                        <span class="dot dot-pending"></span> Chờ xử lý
+                                    </span>
+                                </td>
+                                <td class="text-end">
+                                    <button class="btn btn-link p-0 text-muted"><span class="material-symbols-outlined">more_vert</span></button>
+                                </td>
+                            </tr>
+        <!-- Row 3 -->
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="avatar-circle" style="background: rgba(113, 87, 60, 0.1); color: var(--tertiary);">JS</div>
+                                        <div>
+                                            <div class="fw-bold small">James Smith</div>
+                                            <div class="text-muted" style="font-size: 11px;">jsmith@web.uk</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                <div class="d-flex align-items-center gap-3">
+                                    <img alt="Hoi An" class="rounded" height="32" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-TQObyVKFEaVzgD0Na6E3a6r6zB0yw9e9fZWc03nDvwbhH8G1eb6DIYSN8wbmbOAbKw1aGuqjnozhkDOmhQJTnrzcmxx4K5zUaKNM9FZDf9HK1oawqHXBFs-SrkVWcxsNiPfO2jDrrxWhWjATFlcjCmiKhT-e6UrpnM9o2HLl849-9Xg8yVpiCVNdNIQGBTxr9ult4X0ymKEiWWj1Gr56wPOV10p4U5Egt2M6A62q7-Nr_OVX2g8rvVxmDEjRyInX0koC7eap1Mu5" width="48"/>
+                                    <span class="small fw-semibold">Khám Phá Phố Cổ Hội An & Mỹ Sơn</span>
+                                </div>
+                                </td>
+                                <td>
+                                    <div class="fw-bold small">25/03/2026</div>
+                                    <div class="text-muted text-uppercase" style="font-size: 9px; letter-spacing: 0.05em;">1 ngày</div>
+                                </td>
+                                <td class="text-end fw-bold small">1.500.000 vnđ</td>
+                                <td>
+                                    <span class="status-badge badge-cancelled">
+                                    <span class="dot dot-cancelled"></span> Hủy bỏ
+                                                                </span>
+                                </td>
+                                <td class="text-end">
+                                    <button class="btn btn-link p-0 text-muted"><span class="material-symbols-outlined">more_vert</span></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+<!-- Pagination Area -->
+                <div class="p-4 bg-light border-top d-flex align-items-center justify-content-between">
+                    <p class="text-muted small mb-0 fw-medium">Hiển thị từ 1 đến 3 trong 1,284 đơn đặt</p>
+                    <nav>
+                        <ul class="pagination pagination-custom mb-0 align-items-center">
+                            <li class="page-item"><a class="page-link" href="#"><span class="material-symbols-outlined">chevron_left</span></a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item disabled px-2"><span class="text-muted small">...</span></li>
+                            <li class="page-item"><a class="page-link" href="#">321</a></li>
+                            <li class="page-item"><a class="page-link" href="#"><span class="material-symbols-outlined">chevron_right</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+<!-- FAB -->
+        <button class="fab">
+            <span class="material-symbols-outlined fs-2">add</span>
+        </button>
+    </main>
+<!-- Bootstrap 5 Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="Script/main.js"></script>
+
+</body></html>

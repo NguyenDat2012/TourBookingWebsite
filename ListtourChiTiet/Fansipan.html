@@ -13,7 +13,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
     <div class="container-xxl">
-        <a class="navbar-brand" href="index.html">The Verdant Archive</a>
+        <a class="navbar-brand" href="/index.html">The Verdant Archive</a>
         <div class="search-container d-none d-md-flex ms-4">
             <span class="material-symbols-outlined text-muted" style="font-size: 18px">search</span>
             <input placeholder="Tìm kiếm điểm đến..." type="text"/>
@@ -23,13 +23,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto">
-                <li class="nav-item"><a class="nav-link active" href="#">Destinations</a></li>
+                <li class="nav-item"><a class="nav-link active" href="/ListTour.html">Destinations</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Experiences</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Journals</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Plan</a></li>
             </ul>
             <div class="d-flex align-items-center gap-3">
-                <a class="text-decoration-none text-dark fw-bold px-3" href="#">Sign In</a>
+                <a class="nav-link me-3 d-none d-lg-block" href="/Login.html">Đăng nhập</a>
+                <a class="nav-link me-3 d-none d-lg-block" href="/Register.html">Đăng ký</a>
                 <button class="btn btn-primary-custom shadow-sm">Book Now</button>
             </div>
         </div>
@@ -43,19 +44,19 @@
         <div class="gallery-main">
             <div class="gallery-item">
                 <!-- Image: Fansipan Peak -->
-                <img alt="Đỉnh Fansipan" src="https://loadbalancer.dktvnblog.com/blog/wp-content/uploads/2025/08/unnamed-file-900.png"/>
+                <img alt="Đỉnh Fansipan" src="/Img/Fansipan-Hue/Fansipan.png"/>
                 <div class="overlay-gradient"></div>
             </div>
         </div>
         <div class="gallery-side">
             <div class="gallery-item" style="height: 50%;">
                 <!-- Image: Hue Imperial City -->
-                <img alt="Cố đô Huế" src="https://ik.imagekit.io/tvlk/blog/2024/11/t0OyiydT-Untitled-design-1.png"/>
+                <img alt="Kinh thành Huế" src="/Img/Fansipan-Hue/Kinh-Thanh-Hue.png"/>
             </div>
             <div class="d-flex gap-3" style="height: 50%;">
                 <div class="gallery-item flex-grow-1">
                     <!-- Image: Sapa Terraced Fields -->
-                    <img alt="Ruộng bậc thang Sapa" src="https://sun-ecommerce-cdn.azureedge.net/ecommerce/service-sites/asset/SunWorldFansipan/google-doc/post_id_12050/AD_4nXeXrVsR2nRblfyBUPgNCnpwzKbxOVMOOQZ2rsem587EAKeECY40end5GKhR_tmIToWLLe7IvRWT75sauGSHILNgwhixopx5nHoO4v_G5Gc1uqUd1Lx_eYOgIHLvGts3sKp9PNGqbKReXVxnczZqMuso4f1usg.webp"/>
+                    <img alt="Lăng tẩm Huế" src="/Img/Fansipan-Hue/Lang-Tam-Hue.png"/>
                 </div>
                 <div class="view-all-card flex-grow-1">
                     <span class="fs-2 fw-bold">+25</span>
@@ -155,18 +156,17 @@
                 <div class="d-flex justify-content-between align-items-end mb-4">
                     <div>
                         <span class="small text-muted d-block mb-1">Giá trọn gói</span>
-                        <span class="h1 fw-extrabold mb-0" style="color: var(--primary)" id="unitPriceDisplay">9.500.000</span>
+                        <span class="h1 fw-extrabold mb-0" style="color: var(--primary)" id="unitPriceDisplay">12.500.000</span>
                         <span class="small text-muted">₫/khách</span>
                     </div>
                     <div class="badge-discount">-15% Mùa Lễ Hội</div>
                 </div>
 
-                <div class="input-group-custom" id="dateTrigger">
-                    <label class="input-label">Ngày khởi hành</label>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <input type="text" id="datePicker" placeholder="Chọn ngày" readonly
-                               style="border: none; outline: none; background: transparent; font-weight: 600; width: 100%; cursor: pointer; color: var(--on-surface-variant);"/>
-                        <span class="material-symbols-outlined text-muted">calendar_today</span>
+                <div class="input-group-custom">
+                    <div class="input-label">Ngày khởi hành</div>
+                    <div class="d-flex justify-content-between align-items-center cursor-pointer">
+                        <span class="fw-semibold">Chọn ngày</span>
+                        <input type="date" id="datePicker" style="border: none; outline: none; background: transparent;">
                     </div>
                 </div>
 
@@ -174,33 +174,32 @@
                     <label class="input-label">Số lượng khách</label>
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="d-flex align-items-center gap-3">
-                            <button class="btn btn-outline-secondary btn-sm rounded-circle" id="btnMinus" style="width: 32px; height: 32px;">−</button>
-                            <span class="fw-bold" id="guestCount">01</span>
-                            <button class="btn btn-outline-secondary btn-sm rounded-circle" id="btnPlus" style="width: 32px; height: 32px;">+</button>
+                            <button id="minusBtn" class="btn btn-outline-secondary btn-sm rounded-circle" style="width: 32px; height: 32px;">-</button>
+                            <span id="guestCount" class="fw-bold">1</span>
+                            <button id="plusBtn" class="btn btn-outline-secondary btn-sm rounded-circle" style="width: 32px; height: 32px;">+</button>
                         </div>
                         <span class="material-symbols-outlined text-muted">group</span>
                     </div>
                 </div>
 
+
                 <div class="mt-4">
                     <div class="d-flex justify-content-between small text-muted mb-2">
-                        <span>Giá vé (x<span id="adultCount">1</span>)</span>
-                        <span class="fw-bold text-dark"><span id="adultPrice">9.500.000</span>₫</span>
+                        <span id="guestText">Người lớn (x1)</span>
+                        <span id="guestPrice" class="fw-bold text-dark">12.500.000₫</span>
                     </div>
                     <div class="d-flex justify-content-between small text-muted mb-2">
-                        <span>Thuế & Phí</span>
-                        <span class="fw-bold text-dark">450.000₫</span>
+                        <span>Phí dịch vụ</span>
+                        <span class="fw-bold text-dark" id="serviceFee">450.000₫</span>
                     </div>
                     <div class="tapered-divider"></div>
                     <div class="d-flex justify-content-between align-items-center">
                         <span class="h5 fw-bold mb-0">Tổng tiền</span>
-                        <span class="h3 fw-extrabold mb-0" style="color: var(--primary)">
-                            <span id="totalPriceDisplay">12.950.000</span>₫
-                        </span>
+                        <span id="totalPrice" class="h3 fw-extrabold mb-0" style="color: var(--primary)">12.950.000₫</span>
                     </div>
                 </div>
 
-                <button class="btn btn-primary-custom w-100 py-3 mt-4 fs-5 shadow" id="bookNowBtn">Đặt chuyến đi ngay</button>
+                <button class="btn btn-primary-custom w-100 py-3 mt-4 fs-5 shadow" id="bookNowBtn">Đặt ngay hôm nay</button>
                 <p class="text-center mt-3 mb-0 small text-muted fw-medium">Thanh toán linh hoạt & Bảo mật</p>
                 
             </div>
@@ -259,43 +258,65 @@
 <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/vn.js"></script>
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-    const unitPrice = 9500000;
+    //Calendar
+    const dateInput = document.getElementById("datePicker");
+    const today = new Date().toISOString().split("T")[0];
+    dateInput.min = today;
+
+    // Sửa con số này cho từng file: HaLong (4500000), Fansipan (2850000), HoiAn (1200000)
+    const pricePerPerson = 12500000; 
     const serviceFee = 450000;
     let count = 1;
-    let selectedDate = '';
 
-    function fmt(n) { return n.toLocaleString('vi-VN'); }
+    const guestCount = document.getElementById("guestCount");
+    const guestText = document.getElementById("guestText");
+    const guestPrice = document.getElementById("guestPrice");
+    const totalPrice = document.getElementById("totalPrice");
+
+    function formatMoney(number) { return number.toLocaleString("vi-VN") + "₫"; }
 
     function updateUI() {
-        document.getElementById('guestCount').innerText = String(count).padStart(2, '0');
-        document.getElementById('adultCount').innerText = count;
-        const total = count * unitPrice + serviceFee;
-        document.getElementById('adultPrice').innerText = fmt(count * unitPrice);
-        document.getElementById('totalPriceDisplay').innerText = fmt(total);
-        document.getElementById('unitPriceDisplay').innerText = fmt(unitPrice);
+        let totalGuestPrice = count * pricePerPerson;
+        let total = totalGuestPrice + serviceFee;
+        if(guestCount) guestCount.innerText = count;
+        if(guestText) guestText.innerText = `Người lớn (x${count})`;
+        if(guestPrice) guestPrice.innerText = formatMoney(totalGuestPrice);
+        if(totalPrice) totalPrice.innerText = formatMoney(total);
     }
 
-    const fp = flatpickr("#datePicker", {
-        minDate: "today",
-        dateFormat: "d/m/Y",
-        locale: "vn",
-        onChange: function (selectedDates, dateStr) {
-            selectedDate = dateStr;
-            document.getElementById("datePicker").style.color = "var(--primary)";
+    document.getElementById("plusBtn").onclick = () => { count++; updateUI(); };
+    document.getElementById("minusBtn").onclick = () => { if (count > 1) { count--; updateUI(); } };
+
+    //Gửi đến file BookingForm
+    const bookBtn = document.getElementById("bookNowBtn");
+
+    bookBtn.onclick = function () {
+
+        const selectedDate = document.getElementById("datePicker").value;
+
+        if (selectedDate === "") {
+            alert("Vui lòng chọn ngày khởi hành!");
+            return;
         }
-    });
 
-    document.getElementById("dateTrigger").onclick = () => fp.open();
-    document.getElementById('btnPlus').onclick = () => { count++; updateUI(); };
-    document.getElementById('btnMinus').onclick = () => { if (count > 1) { count--; updateUI(); } };
+        let totalGuestPrice = count * pricePerPerson;
+        let total = totalGuestPrice + serviceFee;
 
-    document.getElementById('bookNowBtn').onclick = function () {
-        if (!selectedDate) { alert("Vui lòng chọn ngày khởi hành!"); return; }
-        alert("Xác nhận đặt tour Fansipan & Huế!\nNgày: " + selectedDate + "\nKhách: " + count);
+        const bookingData = {
+            image: "/Img/Fansipan-Hue/Fansipan.png",
+            title: "Chạm Đỉnh Fansipan & Dấu Ấn Cố Đô Huế",
+            date: selectedDate,
+            guest: count,
+            price: totalGuestPrice,
+            fee: serviceFee,
+            total: total
+        };
+
+        localStorage.setItem("bookingData", JSON.stringify(bookingData));
+
+        window.location.href = "/BookingForm.html";
     };
-    updateUI();
-});
+
 </script>
 </body>
 </html>

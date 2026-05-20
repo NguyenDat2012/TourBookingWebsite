@@ -1,0 +1,26 @@
+{
+  "0901234567": {
+    "password": "123",
+    "role": "admin",
+    "fullname": "Quản Trị Viên Hệ Thống",
+    "email": "admin@theverdant.com"
+  },
+  "0911223344": {
+    "password": "123",
+    "role": "user",
+    "fullname": "Nguyễn Duy Khang",
+    "email": "duykhang@gmail.com"
+  },
+  "0988776655": {
+    "password": "123",
+    "role": "user",
+    "fullname": "Trần Minh Anh",
+    "email": "minhanh@travel.vn"
+  },
+  "0334455667": {
+    "password": "123",
+    "role": "admin",
+    "fullname": "Lê Biên Tập",
+    "email": "editor@theverdant.com"
+  }
+}
