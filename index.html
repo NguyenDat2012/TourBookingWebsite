@@ -56,32 +56,33 @@
     <div class="hero-content">
       <span class="badge-hero">Khám phá Việt Nam</span>
       <h1 class="hero-title">Hành Trình Qua Những <br/><span class="italic">Kỳ Quan</span></h1>
-      <div class="search-container mx-auto">
-          <div class="search-field">
-            <span class="search-label">Điểm đến</span>
-            <div class="d-flex align-items-center gap-2">
-              <span class="material-symbols-outlined text-primary">location_on</span>
-              <input class="search-input" placeholder="Bạn muốn đi đâu?" type="text"/>
+      <div class="search-container mx-auto" style="display:flex;align-items:stretch;background:rgba(255,255,255,0.92);backdrop-filter:blur(8px);border-radius:50px;padding:6px 6px 6px 0;max-width:700px;">
+             <!-- Điểm đến -->
+            <div class="search-field" id="sfDest" style="position:relative;cursor:pointer;">
+              <span class="search-label">Điểm đến</span>
+              <div class="d-flex align-items-center gap-2">
+                <span class="material-symbols-outlined text-primary">location_on</span>
+                <input class="search-input" id="destInp" placeholder="Bạn muốn đi đâu?" autocomplete="off" readonly />
+              </div>
+              <div id="destDrop" style="display:none;position:absolute;top:calc(100% + 8px);left:0;right:0;background:#fff;border-radius:12px;border:0.5px solid #ddd;box-shadow:0 8px 24px rgba(0,0,0,0.1);z-index:200;overflow:hidden;min-width:200px;"></div>
             </div>
+
+            
+            <!-- Khởi hành từ -->
+            <div class="search-field" id="sfDepart" style="position:relative;cursor:pointer;border-right:none;">
+              <span class="search-label">Khởi hành từ</span>
+              <div class="d-flex align-items-center gap-2">
+                <span class="material-symbols-outlined text-primary">navigation</span>
+                <input class="search-input" id="departInp" placeholder="Tất cả" readonly />
+              </div>
+              <div id="departDrop" style="display:none;position:absolute;top:calc(100% + 8px);left:0;right:0;background:#fff;border-radius:12px;border:0.5px solid #ddd;box-shadow:0 8px 24px rgba(0,0,0,0.1);z-index:200;overflow:hidden;min-width:200px;"></div>
+            </div>
+            <!-- Nút tìm -->
+            <button class="btn-search">
+              <span class="material-symbols-outlined">search</span>
+            </button>
+
           </div>
-        <div class="search-field">
-          <span class="search-label">Ngày đi</span>
-          <div class="d-flex align-items-center gap-2">
-            <span class="material-symbols-outlined text-primary">calendar_month</span>
-            <input class="search-input" placeholder="Thêm ngày" type="text"/>
-          </div>
-        </div>
-        <div class="search-field">
-          <span class="search-label">Số người</span>
-          <div class="d-flex align-items-center gap-2">
-            <span class="material-symbols-outlined text-primary">group</span>
-            <input class="search-input" placeholder="2 Người lớn" type="text"/>
-          </div>
-        </div>
-        <button class="btn-search">
-          <span class="material-symbols-outlined">search</span>
-        </button>
-      </div>
     </div>
   </section>
         <!-- Featured Destinations -->
@@ -392,13 +393,73 @@
       });
 
       // Basic button interactions
-      document.querySelectorAll('.btn-search').forEach(btn => {
-          btn.addEventListener('click', () => {
-              const query = document.querySelector('.search-input').value;
-              if(query) alert('Searching for: ' + query);
-          });
+      let tours = {}, departs = [], selDest='';
+
+      fetch('data/toursConfig.json')
+        .then(res => res.json())
+        .then(data => {
+          tours = data.tourNames;
+          departs = data.departureCities;
+        });
+
+      function closeAll(){
+        document.getElementById('destDrop').style.display='none';
+        document.getElementById('departDrop').style.display='none';
+      }
+      document.addEventListener('click', closeAll);
+
+      // Điểm đến
+      document.getElementById('sfDest').addEventListener('click', e=>{
+        e.stopPropagation();
+        const dd = document.getElementById('destDrop');
+        const open = dd.style.display !== 'none';
+        closeAll();
+        if(!open) buildDestDrop();
       });
-      
+
+      function buildDestDrop(){
+        const dd = document.getElementById('destDrop');
+        dd.innerHTML = Object.entries(tours).map(([k,v])=>
+          `<div onclick="pickDest('${k}','${v}')" style="padding:10px 16px;font-size:14px;color:#333;cursor:pointer;display:flex;align-items:center;gap:8px;" onmouseover="this.style.background='#f5f5f5'" onmouseout="this.style.background=''">${v}</div>`
+        ).join('');
+        dd.style.display='block';
+      }
+
+      function pickDest(id, name){
+        document.getElementById('destInp').value = name;
+        selDest = id;
+        document.getElementById('destDrop').style.display='none';
+      }
+
+      // Khởi hành từ
+      document.getElementById('sfDepart').addEventListener('click', e=>{
+        e.stopPropagation();
+        const dd = document.getElementById('departDrop');
+        const open = dd.style.display !== 'none';
+        closeAll();
+        if(!open){
+          dd.innerHTML = departs.map(d=>
+            `<div onclick="pickDepart('${d}')" style="padding:10px 16px;font-size:14px;color:#333;cursor:pointer;" onmouseover="this.style.background='#f5f5f5'" onmouseout="this.style.background=''">${d}</div>`
+          ).join('');
+          dd.style.display='block';
+        }
+      });
+
+      function pickDepart(val){
+        document.getElementById('departInp').value = val==='Tất cả' ? '' : val;
+        document.getElementById('departInp').placeholder = val;
+        document.getElementById('departDrop').style.display='none';
+      }
+
+      // Nút tìm
+      document.querySelector('.btn-search').addEventListener('click', ()=>{
+        const dest = selDest || document.getElementById('destInp').value;
+        const dep = document.getElementById('departInp').placeholder;
+        const p = new URLSearchParams();
+        if(dest) p.set('dest', dest);
+        if(dep && dep!=='Tất cả') p.set('from', dep);
+        window.location.href = 'ListTour.html?' + p.toString();
+      });
   </script>
 </body>
 </html>

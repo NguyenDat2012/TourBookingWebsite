@@ -34,5 +34,14 @@
         "serviceFee": 500000, 
         "title": "Chinh Phục Đỉnh Fansipan & Bản Cát Cát",
         "imgs": ["/Img/FansipanTour/FansipanTour.png", "/Img/FansipanTour/Sapa.png", "/Img/FansipanTour/MocChau.png"] 
-    }
+    },
+    "tourNames": {
+        "ha-noi": "Hà Nội",
+        "da-nang": "Đà Nẵng",
+        "tphcm": "TP. Hồ Chí Minh",
+        "ha-long": "Hạ Long",
+        "hoi-an": "Hội An",
+        "fansipan": "Fansipan / Sapa"
+    },
+    "departureCities": ["Tất cả","Hà Nội","TP. Hồ Chí Minh","Đà Nẵng","Cần Thơ","Hải Phòng"]
 }

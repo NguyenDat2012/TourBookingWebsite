@@ -1,3 +1,304 @@
+/* Custom cho bộ lọc hàng ngang */
+.filter-horizontal {
+    padding: 1.5rem 2rem !important;
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Thu nhỏ lề của các tiêu đề filter mục nhỏ */
+.filter-horizontal .filter-group {
+    margin-bottom: 0 !important;
+}
+
+.filter-horizontal .filter-title {
+    font-size: 0.85rem !important;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem !important;
+    text-transform: uppercase;
+    color: #8c7663;
+}
+
+/* Tối ưu lại khoảng cách chữ trong form check khi nằm ngang */
+.filter-horizontal .form-check-label {
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+/* Đảm bảo responsive mượt mà trên mobile */
+@media (max-width: 991.98px) {
+    .filter-horizontal {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 1.5rem !important;
+    }
+    .filter-horizontal .filter-group {
+        width: 100%;
+        max-width: 100% !important;
+    }
+    .filter-horizontal .d-flex {
+        flex-wrap: wrap;
+    }
+}
+
+/* =========================
+   SEARCH FILTER BAR NEW UI
+========================= */
+
+.search-filter-bar {
+    width: 100%;
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+
+    padding: 1rem 1.5rem;
+
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255,255,255,0.45);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,0.06),
+        0 2px 8px rgba(0,0,0,0.04);
+
+    transition: all 0.3s ease;
+}
+
+/* Hover nhẹ */
+.search-filter-bar:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,0.08),
+        0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* =========================
+   SEARCH INPUT
+========================= */
+
+.search-input-wrapper {
+    flex: 1;
+    min-width: 260px;
+
+    background: rgba(255,255,255,0.7);
+
+    border-radius: 18px;
+
+    padding: 0.9rem 1rem;
+
+    border: 1px solid rgba(0,0,0,0.05);
+
+    transition: all 0.3s ease;
+}
+
+.search-input-wrapper:focus-within {
+    border-color: rgba(0, 105, 84, 0.25);
+
+    box-shadow: 0 0 0 4px rgba(0,105,84,0.08);
+}
+
+.search-icon {
+    color: var(--primary);
+    font-size: 1.3rem;
+    margin-right: 0.8rem;
+}
+
+.search-input {
+    border: none;
+    background: transparent;
+
+    width: 100%;
+
+    font-size: 0.95rem;
+    font-weight: 500;
+
+    color: var(--on-surface);
+}
+
+.search-input::placeholder {
+    color: #9ca3af;
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+/* =========================
+   DIVIDER
+========================= */
+
+.search-divider {
+    width: 1px;
+    align-self: stretch;
+
+    background: rgba(0,0,0,0.06);
+}
+
+/* =========================
+   PRICE FILTER
+========================= */
+
+.price-filter-wrapper {
+    width: 360px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.75rem;
+}
+
+.price-title {
+    font-size: 0.72rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.12em;
+
+    font-weight: 800;
+
+    color: #7b6a58;
+}
+
+/* Grid nút */
+.price-options-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 0.55rem;
+}
+
+/* Button giá */
+.price-btn {
+    padding: 0.65rem 0.75rem;
+
+    border-radius: 14px;
+
+    border: 1px solid rgba(0,0,0,0.08);
+
+    background: rgba(255,255,255,0.75);
+
+    font-size: 0.78rem;
+
+    font-weight: 600;
+
+    color: #4b5563;
+
+    transition: all 0.25s ease;
+}
+
+.price-btn:hover {
+    transform: translateY(-1px);
+
+    border-color: var(--primary);
+
+    color: var(--primary);
+
+    background: rgba(0,105,84,0.04);
+}
+
+.price-btn.active {
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-container)
+    );
+
+    color: white;
+
+    border-color: transparent;
+
+    box-shadow: 0 8px 20px rgba(0,105,84,0.22);
+}
+
+/* =========================
+   SEARCH BUTTON
+========================= */
+
+.btn-search-submit {
+    height: 58px;
+
+    padding: 0 2rem;
+
+    border: none;
+
+    border-radius: 18px;
+
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-container)
+    );
+
+    color: white;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    transition: all 0.3s ease;
+
+    box-shadow: 0 10px 20px rgba(0,105,84,0.18);
+}
+
+.btn-search-submit:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 15px 30px rgba(0,105,84,0.28);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+
+    .search-filter-bar {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        border-radius: 24px;
+
+        padding: 1.25rem;
+    }
+
+    .search-divider {
+        display: none;
+    }
+
+    .price-filter-wrapper {
+        width: 100%;
+    }
+
+    .btn-search-submit {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .price-options-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-input-wrapper {
+        min-width: 100%;
+    }
+}
 :root {
             --primary: #006954;
             --primary-container: #00846b;
