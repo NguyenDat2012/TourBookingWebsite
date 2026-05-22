@@ -20,7 +20,7 @@
     "ha-long": { 
         "price": 4500000, 
         "serviceFee": 500000, 
-        "tile": "Du Thuyền Cao Cấp 5* Vịnh Hạ Long",
+        "title": "Du Thuyền Cao Cấp 5* Vịnh Hạ Long",
         "imgs": ["/Img/HaLongTour/HaLongTour.png", "/Img/HaLongTour/HaLongCave.png", "/Img/HaLongTour/Kayak.png"] 
     },
     "hoi-an": { 
@@ -34,5 +34,30 @@
         "serviceFee": 500000, 
         "title": "Chinh Phục Đỉnh Fansipan & Bản Cát Cát",
         "imgs": ["/Img/FansipanTour/FansipanTour.png", "/Img/FansipanTour/Sapa.png", "/Img/FansipanTour/MocChau.png"] 
+    },
+
+    "fansipan-hue": {
+        "price": 12500000,
+        "serviceFee": 500000,
+        "title": "Chạm Đỉnh Fansipan & Dấu Ấn Cố Đô Huế",
+        "imgs":["/Img/Fansipan-Hue/Fansipan.png","/Img/Fansipan-Hue/Kinh-Thanh-Hue.png","/Img/Fansipan-Hue/Lang-Tam-Hue.png"]
+    },
+    "hue":{
+        "price":12200000,
+        "serviceFee":500000,
+        "title":"Hồn Xưa Phố Hội & Kinh Đô Huế: Hành Trình Di Sản Tàu Hỏa Hạng Sang",
+        "imgs":["/Img/HoiAn-Hue/Co-do-Hue.png","/Img/HoiAn-Hue/Pho-co-Hoi-An.png","/Img/HoiAn-Hue/Lang-Khai-Dinh.png"]
+    },
+    "ninh-van":{
+        "price": 24500000,
+        "serviceFee": 500000,
+        "title": "Ninh Vân Bay: Tuyệt Tác Thiên Nhiên & Nghỉ Dưỡng Biệt Lập",
+        "imgs": ["/Img/NinhVanTour/Ninh-Van-Bay.png", "/Img/NinhVanTour/Ninh-Van-Resort.png", "/Img/NinhVanTour/Ninh-Van-Beach.png"]
+    },
+    "vinh-ha-long":{
+        "price": 15800000,
+        "serviceFee": 500000,
+        "title": "Huyền Thoại Vịnh Hạ Long & Lan Hạ: Di Sản Thiên Nhiên Thế Giới",
+        "imgs": ["/Img/VinhHaLong-LanHa/Vinh-Ha-Long.png", "/Img/VinhHaLong-LanHa/Vinh-Lan-Ha.png", "/Img/VinhHaLong-LanHa/Dao-Ti-Top.png"]
     }
 }

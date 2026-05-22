@@ -1,7 +1,7 @@
 // 1. Tự động nạp dữ liệu từ JSON vào LocalStorage nếu chưa có
 async function initUserData() {
     try {
-        // Thằng này lo phần users
+        
         if (!localStorage.getItem('users')) {
             const response = await fetch('data/users.json');
             const defaultUsers = await response.json();
@@ -9,7 +9,7 @@ async function initUserData() {
             console.log("-> Đã nạp dữ liệu users thành công.");
         }
 
-        // Thằng này ĐỘC LẬP lo phần toursConfig
+        
         if (!localStorage.getItem('toursConfig')) {
             const response1 = await fetch('data/toursConfig.json');
             const defaultToursConfig = await response1.json();
