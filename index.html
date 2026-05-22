@@ -50,40 +50,49 @@
 </nav>
 <main>
         <!-- Hero Section -->
-  <section class="hero-section">
-    <img alt="Ha Long Bay" class="hero-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvTGNdx22A65ji5oItuEvvIw-gQ6xB9UkVEnx_S9EjqJ9X_YagZ3nb9LYkSOiyeCopclvOHXe4x8IW_IE-kYZk7pKnsrcIMQeYipMzTGGWPytJ3KxLmtrb5ehGA09SygEOFDEGrfTYshuNJTJhO47-eZQM46KOF4E7WdtbfAcb7PzGVpKLpiTKJMXf5PaoZ0UYPfJP4E2rur9sRokB6_PcbLeH6XZ2739dFQC6KWqkGjtIvgkTVAYKyNQArZhW4aEeyoXOivRsnROy"/>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <span class="badge-hero">Khám phá Việt Nam</span>
-      <h1 class="hero-title">Hành Trình Qua Những <br/><span class="italic">Kỳ Quan</span></h1>
-      <div class="search-container mx-auto">
-          <div class="search-field">
-            <span class="search-label">Điểm đến</span>
-            <div class="d-flex align-items-center gap-2">
-              <span class="material-symbols-outlined text-primary">location_on</span>
-              <input class="search-input" placeholder="Bạn muốn đi đâu?" type="text"/>
-            </div>
-          </div>
-        <div class="search-field">
-          <span class="search-label">Ngày đi</span>
-          <div class="d-flex align-items-center gap-2">
-            <span class="material-symbols-outlined text-primary">calendar_month</span>
-            <input class="search-input" placeholder="Thêm ngày" type="text"/>
-          </div>
+<section class="hero-section">
+  <img alt="Ha Long Bay" class="hero-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvTGNdx22A65ji5oItuEvvIw-gQ6xB9UkVEnx_S9EjqJ9X_YagZ3nb9LYkSOiyeCopclvOHXe4x8IW_IE-kYZk7pKnsrcIMQeYipMzTGGWPytJ3KxLmtrb5ehGA09SygEOFDEGrfTYshuNJTJhO47-eZQM46KOF4E7WdtbfAcb7PzGVpKLpiTKJMXf5PaoZ0UYPfJP4E2rur9sRokB6_PcbLeH6XZ2739dFQC6KWqkGjtIvgkTVAYKyNQArZhW4aEeyoXOivRsnROy"/>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <span class="badge-hero">Khám phá Việt Nam</span>
+
+    <h1 class="hero-title">
+      Hành Trình Qua Những <br/>
+      <span class="italic">Kỳ Quan</span>
+    </h1>
+
+    <div class="search-container mx-auto"
+      style="display:flex;align-items:stretch;background:rgba(255,255,255,0.92);backdrop-filter:blur(8px);border-radius:50px;padding:6px 6px 6px 0;max-width:700px;">
+
+      <!-- Điểm đến -->
+      <div class="search-field" id="sfDest" style="position:relative;cursor:pointer;">
+        <span class="search-label">Điểm đến</span>
+
+        <div class="d-flex align-items-center gap-2">
+          <span class="material-symbols-outlined text-primary">location_on</span>
+
+          <input
+            class="search-input"
+            id="destInp"
+            placeholder="Bạn muốn đi đâu?"
+            autocomplete="off"
+            readonly
+          />
         </div>
-        <div class="search-field">
-          <span class="search-label">Số người</span>
-          <div class="d-flex align-items-center gap-2">
-            <span class="material-symbols-outlined text-primary">group</span>
-            <input class="search-input" placeholder="2 Người lớn" type="text"/>
-          </div>
+
+        <div id="destDrop"
+          style="display:none;position:absolute;top:calc(100% + 8px);left:0;right:0;background:#fff;border-radius:12px;border:0.5px solid #ddd;box-shadow:0 8px 24px rgba(0,0,0,0.1);z-index:200;overflow:hidden;min-width:200px;">
         </div>
-        <button class="btn-search">
-          <span class="material-symbols-outlined">search</span>
-        </button>
       </div>
+
+      <!-- Nút tìm -->
+      <button class="btn-search">
+        <span class="material-symbols-outlined">search</span>
+      </button>
     </div>
-  </section>
+  </div>
+</section>
         <!-- Featured Destinations -->
   <section class="container-fluid px-lg-5 py-5">
     <div class="d-flex flex-column flex-md-row justify-content-between align-items-end mb-4">
@@ -379,26 +388,90 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="Script/main.js"></script>
 <script>
-      // Smooth scroll / Simple Navbar transparency script
-      window.addEventListener('scroll', function() {
-          const navbar = document.querySelector('.navbar-custom');
-          if (window.scrollY > 50) {
-              navbar.style.backgroundColor = 'rgba(252, 249, 244, 0.95)';
-              navbar.style.padding = '0.5rem 2rem';
-          } else {
-              navbar.style.backgroundColor = 'rgba(252, 249, 244, 0.8)';
-              navbar.style.padding = '1rem 2rem';
-          }
-      });
+  // Smooth scroll / Simple Navbar transparency script
+  window.addEventListener('scroll', function () {
+    const navbar = document.querySelector('.navbar-custom');
 
-      // Basic button interactions
-      document.querySelectorAll('.btn-search').forEach(btn => {
-          btn.addEventListener('click', () => {
-              const query = document.querySelector('.search-input').value;
-              if(query) alert('Searching for: ' + query);
-          });
-      });
+    if (window.scrollY > 50) {
+      navbar.style.backgroundColor = 'rgba(252, 249, 244, 0.95)';
+      navbar.style.padding = '0.5rem 2rem';
+    } else {
+      navbar.style.backgroundColor = 'rgba(252, 249, 244, 0.8)';
+      navbar.style.padding = '1rem 2rem';
+    }
+  });
+
+  // =========================
+  // SEARCH DROPDOWN SCRIPT
+  // =========================
+
+  let tours = {},
+      departs = [],
+      selDest = '';
+
+  fetch('data/toursConfig.json')
+    .then(res => res.json())
+    .then(data => {
+      tours = data.tourNames;
       
-  </script>
+    });
+
+  function closeAll() {
+    document.getElementById('destDrop').style.display = 'none';
+    
+  }
+
+  document.addEventListener('click', closeAll);
+
+  // Điểm đến
+  document.getElementById('sfDest').addEventListener('click', e => {
+    e.stopPropagation();
+
+    const dd = document.getElementById('destDrop');
+    const open = dd.style.display !== 'none';
+
+    closeAll();
+
+    if (!open) buildDestDrop();
+  });
+
+  function buildDestDrop() {
+    const dd = document.getElementById('destDrop');
+
+    dd.innerHTML = Object.entries(tours).map(([k, v]) =>
+      `<div
+        onclick="pickDest('${k}','${v}')"
+        style="padding:10px 16px;font-size:14px;color:#333;cursor:pointer;display:flex;align-items:center;gap:8px;"
+        onmouseover="this.style.background='#f5f5f5'"
+        onmouseout="this.style.background=''">
+          ${v}
+      </div>`
+    ).join('');
+
+    dd.style.display = 'block';
+  }
+
+  function pickDest(id, name) {
+    document.getElementById('destInp').value = name;
+    selDest = id;
+
+    document.getElementById('destDrop').style.display = 'none';
+  }
+
+
+  // Nút tìm
+  document.querySelector('.btn-search').addEventListener('click', () => {
+    const dest = selDest || document.getElementById('destInp').value;
+
+    
+
+    const p = new URLSearchParams();
+
+    if (dest) p.set('dest', dest);
+
+    window.location.href =
+      'ListTour.html?' + p.toString();
+  });
+</script>
 </body>
 </html>

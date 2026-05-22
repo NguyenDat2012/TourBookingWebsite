@@ -59,5 +59,13 @@
         "serviceFee": 500000,
         "title": "Huyền Thoại Vịnh Hạ Long & Lan Hạ: Di Sản Thiên Nhiên Thế Giới",
         "imgs": ["/Img/VinhHaLong-LanHa/Vinh-Ha-Long.png", "/Img/VinhHaLong-LanHa/Vinh-Lan-Ha.png", "/Img/VinhHaLong-LanHa/Dao-Ti-Top.png"]
+    },
+    "tourNames": {
+        "ha-noi": "Hà Nội",
+        "da-nang": "Đà Nẵng",
+        "tphcm": "TP. Hồ Chí Minh",
+        "ha-long": "Hạ Long",
+        "hoi-an": "Hội An",
+        "fansipan": "Fansipan / Sapa"
     }
 }
