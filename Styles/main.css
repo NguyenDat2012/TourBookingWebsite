@@ -148,7 +148,10 @@ h1, h2, h3, h4, .headline {
     flex: 1;
     padding: 0.75rem 1.5rem;
     border-right: 1px solid var(--outline-variant);
-    text-align: left;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .search-field:last-of-type {
     border-right: none;
@@ -168,9 +171,11 @@ h1, h2, h3, h4, .headline {
     width: 100%;
     padding: 0;
     color: var(--on-surface);
+    text-align: center;
 }
 .search-input:focus {
     outline: none;
+    text-align: left;
 }
 .btn-search {
     background: var(--primary);

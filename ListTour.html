@@ -94,9 +94,17 @@
                         </div>
 
                         <!-- Submit -->
-                        <button class="btn-search-submit">
-                            Tìm kiếm
-                        </button>
+                        <div class="d-flex gap-2 align-items-center">
+
+                            <button class="btn-search-submit">
+                                Tìm kiếm
+                            </button>
+
+                            <button id="show-all-btn" class="btn-show-all">
+                                Tất cả tour
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -408,6 +416,53 @@
         const countEl = document.querySelector('.fw-bold.text-dark');
         if (countEl) countEl.textContent = found;
 
+        suggestions.style.display = 'none';
+    });
+        // Hiển thị tất cả tour
+    document.getElementById('show-all-btn')
+    .addEventListener('click', function () {
+
+        const cards = document.querySelectorAll('.row.g-4 > [data-dest]');
+
+        cards.forEach(col => {
+            col.style.display = '';
+        });
+
+        // reset ô tìm kiếm
+        searchInput.value = '';
+
+        // bỏ active nút giá
+        priceBtns.forEach(btn => {
+            btn.classList.remove('active');
+        });
+
+        // cập nhật số lượng
+        const countEl = document.querySelector('.fw-bold.text-dark');
+
+        if (countEl) {
+            countEl.textContent = cards.length;
+        }
+
+        suggestions.style.display = 'none';
+    });
+    // Hiển thị tất cả tour
+    document.getElementById('show-all-btn')
+    .addEventListener('click', function () {
+        const cards = document.querySelectorAll('.row.g-4 > [data-dest]');
+        cards.forEach(col => {
+            col.style.display = '';
+        });
+        // reset ô tìm kiếm
+        searchInput.value = '';
+        // bỏ active nút giá
+        priceBtns.forEach(btn => {
+            btn.classList.remove('active');
+        });
+        // cập nhật số lượng
+        const countEl = document.querySelector('.fw-bold.text-dark');
+        if (countEl) {
+            countEl.textContent = cards.length;
+        }
         suggestions.style.display = 'none';
     });
 </script>
