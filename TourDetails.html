@@ -13,24 +13,35 @@
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
     <div class="container-xxl">
         <a class="navbar-brand" href="index.html">The Verdant Archive</a>
-        <div class="search-container d-none d-md-flex ms-4">
-            <span class="material-symbols-outlined text-muted" style="font-size: 18px">search</span>
-            <input placeholder="Tìm kiếm điểm đến..." type="text"/>
-        </div>
+        
         <button class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item"><a class="nav-link active" href="ListTour.html">Destinations</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Experiences</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Journals</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Plan</a></li>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="ListTour.html">Điểm đến</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Kế hoạch</a></li>
             </ul>
-            <div class="d-flex align-items-center gap-3">
-                <a class="nav-link me-3 d-none d-lg-block" href="Login.html">Đăng nhập</a>
-                <a class="nav-link me-3 d-none d-lg-block" href="Register.html">Đăng ký</a>
-                <button class="btn btn-primary-custom shadow-sm">Book Now</button>
+            <div class="d-flex align-items-center">
+                <div id="authButtons" class="d-flex align-items-center">
+                    <a class="nav-link me-3 d-none d-lg-block" href="Login.html">Đăng nhập</a>
+                    <a class="nav-link me-3 d-none d-lg-block" href="Register.html">Đăng ký</a>
+                </div>
+
+                <div id="userProfile" class="dropdown d-none">
+                    <button class="btn d-flex align-items-center gap-2 dropdown-toggle border-0" type="button" data-bs-toggle="dropdown">
+                        <span class="material-symbols-outlined">account_circle</span>
+                        <span id="navUserName" class="fw-bold small">Tên người dùng</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end shadow border-0">
+                        <li><a class="dropdown-item py-2" href="#"><span class="material-symbols-outlined align-middle me-2">person</span>Hồ sơ của tôi</a></li>
+                        <li><a class="dropdown-item py-2" href="#"><span class="material-symbols-outlined align-middle me-2">history</span>Lịch sử đặt tour</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item py-2 text-danger" href="javascript:void(0)" onclick="logout()">
+                            <span class="material-symbols-outlined align-middle me-2">logout</span>Đăng xuất</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
