@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+    <!-- Thiết lập mã hóa ký tự UTF-8 -->
     <meta charset="utf-8"/>
+    <!-- Cấu hình viewport cho thiết bị di động, đảm bảo responsive -->
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <!-- Tiêu đề của trang hiển thị trên tab trình duyệt -->
     <title>Huyền Thoại Vịnh Hạ Long | The Verdant Archive</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <!-- Nhúng Google Fonts cho các kiểu chữ tùy chỉnh -->
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <!-- Nhúng Material Symbols Outlined từ Google Fonts cho các icon -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <link href="Styles/DaNangTour.css" rel="stylesheet"/>
-    <link href="../Styles/ListourChiTiet/VinhHaLong.css" rel="stylesheet"/>
+    <link href="Styles/DaNangTour.css" rel="stylesheet"/> <!-- CSS chung cho các trang tour (có thể dùng chung) -->
+    <link href="../Styles/ListourChiTiet/VinhHaLong.css" rel="stylesheet"/> <!-- CSS riêng cho tour Vịnh Hạ Long -->
 </head>
 <body>
 
@@ -17,20 +22,25 @@
 <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
     <div class="container-xxl">
         <a class="navbar-brand" href="/index.html">The Verdant Archive</a>
+        <!-- Thanh tìm kiếm trên navbar, ẩn trên màn hình nhỏ -->
         <div class="search-container d-none d-md-flex ms-4">
             <span class="material-symbols-outlined text-muted" style="font-size: 18px">search</span>
             <input placeholder="Tìm kiếm điểm đến..." type="text"/>
         </div>
+        <!-- Nút toggle cho navbar trên thiết bị di động -->
         <button class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <!-- Nội dung của navbar, sẽ thu gọn trên màn hình nhỏ -->
         <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- Các liên kết điều hướng chính -->
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item"><a class="nav-link active" href="/ListTour.html">Destinations</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Experiences</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Journals</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Plan</a></li>
             </ul>
+            <!-- Các nút Đăng nhập/Đăng ký và Book Now -->
             <div class="d-flex align-items-center gap-3">
                 <a class="nav-link me-3 d-none d-lg-block" href="/Login.html">Đăng nhập</a>
                 <a class="nav-link me-3 d-none d-lg-block" href="/Register.html">Đăng ký</a>
@@ -42,19 +52,24 @@
 
 <main class="container-xxl" style="padding-top: 120px;">
 
-    <!-- Gallery -->
+    <!-- Phần Gallery ảnh của tour -->
     <section class="gallery-grid">
+        <!-- Ảnh chính của tour -->
         <div class="gallery-main">
             <div class="gallery-item">
                 <img alt="Vịnh Hạ Long" src="/Img/VinhHaLong-LanHa/Vinh-Ha-Long.png"/>
                 <div class="overlay-gradient"></div>
             </div>
         </div>
+        <!-- Các ảnh phụ và nút xem tất cả -->
         <div class="gallery-side">
+            <!-- Ảnh phụ 1 -->
             <div class="gallery-item" style="height: 50%;">
                 <img alt="Vinh Lan Hạ" src="/Img/VinhHaLong-LanHa/Vinh-Lan-Ha.png"/>
             </div>
+            <!-- Ảnh phụ 2 và nút xem tất cả -->
             <div class="d-flex gap-3" style="height: 50%;">
+                <!-- Ảnh phụ 2 -->
                 <div class="gallery-item flex-grow-1">
                     <img alt="Đảo Ti Tốp" src="/Img/VinhHaLong-LanHa/Dao-Ti-Top.png"/>
                 </div>
@@ -68,10 +83,12 @@
 
     <!-- Content Area -->
     <div class="row g-5">
+        <!-- Cột trái: Thông tin chi tiết tour -->
         <div class="col-lg-8">
 
             <!-- Title block -->
             <div class="mb-4">
+                <!-- Badge loại tour -->
                 <span class="badge rounded-pill text-uppercase mb-2"
                       style="background-color: rgba(0, 105, 84, 0.1); color: var(--primary); font-size: 10px; padding: 6px 12px;">
                     Signature Journey
@@ -85,10 +102,11 @@
                     <span class="ms-2 fw-semibold text-muted small">4.9 (312 đánh giá)</span>
                 </div>
             </div>
-
+            <!-- Tiêu đề chính của tour -->
             <h1 class="display-4 fw-extrabold mb-4">
                 Huyền Thoại Vịnh Hạ Long & Lan Hạ: Di Sản Thiên Nhiên Thế Giới
             </h1>
+            <!-- Mô tả ngắn về tour -->
             <p class="lead text-muted mb-5">
                 Hành trình 3 ngày 2 đêm trên du thuyền 6 sao đưa bạn khám phá Vịnh Hạ Long — kỳ quan thiên nhiên thế giới với hơn 1.600 hòn đảo đá vôi sừng sững giữa làn nước xanh ngọc bích. Từ hang động kỳ bí triệu năm tuổi đến làng chài yên bình trên mặt nước, từ hoàng hôn đỏ rực trên vịnh đến bữa hải sản tươi sống ngay trên boong tàu.
             </p>
@@ -98,12 +116,13 @@
                 <h2 class="h3 fw-bold d-flex align-items-center mb-4">
                     Lịch trình chi tiết<span class="section-divider ms-4"></span>
                 </h2>
-
+                <!-- Mục lịch trình Ngày 1 -->
                 <div class="itinerary-item">
                     <div class="itinerary-dot"></div>
                     <span class="day-label">Ngày 1</span>
                     <h3 class="h4 fw-bold">Hà Nội – Hạ Long – Lên Tàu Khám Phá Vịnh</h3>
                     <p class="text-muted">Xe đón tại Hà Nội, di chuyển đến cảng Tuần Châu. Làm thủ tục lên du thuyền 6 sao, dùng bữa trưa đầu tiên trên boong. Chiều thăm hang Sửng Sốt — một trong những hang đẹp nhất Hạ Long với thạch nhũ muôn hình dáng. Kayak quanh vùng vịnh yên tĩnh khi hoàng hôn buông xuống.</p>
+                    <!-- Thẻ thông tin nổi bật của ngày -->
                     <div class="itinerary-card">
                         <span class="material-symbols-outlined fs-1" style="color: var(--primary)">sailing</span>
                         <div>
@@ -112,14 +131,14 @@
                         </div>
                     </div>
                 </div>
-
+                <!-- Mục lịch trình Ngày 2 -->
                 <div class="itinerary-item">
                     <div class="itinerary-dot inactive"></div>
                     <span class="day-label">Ngày 2</span>
                     <h3 class="h4 fw-bold">Vịnh Lan Hạ – Làng Chài – Chèo Kayak</h3>
                     <p class="text-muted">Buổi sáng tập Tai Chi trên boong tàu khi bình minh ló dạng trên vịnh. Di chuyển sang Vịnh Lan Hạ — vùng biển hoang sơ ít người biết đến với nước trong vắt nhìn thấy đáy. Thăm làng chài Cửa Vạn — làng nổi cổ nhất Hạ Long, nơi người dân vẫn sống cuộc đời thủy cư thanh bình.</p>
                 </div>
-
+                <!-- Mục lịch trình Ngày 3 -->
                 <div class="itinerary-item border-0">
                     <div class="itinerary-dot inactive"></div>
                     <span class="day-label">Ngày 3</span>
@@ -127,7 +146,7 @@
                     <p class="text-muted">Buổi sáng chèo kayak qua hang Luồn huyền bí — vòm đá tự nhiên dẫn vào đầm nước kín như thế giới tách biệt. Leo lên đỉnh đảo Ti Tốp ngắm toàn cảnh vịnh Hạ Long từ trên cao. Tắm biển lần cuối trước khi tàu quay về cảng, xe đưa đoàn về Hà Nội.</p>
                 </div>
             </div>
-
+            <!-- Phần chính sách và lưu ý -->
             <!-- Policies -->
             <div class="p-5 rounded-4" style="background-color: var(--surface-container)">
                 <h3 class="h4 fw-bold mb-4 d-flex align-items-center gap-2">
@@ -135,6 +154,7 @@
                     Chính sách &amp; Lưu ý
                 </h3>
                 <div class="row">
+                    <!-- Chính sách hủy -->
                     <div class="col-md-6 mb-4 mb-md-0">
                         <h4 class="small fw-bold text-uppercase mb-3" style="letter-spacing: 1px">Chính sách hủy</h4>
                         <ul class="list-unstyled small text-muted">
@@ -143,6 +163,7 @@
                             <li class="mb-2"><span class="fw-bold me-2" style="color: var(--primary)">•</span> Hủy trong vòng 48h: Không hoàn tiền.</li>
                         </ul>
                     </div>
+                    <!-- Lưu ý quan trọng -->
                     <div class="col-md-6">
                         <h4 class="small fw-bold text-uppercase mb-3" style="letter-spacing: 1px">Lưu ý quan trọng</h4>
                         <ul class="list-unstyled small text-muted">
@@ -156,10 +177,12 @@
 
         </div>
 
-        <!-- ─── Booking Widget ─── -->
+        <!-- Cột phải: Widget đặt tour -->
+        <!-- Booking Widget -->
         <div class="col-lg-4">
             <div class="booking-card">
                 <div class="d-flex justify-content-between align-items-end mb-4">
+                    <!-- Giá tour -->
                     <div>
                         <span class="small text-muted d-block mb-1">Giá từ</span>
                         <span class="h1 fw-extrabold mb-0" style="color: var(--primary)" id="unitPriceDisplay">15.800.000</span>
@@ -168,6 +191,7 @@
                     <div class="badge-discount">-10% Early Bird</div>
                 </div>
 
+                <!-- Bộ chọn ngày khởi hành -->
                 <!-- Date Picker -->
                 <div class="input-group-custom">
                     <div class="input-label">Ngày khởi hành</div>
@@ -176,7 +200,7 @@
                         <input type="date" id="datePicker" style="border: none; outline: none; background: transparent;">
                     </div>
                 </div>
-
+                <!-- Bộ chọn số lượng khách -->
                 <div class="input-group-custom">
                     <label class="input-label">Số lượng khách</label>
                     <div class="d-flex justify-content-between align-items-center">
@@ -188,24 +212,27 @@
                         <span class="material-symbols-outlined text-muted">group</span>
                     </div>
                 </div>
-
+                <!-- Tóm tắt giá -->
                 <!-- Price Summary -->
                 <div class="mt-4">
+                    <!-- Giá cho số lượng khách -->
                     <div class="d-flex justify-content-between small text-muted mb-2">
                         <span id="guestText">Người lớn (x1)</span>
                         <span id="guestPrice" class="fw-bold text-dark">15.800.000₫</span>
                     </div>
+                    <!-- Phí dịch vụ -->
                     <div class="d-flex justify-content-between small text-muted mb-2">
                         <span>Phí dịch vụ</span>
                         <span class="fw-bold text-dark" id="serviceFee">0₫</span>
                     </div>
+                    <!-- Tổng tiền -->
                     <div class="tapered-divider"></div>
                     <div class="d-flex justify-content-between align-items-center">
                         <span class="h5 fw-bold mb-0">Tổng tiền</span>
                         <span id="totalPrice" class="h3 fw-extrabold mb-0" style="color: var(--primary)">15.800.000₫</span>
                     </div>
                 </div>
-
+                <!-- Nút đặt tour -->
                 <button class="btn btn-primary-custom w-100 py-3 mt-4 fs-5 shadow" id="bookNowBtn">
                     Đặt ngay hôm nay
                 </button>
@@ -213,7 +240,7 @@
                     Đảm bảo giá tốt nhất &amp; Thanh toán an toàn
                 </p>
             </div>
-
+            <!-- Badge bảo hiểm -->
             <!-- Insurance badge -->
             <div class="mt-4 p-4 rounded-4 d-flex gap-3" style="background-color: rgba(0, 105, 84, 0.05)">
                 <span class="material-symbols-outlined" style="color: var(--primary); font-variation-settings: 'FILL' 1">verified_user</span>
@@ -227,14 +254,16 @@
     </div>
 </main>
 
-<!-- Footer -->
+<!-- Phần chân trang -->
 <footer>
     <div class="container-xxl">
         <div class="row g-4">
+            <!-- Cột logo và mô tả -->
             <div class="col-md-3">
                 <div class="h5 fw-bold mb-3" style="color: var(--primary)">The Verdant Archive</div>
                 <p class="small text-muted">Ghi lại những khoảnh khắc rực rỡ nhất trong hành trình khám phá vẻ đẹp bất tận của dải đất hình chữ S.</p>
             </div>
+            <!-- Cột liên kết khám phá -->
             <div class="col-md-3 ms-auto">
                 <h6 class="small fw-bold text-uppercase mb-3" style="letter-spacing: 1px">Khám phá</h6>
                 <ul class="list-unstyled">
@@ -242,6 +271,7 @@
                     <li><a class="footer-link" href="#">Experiences</a></li>
                 </ul>
             </div>
+            <!-- Cột liên kết pháp lý -->
             <div class="col-md-2">
                 <h6 class="small fw-bold text-uppercase mb-3" style="letter-spacing: 1px">Pháp lý</h6>
                 <ul class="list-unstyled">
@@ -249,6 +279,7 @@
                     <li><a class="footer-link" href="#">Privacy Policy</a></li>
                 </ul>
             </div>
+            <!-- Cột liên hệ và mạng xã hội -->
             <div class="col-md-2">
                 <h6 class="small fw-bold text-uppercase mb-3" style="letter-spacing: 1px">Liên hệ</h6>
                 <ul class="list-unstyled">
@@ -260,19 +291,22 @@
                 </ul>
             </div>
         </div>
+        <!-- Thông tin bản quyền -->
         <div class="border-top mt-5 pt-4 text-center small text-muted">
             © 2024 The Verdant Archive. Crafted for the Editorial Odyssey.
         </div>
     </div>
 </footer>
 
-<!-- Bootstrap JS -->
+<!-- Nhúng Bootstrap JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Nhúng Flatpickr CSS và JS cho bộ chọn ngày -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/vn.js"></script>
 
 <script>
+    // Khởi tạo biến cho bộ chọn ngày
 //Calendar
     const dateInput = document.getElementById("datePicker");
     const today = new Date().toISOString().split("T")[0];
@@ -280,25 +314,32 @@
 
     // Sửa con số này cho từng file: HaLong (4500000), Fansipan (2850000), HoiAn (1200000)
     const pricePerPerson = 15800000; 
-    const serviceFee = 0;
-    let count = 1;
+    const serviceFee = 0; // Phí dịch vụ
+    let count = 1; // Số lượng khách mặc định
 
+    // Lấy các phần tử DOM để cập nhật giao diện
     const guestCount = document.getElementById("guestCount");
     const guestText = document.getElementById("guestText");
     const guestPrice = document.getElementById("guestPrice");
     const totalPrice = document.getElementById("totalPrice");
 
+    // Hàm định dạng tiền tệ Việt Nam Đồng
     function formatMoney(number) { return number.toLocaleString("vi-VN") + "₫"; }
 
+    // Hàm cập nhật giao diện khi số lượng khách thay đổi
     function updateUI() {
         let totalGuestPrice = count * pricePerPerson;
         let total = totalGuestPrice + serviceFee;
+        // Cập nhật số lượng khách
         if(guestCount) guestCount.innerText = count;
+        // Cập nhật văn bản số lượng khách
         if(guestText) guestText.innerText = `Người lớn (x${count})`;
+        // Cập nhật giá theo số lượng khách
         if(guestPrice) guestPrice.innerText = formatMoney(totalGuestPrice);
+        // Cập nhật tổng tiền
         if(totalPrice) totalPrice.innerText = formatMoney(total);
     }
-
+    // Gán sự kiện click cho nút tăng/giảm số lượng khách
     document.getElementById("plusBtn").onclick = () => { count++; updateUI(); };
     document.getElementById("minusBtn").onclick = () => { if (count > 1) { count--; updateUI(); } };
 
@@ -307,16 +348,19 @@
 
     bookBtn.onclick = function () {
 
+        // Lấy ngày đã chọn
         const selectedDate = document.getElementById("datePicker").value;
 
+        // Kiểm tra nếu ngày chưa được chọn
         if (selectedDate === "") {
             alert("Vui lòng chọn ngày khởi hành!");
             return;
         }
-
+        // Tính toán lại tổng giá
         let totalGuestPrice = count * pricePerPerson;
         let total = totalGuestPrice + serviceFee;
 
+        // Tạo đối tượng bookingData để lưu vào Local Storage
         const bookingData = {
             image: "/Img/VinhHaLong-LanHa/Vinh-Lan-Ha.png",
             title: "Huyền Thoại Vịnh Hạ Long & Lan Hạ: Di Sản Thiên Nhiên Thế Giới",
@@ -327,8 +371,9 @@
             total: total
         };
 
+        // Lưu dữ liệu đặt tour vào Local Storage
         localStorage.setItem("bookingData", JSON.stringify(bookingData));
-
+        // Chuyển hướng đến trang BookingForm
         window.location.href = "/BookingForm.html";
     };
 </script>

@@ -390,35 +390,44 @@ footer {
 .footer-links ul li a:hover {
     color: var(--primary);
 }
-
+/* Responsive Styles */
 @media (max-width: 768px) {
-    .hero-title { font-size: 3rem; }
+    .hero-title { font-size: 3rem; } /* Giảm kích thước tiêu đề hero trên màn hình nhỏ */
     
-    .search-container { 
-        flex-direction: column; 
-        border-radius: 16px !important; 
-        padding: 8px !important; 
-        gap: 0;
+    .search-container { /* Điều chỉnh thanh tìm kiếm trên màn hình nhỏ */
+        flex-direction: column; /* Xếp các mục theo cột */
+        border-radius: 16px !important; /* Bo tròn góc */
+        padding: 8px !important; /* Khoảng đệm */
+        gap: 0; /* Không có khoảng cách giữa các mục */
     }
     .search-field { 
-        border-right: none !important; 
-        border-bottom: 1px solid var(--outline-variant); 
-        padding: 12px 16px !important;
-        width: 100%; 
+        border-right: none !important; /* Bỏ đường viền bên phải */
+        border-bottom: 1px solid var(--outline-variant); /* Thêm đường viền dưới */
+        padding: 12px 16px !important; /* Khoảng đệm */
+        width: 100%; /* Chiếm toàn bộ chiều rộng */
     }
-    .search-field:last-of-type { 
-        border-bottom: none; 
+    .search-field { /* Điều chỉnh trường tìm kiếm */
+        border-right: none !important; /* Bỏ đường viền bên phải */
+        border-bottom: 1px solid var(--outline-variant); /* Thêm đường viền dưới */
+        padding: 12px 16px !important; /* Khoảng đệm */
+        width: 100%; /* Chiếm toàn bộ chiều rộng */
     }
-    .btn-search { 
-        width: 100% !important; 
-        border-radius: 12px !important; 
-        margin: 8px 0 0 0 !important; 
-        height: 48px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+       
+    .search-field:last-of-type { /* Trường tìm kiếm cuối cùng */
+        border-bottom: none; /* Bỏ đường viền dưới */
+    }
+   
+    .btn-search { /* Điều chỉnh nút tìm kiếm */
+        width: 100% !important; /* Chiếm toàn bộ chiều rộng */
+        border-radius: 12px !important; /* Bo tròn góc */
+        margin: 8px 0 0 0 !important; /* Khoảng lề */
+        height: 48px; /* Chiều cao */
+        display: flex; /* Sử dụng flexbox */
+        align-items: center; /* Căn chỉnh theo chiều dọc ở giữa */
+        justify-content: center; /* Căn chỉnh theo chiều ngang ở giữa */
     }
 
-    .bento-container { height: auto; display: flex; flex-direction: column; }
-    .item-3 { height: 300px; }
-}
+    
+    .bento-container { height: auto; display: flex; flex-direction: column; } /* Điều chỉnh bento grid trên màn hình nhỏ */
+    .item-3 { height: 300px; } /* Chiều cao của item-3 */
+ }

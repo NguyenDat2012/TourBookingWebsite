@@ -1,41 +1,59 @@
 <!DOCTYPE html>
 
 <html lang="vi"><head>
+<!-- Khai báo loại tài liệu HTML5 -->
+<!-- Ngôn ngữ của trang là tiếng Việt -->
+<html lang="vi">
+<head>
+<!-- Thiết lập mã hóa ký tự UTF-8 -->
 <meta charset="utf-8"/>
+<!-- Cấu hình viewport cho thiết bị di động, đảm bảo responsive -->
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- Tiêu đề của trang hiển thị trên tab trình duyệt -->
 <title>The Verdant Archive | Khám Phá Vẻ Đẹp Việt Nam</title>
-<!-- Bootstrap 5 CSS -->
+<!-- Nhúng Bootstrap 5 CSS từ CDN -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
-<!-- Fonts -->
+<!-- Nhúng Google Fonts cho các kiểu chữ tùy chỉnh -->
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="/Styles/main.css" rel="stylesheet" />
 </head>
 <body>
-<!-- Navigation -->
+<!-- Navbar: Sử dụng class navbar, navbar-expand-lg để menu tự động thu gọn trên mobile -->
+<!-- Thanh điều hướng chính của trang, cố định ở trên cùng -->
 <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+<!-- Container giới hạn chiều rộng nội dung và căn giữa -->
   <div class="container-fluid max-width-2xl px-lg-5">
+<!-- Logo thương hiệu, liên kết về trang chủ -->
     <a class="navbar-brand" href="#">The Verdant Archive</a>
+<!-- Nút toggle cho navbar trên thiết bị di động -->
     <button class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
       <span class="navbar-toggler-icon"></span>
     </button>
+<!-- Nội dung của navbar, sẽ thu gọn trên màn hình nhỏ -->
     <div class="collapse navbar-collapse" id="navbarNav">
+<!-- Các liên kết điều hướng chính -->
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item"><a class="nav-link" href="ListTour.html">Điểm đến</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Kế hoạch</a></li>
       </ul>
+       <!-- d-flex, gap-2: căn chỉnh và giãn cách các nút, tự động xếp dọc khi màn hình nhỏ -->
       <div class="d-flex align-items-center justify-content-center gap-2 w-100">
+<!-- Các nút Đăng nhập/Đăng ký, hiển thị khi chưa đăng nhập -->
         <div id="authButtons" class="d-flex align-items-center">
             <a class="nav-link me-3 d-none d-lg-block" href="Login.html">Đăng nhập</a>
             <a class="nav-link me-3 d-none d-lg-block" href="Register.html">Đăng ký</a>
         </div>
-
+<!-- Profile người dùng, hiển thị khi đã đăng nhập -->
         <div id="userProfile" class="dropdown d-none">
+<!-- Nút kích hoạt dropdown, hiển thị tên người dùng và icon -->
             <button class="btn d-flex align-items-center gap-2 dropdown-toggle border-0" type="button" data-bs-toggle="dropdown">
                 <span class="material-symbols-outlined">account_circle</span>
                 <span id="navUserName" class="fw-bold small">Tên người dùng</span>
             </button>
+<!-- Menu dropdown chứa các tùy chọn cho người dùng -->
             <ul class="dropdown-menu dropdown-menu-end shadow border-0">
+<!-- Các mục trong menu dropdown -->
                 <li><a class="dropdown-item py-2" href="#"><span class="material-symbols-outlined align-middle me-2">person</span>Hồ sơ của tôi</a></li>
                 <li><a class="dropdown-item py-2" href="#"><span class="material-symbols-outlined align-middle me-2">history</span>Lịch sử đặt tour</a></li>
                 <li><hr class="dropdown-divider"></li>
@@ -48,11 +66,16 @@
     </div>
   </div>
 </nav>
+<!-- Phần nội dung chính của trang -->
 <main>
-        <!-- Hero Section -->
+       <!-- Hero Section: Ảnh nền lớn, overlay mờ, nội dung căn giữa, dùng flexbox để responsive -->
+<!-- Phần hero, hiển thị ảnh nền lớn và thanh tìm kiếm -->
   <section class="hero-section">
+<!-- Ảnh nền của hero section -->
     <img alt="Ha Long Bay" class="hero-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvTGNdx22A65ji5oItuEvvIw-gQ6xB9UkVEnx_S9EjqJ9X_YagZ3nb9LYkSOiyeCopclvOHXe4x8IW_IE-kYZk7pKnsrcIMQeYipMzTGGWPytJ3KxLmtrb5ehGA09SygEOFDEGrfTYshuNJTJhO47-eZQM46KOF4E7WdtbfAcb7PzGVpKLpiTKJMXf5PaoZ0UYPfJP4E2rur9sRokB6_PcbLeH6XZ2739dFQC6KWqkGjtIvgkTVAYKyNQArZhW4aEeyoXOivRsnROy"/>
+<!-- Lớp phủ trên ảnh nền -->
     <div class="hero-overlay"></div>
+<!-- Nội dung chính của hero section -->
     <div class="hero-content">
       <span class="badge-hero">Khám phá Việt Nam</span>
       <h1 class="hero-title">Hành Trình Qua Những <br/><span class="italic">Kỳ Quan</span></h1>
@@ -62,8 +85,10 @@
               <span class="search-label">Điểm đến</span>
               <div class="d-flex align-items-center gap-2">
                 <span class="material-symbols-outlined text-primary">location_on</span>
+<!-- Ô input tìm kiếm điểm đến -->
                 <input class="search-input" id="destInp" placeholder="Bạn muốn đi đâu?" autocomplete="off"  />
               </div>
+<!-- Dropdown hiển thị gợi ý điểm đến -->
               <div id="destDrop" style="display:none;position:absolute;top:calc(100% + 8px);left:0;right:0;background:#fff;border-radius:12px;border:0.5px solid #ddd;box-shadow:0 8px 24px rgba(0,0,0,0.1);z-index:200;overflow:hidden;min-width:200px;"></div>
             </div>
             <!-- Nút tìm -->
@@ -75,17 +100,21 @@
     </div>
   </section>
         <!-- Featured Destinations -->
+<!-- Phần các điểm đến nổi bật -->
   <section class="container-fluid px-lg-5 py-5">
     <div class="d-flex flex-column flex-md-row justify-content-between align-items-end mb-4">
       <div>
+<!-- Tiêu đề phụ và tiêu đề chính của phần -->
         <span class="text-primary fw-bold text-uppercase small tracking-widest">Cảm hứng du lịch</span>
         <h2 class="display-4 fw-black tracking-tighter mt-2">Điểm Đến <span class="text-secondary italic fw-normal text-decoration-underline">Nổi Bật</span></h2>
       </div>
       <a class="text-primary fw-bold text-decoration-none d-flex align-items-center gap-2 mb-2" href="#">Xem tất cả 150+ điểm đến <span class="material-symbols-outlined">arrow_forward</span></a>
     </div>
+<!-- Container hiển thị các điểm đến theo layout bento grid -->
     <div class="bento-container">
       
       <div class="bento-item item-1">
+<!-- Thẻ điểm đến Hà Nội -->
         <a href="TourDetails.html?id=ha-noi" class="bento-link">
           <img alt="Hanoi" src="Img/HaNoiTour/Hoan-Kiem-Lake-Title.png"/>
           <div class="bento-overlay">
@@ -94,6 +123,7 @@
           </div>
         </a>
       </div>
+<!-- Thẻ điểm đến Đà Nẵng -->
       <div class="bento-item item-2">
         <a href="TourDetails.html?id=da-nang" class="bento-link">
           <img alt="Da Nang" src="Img/DaNangTour/Dragon-Bridge-Title.png"/>
@@ -103,6 +133,7 @@
           </div>
         </a>
       </div>
+<!-- Thẻ điểm đến TP. Hồ Chí Minh -->
       <div class="bento-item item-3">
         <a href="TourDetails.html?id=tphcm" class="bento-link">
           <img alt="HCMC" src="Img/TPHCMTour/Dinh-Doc-Lap-Title.png"/>
@@ -118,14 +149,17 @@
     </div>
   </section>
         <!-- Best Sellers -->
+<!-- Phần các tour bán chạy nhất -->
   <section class="bg-surface-container-low py-5 mt-5">
     <div class="container-fluid px-lg-5 py-5">
       <div class="mb-5">
+<!-- Tiêu đề phần -->
         <h2 class="display-5 fw-black tracking-tighter">Tour <span class="text-primary">Bán Chạy Nhất</span></h2>
         <p class="text-muted lead">Những trải nghiệm độc bản được hàng ngàn du khách bình chọn.</p>
       </div>
       <div class="row g-4">
           <!-- Tour 1 -->
+<!-- Thẻ tour Vịnh Hạ Long -->
         <div class="col-md-4">
           <div class="tour-card card">
             <div class="position-relative">
@@ -157,6 +191,7 @@
           </div>
         </div>
           <!-- Tour 2 -->
+<!-- Thẻ tour Fansipan -->
         <div class="col-md-4">
           <div class="tour-card card">
             <div class="position-relative">
@@ -188,6 +223,7 @@
           </div>
         </div>
           <!-- Tour 3 -->
+<!-- Thẻ tour Hội An -->
         <div class="col-md-4">
           <div class="tour-card card">
             <div class="position-relative">
@@ -221,13 +257,16 @@
     </div>
   </section>
         <!-- Testimonials -->
+<!-- Phần đánh giá từ khách hàng -->
   <section class="container-fluid px-lg-5 py-5">
     <div class="text-center mb-5">
+<!-- Tiêu đề phụ và tiêu đề chính của phần -->
       <span class="text-secondary fw-bold text-uppercase small tracking-widest">Cảm nhận từ khách hàng</span>
       <h2 class="display-5 fw-black tracking-tighter mt-2">Hơn Cả Một <span class="italic fw-normal">Chuyến Đi</span></h2>
     </div>
     <div class="row g-4">
       <div class="col-md-6 col-lg-3">
+<!-- Thẻ đánh giá 1 -->
         <div class="testimonial-card">
           <span class="material-symbols-outlined quote-icon">format_quote</span>
           <div class="text-warning mb-3">
@@ -248,6 +287,7 @@
         </div>
       </div>
         <!-- Repeat for other testimonials if needed, or keep 4 as requested -->
+<!-- Thẻ đánh giá 2 -->
       <div class="col-md-6 col-lg-3">
         <div class="testimonial-card">
           <span class="material-symbols-outlined quote-icon">format_quote</span>
@@ -266,6 +306,7 @@
           </div>
         </div>
       </div>
+<!-- Thẻ đánh giá 3 -->
       <div class="col-md-6 col-lg-3">
         <div class="testimonial-card">
           <span class="material-symbols-outlined quote-icon">format_quote</span>
@@ -286,6 +327,7 @@
           </div>
         </div>
       </div>
+<!-- Thẻ đánh giá 4 -->
       <div class="col-md-6 col-lg-3">
         <div class="testimonial-card">
           <span class="material-symbols-outlined quote-icon">format_quote</span>
@@ -309,10 +351,13 @@
     </div>
   </section>
         <!-- CTA Section -->
+<!-- Phần kêu gọi hành động (Call to Action) -->
   <section class="container py-5 my-5">
     <div class="cta-section">
+<!-- Ảnh nền trang trí cho CTA -->
       <img alt="Pattern" class="cta-bg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaUxW97pfedzxaJq0B1dMXMw68UTLZUB-Na4ABzHXmUihQ4JhHlNmeJx-Py0vb6Cba7tViS0BPICF0MbTuScQTlx1HxBMUn08_cte-GjMbvhUHUuFCpDO6zuUFWicDkMxrP81XuACH816M_DfI5w7UMHqbX1h4ziV-m817eSpxAuEriN7ULSmpmorTIsel1lOLYS-JmGxqY1U9Wd11oeauJbmhG7jwN6ESjfSWYOFDEezgXufrzliHNhp-T0cMnESJOqr4YSAR7pkK"/>
       <div class="position-relative z-1">
+<!-- Tiêu đề và mô tả của CTA -->
         <h2 class="display-4 fw-black mb-4">Bắt Đầu Hành Trình Của Bạn <br/>Ngay Hôm Nay</h2>
         <p class="lead opacity-75 mb-5 mx-auto" style="max-width: 600px;">Đăng ký nhận bản tin để không bỏ lỡ các ưu đãi độc quyền và những câu chuyện truyền cảm hứng du lịch từ các chuyên gia.</p>
         <div class="newsletter-form">
@@ -324,18 +369,22 @@
   </section>
 </main>
         <!-- Footer -->
+<!-- Phần chân trang -->
 <footer>
   <div class="container-fluid px-lg-5">
     <div class="row g-5">
       <div class="col-lg-3">
+<!-- Logo và mô tả ngắn của thương hiệu -->
         <div class="footer-logo">The Verdant Archive</div>
         <p class="text-muted small">Đơn vị lữ hành cao cấp hàng đầu Việt Nam, mang đến những trải nghiệm cá nhân hóa sâu sắc giữa lòng di sản.</p>
+<!-- Các nút mạng xã hội -->
         <div class="d-flex gap-3 mt-4">
           <a class="btn btn-sm btn-light rounded-circle p-2" href="#"><span class="material-symbols-outlined text-primary">public</span></a>
           <a class="btn btn-sm btn-light rounded-circle p-2" href="#"><span class="material-symbols-outlined text-primary">favorite</span></a>
         </div>
       </div>
       <div class="col-lg-3 col-6 footer-links">
+<!-- Tiêu đề và danh sách liên kết -->
         <h5>Liên kết</h5>
         <ul>
           <li><a href="#">Về chúng tôi</a></li>
@@ -344,6 +393,7 @@
         </ul>
       </div>
       <div class="col-lg-3 col-6 footer-links">
+<!-- Tiêu đề và danh sách trải nghiệm -->
         <h5>Trải nghiệm</h5>
         <ul>
           <li><a href="#">Văn hóa &amp; Di sản</a></li>
@@ -352,6 +402,7 @@
         </ul>
       </div>
       <div class="col-lg-3 footer-links">
+<!-- Tiêu đề và danh sách hỗ trợ -->
         <h5>Hỗ trợ</h5>
         <ul>
           <li><a href="#">Chính sách bảo mật</a></li>
@@ -359,59 +410,100 @@
         </ul>
       </div>
     </div>
+<!-- Đường phân cách và thông tin bản quyền -->
     <hr class="mt-5 mb-4 opacity-10"/>
     <div class="text-center text-md-start text-muted small">
       © 2024 The Verdant Archive. Crafted for the Editorial Odyssey.
     </div>
   </div>
 </footer>
-<!-- Bootstrap 5 JS -->
+<!-- Nhúng Bootstrap 5 JS Bundle (bao gồm Popper.js) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="Script/main.js"></script>
 <script>
+      // Script cho hiệu ứng cuộn trang và thanh điều hướng
       // Smooth scroll / Simple Navbar transparency script
       window.addEventListener('scroll', function() {
+        // Lấy navbar có class navbar-custom
           const navbar = document.querySelector('.navbar-custom');
+          // Nếu cuộn xuống quá 50px
           if (window.scrollY > 50) {
+             // Đổi màu nền navbar đậm hơn
               navbar.style.backgroundColor = 'rgba(252, 249, 244, 0.95)';
+               // Giảm padding để navbar nhỏ lại
               navbar.style.padding = '0.5rem 2rem';
           } else {
+              // Nếu đang ở gần đầu trang
+        // Navbar sẽ trong hơn
               navbar.style.backgroundColor = 'rgba(252, 249, 244, 0.8)';
+              // Navbar to lại
               navbar.style.padding = '1rem 2rem';
           }
       });
 
+      // ==========================================
+      // Biến toàn cục
+      // ==========================================
       // Basic button interactions
+      // Dùng để lưu danh sách tour lấy từ file JSON
       let tours = {}, selDest='';
-
+      // Đọc file toursConfig.json để lấy danh sách tour và tên điểm đến
       fetch('data/toursConfig.json')
+        // Lấy dữ liệu cấu hình tour từ file JSON
         .then(res => res.json())
+           // Sau khi có dữ liệu
         .then(data => {
           tours = data.tourNames;
          
         });
-
+// ==========================================
+// Hàm đóng tất cả dropdown
+// ==========================================
       function closeAll(){
+        // Đóng tất cả các dropdown gợi ý
         document.getElementById('destDrop').style.display='none';
        
       }
+// Khi click ra ngoài trang
+// sẽ tự động đóng dropdown
       document.addEventListener('click', closeAll);
 
-      // Điểm đến
+// ==========================================
+// Xử lý tìm kiếm điểm đến khi nhập
+// ==========================================
+// Lắng nghe sự kiện input
+// Khi người dùng gõ vào ô tìm kiếm
       document.getElementById('destInp').addEventListener('input', function(e){
+        // Lấy nội dung người dùng nhập
+        // toLowerCase(): chuyển thành chữ thường
+        // trim(): xóa khoảng trắng dư
           const keyword = e.target.value.toLowerCase().trim();
-
+        // Lấy dropdown hiển thị kết quả
           const dd = document.getElementById('destDrop');
-
+        // Nếu ô input trống
           if(keyword === ''){
+              // Nếu không có từ khóa, ẩn dropdown
               dd.style.display = 'none';
+              //dừng 
               return;
           }
 
+  // ==========================================
+    // Lọc dữ liệu tour
+    // ==========================================
           const filtered = Object.entries(tours).filter(([id, name]) =>
+           // includes()
+        // Kiểm tra tên tour có chứa keyword không
               name.toLowerCase().includes(keyword)
           );
+    // Object.entries(tours)
+    // Chuyển object thành mảng
 
+    // filter()
+    // Lọc những tour chứa từ khóa
+                // ==========================================
+                // Nếu không tìm thấy
+                // ==========================================
           if(filtered.length === 0){
               dd.innerHTML = `
                   <div style="padding:10px 16px;color:#999;">
@@ -419,6 +511,7 @@
                   </div>
               `;
           } else {
+              // Hiển thị các gợi ý khớp
               dd.innerHTML = filtered.map(([k,v]) =>
                   `<div onclick="pickDest('${k}','${v}')"
                       style="padding:10px 16px;font-size:14px;color:#333;cursor:pointer;display:flex;align-items:center;gap:8px;"
@@ -431,13 +524,20 @@
 
           dd.style.display = 'block';
       });
+      // ==========================================
+      // Ngăn dropdown bị đóng khi click vào ô search
+      // ==========================================
       document.getElementById('sfDest').addEventListener('click', function(e){
           e.stopPropagation();
       });
+        // ==========================================
+        // Khi focus vào input
+        // Hiện toàn bộ danh sách điểm đến
+        // ==========================================
       document.getElementById('destInp').addEventListener('focus', ()=>{
-
+           // Lấy dropdown
         const dd = document.getElementById('destDrop');
-
+        // Hiển thị tất cả tour
         dd.innerHTML = Object.entries(tours).map(([k,v]) =>
             `<div onclick="pickDest('${k}','${v}')"
                 style="padding:10px 16px;font-size:14px;color:#333;cursor:pointer;"
@@ -450,6 +550,7 @@
         dd.style.display = 'block';
      });
 
+      // Hàm xây dựng dropdown gợi ý điểm đến (có vẻ bị trùng lặp với logic focus)
       function buildDestDrop(){
         const dd = document.getElementById('destDrop');
         dd.innerHTML = Object.entries(tours).map(([k,v])=>
@@ -458,12 +559,14 @@
         dd.style.display='block';
       }
 
+      // Hàm chọn một điểm đến từ gợi ý
       function pickDest(id, name){
         document.getElementById('destInp').value = name;
         selDest = id;
         document.getElementById('destDrop').style.display='none';
       }
 
+      // Xử lý sự kiện click nút tìm kiếm
       // Nút tìm
       document.querySelector('.btn-search').addEventListener('click', ()=>{
         const dest = selDest || document.getElementById('destInp').value;

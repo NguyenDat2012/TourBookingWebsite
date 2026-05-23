@@ -1,10 +1,10 @@
 /* Custom cho bộ lọc hàng ngang */
 .filter-horizontal {
-    padding: 1.5rem 2rem !important;
-    background: rgba(255, 255, 255, 0.85) !important;
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem 2rem !important; /* Đệm bên trong */
+    background: rgba(255, 255, 255, 0.85) !important; /* Màu nền với độ trong suốt */
+    backdrop-filter: blur(10px); /* Hiệu ứng làm mờ nền */
+    border-radius: 20px; /* Bo tròn góc */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Đổ bóng */
     margin: 0 auto;
     width: 100%;
 }
@@ -15,10 +15,10 @@
 }
 
 .filter-horizontal .filter-title {
-    font-size: 0.85rem !important;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.5rem !important;
-    text-transform: uppercase;
+    font-size: 0.85rem !important; /* Kích thước chữ */
+    letter-spacing: 0.05em; /* Khoảng cách giữa các chữ */
+    margin-bottom: 0.5rem !important; /* Khoảng cách dưới */
+    text-transform: uppercase; /* Chuyển thành chữ hoa */
     color: #8c7663;
 }
 
@@ -31,9 +31,9 @@
 /* Đảm bảo responsive mượt mà trên mobile */
 @media (max-width: 991.98px) {
     .filter-horizontal {
-        flex-direction: column;
-        align-items: flex-start !important;
-        gap: 1.5rem !important;
+        flex-direction: column; /* Xếp các mục theo cột */
+        align-items: flex-start !important; /* Căn chỉnh các mục về phía đầu */
+        gap: 1.5rem !important; /* Khoảng cách giữa các mục */
     }
     .filter-horizontal .filter-group {
         width: 100%;
@@ -47,19 +47,19 @@
 /* =========================
    SEARCH FILTER BAR NEW UI
 ========================= */
-
+/* Thanh tìm kiếm và bộ lọc chính */
 .search-filter-bar {
-    width: 100%;
-    max-width: 1150px;
+    width: 100%; /* Chiều rộng đầy đủ */
+    max-width: 1150px; /* Chiều rộng tối đa */
 
-    margin: 0 auto;
+    margin: 0 auto; /* Căn giữa */
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1.5rem;
+    display: flex; /* Sử dụng flexbox */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: space-between; /* Phân bổ không gian giữa các mục */
+    gap: 1.5rem; /* Khoảng cách giữa các mục */
 
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.5rem; /* Đệm bên trong */
 
     background: rgba(255, 255, 255, 0.78);
     backdrop-filter: blur(18px);
@@ -69,10 +69,10 @@
 
     border-radius: 28px;
 
-    box-shadow:
+    box-shadow: /* Đổ bóng */
         0 10px 40px rgba(0,0,0,0.06),
         0 2px 8px rgba(0,0,0,0.04);
-
+    /* Hiệu ứng chuyển động mượt mà */
     transition: all 0.3s ease;
 }
 
@@ -88,42 +88,42 @@
 /* =========================
    SEARCH INPUT
 ========================= */
-
+/* Wrapper cho ô tìm kiếm */
 .search-input-wrapper {
-    flex: 1;
-    min-width: 260px;
+    flex: 1; /* Chiếm hết không gian còn lại */
+    min-width: 260px; /* Chiều rộng tối thiểu */
 
-    background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.7); /* Màu nền */
 
-    border-radius: 18px;
+    border-radius: 18px; /* Bo tròn góc */
 
-    padding: 0.9rem 1rem;
+    padding: 0.9rem 1rem; /* Đệm bên trong */
 
-    border: 1px solid rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.05); /* Viền */
 
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; /* Hiệu ứng chuyển động */
 }
 
 .search-input-wrapper:focus-within {
-    border-color: rgba(0, 105, 84, 0.25);
+    border-color: rgba(0, 105, 84, 0.25); /* Màu viền khi focus */
 
-    box-shadow: 0 0 0 4px rgba(0,105,84,0.08);
+    box-shadow: 0 0 0 4px rgba(0,105,84,0.08); /* Đổ bóng khi focus */
 }
-
+/* Icon tìm kiếm */
 .search-icon {
-    color: var(--primary);
-    font-size: 1.3rem;
-    margin-right: 0.8rem;
+    color: var(--primary); /* Màu icon */
+    font-size: 1.3rem; /* Kích thước icon */
+    margin-right: 0.8rem; /* Khoảng cách bên phải */
 }
-
+/* Ô input tìm kiếm */
 .search-input {
-    border: none;
-    background: transparent;
+    border: none; /* Không có viền */
+    background: transparent; /* Nền trong suốt */
 
-    width: 100%;
+    width: 100%; /* Chiều rộng đầy đủ */
 
-    font-size: 0.95rem;
-    font-weight: 500;
+    font-size: 0.95rem; /* Kích thước chữ */
+    font-weight: 500; /* Độ đậm chữ */
 
     color: var(--on-surface);
 }
@@ -139,37 +139,37 @@
 /* =========================
    DIVIDER
 ========================= */
-
+/* Đường phân cách giữa các phần tử trong thanh tìm kiếm */
 .search-divider {
-    width: 1px;
-    align-self: stretch;
+    width: 1px; /* Chiều rộng */
+    align-self: stretch; /* Kéo dài theo chiều dọc */
 
-    background: rgba(0,0,0,0.06);
+    background: rgba(0,0,0,0.06); /* Màu nền */
 }
 
 /* =========================
    PRICE FILTER
 ========================= */
-
+/* Wrapper cho bộ lọc giá */
 .price-filter-wrapper {
-    width: 360px;
+    width: 360px; /* Chiều rộng cố định */
 
-    display: flex;
-    flex-direction: column;
+    display: flex; /* Sử dụng flexbox */
+    flex-direction: column; /* Xếp các mục theo cột */
 
-    gap: 0.75rem;
+    gap: 0.75rem; /* Khoảng cách giữa các mục */
 }
-
+/* Tiêu đề của bộ lọc giá */
 .price-title {
-    font-size: 0.72rem;
+    font-size: 0.72rem; /* Kích thước chữ */
 
-    text-transform: uppercase;
+    text-transform: uppercase; /* Chuyển thành chữ hoa */
 
-    letter-spacing: 0.12em;
+    letter-spacing: 0.12em; /* Khoảng cách giữa các chữ */
 
-    font-weight: 800;
+    font-weight: 800; /* Độ đậm chữ */
 
-    color: #7b6a58;
+    color: #7b6a58; /* Màu chữ */
 }
 
 /* Grid nút */
@@ -180,38 +180,37 @@
 
     gap: 0.55rem;
 }
-
 /* Button giá */
 .price-btn {
-    padding: 0.65rem 0.75rem;
+    padding: 0.65rem 0.75rem; /* Đệm bên trong */
 
-    border-radius: 14px;
+    border-radius: 14px; /* Bo tròn góc */
 
-    border: 1px solid rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.08); /* Viền */
 
-    background: rgba(255,255,255,0.75);
+    background: rgba(255,255,255,0.75); /* Màu nền */
 
-    font-size: 0.78rem;
+    font-size: 0.78rem; /* Kích thước chữ */
 
-    font-weight: 600;
+    font-weight: 600; /* Độ đậm chữ */
 
-    color: #4b5563;
+    color: #4b5563; /* Màu chữ */
 
-    transition: all 0.25s ease;
+    transition: all 0.25s ease; /* Hiệu ứng chuyển động */
 }
 
 .price-btn:hover {
-    transform: translateY(-1px);
+    transform: translateY(-1px); /* Dịch chuyển lên trên khi hover */
 
-    border-color: var(--primary);
+    border-color: var(--primary); /* Màu viền khi hover */
 
-    color: var(--primary);
+    color: var(--primary); /* Màu chữ khi hover */
 
-    background: rgba(0,105,84,0.04);
+    background: rgba(0,105,84,0.04); /* Màu nền khi hover */
 }
-
+/* Trạng thái active của nút giá */
 .price-btn.active {
-    background: linear-gradient(
+    background: linear-gradient( /* Nền gradient */
         135deg,
         var(--primary),
         var(--primary-container)
@@ -219,39 +218,39 @@
 
     color: white;
 
-    border-color: transparent;
+    border-color: transparent; /* Không có viền */
 
-    box-shadow: 0 8px 20px rgba(0,105,84,0.22);
+    box-shadow: 0 8px 20px rgba(0,105,84,0.22); /* Đổ bóng */
 }
 
 /* =========================
    SEARCH BUTTON
 ========================= */
-
+/* Nút tìm kiếm chính */
 .btn-search-submit {
-    height: 58px;
+    height: 58px; /* Chiều cao */
 
-    padding: 0 2rem;
+    padding: 0 2rem; /* Đệm bên trong */
 
-    border: none;
+    border: none; /* Không có viền */
 
-    border-radius: 18px;
+    border-radius: 18px; /* Bo tròn góc */
 
-    background: linear-gradient(
+    background: linear-gradient( /* Nền gradient */
         135deg,
         var(--primary),
         var(--primary-container)
     );
 
-    color: white;
+    color: white; /* Màu chữ */
 
-    font-weight: 700;
+    font-weight: 700; /* Độ đậm chữ */
 
-    white-space: nowrap;
+    white-space: nowrap; /* Ngăn chặn xuống dòng */
 
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; /* Hiệu ứng chuyển động */
 
-    box-shadow: 0 10px 20px rgba(0,105,84,0.18);
+    box-shadow: 0 10px 20px rgba(0,105,84,0.18); /* Đổ bóng */
 }
 
 .btn-search-submit:hover {
@@ -263,19 +262,19 @@
 /* =========================
    RESPONSIVE
 ========================= */
-
+/* Điều chỉnh responsive cho màn hình nhỏ hơn 992px */
 @media (max-width: 992px) {
-
     .search-filter-bar {
-        flex-direction: column;
+        flex-direction: column; /* Xếp các mục theo cột */
 
-        align-items: stretch;
+        align-items: stretch; /* Kéo dài các mục theo chiều ngang */
 
-        border-radius: 24px;
+        border-radius: 24px; /* Bo tròn góc */
 
-        padding: 1.25rem;
+        padding: 1.25rem; /* Đệm bên trong */
     }
 
+    /* Ẩn đường phân cách */
     .search-divider {
         display: none;
     }
@@ -288,11 +287,10 @@
         width: 100%;
     }
 }
-
+/* Điều chỉnh responsive cho màn hình nhỏ hơn 576px */
 @media (max-width: 576px) {
-
     .price-options-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Xếp các nút giá thành một cột */
     }
 
     .search-input-wrapper {
@@ -300,10 +298,10 @@
     }
 }
 :root {
-            --primary: #006954;
-            --primary-container: #00846b;
-            --on-primary: #ffffff;
-            --on-primary-container: #f5fff9;
+            --primary: #006954; /* Màu chủ đạo */
+            --primary-container: #00846b; /* Màu container chủ đạo */
+            --on-primary: #ffffff; /* Màu chữ trên màu chủ đạo */
+            --on-primary-container: #f5fff9; /* Màu chữ trên container chủ đạo */
             --secondary: #265fa2;
             --tertiary: #71573c;
             --background: #fcf9f4;
@@ -316,10 +314,10 @@
             --editorial-shadow: 0 20px 40px rgba(28, 28, 25, 0.12);
         }
 
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            color: var(--on-surface);
-            background-color: var(--background);
+        body { /* Thiết lập font, màu chữ, màu nền và vị trí cho toàn bộ body */
+            font-family: 'Plus Jakarta Sans', sans-serif; /* Font chữ chính */
+            color: var(--on-surface); /* Màu chữ mặc định */
+            background-color: var(--background); /* Màu nền mặc định */
             position: relative;
         }
 
@@ -327,20 +325,20 @@
         .hero-bg-wrapper {
             position: absolute;
             top: 0;
-            left: 0;
-            width: 100%;
-            height: 85vh;
-            z-index: -1;
-            overflow: hidden;
+            left: 0; /* Đặt ở góc trên bên trái */
+            width: 100%; /* Chiếm toàn bộ chiều rộng */
+            height: 85vh; /* Chiếm 85% chiều cao viewport */
+            z-index: -1; /* Đặt dưới các nội dung khác */
+            overflow: hidden; /* Ẩn phần tràn ra */
         }
 
         .hero-bg-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: brightness(0.9);
+            width: 100%; /* Chiếm toàn bộ chiều rộng của wrapper */
+            height: 100%; /* Chiếm toàn bộ chiều cao của wrapper */
+            object-fit: cover; /* Đảm bảo ảnh bao phủ toàn bộ khu vực */
+            filter: brightness(0.9); /* Giảm độ sáng của ảnh */
         }
-
+        /* Lớp phủ trên ảnh nền */
         .hero-overlay {
             position: absolute;
             top: 0;
@@ -349,26 +347,25 @@
             height: 100%;
             background: linear-gradient(to bottom, rgba(252, 249, 244, 0.2) 0%, rgba(252, 249, 244, 1) 95%);
         }
-
+        /* Font chữ cho các tiêu đề */
         h1, h2, h3, h4, .headline-font {
             font-family: 'Be Vietnam Pro', sans-serif;
         }
-
         /* Navigation */
         .navbar-editorial {
-            background-color: rgba(252, 249, 244, 0.85);
-            backdrop-filter: blur(20px);
-            box-shadow: var(--editorial-shadow);
-            padding: 1rem 2rem;
-            transition: all 0.3s;
+            background-color: rgba(252, 249, 244, 0.85); /* Màu nền với độ trong suốt */
+            backdrop-filter: blur(20px); /* Hiệu ứng làm mờ nền */
+            box-shadow: var(--editorial-shadow); /* Đổ bóng */
+            padding: 1rem 2rem; /* Đệm bên trong */
+            transition: all 0.3s; /* Hiệu ứng chuyển động */
         }
-
+        /* Logo thương hiệu */
         .brand-logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            letter-spacing: -0.05em;
-            color: var(--primary);
-            text-decoration: none;
+            font-size: 1.5rem; /* Kích thước chữ */
+            font-weight: 800; /* Độ đậm chữ */
+            letter-spacing: -0.05em; /* Khoảng cách giữa các chữ */
+            color: var(--primary); /* Màu chữ */
+            text-decoration: none; /* Không gạch chân */
         }
 
         .nav-link-editorial {
@@ -378,11 +375,11 @@
             transition: color 0.3s;
             margin: 0 1rem;
         }
-
+        /* Hiệu ứng hover cho liên kết điều hướng */
         .nav-link-editorial:hover {
             color: var(--primary);
         }
-
+        /* Trạng thái active của liên kết điều hướng */
         .nav-link-editorial.active {
             color: var(--primary);
             
@@ -390,10 +387,10 @@
         }
 
         .btn-book {
-            background: linear-gradient(to right, var(--primary), var(--primary-container));
-            color: var(--on-primary-container);
-            border: none;
-            border-radius: 9999px;
+            background: linear-gradient(to right, var(--primary), var(--primary-container)); /* Nền gradient */
+            color: var(--on-primary-container); /* Màu chữ */
+            border: none; /* Không có viền */
+            border-radius: 9999px; /* Bo tròn góc tối đa */
             padding: 0.6rem 1.5rem;
             font-weight: 700;
             box-shadow: var(--editorial-shadow);
@@ -404,11 +401,10 @@
             transform: scale(0.95);
             color: var(--on-primary-container);
         }
-
         /* Header */
         .page-header {
-            padding-top: 10rem;
-            margin-bottom: 4rem;
+            padding-top: 10rem; /* Đệm trên */
+            margin-bottom: 4rem; /* Khoảng cách dưới */
         }
 
         .eyebrow {
@@ -421,10 +417,10 @@
             display: block;
             margin-bottom: 1rem;
         }
-
+        /* Tiêu đề chính của trang */
         .display-title {
-            font-size: clamp(2.5rem, 5vw, 4.5rem);
-            font-weight: 800;
+            font-size: clamp(2.5rem, 5vw, 4.5rem); /* Kích thước chữ linh hoạt */
+            font-weight: 800; /* Độ đậm chữ */
             letter-spacing: -0.03em;
             line-height: 1.1;
             color: #1a1a1a;
@@ -433,10 +429,10 @@
         .display-title span {
             color: var(--primary);
             font-style: italic;
-        }
-
+        } /* Phần chữ in nghiêng trong tiêu đề */
         /* Sidebar Filters */
         .filter-sidebar {
+            /* Các thuộc tính CSS cho sidebar filter */
             background-color: var(--surface-container-low);
             backdrop-filter: blur(10px);
             border-radius: 2rem;
@@ -444,10 +440,10 @@
             box-shadow: var(--editorial-shadow);
         }
 
-        .filter-title {
-            font-size: 0.75rem;
-            font-weight: 800;
-            text-transform: uppercase;
+        .filter-title { /* Tiêu đề của các nhóm lọc */
+            font-size: 0.75rem; /* Kích thước chữ */
+            font-weight: 800; /* Độ đậm chữ */
+            text-transform: uppercase; /* Chuyển thành chữ hoa */
             letter-spacing: 0.15em;
             color: var(--tertiary);
             margin-bottom: 1.5rem;
@@ -457,10 +453,10 @@
             background-color: var(--primary);
             border-color: var(--primary);
         }
-
+        /* Nút "pill" */
         .btn-pill {
-            border-radius: 9999px;
-            padding: 0.5rem 1rem;
+            border-radius: 9999px; /* Bo tròn góc tối đa */
+            padding: 0.5rem 1rem; /* Đệm bên trong */
             font-size: 0.75rem;
             font-weight: 700;
             border: 1px solid rgba(189, 201, 195, 0.3);
@@ -469,20 +465,19 @@
             margin-bottom: 0.5rem;
             transition: all 0.3s;
         }
-
+        /* Trạng thái active của nút "pill" */
         .btn-pill.active {
             background-color: var(--primary);
             color: white;
             border-color: var(--primary);
         }
-
         /* Tour Cards */
         .tour-card {
-            border: none;
-            background: var(--surface);
-            border-radius: 2rem;
-            margin-bottom: 4rem;
-            cursor: pointer;
+            border: none; /* Không có viền */
+            background: var(--surface); /* Màu nền */
+            border-radius: 2rem; /* Bo tròn góc */
+            margin-bottom: 4rem; /* Khoảng cách dưới */
+            cursor: pointer; /* Con trỏ dạng bàn tay */
             box-shadow: var(--editorial-shadow);
             overflow: hidden;
             transition: transform 0.3s ease;
@@ -491,10 +486,10 @@
         .tour-card:hover {
             transform: translateY(-5px);
         }
-
+        /* Wrapper cho ảnh thẻ tour */
         .card-img-wrapper {
-            position: relative;
-            height: 400px;
+            position: relative; /* Vị trí tương đối */
+            height: 400px; /* Chiều cao cố định */
             overflow: hidden;
         }
 
@@ -508,7 +503,7 @@
         .tour-card:hover img {
             transform: scale(1.05);
         }
-
+        /* Badge trên thẻ tour */
         .badge-editorial {
             position: absolute;
             top: 1.5rem;
@@ -524,12 +519,12 @@
             color: var(--primary);
             z-index: 2;
         }
-
+        /* Badge phụ */
         .badge-secondary-editorial {
             background: rgba(38, 95, 162, 0.95);
             color: white;
         }
-
+        /* Phần thân của thẻ tour */
         .card-body-custom {
             padding: 2rem;
         }
@@ -545,10 +540,10 @@
         .tour-card:hover .tour-title {
             color: var(--primary);
         }
-
+        /* Thông tin meta của tour */
         .tour-meta {
-            font-size: 0.875rem;
-            color: var(--on-surface-variant);
+            font-size: 0.875rem; /* Kích thước chữ */
+            color: var(--on-surface-variant); /* Màu chữ */
             display: flex;
             align-items: center;
         }
@@ -560,10 +555,10 @@
             text-transform: uppercase;
             margin-bottom: 0.2rem;
         }
-
+        /* Giá trị của tour */
         .price-value {
-            font-size: 1.25rem;
-            font-weight: 800;
+            font-size: 1.25rem; /* Kích thước chữ */
+            font-weight: 800; /* Độ đậm chữ */
         }
 
         .btn-outline-primary-editorial {
@@ -579,9 +574,9 @@
             justify-content: center;
             align-items: center;
             gap: 0.5rem;
-            background: transparent;
+            background: transparent; /* Nền trong suốt */
         }
-
+        /* Hiệu ứng hover cho nút */
         .btn-outline-primary-editorial:hover {
             background-color: var(--primary);
             color: white;
@@ -589,10 +584,10 @@
 
         /* Sorting Select */
         .editorial-select {
-            background-color: var(--surface-container-low);
-            border: 1px solid rgba(0,0,0,0.05);
-            border-radius: 9999px;
-            padding: 0.5rem 2.5rem 0.5rem 1.5rem;
+            background-color: var(--surface-container-low); /* Màu nền */
+            border: 1px solid rgba(0,0,0,0.05); /* Viền */
+            border-radius: 9999px; /* Bo tròn góc tối đa */
+            padding: 0.5rem 2.5rem 0.5rem 1.5rem; /* Đệm bên trong */
             font-size: 0.875rem;
             font-weight: 700;
             appearance: none;
@@ -601,10 +596,10 @@
             background-position: right 1rem center;
             background-size: 1.2rem;
             cursor: pointer;
-        }
-
+        } /* Icon mũi tên tùy chỉnh cho select */
         /* Pagination */
         .pagination-editorial {
+            /* Các thuộc tính CSS cho phân trang */
             margin-top: 4rem;
             display: flex;
             justify-content: center;
@@ -612,10 +607,10 @@
         }
 
         .page-btn {
-            width: 3rem;
-            height: 3rem;
-            border-radius: 50%;
-            display: flex;
+            width: 3rem; /* Chiều rộng */
+            height: 3rem; /* Chiều cao */
+            border-radius: 50%; /* Bo tròn thành hình tròn */
+            display: flex; /* Sử dụng flexbox */
             align-items: center;
             justify-content: center;
             border: none;
@@ -624,11 +619,10 @@
             color: var(--on-surface-variant);
             font-weight: 700;
             transition: all 0.3s;
-        }
-
+        } /* Nút phân trang */
         .page-btn.active {
-            background-color: var(--primary);
-            color: white;
+            background-color: var(--primary); /* Màu nền khi active */
+            color: white; /* Màu chữ khi active */
         }
 
         /* Footer */
@@ -638,10 +632,10 @@
             position: relative;
             z-index: 1;
         }
-
+        /* Logo thương hiệu trong footer */
         .footer-brand {
-            font-size: 1.25rem;
-            font-weight: 700;
+            font-size: 1.25rem; /* Kích thước chữ */
+            font-weight: 700; /* Độ đậm chữ */
             color: var(--primary);
             margin-bottom: 1rem;
         }
@@ -653,10 +647,10 @@
             letter-spacing: 0.15em;
             margin-bottom: 1.5rem;
         }
-
+        /* Liên kết trong footer */
         .footer-link {
-            display: block;
-            color: #6c757d;
+            display: block; /* Hiển thị dạng block */
+            color: #6c757d; /* Màu chữ */
             text-decoration: none;
             font-size: 0.875rem;
             margin-bottom: 0.8rem;
@@ -666,10 +660,10 @@
         .footer-link:hover {
             color: var(--primary);
         }
-
+        /* Nút mạng xã hội */
         .social-btn {
-            width: 2.5rem;
-            height: 2.5rem;
+            width: 2.5rem; /* Chiều rộng */
+            height: 2.5rem; /* Chiều cao */
             border-radius: 50%;
             background-color: var(--surface-container);
             display: inline-flex;
@@ -679,11 +673,10 @@
             text-decoration: none;
             margin-right: 0.5rem;
             transition: all 0.3s;
-        }
-
+        } /* Icon Material Symbols */
         .material-symbols-outlined {
-            font-size: 1.25rem;
-            vertical-align: middle;
+            font-size: 1.25rem; /* Kích thước icon */
+            vertical-align: middle; /* Căn chỉnh theo chiều dọc */
         }
 
         @media (max-width: 768px) {
@@ -692,11 +685,12 @@
             .card-img-wrapper { height: 300px; }
         }
 
+        /* Nhóm các nút hành động tìm kiếm */
         /* Group nút */
         .search-actions{
-            display:flex;
-            align-items:center;
-            gap:0.8rem;
+            display:flex; /* Sử dụng flexbox */
+            align-items:center; /* Căn giữa theo chiều dọc */
+            gap:0.8rem; /* Khoảng cách giữa các mục */
         }
 
         /* Nút tất cả tour */
