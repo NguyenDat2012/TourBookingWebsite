@@ -41,7 +41,15 @@
         "tphcm": "TP. Hồ Chí Minh",
         "ha-long": "Hạ Long",
         "hoi-an": "Hội An",
+<<<<<<< Updated upstream
         "fansipan": "Fansipan / Sapa"
     },
     "departureCities": ["Tất cả","Hà Nội","TP. Hồ Chí Minh","Đà Nẵng","Cần Thơ","Hải Phòng"]
 }
+=======
+        "fansipan": "Fansipan / Sapa",
+        "ninh-van": "Ninh Vân Bay",
+        "hue": "Huế"
+    }
+}
+>>>>>>> Stashed changes
