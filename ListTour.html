@@ -56,15 +56,16 @@
         <header class="page-header text-center">
             <span class="eyebrow">Hành Trình Được Tuyển Chọn</span>
             <h1 class="display-title">Khám Phá Tâm Hồn <br/><span>Đất Việt</span></h1>
-            <p class="text-dark mt-4 mb-0 fw-medium" style="max-width: 650px; font-size: 1.125rem; line-height: 1.6; text-shadow: 0 1px 1px rgba(255,255,255,0.8); margin: 0 auto;"></p>
+            <p class="text-dark mt-4 mb-0 fw-medium" style="max-width: 650px; font-size: 1.125rem; line-height: 1.6; text-shadow: 0 1px 1px rgba(255,255,255,0.8); margin: 0 auto;">
                         Vượt qua những lối mòn thông thường để đến với những trải nghiệm nguyên bản, nơi mỗi hành trình là một trang nhật ký sống động về thiên nhiên và con người.
                     </p>
         </header>
+<!-- Hàng chứa thanh tìm kiếm và bộ lọc -->
         <div class="row justify-content-center my-5">
             <div class="col-12">
 
                     <div class="search-filter-bar">
-
+<!-- Phần tìm kiếm -->
                         <!-- Search -->
                         <div class="search-input-wrapper d-flex align-items-center">
                             <span class="material-symbols-outlined search-icon">
@@ -77,10 +78,10 @@
                                 placeholder="Khám phá địa điểm, trải nghiệm, hành trình..."
                             >
                         </div>
-
+<!-- Đường phân cách -->
                         <!-- Divider -->
                         <div class="search-divider"></div>
-
+<!-- Phần lọc theo giá -->
                         <!-- Price -->
                         <div class="price-filter-wrapper">
 
@@ -108,7 +109,7 @@
 
                             </div>
                         </div>
-
+<!-- Nút hành động tìm kiếm và hiển thị tất cả -->
                         <!-- Submit -->
                         <div class="d-flex gap-2 align-items-center">
 
@@ -127,10 +128,10 @@
                 
             </div>
         </div>
-<!-- Main Grid -->
-            
+<!-- Phần hiển thị thống kê và sắp xếp -->
 <!-- Stats & Sort -->
                 <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center mb-4 gap-3 p-3 rounded-4" style="background: rgba(255,255,255,0.6); backdrop-filter: blur(5px);">
+<!-- Hiển thị số lượng tour phù hợp chưa xử lý xong-->
                     <p class="mb-0 text-muted fw-medium">Hiển thị <span class="text-dark fw-bold">128</span> hành trình phù hợp</p>
                     <div class="d-flex align-items-center">
                         <span class="small fw-bold text-uppercase text-muted me-3" style="letter-spacing: 0.1em;">Sắp xếp:</span>
@@ -142,10 +143,10 @@
                         </select>
                     </div>
                 </div>
-<!-- Cards Grid -->
+<!-- Lưới hiển thị các thẻ tour -->
                 <div class="row g-4">
 <!-- Card 1 -->
-                    <div class="col-md-6" data-dest="ha-long" data-depart="Hà Nội,TP. Hồ Chí Minh,Đà Nẵng"  data-months="1,2,3,4,5,6,7,8,9,10,11,12" data-price="15800000">
+                    <div class="col-md-6" data-dest="ha-long" data-depart="Hà Nội,TP. Hồ Chí Minh,Đà Nẵng" data-months="1,2,3,4,5,6,7,8,9,10,11,12" data-price="15800000">
                         <div class="tour-card">
                             <div class="card-img-wrapper">
                                 <span class="badge-editorial">Signature</span>
@@ -165,7 +166,7 @@
                                         <div class="price-value">15.800.000</div>
                                     </div>
                                 </div>
-                                <a href="TourDetails.html?id=vinh-ha-long" class="btn btn-outline-primary-editorial" role="button">
+                                <a href="TourDetails.html?id=ha-long" class="btn btn-outline-primary-editorial" role="button">
                                     Xem Chi Tiết <span class="material-symbols-outlined">arrow_forward</span>
                                 </a>
                             </div>
@@ -191,14 +192,14 @@
                                         <div class="price-value">12.500.000</div>
                                     </div>
                                 </div>
-                                <a href="TourDetails.html?id=fansipan-hue" class="btn btn-outline-primary-editorial" role="button">
+                                <a href="TourDetails.html?id=fansipan" class="btn btn-outline-primary-editorial" role="button">
                                     Xem Chi Tiết <span class="material-symbols-outlined">arrow_forward</span>
                                 </a>
                             </div>
                         </div>
                     </div>
 <!-- Card 3 -->
-                    <div class="col-md-6"  data-dest="hoi-an" data-depart="Hà Nội,TP. Hồ Chí Minh,Đà Nẵng" data-months="1,2,3,4,5,6" data-price="12200000">
+                    <div class="col-md-6"  data-dest="hoi-an,hue" data-depart="Hà Nội,TP. Hồ Chí Minh,Đà Nẵng" data-months="1,2,3,4,5,6" data-price="12200000">
                         <div class="tour-card">
                             <div class="card-img-wrapper">
                                 <span class="badge-editorial badge-secondary-editorial">Bestseller</span>
@@ -218,14 +219,14 @@
                                         <div class="price-value">12.200.000</div>
                                     </div>
                                 </div>
-                                <a href="TourDetails.html?id=hue" class="btn btn-outline-primary-editorial" role="button">
+                                <a href="TourDetails.html?id=hoi-an" class="btn btn-outline-primary-editorial" role="button">
                                     Xem Chi Tiết <span class="material-symbols-outlined">arrow_forward</span>
                                 </a>
                             </div>
                         </div>
                     </div>
 <!-- Card 4 -->
-                    <div class="col-md-6" data-dest="tphcm" data-depart="TP. Hồ Chí Minh,Hà Nội" data-months="1,2,3,4,5,6,7,8,9,10,11,12" data-price="24500000">
+                    <div class="col-md-6" data-dest="ninh-van" data-depart="TP. Hồ Chí Minh,Hà Nội" data-months="1,2,3,4,5,6,7,8,9,10,11,12" data-price="24500000">
                         <div class="tour-card">
                             <div class="card-img-wrapper">
                                 <img alt="Ninh Van Bay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOiHh7by5kWjjIx600zQ0haAYSqRW0qib68DSSj7QfOaz6-s0F9c93EzDpVuMrmfh0nWm79Egvk-T3X75ZvKziZB1u8r2ENXiceUdhr3A_aZwiMyKEVzU0PjC_O_zeFcionE28tDlx3FuHtlbMj4Q1UGJVudXdTBNWtpxTek1Uoodx0oFxUDuR0s4ObmNr_VDnWrZ05ewLovmxJUy-On_UwJvfpBimsiTte2Dlu2hLX4hfl1Q6QyKDYiHNXy1du-UelQmUwvLv_YAT"/>
@@ -250,9 +251,88 @@
                             </div>
                         </div>
                     </div>
+                
+<!-- Card 5 --><div class="col-md-6" data-dest="ha-noi" data-depart="Hà Nội,TP. Hồ Chí Minh,Đà Nẵng" data-months="1,2,3,4,5,6,7,8,9,10,11,12" data-price="8500000">
+                    <div class="tour-card">
+                        <div class="card-img-wrapper">
+                            <span class="badge-editorial">Bestseller</span>
+                            <img alt="Ha Noi" src="Img/HaNoiTour/Hoan-Kiem-Lake-Title.png"/>
+                        </div>
+                        <div class="card-body-custom">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <h2 class="tour-title">Khám Phá Hà Nội: Tinh Hoa Thủ Đô Ngàn Năm Văn Hiến</h2>
+                                    <div class="tour-meta">
+                                        <span class="material-symbols-outlined me-1" style="font-variation-settings: 'FILL' 1; font-size: 0.9rem;">schedule</span>
+                                        5 Ngày 4 Đêm <span class="mx-2 opacity-50">•</span> Văn Hóa & Lịch Sử
+                                    </div>
+                                </div>
+                                <div class="text-end">
+                                    <div class="price-label">Từ</div>
+                                    <div class="price-value">8.500.000</div>
+                                </div>
+                            </div>
+                            <a href="TourDetails.html?id=ha-noi" class="btn btn-outline-primary-editorial" role="button">
+                                Xem Chi Tiết <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
+<!-- Card 6 -->
+                <div class="col-md-6" data-dest="da-nang" data-depart="Hà Nội,TP. Hồ Chí Minh,Đà Nẵng" data-months="1,2,3,4,5,6,7,8,9,10,11,12" data-price="6200000">
+                    <div class="tour-card">
+                        <div class="card-img-wrapper">
+                            <img alt="Da Nang" src="Img/DaNangTour/Dragon-Bridge-Title.png"/>
+                        </div>
+                        <div class="card-body-custom">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <h2 class="tour-title">Khám Phá Đà Nẵng: Thành Phố Của Những Cây Cầu & Biển Xanh</h2>
+                                    <div class="tour-meta">
+                                        <span class="material-symbols-outlined me-1" style="font-variation-settings: 'FILL' 1; font-size: 0.9rem;">schedule</span>
+                                        5 Ngày 4 Đêm <span class="mx-2 opacity-50">•</span> Biển & Văn Hóa
+                                    </div>
+                                </div>
+                                <div class="text-end">
+                                    <div class="price-label">Từ</div>
+                                    <div class="price-value">6.200.000</div>
+                                </div>
+                            </div>
+                            <a href="TourDetails.html?id=da-nang" class="btn btn-outline-primary-editorial" role="button">
+                                Xem Chi Tiết <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+<!-- Card 7 -->
+                <div class="col-md-6" data-dest="tphcm" data-depart="TP. Hồ Chí Minh,Hà Nội,Đà Nẵng" data-months="1,2,3,4,5,6,7,8,9,10,11,12" data-price="5500000">
+                    <div class="tour-card">
+                        <div class="card-img-wrapper">
+                            <img alt="TPHCM" src="Img/TPHCMTour/Dinh-Doc-Lap-Title.png"/>
+                        </div>
+                        <div class="card-body-custom">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <h2 class="tour-title">Khám Phá TP.HCM: Hòn Ngọc Viễn Đông Rực Rỡ</h2>
+                                    <div class="tour-meta">
+                                        <span class="material-symbols-outlined me-1" style="font-variation-settings: 'FILL' 1; font-size: 0.9rem;">schedule</span>
+                                        4 Ngày 3 Đêm <span class="mx-2 opacity-50">•</span> Lịch Sử & Ẩm Thực
+                                    </div>
+                                </div>
+                                <div class="text-end">
+                                    <div class="price-label">Từ</div>
+                                    <div class="price-value">5.500.000</div>
+                                </div>
+                            </div>
+                            <a href="TourDetails.html?id=tphcm" class="btn btn-outline-primary-editorial" role="button">
+                                Xem Chi Tiết <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 <!-- Pagination -->
-                <div class="pagination-editorial">
+                <div class="pagination-editorial"> <!-- Thanh phân trang -->
                     <button class="page-btn"><span class="material-symbols-outlined">chevron_left</span></button>
                     <button class="page-btn active">1</button>
                     <button class="page-btn">2</button>
@@ -261,10 +341,12 @@
                     <button class="page-btn"><span class="material-symbols-outlined">chevron_right</span></button>
                 </div>
     </main>
+<!-- Footer của trang -->
     <footer>
         <div class="container-xxl py-5">
             <div class="row g-4">
                 <div class="col-md-3">
+<!-- Logo và mô tả ngắn của thương hiệu -->
                     <div class="footer-brand">The Verdant Archive</div>
                     <p class="footer-text">
                                         Nơi hội tụ những hành trình di sản, tôn vinh vẻ đẹp nguyên sơ và văn hóa bản địa bền vững của Việt Nam.
@@ -272,18 +354,21 @@
                 </div>
                 <div class="col-6 col-md-3">
                     <h4 class="footer-heading">Hỗ Trợ</h4>
+<!-- Các liên kết hỗ trợ -->
                     <a class="footer-link" href="#">Về Chúng Tôi</a>
                     <a class="footer-link" href="#">Du Lịch Bền Vững</a>
                     <a class="footer-link fw-bold" href="#" style="color: var(--primary);">Liên Hệ</a>
                 </div>
                 <div class="col-6 col-md-3">
                     <h4 class="footer-heading">Pháp Lý</h4>
+<!-- Các liên kết pháp lý -->
                     <a class="footer-link" href="#">Điều Khoản</a>
                     <a class="footer-link" href="#">Chính Sách Bảo Mật</a>
                 </div>
                 <div class="col-md-3">
                     <h4 class="footer-heading">Kết Nối</h4>
                     <div class="d-flex">
+<!-- Các nút mạng xã hội -->
                         <a class="social-btn" href="#"><span class="material-symbols-outlined">public</span></a>
                         <a class="social-btn" href="#"><span class="material-symbols-outlined">mail</span></a>
                     </div>
@@ -294,107 +379,158 @@
             <p class="small text-muted mb-0">© 2024 The Verdant Archive. Crafted for the Editorial Odyssey.</p>
         </div>
     </footer>
-<!-- Bootstrap Bundle with Popper -->
+<!-- Nhúng Bootstrap JS Bundle (bao gồm Popper.js) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="/Script/main.js"></script>
 <script>
+    // ==========================================
+    // Đợi toàn bộ HTML tải xong mới chạy JS
+    // ==========================================
     document.addEventListener('DOMContentLoaded', function() {
+        // Xử lý nút "pill" (nút có hình dạng viên thuốc) để chuyển đổi trạng thái active
         // Pill buttons toggle
         const pills = document.querySelectorAll('.btn-pill');
+        //Duyệt từng nút
         pills.forEach(pill => {
+            //khi click vào nút, chuyển đổi lớp 'active'
             pill.addEventListener('click', function() {
+                // Toggle class active
+            // Có active thì xóa
+            // Không có thì thêm
                 this.classList.toggle('active');
             });
         });
-
+        // Hiệu ứng Navbar dính khi cuộn trang
         // Sticky Navbar effect on scroll
         window.addEventListener('scroll', function() {
             const nav = document.querySelector('.navbar-editorial');
             if (window.scrollY > 50) {
+                 // Navbar đậm hơn
                 nav.style.backgroundColor = 'rgba(252, 249, 244, 0.95)';
+                // Thêm shadow
                 nav.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
             } else {
+                // Khi ở đầu trang
                 nav.style.backgroundColor = 'rgba(252, 249, 244, 0.85)';
+                  // Shadow mặc định
                 nav.style.boxShadow = 'var(--editorial-shadow)';
             }
         });
     });
+    // Hàm lọc tour dựa trên tham số URL (dest và from)
     function filterTours() {
+    // Lấy các tham số từ URL hiện tại
     const params = new URLSearchParams(window.location.search);
+    //lấy giá trị
     const dest   = params.get('dest');
+    //lấy giá trị
+    const search = params.get('search');
+    //lấy giá trị
     const from   = params.get('from');
-
+    // Chọn tất cả các thẻ tour có thuộc tính data-dest
     const cards = document.querySelectorAll('.col-md-6[data-dest]');
+     // Biến đếm số tour tìm thấy
     let found = 0;
-
+    // ==========================================
+    // Duyệt từng card
+    // ==========================================
     cards.forEach(col => {
+        //lấy data-test
         const cardDest   = col.dataset.dest || '';
+        // Lấy data-depart
         const cardDepart = col.dataset.depart || '';
-
-        const matchDest   = !dest || cardDest === dest;
+        // Kiểm tra điều kiện khớp điểm đến và điểm khởi hành
+        const matchDest  = !dest || !dest || cardDest.split(',').map(x => x.trim().toLowerCase()).includes(dest.toLowerCase());
+        // 'Tất cả' là một tùy chọn đặc biệt không lọc theo điểm khởi hành
         const matchDepart = !from || from === 'Tất cả' || cardDepart.includes(from);
-
+        // Hiển thị hoặc ẩn thẻ tour dựa trên kết quả lọc
         const show = matchDest && matchDepart;
         col.style.display = show ? '' : 'none';
+        //nếu hiện thì tăng found
         if (show) found++;
     });
 
     // Cập nhật số lượng
     const countEl = document.querySelector('.fw-bold.text-dark');
     if (countEl) countEl.textContent = found;
-
+    // Hiện thông báo nếu không có kết quả
     // Hiện thông báo nếu không có kết quả
     const grid = document.querySelector('.row.g-4');
     let noResult = document.getElementById('no-result');
     if (found === 0) {
         if (!noResult) {
+             // Tạo div mới
         noResult = document.createElement('div');
         noResult.id = 'no-result';
         noResult.className = 'col-12 text-center py-5';
+        // Nội dung HTML
         noResult.innerHTML = '<p class="text-muted fs-5">Không tìm thấy tour phù hợp. Vui lòng thử lại!</p>';
+          // Thêm vào grid
         grid.appendChild(noResult);
         }
     } else {
         if (noResult) noResult.remove();
     }
     }
-
+    
+    // ==========================================
+    // Chạy filterTours khi trang load xong
+    // =========================================
     document.addEventListener('DOMContentLoaded', filterTours);
-    // Gợi ý khi gõ
+    // ==========================================
+    // TẠO DROPDOWN GỢI Ý SEARCH
+    // ==========================================
+    // Lấy ô input search
     const searchInput = document.querySelector('.search-input');
+    // Tạo div chứa gợi ý
     const suggestions = document.createElement('div');
+    // Gán id
     suggestions.id = 'search-suggestions';
-    suggestions.style.cssText = 'position:absolute;top:100%;left:0;right:0;background:#fff;border-radius:12px;border:0.5px solid #ddd;box-shadow:0 8px 24px rgba(0,0,0,0.1);z-index:200;overflow:hidden;display:none;';
+    // CSS cho dropdown
+    suggestions.style.cssText = 'position:absolute;top:100%;left:0;right:0;background:#fff;border-radius:12px;border:0.5px solid #ddd;box-shadow:0 8px 24px rgba(0,0,0,0.1);z-index:200;overflow:hidden;display:none;';  
+    // Cho cha của input có position relative
     searchInput.parentElement.style.position = 'relative';
+    // Thêm dropdown vào HTML
     searchInput.parentElement.appendChild(suggestions);
-
+    // ==========================================
+    // Xử lý khi gõ tìm kiếm
+    // ==========================================
     searchInput.addEventListener('input', function() {
+        // Lấy keyword
         const keyword = this.value.toLowerCase();
         if (!keyword) { suggestions.style.display = 'none'; return; }
-
+        // Lấy tất cả các thẻ tour
         const cards = document.querySelectorAll('.row.g-4 > [data-dest]');
+         // Mảng lưu kết quả
         const matches = [];
+        //duyệt tour
         cards.forEach(col => {
             const title = col.querySelector('.tour-title')?.textContent.trim() || '';
+            // Nếu title chứa keyword
             if (title.toLowerCase().includes(keyword)) matches.push(title);
         });
-
+        // Nếu không có kết quả khớp, ẩn gợi ý
         if (matches.length === 0) { suggestions.style.display = 'none'; return; }
-
+        // Hiển thị các gợi ý
         suggestions.innerHTML = matches.map(t =>
             `<div onclick="pickSuggestion('${t}')" style="padding:10px 16px;font-size:14px;color:#333;cursor:pointer;" onmouseover="this.style.background='#f0faf6'" onmouseout="this.style.background=''">${t}</div>`
         ).join('');
         suggestions.style.display = 'block';
     });
-
+    searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+            document.querySelector('.btn-search-submit').click();
+        }
+    });
+    // Hàm chọn một gợi ý và điền vào ô tìm kiếm
     function pickSuggestion(title) {
         searchInput.value = title;
         suggestions.style.display = 'none';
     }
-
+    // Ẩn gợi ý khi click ra ngoài, ngăn chặn đóng khi click vào ô tìm kiếm
     document.addEventListener('click', () => suggestions.style.display = 'none');
     searchInput.addEventListener('click', e => e.stopPropagation());
-
+    // Xử lý nút ngân sách — chỉ toggle active
     // Nút ngân sách — chỉ toggle active
     const priceBtns = document.querySelectorAll('.price-btn');
     priceBtns.forEach(btn => {
@@ -403,69 +539,48 @@
             this.classList.add('active');
         });
     });
-
+    // Xử lý sự kiện click nút "Tìm kiếm"
     // Bấm Tìm kiếm mới lọc
-    document.querySelector('.btn-search-submit').addEventListener('click', function() {
-        const keyword = searchInput.value.toLowerCase();
+   document.querySelector('.btn-search-submit').addEventListener('click', function () {
+        const keyword = searchInput.value.trim().toLowerCase();
         const activeBtn = document.querySelector('.price-btn.active');
-        const priceText = activeBtn ? activeBtn.textContent.trim() : '';
-
+        const priceText = activeBtn ? activeBtn.textContent.trim(): '';
         const cards = document.querySelectorAll('.row.g-4 > [data-dest]');
         let found = 0;
-
         cards.forEach(col => {
-            const title = col.querySelector('.tour-title')?.textContent.toLowerCase() || '';
-            const price = parseInt(col.dataset.price || '0');
-
-            const matchKeyword = !keyword || title.includes(keyword);
-
-            let matchPrice = true;
-            if (priceText === 'Dưới 15 triệu')  matchPrice = price < 15000000;
-            if (priceText === '15 - 22 triệu')   matchPrice = price >= 15000000 && price <= 22000000;
-            if (priceText === '22 - 26 triệu')   matchPrice = price >= 22000000 && price <= 26000000;
-            if (priceText === 'Trên 26 triệu')   matchPrice = price > 26000000;
-
+            const title = col.querySelector('.tour-title') ?.textContent.toLowerCase() || '';
+            const price = parseInt(col.dataset.price || 0);
+            const matchKeyword = keyword === '' ||  title.includes(keyword);
+            let matchPrice = true;            
+            switch(priceText){
+                case 'Dưới 15 triệu':
+                    matchPrice = price < 15000000;
+                    break;
+                case '15 - 22 triệu':
+                    matchPrice = price >= 15000000 && price <= 22000000;
+                    break;
+                case '22 - 26 triệu':
+                    matchPrice = price > 22000000 && price <= 26000000;
+                    break;
+                case 'Trên 26 triệu':
+                    matchPrice = price > 26000000;
+                    break;
+            }
             const show = matchKeyword && matchPrice;
             col.style.display = show ? '' : 'none';
-            if (show) found++;
+            if(show) found++;
         });
-
-        const countEl = document.querySelector('.fw-bold.text-dark');
-        if (countEl) countEl.textContent = found;
-
-        suggestions.style.display = 'none';
-    });
-
-    // Hiển thị tất cả tour
-    document.getElementById('show-all-btn')
-    .addEventListener('click', function () {
-
-        const cards = document.querySelectorAll('.row.g-4 > [data-dest]');
-
-        cards.forEach(col => {
-            col.style.display = '';
-        });
-
-        // reset ô tìm kiếm
-        searchInput.value = '';
-
-        // bỏ active nút giá
-        priceBtns.forEach(btn => {
-            btn.classList.remove('active');
-        });
-
-        // cập nhật số lượng
-        const countEl = document.querySelector('.fw-bold.text-dark');
-
-        if (countEl) {
-            countEl.textContent = cards.length;
+        const countEl =
+            document.querySelector('.fw-bold.text-dark');
+        if(countEl){
+            countEl.textContent = found;
         }
-
         suggestions.style.display = 'none';
     });
-    // Hiển thị tất cả tour
-    document.getElementById('show-all-btn')
-    .addEventListener('click', function () {
+    // Xử lý sự kiện click nút "Tất cả tour"
+        // Hiển thị tất cả tour
+    document.getElementById('show-all-btn').addEventListener('click', function () {
+        // Hiển thị tất cả các thẻ tour
         const cards = document.querySelectorAll('.row.g-4 > [data-dest]');
         cards.forEach(col => {
             col.style.display = '';
@@ -483,5 +598,6 @@
         }
         suggestions.style.display = 'none';
     });
+   
 </script>
 </body></html>
