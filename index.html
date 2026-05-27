@@ -489,7 +489,7 @@
           }
       }
       if (!destId) {
-          alert('Không tìm thấy điểm đến');
+          window.location.href = 'ListTour.html?search=' + encodeURIComponent(keyword);
           return;
       }
       window.location.href = 'ListTour.html?dest=' + destId;
