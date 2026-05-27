@@ -71,7 +71,8 @@
 
         <div class="d-flex align-items-center gap-2">
           <span class="material-symbols-outlined text-primary">location_on</span>
-          <input class="search-input"id="destInp" placeholder="Bạn muốn đi đâu?" autocomplete="off" />
+
+           <input class="search-input"id="destInp" placeholder="Bạn muốn đi đâu?" autocomplete="off" />
         </div>
 
         <div id="destDrop"
@@ -80,7 +81,7 @@
       </div>
 
       <!-- Nút tìm -->
-      <button  class="btn-search" id="btnSearch">
+      <button class="btn-search" id="btnSearch">
         <span class="material-symbols-outlined">search</span>
       </button>
     </div>
@@ -458,7 +459,6 @@
       selDest = '';
       buildDestDrop(this.value);
   });
-  // Nút tìm
   document.getElementById('destInp').addEventListener('focus', () => {
       buildDestDrop();
   });
@@ -467,7 +467,6 @@
           document.querySelector('.btn-search').click();
       }
   });
- 
   document.querySelector('.btn-search').addEventListener('click', function () {
       let keyword = document.getElementById('destInp').value.trim();
       // Không nhập gì -> hiện tất cả tour
