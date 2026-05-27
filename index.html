@@ -450,15 +450,18 @@
   function removeVietnameseTones(str) {
       return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/đ/g, "d").replace(/Đ/g, "D");
   }
+
   function pickDest(id, name) {
     document.getElementById('destInp').value = name;
     selDest = id;
+
     document.getElementById('destDrop').style.display = 'none';
   }
   document.getElementById('destInp').addEventListener('input', function(){
       selDest = '';
       buildDestDrop(this.value);
   });
+
   document.getElementById('destInp').addEventListener('focus', () => {
       buildDestDrop();
   });
@@ -467,6 +470,7 @@
           document.querySelector('.btn-search').click();
       }
   });
+
   document.querySelector('.btn-search').addEventListener('click', function () {
       let keyword = document.getElementById('destInp').value.trim();
       // Không nhập gì -> hiện tất cả tour
@@ -485,7 +489,7 @@
           }
       }
       if (!destId) {
-          alert('Không tìm thấy điểm đến');
+          window.location.href = 'ListTour.html?search=' + encodeURIComponent(keyword);
           return;
       }
       window.location.href = 'ListTour.html?dest=' + destId;
