@@ -253,24 +253,55 @@ h1, h2, h3, h4, .headline {
 
 /* Footer */
 footer {
-    background-color: #f6f3ee;
-    padding: 4rem 2rem 2rem;
+    /* Đổi màu nền sang màu nhẹ nhàng đồng bộ với hệ thống màu của bạn */
+    background-color: var(--surface-container-low); 
+    padding: 5rem 0 2rem; /* Tăng khoảng cách phía trên cho thoáng */
     margin-top: 5rem;
 }
 
-.footer-link {
-    color: #78716c;
-    text-decoration: none;
+/* Định dạng cho tên thương hiệu/Logo ở footer */
+.footer-logo {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    letter-spacing: -0.05rem;
+}
+
+/* Định dạng tiêu đề các cột liên kết (H5) */
+footer h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--on-background);
+}
+
+/* Xóa bỏ dấu chấm tròn mặc định của danh sách ul li */
+.footer-links ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.75rem;
     font-size: 0.875rem;
-    transition: color 0.3s;
 }
 
-.footer-link:hover {
-    color: var(--secondary);
+/* Định dạng cho các thẻ link <a> bên trong danh sách */
+.footer-links li a {
+    color: var(--on-surface-variant);
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.section-divider {
-    height: 2px;
-    flex-grow: 1;
-    background-color: var(--surface-container-highest);
+/* Hiệu ứng đổi màu khi rê chuột (hover) vào link */
+.footer-links li a:hover {
+    color: var(--primary);
+}
+
+/* Giữ nguyên định dạng cho text địa chỉ, sđt không phải là link */
+.footer-links li {
+    color: var(--on-surface-variant);
 }

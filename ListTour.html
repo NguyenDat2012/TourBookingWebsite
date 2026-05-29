@@ -1,38 +1,37 @@
 <!DOCTYPE html>
-
-<html lang="vi"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Hành Trình Khám Phá | The Verdant Archive</title>
-<!-- Bootstrap 5 CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="Styles/ListTour.css" rel="stylesheet"/>
-
+<html lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Hành Trình Khám Phá | The Verdant Archive</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="Styles/ListTour.css" rel="stylesheet"/>
 </head>
 <body>
-<!-- Background Layer -->
+
+    <!-- Background Layer -->
     <div class="hero-bg-wrapper">
         <img alt="Ha Long Bay" class="hero-bg-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyWCDdmy6zuvowVBoQSvtKSJGzsPPDDtdYw4EqnpQlgN_DUWKSubAf0P9fkMI0qYXKodO0iFzJUi8hFVJw7oveq7y4elSEDIHf2oFJWmPxHmQkOE-Z1skoaBVESORSP-Ox73DwjGLSj8HNP7mAZ10JqMZWBzuX8_HRBXpgZpJfYJKgdTHovi1gA5Z-C8HDoIhZhm1X3YZruX3s4E9Pr1F6FwvMxKQWB_KVXv-reijV4b8yoltc8MMVGxk-JnQKl0nRL1wKcHCgraWz"/>
         <div class="hero-overlay"></div>
     </div>
-<!-- Navbar -->
+
+    <!-- Navbar -->
     <nav class="navbar navbar-editorial fixed-top">
         <div class="container-xxl d-flex justify-content-between align-items-center">
             <a class="brand-logo" href="index.html">The Verdant Archive</a>
             <div class="d-none d-md-flex align-items-center">
                 <a class="nav-link-editorial active" href="ListTour.html">Điểm đến</a>
                 <a class="nav-link-editorial" href="#">Kế hoạch</a>
-                
             </div>
             <div class="d-flex align-items-center gap-4">
                 <div id="authButtons" class="d-flex align-items-center">
                     <a class="nav-link-editorial me-3 d-none d-lg-block" href="Login.html">Đăng nhập</a>
                     <a class="nav-link-editorial me-3 d-none d-lg-block" href="Register.html">Đăng ký</a>
                 </div>
-
 
                 <div id="userProfile" class="dropdown d-none">
                     <button class="btn d-flex align-items-center gap-2 dropdown-toggle border-0" type="button" data-bs-toggle="dropdown">
@@ -51,289 +50,262 @@
             </div>
         </div>
     </nav>
+
+    <!-- Main Content -->
     <main class="container-xxl pb-5" style="position: relative; z-index: 2;">
-<!-- Header Section -->
-        <header class="page-header text-center">
+        
+        <!-- Header Section (Đã xóa text-center để đưa về lề trái) -->
+        <header class="page-header text-start">
             <span class="eyebrow">Hành Trình Được Tuyển Chọn</span>
             <h1 class="display-title">Khám Phá Tâm Hồn <br/><span>Đất Việt</span></h1>
-            <p class="text-dark mt-4 mb-0 fw-medium" style="max-width: 650px; font-size: 1.125rem; line-height: 1.6; text-shadow: 0 1px 1px rgba(255,255,255,0.8); margin: 0 auto;">
-                        Vượt qua những lối mòn thông thường để đến với những trải nghiệm nguyên bản, nơi mỗi hành trình là một trang nhật ký sống động về thiên nhiên và con người.
-                    </p>
+            <p class="text-dark mt-4 mb-0 fw-medium" style="max-width: 650px; font-size: 1.125rem; line-height: 1.6; text-shadow: 0 1px 1px rgba(255,255,255,0.8); margin-left: 0;">
+                Vượt qua những lối mòn thông thường để đến với những trải nghiệm nguyên bản, nơi mỗi hành trình là một trang nhật ký sống động về thiên nhiên và con người.
+            </p>
         </header>
-<!-- Hàng chứa thanh tìm kiếm và bộ lọc -->
-        <div class="row justify-content-center my-5">
+
+        <!-- Search & Filter Bar Section (Đã đổi justify-content-start để dạt trái) -->
+        <div class="row justify-content-start my-5">
             <div class="col-12">
-
-                    <div class="search-filter-bar">
-<!-- Phần tìm kiếm -->
-                        <!-- Search -->
-                        <div class="search-input-wrapper d-flex align-items-center">
-                            <span class="material-symbols-outlined search-icon">
-                                search
-                            </span>
-
-                            <input
-                                type="text"
-                                class="search-input"
-                                placeholder="Khám phá địa điểm, trải nghiệm, hành trình..."
-                            >
-                        </div>
-<!-- Đường phân cách -->
-                        <!-- Divider -->
-                        <div class="search-divider"></div>
-<!-- Phần lọc theo giá -->
-                        <!-- Price -->
-                        <div class="price-filter-wrapper">
-
-                            <span class="price-title">
-                                Mức ngân sách
-                            </span>
-
-                            <div class="price-options-grid">
-
-                                <button type="button" class="price-btn">
-                                    Dưới 15 triệu
-                                </button>
-
-                                <button type="button" class="price-btn">
-                                    15 - 22 triệu
-                                </button>
-
-                                <button type="button" class="price-btn">
-                                    22 - 26 triệu
-                                </button>
-
-                                <button type="button" class="price-btn">
-                                    Trên 26 triệu
-                                </button>
-
-                            </div>
-                        </div>
-<!-- Nút hành động tìm kiếm và hiển thị tất cả -->
-                        <!-- Submit -->
-                        <div class="d-flex gap-2 align-items-center">
-
-                            <button class="btn-search-submit">
-                                Tìm kiếm
-                            </button>
-
-                            <button id="show-all-btn" class="btn-show-all">
-                                Tất cả tour
-                            </button>
-
-                        </div>
-
+                <div class="search-filter-bar">
+                    <!-- Search -->
+                    <div class="search-input-wrapper d-flex align-items-center">
+                        <span class="material-symbols-outlined search-icon">search</span>
+                        <input type="text" class="search-input" placeholder="Khám phá địa điểm, trải nghiệm, hành trình..."/>
                     </div>
-
-                
+                    
+                    <!-- Divider -->
+                    <div class="search-divider"></div>
+                    
+                    <!-- Price Filter -->
+                    <div class="price-filter-wrapper">
+                        <span class="price-title">Mức ngân sách</span>
+                        <div class="price-options-grid">
+                            <button type="button" class="price-btn">Dưới 15 triệu</button>
+                            <button type="button" class="price-btn">15 - 22 triệu</button>
+                            <button type="button" class="price-btn">22 - 26 triệu</button>
+                            <button type="button" class="price-btn">Trên 26 triệu</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Actions -->
+                    <div class="d-flex gap-2 align-items-center">
+                        <button class="btn-search-submit">Tìm kiếm</button>
+                        <button id="show-all-btn" class="btn-show-all">Tất cả tour</button>
+                    </div>
+                </div>
             </div>
         </div>
-<!-- Phần hiển thị thống kê và sắp xếp -->
-<!-- Stats & Sort -->
-                <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center mb-4 gap-3 p-3 rounded-4" style="background: rgba(255,255,255,0.6); backdrop-filter: blur(5px);">
-<!-- Hiển thị số lượng tour phù hợp chưa xử lý xong-->
-                    <p class="mb-0 text-muted fw-medium">Hiển thị <span class="text-dark fw-bold">10</span> hành trình phù hợp</p>
-                    <div class="d-flex align-items-center">
-                        <span class="small fw-bold text-uppercase text-muted me-3" style="letter-spacing: 0.1em;">Sắp xếp:</span>
-                        <select class="editorial-select">
-                            <option>Phổ biến nhất</option>
-                            <option>Giá: Cao - Thấp</option>
-                            <option>Giá: Thấp - Cao</option>
-                            <option>Mới nhất</option>
-                        </select>
+
+        <!-- Stats & Sort -->
+        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center mb-4 gap-3 p-3 rounded-4" style="background: rgba(255,255,255,0.6); backdrop-filter: blur(5px);">
+            <p class="mb-0 text-muted fw-medium">Hiển thị <span class="text-dark fw-bold">10</span> hành trình phù hợp</p>
+            <div class="d-flex align-items-center">
+                <span class="small fw-bold text-uppercase text-muted me-3" style="letter-spacing: 0.1em;">Sắp xếp:</span>
+                <select class="editorial-select">
+                    <option>Phổ biến nhất</option>
+                    <option>Giá: Cao - Thấp</option>
+                    <option>Giá: Thấp - Cao</option>
+                    <option>Mới nhất</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Tour Cards Grid -->
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-6" data-dest="ha-long" data-depart="Hà Nội,TP. Hồ Chí Minh,Đà Nẵng" data-months="1,2,3,4,5,6,7,8,9,10,11,12" data-price="15800000">
+                <div class="tour-card">
+                    <div class="card-img-wrapper">
+                        <span class="badge-editorial">Signature</span>
+                        <img alt="Ha Long Bay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyWCDdmy6zuvowVBoQSvtKSJGzsPPDDtdYw4EqnpQlgN_DUWKSubAf0P9fkMI0qYXKodO0iFzJUi8hFVJw7oveq7y4elSEDIHf2oFJWmPxHmQkOE-Z1skoaBVESORSP-Ox73DwjGLSj8HNP7mAZ10JqMZWBzuX8_HRBXpgZpJfYJKgdTHovi1gA5Z-C8HDoIhZhm1X3YZruX3s4E9Pr1F6FwvMxKQWB_KVXv-reijV4b8yoltc8MMVGxk-JnQKl0nRL1wKcHCgraWz"/>
                     </div>
-                </div>
-<!-- Lưới hiển thị các thẻ tour -->
-                <div class="row g-4">
-<!-- Card 1 -->
-                    <div class="col-md-6" data-dest="ha-long" data-depart="Hà Nội,TP. Hồ Chí Minh,Đà Nẵng" data-months="1,2,3,4,5,6,7,8,9,10,11,12" data-price="15800000">
-                        <div class="tour-card">
-                            <div class="card-img-wrapper">
-                                <span class="badge-editorial">Signature</span>
-                                <img alt="Ha Long Bay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyWCDdmy6zuvowVBoQSvtKSJGzsPPDDtdYw4EqnpQlgN_DUWKSubAf0P9fkMI0qYXKodO0iFzJUi8hFVJw7oveq7y4elSEDIHf2oFJWmPxHmQkOE-Z1skoaBVESORSP-Ox73DwjGLSj8HNP7mAZ10JqMZWBzuX8_HRBXpgZpJfYJKgdTHovi1gA5Z-C8HDoIhZhm1X3YZruX3s4E9Pr1F6FwvMxKQWB_KVXv-reijV4b8yoltc8MMVGxk-JnQKl0nRL1wKcHCgraWz"/>
-                            </div>
-                            <div class="card-body-custom">
-                                <div class="d-flex justify-content-between align-items-start">
-                                    <div>
-                                        <h2 class="tour-title">Huyền Thoại Vịnh Hạ Long &amp; Lan Hạ</h2>
-                                        <div class="tour-meta">
-                                            <span class="material-symbols-outlined me-1" style="font-variation-settings: 'FILL' 1; font-size: 0.9rem;">schedule</span>
-                                            3 Ngày 2 Đêm <span class="mx-2 opacity-50">•</span> Du Thuyền 6 Sao
-                                        </div>
-                                    </div>
-                                    <div class="text-end">
-                                        <div class="price-label">Từ</div>
-                                        <div class="price-value">15.800.000</div>
-                                    </div>
-                                </div>
-                                <a href="TourDetails.html?id=ha-long" class="btn btn-outline-primary-editorial" role="button">
-                                    Xem Chi Tiết <span class="material-symbols-outlined">arrow_forward</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-<!-- Card 2 -->
-                    <div class="col-md-6" data-dest="fansipan" data-depart="Hà Nội,TP. Hồ Chí Minh" data-months="9,10,11,12,1,2" data-price="12500000">
-                        <div class="tour-card">
-                            <div class="card-img-wrapper">
-                                <img alt="Sapa" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6tK7KoJbBoSOce5m_RRAt4TwEcXLa-sWiR7vNY0wG7DkKzx0DO_yDapzuh9MnQc2LTCmyNj89d8lG5Jx8v_9yvGJi2PjwffIIpzos95g-5H1mJtedqgFrTt9iCDj4eH8GHUZJMR5Wri6MufQX6kzgO9imnzH0tLi2U8ae1G-kx-gn42Xy3VklJkuJdmkRtLiu16As8HgH3Hw3G9pH7UsUvxRxhZxzK1wi3yeU_H4bu1CGjH4rmIvzMcUc6MQ1toxcG2iRwiEt0FSM"/>
-                            </div>
-                            <div class="card-body-custom">
-                                <div class="d-flex justify-content-between align-items-start">
-                                    <div>
-                                        <h2 class="tour-title">Sương Mờ Đỉnh Fansipan</h2>
-                                        <div class="tour-meta">
-                                            <span class="material-symbols-outlined me-1" style="font-variation-settings: 'FILL' 1; font-size: 0.9rem;">schedule</span>4 Ngày 3 Đêm 
-                                            <span class="mx-2 opacity-50">•</span> Bản Làng Nguyên Bản
-                                        </div>
-                                    </div>
-                                    <div class="text-end">
-                                        <div class="price-label">Từ</div>
-                                        <div class="price-value">12.500.000</div>
-                                    </div>
-                                </div>
-                                <a href="TourDetails.html?id=fansipan" class="btn btn-outline-primary-editorial" role="button">
-                                    Xem Chi Tiết <span class="material-symbols-outlined">arrow_forward</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-<!-- Card 3 -->
-                    <div class="col-md-6"  data-dest="hoi-an,hue" data-depart="Hà Nội,TP. Hồ Chí Minh,Đà Nẵng" data-months="1,2,3,4,5,6" data-price="12200000">
-                        <div class="tour-card">
-                            <div class="card-img-wrapper">
-                                <span class="badge-editorial badge-secondary-editorial">Bestseller</span>
-                                <img alt="Hoi An" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdcvai1ROVkTSzhZgVvGzZs6AaHduO2iH_kTmiljVRpN4Qx5tQDU78Y77EbglDLKVJ-kJhSw7d9TJpDWbaO9yJNB3W5PUvYijfZhO8UjRZwQplzkxX43ppvK57neQbQzRHH3fxRcZ40kjwVhAbUVjyy-CufT19_JD-e-rYZ_D_1sWKYVNwjzf5fZ0bSYEcGXrazK1zExGCCujXluGaR19dvt9f4Asid4tVJoGIkm6rzZe5YjcBsclP-eo7EeCHphWUeoHyxlp_flQk"/>
-                            </div>
-                            <div class="card-body-custom">
-                                <div class="d-flex justify-content-between align-items-start">
-                                    <div>
-                                        <h2 class="tour-title">Hồn Xưa Phố Hội &amp; Kinh Đô Huế</h2>
-                                        <div class="tour-meta">
-                                            <span class="material-symbols-outlined me-1" style="font-variation-settings: 'FILL' 1; font-size: 0.9rem;">schedule</span>
-                                                                                    5 Ngày 4 Đêm <span class="mx-2 opacity-50">•</span> Tàu Hỏa Hạng Sang
-                                        </div>
-                                    </div>
-                                    <div class="text-end">
-                                        <div class="price-label">Từ</div>
-                                        <div class="price-value">12.200.000</div>
-                                    </div>
-                                </div>
-                                <a href="TourDetails.html?id=hoi-an" class="btn btn-outline-primary-editorial" role="button">
-                                    Xem Chi Tiết <span class="material-symbols-outlined">arrow_forward</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-<!-- Card 4 -->
-                    <div class="col-md-6" data-dest="ninh-van" data-depart="TP. Hồ Chí Minh,Hà Nội" data-months="1,2,3,4,5,6,7,8,9,10,11,12" data-price="24500000">
-                        <div class="tour-card">
-                            <div class="card-img-wrapper">
-                                <img alt="Ninh Van Bay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOiHh7by5kWjjIx600zQ0haAYSqRW0qib68DSSj7QfOaz6-s0F9c93EzDpVuMrmfh0nWm79Egvk-T3X75ZvKziZB1u8r2ENXiceUdhr3A_aZwiMyKEVzU0PjC_O_zeFcionE28tDlx3FuHtlbMj4Q1UGJVudXdTBNWtpxTek1Uoodx0oFxUDuR0s4ObmNr_VDnWrZ05ewLovmxJUy-On_UwJvfpBimsiTte2Dlu2hLX4hfl1Q6QyKDYiHNXy1du-UelQmUwvLv_YAT"/>
-                            </div>
-                            <div class="card-body-custom">
-                                <div class="d-flex justify-content-between align-items-start">
-                                    <div>
-                                        <h2 class="tour-title">Ninh Vân Bay: Tuyệt Tác Thiên Nhiên</h2>
-                                        <div class="tour-meta">
-                                            <span class="material-symbols-outlined me-1" style="font-variation-settings: 'FILL' 1; font-size: 0.9rem;">schedule</span>
-                                                                                    3 Ngày 2 Đêm <span class="mx-2 opacity-50">•</span> Thủy Phi Cơ Riêng
-                                        </div>
-                                    </div>
-                                    <div class="text-end">
-                                        <div class="price-label">Từ</div>
-                                        <div class="price-value">24.500.000</div>
-                                    </div>
-                                </div>
-                                <a href="TourDetails.html?id=ninh-van" class="btn btn-outline-primary-editorial" role="button">
-                                    Xem Chi Tiết <span class="material-symbols-outlined">arrow_forward</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                
-<!-- Card 5 --><div class="col-md-6" data-dest="ha-noi" data-depart="Hà Nội,TP. Hồ Chí Minh,Đà Nẵng" data-months="1,2,3,4,5,6,7,8,9,10,11,12" data-price="8500000">
-                    <div class="tour-card">
-                        <div class="card-img-wrapper">
-                            <span class="badge-editorial">Bestseller</span>
-                            <img alt="Ha Noi" src="Img/HaNoiTour/Hoan-Kiem-Lake-Title.png"/>
-                        </div>
-                        <div class="card-body-custom">
-                            <div class="d-flex justify-content-between align-items-start">
-                                <div>
-                                    <h2 class="tour-title">Khám Phá Hà Nội: Tinh Hoa Thủ Đô Ngàn Năm Văn Hiến</h2>
-                                    <div class="tour-meta">
-                                        <span class="material-symbols-outlined me-1" style="font-variation-settings: 'FILL' 1; font-size: 0.9rem;">schedule</span>
-                                        5 Ngày 4 Đêm <span class="mx-2 opacity-50">•</span> Văn Hóa & Lịch Sử
-                                    </div>
-                                </div>
-                                <div class="text-end">
-                                    <div class="price-label">Từ</div>
-                                    <div class="price-value">8.500.000</div>
+                    <div class="card-body-custom">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <h2 class="tour-title">Huyền Thoại Vịnh Hạ Long &amp; Lan Hạ</h2>
+                                <div class="tour-meta">
+                                    <span class="material-symbols-outlined me-1" style="font-variation-settings: 'FILL' 1; font-size: 0.9rem;">schedule</span>
+                                    3 Ngày 2 Đêm <span class="mx-2 opacity-50">•</span> Du Thuyền 6 Sao
                                 </div>
                             </div>
-                            <a href="TourDetails.html?id=ha-noi" class="btn btn-outline-primary-editorial" role="button">
-                                Xem Chi Tiết <span class="material-symbols-outlined">arrow_forward</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-<!-- Card 6 -->
-                <div class="col-md-6" data-dest="da-nang" data-depart="Hà Nội,TP. Hồ Chí Minh,Đà Nẵng" data-months="1,2,3,4,5,6,7,8,9,10,11,12" data-price="6200000">
-                    <div class="tour-card">
-                        <div class="card-img-wrapper">
-                            <img alt="Da Nang" src="Img/DaNangTour/Dragon-Bridge-Title.png"/>
-                        </div>
-                        <div class="card-body-custom">
-                            <div class="d-flex justify-content-between align-items-start">
-                                <div>
-                                    <h2 class="tour-title">Khám Phá Đà Nẵng: Thành Phố Của Những Cây Cầu & Biển Xanh</h2>
-                                    <div class="tour-meta">
-                                        <span class="material-symbols-outlined me-1" style="font-variation-settings: 'FILL' 1; font-size: 0.9rem;">schedule</span>
-                                        5 Ngày 4 Đêm <span class="mx-2 opacity-50">•</span> Biển & Văn Hóa
-                                    </div>
-                                </div>
-                                <div class="text-end">
-                                    <div class="price-label">Từ</div>
-                                    <div class="price-value">6.200.000</div>
-                                </div>
+                            <div class="text-end">
+                                <div class="price-label">Từ</div>
+                                <div class="price-value">15.800.000</div>
                             </div>
-                            <a href="TourDetails.html?id=da-nang" class="btn btn-outline-primary-editorial" role="button">
-                                Xem Chi Tiết <span class="material-symbols-outlined">arrow_forward</span>
-                            </a>
                         </div>
-                    </div>
-                </div>
-<!-- Card 7 -->
-                <div class="col-md-6" data-dest="tphcm" data-depart="TP. Hồ Chí Minh,Hà Nội,Đà Nẵng" data-months="1,2,3,4,5,6,7,8,9,10,11,12" data-price="5500000">
-                    <div class="tour-card">
-                        <div class="card-img-wrapper">
-                            <img alt="TPHCM" src="Img/TPHCMTour/Dinh-Doc-Lap-Title.png"/>
-                        </div>
-                        <div class="card-body-custom">
-                            <div class="d-flex justify-content-between align-items-start">
-                                <div>
-                                    <h2 class="tour-title">Khám Phá TP.HCM: Hòn Ngọc Viễn Đông Rực Rỡ</h2>
-                                    <div class="tour-meta">
-                                        <span class="material-symbols-outlined me-1" style="font-variation-settings: 'FILL' 1; font-size: 0.9rem;">schedule</span>
-                                        4 Ngày 3 Đêm <span class="mx-2 opacity-50">•</span> Lịch Sử & Ẩm Thực
-                                    </div>
-                                </div>
-                                <div class="text-end">
-                                    <div class="price-label">Từ</div>
-                                    <div class="price-value">5.500.000</div>
-                                </div>
-                            </div>
-                            <a href="TourDetails.html?id=tphcm" class="btn btn-outline-primary-editorial" role="button">
-                                Xem Chi Tiết <span class="material-symbols-outlined">arrow_forward</span>
-                            </a>
-                        </div>
+                        <a href="TourDetails.html?id=ha-long" class="btn btn-outline-primary-editorial" role="button">
+                            Xem Chi Tiết <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
                     </div>
                 </div>
             </div>
 
-            <!-- card 8 -->
-                <div class="col-md-6" data-dest="ha-long" data-depart="Hà Nội,TP. Hồ Chí Minh,Đà Nẵng" data-months="1,2,3,4,5,6,7,8,9,10,11,12" data-price="4500000">
+            <!-- Card 2 -->
+            <div class="col-md-6" data-dest="fansipan" data-depart="Hà Nội,TP. Hồ Chí Minh" data-months="9,10,11,12,1,2" data-price="12500000">
+                <div class="tour-card">
+                    <div class="card-img-wrapper">
+                        <img alt="Sapa" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6tK7KoJbBoSOce5m_RRAt4TwEcXLa-sWiR7vNY0wG7DkKzx0DO_yDapzuh9MnQc2LTCmyNj89d8lG5Jx8v_9yvGJi2PjwffIIpzos95g-5H1mJtedqgFrTt9iCDj4eH8GHUZJMR5Wri6MufQX6kzgO9imnzH0tLi2U8ae1G-kx-gn42Xy3VklJkuJdmkRtLiu16As8HgH3Hw3G9pH7UsUvxRxhZxzK1wi3yeU_H4bu1CGjH4rmIvzMcUc6MQ1toxcG2iRwiEt0FSM"/>
+                    </div>
+                    <div class="card-body-custom">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <h2 class="tour-title">Sương Mờ Đỉnh Fansipan</h2>
+                                <div class="tour-meta">
+                                    <span class="material-symbols-outlined me-1" style="font-variation-settings: 'FILL' 1; font-size: 0.9rem;">schedule</span>
+                                    4 Ngày 3 Đêm <span class="mx-2 opacity-50">•</span> Bản Làng Nguyên Bản
+                                </div>
+                            </div>
+                            <div class="text-end">
+                                <div class="price-label">Từ</div>
+                                <div class="price-value">12.500.000</div>
+                            </div>
+                        </div>
+                        <a href="TourDetails.html?id=fansipan" class="btn btn-outline-primary-editorial" role="button">
+                            Xem Chi Tiết <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-6" data-dest="hoi-an,hue" data-depart="Hà Nội,TP. Hồ Chí Minh,Đà Nẵng" data-months="1,2,3,4,5,6" data-price="12200000">
+                <div class="tour-card">
+                    <div class="card-img-wrapper">
+                        <span class="badge-editorial badge-secondary-editorial">Bestseller</span>
+                        <img alt="Hoi An" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdcvai1ROVkTSzhZgVvGzZs6AaHduO2iH_kTmiljVRpN4Qx5tQDU78Y77EbglDLKVJ-kJhSw7d9TJpDWbaO9yJNB3W5PUvYijfZhO8UjRZwQplzkxX43ppvK57neQbQzRHH3fxRcZ40kjwVhAbUVjyy-CufT19_JD-e-rYZ_D_1sWKYVNwjzf5fZ0bSYEcGXrazK1zExGCCujXluGaR19dvt9f4Asid4tVJoGIkm6rzZe5YjcBsclP-eo7EeCHphWUeoHyxlp_flQk"/>
+                    </div>
+                    <div class="card-body-custom">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <h2 class="tour-title">Hồn Xưa Phố Hội &amp; Kinh Đô Huế</h2>
+                                <div class="tour-meta">
+                                    <span class="material-symbols-outlined me-1" style="font-variation-settings: 'FILL' 1; font-size: 0.9rem;">schedule</span>
+                                    5 Ngày 4 Đêm <span class="mx-2 opacity-50">•</span> Tàu Hỏa Hạng Sang
+                                </div>
+                            </div>
+                            <div class="text-end">
+                                <div class="price-label">Từ</div>
+                                <div class="price-value">12.200.000</div>
+                            </div>
+                        </div>
+                        <a href="TourDetails.html?id=hoi-an" class="btn btn-outline-primary-editorial" role="button">
+                            Xem Chi Tiết <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-md-6" data-dest="ninh-van" data-depart="TP. Hồ Chí Minh,Hà Nội" data-months="1,2,3,4,5,6,7,8,9,10,11,12" data-price="24500000">
+                <div class="tour-card">
+                    <div class="card-img-wrapper">
+                        <img alt="Ninh Van Bay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOiHh7by5kWjjIx600zQ0haAYSqRW0qib68DSSj7QfOaz6-s0F9c93EzDpVuMrmfh0nWm79Egvk-T3X75ZvKziZB1u8r2ENXiceUdhr3A_aZwiMyKEVzU0PjC_O_zeFcionE28tDlx3FuHtlbMj4Q1UGJVudXdTBNWtpxTek1Uoodx0oFxUDuR0s4ObmNr_VDnWrZ05ewLovmxJUy-On_UwJvfpBimsiTte2Dlu2hLX4hfl1Q6QyKDYiHNXy1du-UelQmUwvLv_YAT"/>
+                    </div>
+                    <div class="card-body-custom">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <h2 class="tour-title">Ninh Vân Bay: Tuyệt Tác Thiên Nhiên</h2>
+                                <div class="tour-meta">
+                                    <span class="material-symbols-outlined me-1" style="font-variation-settings: 'FILL' 1; font-size: 0.9rem;">schedule</span>
+                                    3 Ngày 2 Đêm <span class="mx-2 opacity-50">•</span> Thủy Phi Cơ Riêng
+                                </div>
+                            </div>
+                            <div class="text-end">
+                                <div class="price-label">Từ</div>
+                                <div class="price-value">24.500.000</div>
+                            </div>
+                        </div>
+                        <a href="TourDetails.html?id=ninh-van" class="btn btn-outline-primary-editorial" role="button">
+                            Xem Chi Tiết <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 5 -->
+            <div class="col-md-6" data-dest="ha-noi" data-depart="Hà Nội,TP. Hồ Chí Minh,Đà Nẵng" data-months="1,2,3,4,5,6,7,8,9,10,11,12" data-price="8500000">
+                <div class="tour-card">
+                    <div class="card-img-wrapper">
+                        <span class="badge-editorial">Bestseller</span>
+                        <img alt="Ha Noi" src="Img/HaNoiTour/Hoan-Kiem-Lake-Title.png"/>
+                    </div>
+                    <div class="card-body-custom">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <h2 class="tour-title">Khám Phá Hà Nội: Tinh Hoa Thủ Đô Ngàn Năm Văn Hiến</h2>
+                                <div class="tour-meta">
+                                    <span class="material-symbols-outlined me-1" style="font-variation-settings: 'FILL' 1; font-size: 0.9rem;">schedule</span>
+                                    5 Ngày 4 Đêm <span class="mx-2 opacity-50">•</span> Văn Hóa & Lịch Sử
+                                </div>
+                            </div>
+                            <div class="text-end">
+                                <div class="price-label">Từ</div>
+                                <div class="price-value">8.500.000</div>
+                            </div>
+                        </div>
+                        <a href="TourDetails.html?id=ha-noi" class="btn btn-outline-primary-editorial" role="button">
+                            Xem Chi Tiết <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col-md-6" data-dest="da-nang" data-depart="Hà Nội,TP. Hồ Chí Minh,Đà Nẵng" data-months="1,2,3,4,5,6,7,8,9,10,11,12" data-price="6200000">
+                <div class="tour-card">
+                    <div class="card-img-wrapper">
+                        <img alt="Da Nang" src="Img/DaNangTour/Dragon-Bridge-Title.png"/>
+                    </div>
+                    <div class="card-body-custom">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <h2 class="tour-title">Khám Phá Đà Nẵng: Thành Phố Của Những Cây Cầu & Biển Xanh</h2>
+                                <div class="tour-meta">
+                                    <span class="material-symbols-outlined me-1" style="font-variation-settings: 'FILL' 1; font-size: 0.9rem;">schedule</span>
+                                    5 Ngày 4 Đêm <span class="mx-2 opacity-50">•</span> Biển & Văn Hóa
+                                </div>
+                            </div>
+                            <div class="text-end">
+                                <div class="price-label">Từ</div>
+                                <div class="price-value">6.200.000</div>
+                            </div>
+                        </div>
+                        <a href="TourDetails.html?id=da-nang" class="btn btn-outline-primary-editorial" role="button">
+                            Xem Chi Tiết <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="col-md-6" data-dest="tphcm" data-depart="TP. Hồ Chí Minh,Hà Nội,Đà Nẵng" data-months="1,2,3,4,5,6,7,8,9,10,11,12" data-price="5500000">
+                <div class="tour-card">
+                    <div class="card-img-wrapper">
+                        <img alt="TPHCM" src="Img/TPHCMTour/Dinh-Doc-Lap-Title.png"/>
+                    </div>
+                    <div class="card-body-custom">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <h2 class="tour-title">Khám Phá TP.HCM: Hòn Ngọc Viễn Đông Rực Rỡ</h2>
+                                <div class="tour-meta">
+                                    <span class="material-symbols-outlined me-1" style="font-variation-settings: 'FILL' 1; font-size: 0.9rem;">schedule</span>
+                                    4 Ngày 3 Đêm <span class="mx-2 opacity-50">•</span> Lịch Sử & Ẩm Thực
+                                </div>
+                            </div>
+                            <div class="text-end">
+                                <div class="price-label">Từ</div>
+                                <div class="price-value">5.500.000</div>
+                            </div>
+                        </div>
+                        <a href="TourDetails.html?id=tphcm" class="btn btn-outline-primary-editorial" role="button">
+                            Xem Chi Tiết <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="col-md-6" data-dest="ha-long" data-depart="Hà Nội,TP. Hồ Chí Minh,Đà Nẵng" data-months="1,2,3,4,5,6,7,8,9,10,11,12" data-price="4500000">
                 <div class="tour-card">
                     <div class="card-img-wrapper">
                         <span class="badge-editorial badge-secondary-editorial">Hot Seller</span>
@@ -359,8 +331,9 @@
                     </div>
                 </div>
             </div>
-<!-- card 9 -->
-                <div class="col-md-6" data-dest="fansipan-hue,fansipan,hue" data-depart="Hà Nội,TP. Hồ Chí Minh" data-months="9,10,11,12,1,2,3" data-price="12500000">
+
+            <!-- Card 9 -->
+            <div class="col-md-6" data-dest="fansipan-hue,fansipan,hue" data-depart="Hà Nội,TP. Hồ Chí Minh" data-months="9,10,11,12,1,2,3" data-price="12500000">
                 <div class="tour-card">
                     <div class="card-img-wrapper">
                         <span class="badge-editorial">Mới</span>
@@ -386,8 +359,9 @@
                     </div>
                 </div>
             </div>
-<!-- card 10 -->
-<div class="col-md-6" data-dest="hoi-an" data-depart="Hà Nội,TP. Hồ Chí Minh,Đà Nẵng" data-months="1,2,3,4,5,6,7,8,9,10,11,12" data-price="1200000">
+
+            <!-- Card 10 -->
+            <div class="col-md-6" data-dest="hoi-an" data-depart="Hà Nội,TP. Hồ Chí Minh,Đà Nẵng" data-months="1,2,3,4,5,6,7,8,9,10,11,12" data-price="1200000">
                 <div class="tour-card">
                     <div class="card-img-wrapper">
                         <img alt="Hoi An" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7bcSBFQ5DbeomKaADjHCIY3_-m0gEzdNmlA3Yhk_ql_QinWjJVARUXTZlU-SKI7uyz-56kRkWkoyjTZ4wzgxN7JzjYBTV9auZPC-3p6j8Xm0yJSHPXTZFJUqQV9TIaVgLGA5UB9bHndpCNbLt7RWvPvo1VKegHSIVbXDmbwmUVhauaGepC74LnLKzKZ_UoSNl4qNd8OUNWlTcKVweGqM3brFqV3EXxb531EWVl_NzZCqv89CzeN60ZJElXtvNGx7wcw3C05UmQs3V"/>
@@ -412,58 +386,59 @@
                     </div>
                 </div>
             </div>
+        </div>
 
-<!-- Pagination -->
-                <div class="pagination-editorial"> <!-- Thanh phân trang -->
-                    <button class="page-btn"><span class="material-symbols-outlined">chevron_left</span></button>
-                    <button class="page-btn active">1</button>
-                    <button class="page-btn">2</button>
-                    <button class="page-btn">3</button>
-                    <span class="d-flex align-items-center px-2 opacity-50">...</span>
-                    <button class="page-btn"><span class="material-symbols-outlined">chevron_right</span></button>
-                </div>
+        <!-- Pagination -->
+        <div class="pagination-editorial">
+            <button class="page-btn"><span class="material-symbols-outlined">chevron_left</span></button>
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <span class="d-flex align-items-center px-2 opacity-50">...</span>
+            <button class="page-btn"><span class="material-symbols-outlined">chevron_right</span></button>
+        </div>
     </main>
-<!-- Footer của trang -->
+
+    <!-- Footer (Đã dọn dẹp các class text-center cũ) -->
     <footer>
         <div class="container-xxl py-5">
-            <div class="row g-4">
+            <div class="row g-4 text-start">
                 <div class="col-md-3">
-<!-- Logo và mô tả ngắn của thương hiệu -->
                     <div class="footer-brand">The Verdant Archive</div>
-                    <p class="footer-text">
-                                        Nơi hội tụ những hành trình di sản, tôn vinh vẻ đẹp nguyên sơ và văn hóa bản địa bền vững của Việt Nam.
-                    </p>
+                    <p class="footer-text">Đơn vị lữ hành cao cấp hàng đầu Việt Nam, mang đến những trải nghiệm cá nhân hóa sâu sắc giữa lòng di sản.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a class="btn btn-sm btn-light rounded-circle p-2" href="#"><span class="material-symbols-outlined text-primary">public</span></a>
+                        <a class="btn btn-sm btn-light rounded-circle p-2" href="#"><span class="material-symbols-outlined text-primary">favorite</span></a>
+                    </div>
                 </div>
                 <div class="col-6 col-md-3">
-                    <h4 class="footer-heading">Hỗ Trợ</h4>
-<!-- Các liên kết hỗ trợ -->
-                    <a class="footer-link" href="#">Về Chúng Tôi</a>
-                    <a class="footer-link" href="#">Du Lịch Bền Vững</a>
-                    <a class="footer-link fw-bold" href="#" style="color: var(--primary);">Liên Hệ</a>
+                    <h4 class="footer-heading">Liên kết</h4>
+                    <a class="footer-link d-block mb-2" href="#">Về Chúng Tôi</a>
+                    <a class="footer-link d-block" href="#">Điều khoản dịch vụ</a>
                 </div>
                 <div class="col-6 col-md-3">
-                    <h4 class="footer-heading">Pháp Lý</h4>
-<!-- Các liên kết pháp lý -->
-                    <a class="footer-link" href="#">Điều Khoản</a>
-                    <a class="footer-link" href="#">Chính Sách Bảo Mật</a>
+                    <h4 class="footer-heading">Trải nghiệm</h4>
+                    <a class="footer-link d-block mb-2" href="#">Văn hóa &amp; Di sản</a>
+                    <a class="footer-link d-block mb-2" href="#">Phiêu lưu mạo hiểm</a>
+                    <a class="footer-link d-block" href="#">Nghỉ dưỡng cao cấp</a>
                 </div>
                 <div class="col-md-3">
-                    <h4 class="footer-heading">Kết Nối</h4>
-                    <div class="d-flex">
-<!-- Các nút mạng xã hội -->
-                        <a class="social-btn" href="#"><span class="material-symbols-outlined">public</span></a>
-                        <a class="social-btn" href="#"><span class="material-symbols-outlined">mail</span></a>
-                    </div>
+                    <h4 class="footer-heading">Hỗ trợ</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li class="mb-2">Địa chỉ: 123 Cao Lỗ, Quận 8, TP HCM</li>
+                        <li>Liên hệ SĐT: 1900 1811</li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <div class="border-top py-4 text-center">
+        <div class="border-top py-4 text-start">
             <p class="small text-muted mb-0">© 2024 The Verdant Archive. Crafted for the Editorial Odyssey.</p>
         </div>
     </footer>
-<!-- Nhúng Bootstrap JS Bundle (bao gồm Popper.js) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="/Script/main.js"></script>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
 <script>
     // ==========================================
     // Đợi toàn bộ HTML tải xong mới chạy JS
@@ -474,11 +449,7 @@
         const pills = document.querySelectorAll('.btn-pill');
         //Duyệt từng nút
         pills.forEach(pill => {
-            //khi click vào nút, chuyển đổi lớp 'active'
             pill.addEventListener('click', function() {
-                // Toggle class active
-            // Có active thì xóa
-            // Không có thì thêm
                 this.classList.toggle('active');
             });
         });
@@ -498,11 +469,11 @@
                 nav.style.boxShadow = 'var(--editorial-shadow)';
             }
         });
-        document.getElementById('tourCount').textContent = document.querySelectorAll('.col-md-6[data-dest]').length;
+         document.getElementById('tourCount').textContent = document.querySelectorAll('.col-md-6[data-dest]').length;
     });
     // Hàm lọc tour dựa trên tham số URL (dest và from)
     function filterTours() {
-    // Lấy các tham số từ URL hiện tại
+        // Lấy các tham số từ URL hiện tại
         const params = new URLSearchParams(window.location.search);
         //lấy giá trị
         const dest   = params.get('dest');
@@ -557,7 +528,6 @@
     function removeVietnameseTones(str) {
         return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/đ/g, "d").replace(/Đ/g, "D");
     }
-    
     // ==========================================
     // Chạy filterTours khi trang load xong
     // =========================================
@@ -592,7 +562,7 @@
         cards.forEach(col => {
             const title = col.querySelector('.tour-title')?.textContent.trim() || '';
             // Nếu title chứa keyword
-            if (removeVietnameseTones(title.toLowerCase()).includes(keyword)) matches.push(title);
+           if (removeVietnameseTones(title.toLowerCase()).includes(keyword)) matches.push(title);
         });
         // Nếu không có kết quả khớp, ẩn gợi ý
         if (matches.length === 0) { suggestions.style.display = 'none'; return; }

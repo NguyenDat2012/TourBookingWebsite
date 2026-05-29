@@ -1,304 +1,6 @@
-/* Custom cho bộ lọc hàng ngang */
-.filter-horizontal {
-    padding: 1.5rem 2rem !important;
-    background: rgba(255, 255, 255, 0.85) !important;
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    margin: 0 auto;
-    width: 100%;
-}
-
-/* Thu nhỏ lề của các tiêu đề filter mục nhỏ */
-.filter-horizontal .filter-group {
-    margin-bottom: 0 !important;
-}
-
-.filter-horizontal .filter-title {
-    font-size: 0.85rem !important;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.5rem !important;
-    text-transform: uppercase;
-    color: #8c7663;
-}
-
-/* Tối ưu lại khoảng cách chữ trong form check khi nằm ngang */
-.filter-horizontal .form-check-label {
-    font-size: 0.9rem;
-    white-space: nowrap;
-}
-
-/* Đảm bảo responsive mượt mà trên mobile */
-@media (max-width: 991.98px) {
-    .filter-horizontal {
-        flex-direction: column;
-        align-items: flex-start !important;
-        gap: 1.5rem !important;
-    }
-    .filter-horizontal .filter-group {
-        width: 100%;
-        max-width: 100% !important;
-    }
-    .filter-horizontal .d-flex {
-        flex-wrap: wrap;
-    }
-}
-
-/* =========================
-   SEARCH FILTER BAR NEW UI
-========================= */
-
-.search-filter-bar {
-    width: 100%;
-    max-width: 1150px;
-
-    margin: 0 auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1.5rem;
-
-    padding: 1rem 1.5rem;
-
-    background: rgba(255, 255, 255, 0.78);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-
-    border: 1px solid rgba(255,255,255,0.45);
-
-    border-radius: 28px;
-
-    box-shadow:
-        0 10px 40px rgba(0,0,0,0.06),
-        0 2px 8px rgba(0,0,0,0.04);
-
-    transition: all 0.3s ease;
-}
-
-/* Hover nhẹ */
-.search-filter-bar:hover {
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 18px 45px rgba(0,0,0,0.08),
-        0 4px 12px rgba(0,0,0,0.05);
-}
-
-/* =========================
-   SEARCH INPUT
-========================= */
-
-.search-input-wrapper {
-    flex: 1;
-    min-width: 260px;
-
-    background: rgba(255,255,255,0.7);
-
-    border-radius: 18px;
-
-    padding: 0.9rem 1rem;
-
-    border: 1px solid rgba(0,0,0,0.05);
-
-    transition: all 0.3s ease;
-}
-
-.search-input-wrapper:focus-within {
-    border-color: rgba(0, 105, 84, 0.25);
-
-    box-shadow: 0 0 0 4px rgba(0,105,84,0.08);
-}
-
-.search-icon {
-    color: var(--primary);
-    font-size: 1.3rem;
-    margin-right: 0.8rem;
-}
-
-.search-input {
-    border: none;
-    background: transparent;
-
-    width: 100%;
-
-    font-size: 0.95rem;
-    font-weight: 500;
-
-    color: var(--on-surface);
-}
-
-.search-input::placeholder {
-    color: #9ca3af;
-}
-
-.search-input:focus {
-    outline: none;
-}
-
-/* =========================
-   DIVIDER
-========================= */
-
-.search-divider {
-    width: 1px;
-    align-self: stretch;
-
-    background: rgba(0,0,0,0.06);
-}
-
-/* =========================
-   PRICE FILTER
-========================= */
-
-.price-filter-wrapper {
-    width: 360px;
-
-    display: flex;
-    flex-direction: column;
-
-    gap: 0.75rem;
-}
-
-.price-title {
-    font-size: 0.72rem;
-
-    text-transform: uppercase;
-
-    letter-spacing: 0.12em;
-
-    font-weight: 800;
-
-    color: #7b6a58;
-}
-
-/* Grid nút */
-.price-options-grid {
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 0.55rem;
-}
-
-/* Button giá */
-.price-btn {
-    padding: 0.65rem 0.75rem;
-
-    border-radius: 14px;
-
-    border: 1px solid rgba(0,0,0,0.08);
-
-    background: rgba(255,255,255,0.75);
-
-    font-size: 0.78rem;
-
-    font-weight: 600;
-
-    color: #4b5563;
-
-    transition: all 0.25s ease;
-}
-
-.price-btn:hover {
-    transform: translateY(-1px);
-
-    border-color: var(--primary);
-
-    color: var(--primary);
-
-    background: rgba(0,105,84,0.04);
-}
-
-.price-btn.active {
-    background: linear-gradient(
-        135deg,
-        var(--primary),
-        var(--primary-container)
-    );
-
-    color: white;
-
-    border-color: transparent;
-
-    box-shadow: 0 8px 20px rgba(0,105,84,0.22);
-}
-
-/* =========================
-   SEARCH BUTTON
-========================= */
-
-.btn-search-submit {
-    height: 58px;
-
-    padding: 0 2rem;
-
-    border: none;
-
-    border-radius: 18px;
-
-    background: linear-gradient(
-        135deg,
-        var(--primary),
-        var(--primary-container)
-    );
-
-    color: white;
-
-    font-weight: 700;
-
-    white-space: nowrap;
-
-    transition: all 0.3s ease;
-
-    box-shadow: 0 10px 20px rgba(0,105,84,0.18);
-}
-
-.btn-search-submit:hover {
-    transform: translateY(-2px);
-
-    box-shadow: 0 15px 30px rgba(0,105,84,0.28);
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 992px) {
-
-    .search-filter-bar {
-        flex-direction: column;
-
-        align-items: stretch;
-
-        border-radius: 24px;
-
-        padding: 1.25rem;
-    }
-
-    .search-divider {
-        display: none;
-    }
-
-    .price-filter-wrapper {
-        width: 100%;
-    }
-
-    .btn-search-submit {
-        width: 100%;
-    }
-}
-
-@media (max-width: 576px) {
-
-    .price-options-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .search-input-wrapper {
-        min-width: 100%;
-    }
-}
+/* ==========================================================================
+   1. HỆ THỐNG BIẾN (VARIABLES) & ĐỊNH DẠNG CHUNG
+   ========================================================================== */
 :root {
     --primary: #006954;
     --primary-container: #00846b;
@@ -321,6 +23,18 @@ body {
     color: var(--on-surface);
     background-color: var(--background);
     position: relative;
+    text-align: left; /* Đảm bảo mặc định toàn trang gióng lề trái */
+}
+
+h1, h2, h3, h4, .headline-font {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    text-align: left;
+}
+
+.material-symbols-outlined {
+    font-size: 1.25rem;
+    vertical-align: middle;
+    display: inline-block;
 }
 
 /* Hero Background */
@@ -350,11 +64,9 @@ body {
     background: linear-gradient(to bottom, rgba(252, 249, 244, 0.2) 0%, rgba(252, 249, 244, 1) 95%);
 }
 
-h1, h2, h3, h4, .headline-font {
-    font-family: 'Be Vietnam Pro', sans-serif;
-}
-
-/* Navigation */
+/* ==========================================================================
+   2. NAVIGATION BAR (Sửa lỗi căn giữa, ép sát 2 lề)
+   ========================================================================== */
 .navbar-editorial {
     background-color: rgba(252, 249, 244, 0.85);
     backdrop-filter: blur(20px);
@@ -363,12 +75,28 @@ h1, h2, h3, h4, .headline-font {
     transition: all 0.3s;
 }
 
+/* Ép container bên trong navbar chia đều không gian ra hai bên lề */
+.navbar-editorial .container,
+.navbar-editorial .container-fluid {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    text-align: left !important;
+}
+
 .brand-logo {
     font-size: 1.5rem;
     font-weight: 800;
     letter-spacing: -0.05em;
     color: var(--primary);
     text-decoration: none;
+}
+
+.navbar-editorial .navbar-nav {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    text-align: left !important;
 }
 
 .nav-link-editorial {
@@ -385,7 +113,6 @@ h1, h2, h3, h4, .headline-font {
 
 .nav-link-editorial.active {
     color: var(--primary);
-    
     border-bottom: 2px solid var(--primary);
 }
 
@@ -405,10 +132,13 @@ h1, h2, h3, h4, .headline-font {
     color: var(--on-primary-container);
 }
 
-/* Header */
+/* ==========================================================================
+   3. PAGE HEADER (Tiêu đề trang dạt sát lề trái)
+   ========================================================================== */
 .page-header {
     padding-top: 10rem;
     margin-bottom: 4rem;
+    text-align: left !important;
 }
 
 .eyebrow {
@@ -420,6 +150,7 @@ h1, h2, h3, h4, .headline-font {
     font-weight: 800;
     display: block;
     margin-bottom: 1rem;
+    text-align: left !important;
 }
 
 .display-title {
@@ -428,6 +159,7 @@ h1, h2, h3, h4, .headline-font {
     letter-spacing: -0.03em;
     line-height: 1.1;
     color: #1a1a1a;
+    text-align: left !important;
 }
 
 .display-title span {
@@ -435,13 +167,181 @@ h1, h2, h3, h4, .headline-font {
     font-style: italic;
 }
 
-/* Sidebar Filters */
+/* ==========================================================================
+   4. NEW UI SEARCH FILTER BAR (Thanh tìm kiếm & Bộ lọc)
+   ========================================================================== */
+.search-filter-bar {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,0.45);
+    border-radius: 28px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.04);
+    transition: all 0.3s ease;
+}
+
+.search-filter-bar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 45px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.search-input-wrapper {
+    flex: 1;
+    min-width: 260px;
+    background: rgba(255,255,255,0.7);
+    border-radius: 18px;
+    padding: 0.9rem 1rem;
+    border: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.search-input-wrapper:focus-within {
+    border-color: rgba(0, 105, 84, 0.25);
+    box-shadow: 0 0 0 4px rgba(0,105,84,0.08);
+}
+
+.search-icon {
+    color: var(--primary);
+    font-size: 1.3rem;
+    margin-right: 0.8rem;
+}
+
+.search-input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--on-surface);
+}
+
+.search-input::placeholder {
+    color: #9ca3af;
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.search-divider {
+    width: 1px;
+    align-self: stretch;
+    background: rgba(0,0,0,0.06);
+}
+
+/* Bộ lọc khoảng giá */
+.price-filter-wrapper {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.price-title {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 800;
+    color: #7b6a58;
+    text-align: left;
+}
+
+.price-options-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.55rem;
+}
+
+.price-btn {
+    padding: 0.65rem 0.75rem;
+    border-radius: 14px;
+    border: 1px solid rgba(0,0,0,0.08);
+    background: rgba(255,255,255,0.75);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #4b5563;
+    transition: all 0.25s ease;
+}
+
+.price-btn:hover {
+    transform: translateY(-1px);
+    border-color: var(--primary);
+    color: var(--primary);
+    background: rgba(0,105,84,0.04);
+}
+
+.price-btn.active {
+    background: linear-gradient(135deg, var(--primary), var(--primary-container));
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 8px 20px rgba(0,105,84,0.22);
+}
+
+/* Nhóm các nút kích hoạt Tìm kiếm */
+.search-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.btn-search-submit {
+    height: 58px;
+    padding: 0 2rem;
+    border: none;
+    border-radius: 18px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-container));
+    color: white;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0,105,84,0.18);
+}
+
+.btn-search-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(0,105,84,0.28);
+}
+
+.btn-show-all {
+    height: 58px;
+    padding: 0 1.5rem;
+    border: none;
+    border-radius: 18px;
+    background: #ffffff;
+    color: var(--primary);
+    font-weight: 700;
+    white-space: nowrap;
+    border: 1px solid rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.btn-show-all:hover {
+    transform: translateY(-2px);
+    background: var(--primary);
+    color: white;
+}
+
+/* ==========================================================================
+   5. SIDEBAR FILTERS & TOUR CARDS CONTROLS
+   ========================================================================== */
 .filter-sidebar {
     background-color: var(--surface-container-low);
     backdrop-filter: blur(10px);
     border-radius: 2rem;
     padding: 2rem;
     box-shadow: var(--editorial-shadow);
+    text-align: left;
 }
 
 .filter-title {
@@ -451,6 +351,7 @@ h1, h2, h3, h4, .headline-font {
     letter-spacing: 0.15em;
     color: var(--tertiary);
     margin-bottom: 1.5rem;
+    text-align: left;
 }
 
 .form-check-input:checked {
@@ -486,6 +387,7 @@ h1, h2, h3, h4, .headline-font {
     box-shadow: var(--editorial-shadow);
     overflow: hidden;
     transition: transform 0.3s ease;
+    text-align: left;
 }
 
 .tour-card:hover {
@@ -532,6 +434,7 @@ h1, h2, h3, h4, .headline-font {
 
 .card-body-custom {
     padding: 2rem;
+    text-align: left;
 }
 
 .tour-title {
@@ -540,6 +443,7 @@ h1, h2, h3, h4, .headline-font {
     line-height: 1.2;
     margin-bottom: 0.5rem;
     transition: color 0.3s;
+    text-align: left;
 }
 
 .tour-card:hover .tour-title {
@@ -551,6 +455,7 @@ h1, h2, h3, h4, .headline-font {
     color: var(--on-surface-variant);
     display: flex;
     align-items: center;
+    justify-content: flex-start;
 }
 
 .price-label {
@@ -559,11 +464,13 @@ h1, h2, h3, h4, .headline-font {
     color: var(--tertiary);
     text-transform: uppercase;
     margin-bottom: 0.2rem;
+    text-align: left;
 }
 
 .price-value {
     font-size: 1.25rem;
     font-weight: 800;
+    text-align: left;
 }
 
 .btn-outline-primary-editorial {
@@ -587,7 +494,7 @@ h1, h2, h3, h4, .headline-font {
     color: white;
 }
 
-/* Sorting Select */
+/* Bộ lọc sắp xếp (Select) */
 .editorial-select {
     background-color: var(--surface-container-low);
     border: 1px solid rgba(0,0,0,0.05);
@@ -603,7 +510,7 @@ h1, h2, h3, h4, .headline-font {
     cursor: pointer;
 }
 
-/* Pagination */
+/* Phân trang */
 .pagination-editorial {
     margin-top: 4rem;
     display: flex;
@@ -631,12 +538,19 @@ h1, h2, h3, h4, .headline-font {
     color: white;
 }
 
-/* Footer */
+/* ==========================================================================
+   6. FOOTER SECTION (Sửa lỗi căn giữa, ép dạt trái giống main.css)
+   ========================================================================== */
 footer {
     background-color: #f6f3ee;
-    padding-top: 5rem;
+    padding: 5rem 2rem 2rem;
     position: relative;
     z-index: 1;
+    text-align: left !important; /* Triệt tiêu hoàn toàn căn giữa */
+}
+
+footer .row {
+    text-align: left !important;
 }
 
 .footer-brand {
@@ -644,6 +558,7 @@ footer {
     font-weight: 700;
     color: var(--primary);
     margin-bottom: 1rem;
+    text-align: left;
 }
 
 .footer-heading {
@@ -652,6 +567,19 @@ footer {
     text-transform: uppercase;
     letter-spacing: 0.15em;
     margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.footer-links ul li {
+    margin-bottom: 0.8rem;
+    text-align: left;
 }
 
 .footer-link {
@@ -659,8 +587,8 @@ footer {
     color: #6c757d;
     text-decoration: none;
     font-size: 0.875rem;
-    margin-bottom: 0.8rem;
     transition: color 0.3s;
+    text-align: left;
 }
 
 .footer-link:hover {
@@ -681,55 +609,57 @@ footer {
     transition: all 0.3s;
 }
 
-.material-symbols-outlined {
-    font-size: 1.25rem;
-    vertical-align: middle;
+/* Ép phần dòng chữ bản quyền Copyright nằm sát trái */
+footer .text-center {
+    text-align: left !important;
+}
+
+/* ==========================================================================
+   7. MEDIA QUERIES (RESPONSIVE)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .search-filter-bar {
+        flex-direction: column;
+        align-items: stretch;
+        border-radius: 24px;
+        padding: 1.25rem;
+    }
+
+    .search-divider {
+        display: none;
+    }
+
+    .price-filter-wrapper {
+        width: 100%;
+    }
+
+    .btn-search-submit {
+        width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
-    .page-header { padding-top: 7rem; }
-    .tour-card { margin-bottom: 2rem; }
-    .card-img-wrapper { height: 300px; }
+    .page-header { 
+        padding-top: 7rem; 
+    }
+    .tour-card { 
+        margin-bottom: 2rem; 
+    }
+    .card-img-wrapper { 
+        height: 300px; 
+    }
+    /* Trên màn hình nhỏ, cho phép dòng copyright đưa về giữa cho cân xứng */
+    footer .text-center {
+        text-align: center !important;
+    }
 }
 
+@media (max-width: 576px) {
+    .price-options-grid {
+        grid-template-columns: 1fr;
+    }
 
-
-/* Group nút */
-.search-actions{
-    display:flex;
-    align-items:center;
-    gap:0.8rem;
-}
-
-/* Nút tất cả tour */
-.btn-show-all{
-    height:58px;
-
-    padding:0 1.5rem;
-
-    border:none;
-
-    border-radius:18px;
-
-    background:#ffffff;
-
-    color:var(--primary);
-
-    font-weight:700;
-
-    white-space:nowrap;
-
-    border:1px solid rgba(0,0,0,0.08);
-
-    transition:all 0.3s ease;
-
-    box-shadow:0 8px 20px rgba(0,0,0,0.05);
-}
-
-.btn-show-all:hover{
-    transform:translateY(-2px);
-
-    background:var(--primary);
-
-    color:white;
+    .search-input-wrapper {
+        min-width: 100%;
+    }
 }
