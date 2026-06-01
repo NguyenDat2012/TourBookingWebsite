@@ -20,36 +20,41 @@
     </div>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-editorial fixed-top">
-        <div class="container-xxl d-flex justify-content-between align-items-center">
+<nav class="navbar navbar-editorial fixed-top">
+    <div class="container-fluid px-sm-5 px-4 d-flex justify-content-between align-items-center">
+        
+        <div class="d-flex align-items-center gap-5"> 
             <a class="brand-logo" href="index.html">The Verdant Archive</a>
-            <div class="d-none d-md-flex align-items-center">
+            
+            <div class="d-none d-md-flex align-items-center gap-4">
                 <a class="nav-link-editorial active" href="ListTour.html">Điểm đến</a>
                 <a class="nav-link-editorial" href="#">Kế hoạch</a>
             </div>
-            <div class="d-flex align-items-center gap-4">
-                <div id="authButtons" class="d-flex align-items-center">
-                    <a class="nav-link-editorial me-3 d-none d-lg-block" href="Login.html">Đăng nhập</a>
-                    <a class="nav-link-editorial me-3 d-none d-lg-block" href="Register.html">Đăng ký</a>
-                </div>
+        </div>
 
-                <div id="userProfile" class="dropdown d-none">
-                    <button class="btn d-flex align-items-center gap-2 dropdown-toggle border-0" type="button" data-bs-toggle="dropdown">
-                        <span class="material-symbols-outlined">account_circle</span>
-                        <span id="navUserName" class="fw-bold small">Tên người dùng</span>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end shadow border-0">
-                        <li><a class="dropdown-item py-2" href="#"><span class="material-symbols-outlined align-middle me-2">person</span>Hồ sơ của tôi</a></li>
-                        <li><a class="dropdown-item py-2" href="#"><span class="material-symbols-outlined align-middle me-2">history</span>Lịch sử đặt tour</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item py-2 text-danger" href="javascript:void(0)" onclick="logout()">
-                            <span class="material-symbols-outlined align-middle me-2">logout</span>Đăng xuất</a>
-                        </li>
-                    </ul>
-                </div>
+        <div class="d-flex align-items-center gap-4">
+            <div id="authButtons" class="d-flex align-items-center">
+                <a class="nav-link-editorial me-4 d-none d-lg-block" href="Login.html">Đăng nhập</a>
+                <a class="nav-link-editorial d-none d-lg-block" href="Register.html">Đăng ký</a>
+            </div>
+
+            <div id="userProfile" class="dropdown d-none">
+                <button class="btn d-flex align-items-center gap-2 dropdown-toggle border-0" type="button" data-bs-toggle="dropdown">
+                    <span class="material-symbols-outlined">account_circle</span>
+                    <span id="navUserName" class="fw-bold small">Tên người dùng</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end shadow border-0">
+                    <li>
+                        <a class="dropdown-item py-2 text-danger" href="javascript:void(0)" onclick="logout()">
+                            <span class="material-symbols-outlined align-middle me-2">logout</span>Đăng xuất
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </nav>
+
+    </div>
+</nav>
 
     <!-- Main Content -->
     <main class="container-xxl pb-5" style="position: relative; z-index: 2;">
@@ -99,15 +104,7 @@
         <!-- Stats & Sort -->
         <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center mb-4 gap-3 p-3 rounded-4" style="background: rgba(255,255,255,0.6); backdrop-filter: blur(5px);">
             <p class="mb-0 text-muted fw-medium">Hiển thị <span class="text-dark fw-bold">10</span> hành trình phù hợp</p>
-            <div class="d-flex align-items-center">
-                <span class="small fw-bold text-uppercase text-muted me-3" style="letter-spacing: 0.1em;">Sắp xếp:</span>
-                <select class="editorial-select">
-                    <option>Phổ biến nhất</option>
-                    <option>Giá: Cao - Thấp</option>
-                    <option>Giá: Thấp - Cao</option>
-                    <option>Mới nhất</option>
-                </select>
-            </div>
+            
         </div>
 
         <!-- Tour Cards Grid -->
@@ -387,54 +384,52 @@
                 </div>
             </div>
         </div>
-
-        <!-- Pagination -->
-        <div class="pagination-editorial">
-            <button class="page-btn"><span class="material-symbols-outlined">chevron_left</span></button>
-            <button class="page-btn active">1</button>
-            <button class="page-btn">2</button>
-            <button class="page-btn">3</button>
-            <span class="d-flex align-items-center px-2 opacity-50">...</span>
-            <button class="page-btn"><span class="material-symbols-outlined">chevron_right</span></button>
-        </div>
     </main>
 
     <!-- Footer (Đã dọn dẹp các class text-center cũ) -->
     <footer>
-        <div class="container-xxl py-5">
-            <div class="row g-4 text-start">
-                <div class="col-md-3">
-                    <div class="footer-brand">The Verdant Archive</div>
-                    <p class="footer-text">Đơn vị lữ hành cao cấp hàng đầu Việt Nam, mang đến những trải nghiệm cá nhân hóa sâu sắc giữa lòng di sản.</p>
-                    <div class="d-flex gap-3 mt-4">
-                        <a class="btn btn-sm btn-light rounded-circle p-2" href="#"><span class="material-symbols-outlined text-primary">public</span></a>
-                        <a class="btn btn-sm btn-light rounded-circle p-2" href="#"><span class="material-symbols-outlined text-primary">favorite</span></a>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <h4 class="footer-heading">Liên kết</h4>
-                    <a class="footer-link d-block mb-2" href="#">Về Chúng Tôi</a>
-                    <a class="footer-link d-block" href="#">Điều khoản dịch vụ</a>
-                </div>
-                <div class="col-6 col-md-3">
-                    <h4 class="footer-heading">Trải nghiệm</h4>
-                    <a class="footer-link d-block mb-2" href="#">Văn hóa &amp; Di sản</a>
-                    <a class="footer-link d-block mb-2" href="#">Phiêu lưu mạo hiểm</a>
-                    <a class="footer-link d-block" href="#">Nghỉ dưỡng cao cấp</a>
-                </div>
-                <div class="col-md-3">
-                    <h4 class="footer-heading">Hỗ trợ</h4>
-                    <ul style="list-style: none; padding: 0;">
-                        <li class="mb-2">Địa chỉ: 123 Cao Lỗ, Quận 8, TP HCM</li>
-                        <li>Liên hệ SĐT: 1900 1811</li>
-                    </ul>
+    <div class="container-fluid px-sm-5 px-4 py-5">
+        <div class="row g-4 text-start justify-content-between">
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-brand">The Verdant Archive</div>
+                <p class="footer-text">Đơn vị lữ hành cao cấp hàng đầu Việt Nam, mang đến những trải nghiệm cá nhân hóa sâu sắc giữa lòng di sản.</p>
+                <div class="d-flex gap-3 mt-4">
+                    <a class="btn btn-sm btn-light rounded-circle p-2" href="#"><span class="material-symbols-outlined text-primary">public</span></a>
+                    <a class="btn btn-sm btn-light rounded-circle p-2" href="#"><span class="material-symbols-outlined text-primary">favorite</span></a>
                 </div>
             </div>
+            
+            <div class="col-6 col-lg-2 col-md-6 ps-lg-5">
+                <h4 class="footer-heading">Liên kết</h4>
+                <a class="footer-link d-block mb-2" href="#">Về Chúng Tôi</a>
+                <a class="footer-link d-block" href="#">Điều khoản dịch vụ</a>
+            </div>
+            
+            <div class="col-6 col-lg-2 col-md-6">
+                <h4 class="footer-heading">Trải nghiệm</h4>
+                <a class="footer-link d-block mb-2" href="#">Văn hóa &amp; Di sản</a>
+                <a class="footer-link d-block mb-2" href="#">Phiêu lưu mạo hiểm</a>
+                <a class="footer-link d-block" href="#">Nghỉ dưỡng cao cấp</a>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <h4 class="footer-heading">Hỗ trợ</h4>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li class="mb-2" style="color: #6c757d; font-size: 0.875rem;">Địa chỉ: 123 Cao Lỗ, Quận 8, TP HCM</li>
+                    <li style="color: #6c757d; font-size: 0.875rem;">Liên hệ SĐT: 1900 1811</li>
+                </ul>
+            </div>
+            
         </div>
-        <div class="border-top py-4 text-start">
+
+        <hr class="mt-5 mb-4" style="border-color: rgba(0,0,0,0.08);">
+
+        <div class="text-start">
             <p class="small text-muted mb-0">© 2024 The Verdant Archive. Crafted for the Editorial Odyssey.</p>
         </div>
-    </footer>
+    </div>
+</footer>
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

@@ -1,6 +1,3 @@
-/* ==========================================================================
-   1. HỆ THỐNG BIẾN (VARIABLES) & ĐỊNH DẠNG CHUNG
-   ========================================================================== */
 :root {
     --primary: #006954;
     --primary-container: #00846b;
@@ -508,34 +505,6 @@ h1, h2, h3, h4, .headline-font {
     background-position: right 1rem center;
     background-size: 1.2rem;
     cursor: pointer;
-}
-
-/* Phân trang */
-.pagination-editorial {
-    margin-top: 4rem;
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-}
-
-.page-btn {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    background-color: var(--surface-container-low);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    color: var(--on-surface-variant);
-    font-weight: 700;
-    transition: all 0.3s;
-}
-
-.page-btn.active {
-    background-color: var(--primary);
-    color: white;
 }
 
 /* ==========================================================================
