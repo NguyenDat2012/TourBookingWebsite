@@ -274,3 +274,95 @@ footer {
     flex-grow: 1;
     background-color: var(--surface-container-highest);
 }
+@media (max-width: 992px) {
+    .gallery-grid {
+        height: auto !important; /* Phá bỏ chiều cao cứng 800px gây đè hình */
+        grid-template-columns: 1fr !important; /* Đưa lưới ảnh về 1 cột dọc */
+        gap: 1rem;
+    }
+
+    .gallery-main {
+        grid-column: span 12 !important; /* Ảnh chính chiếm hết 12 cột */
+        height: 400px !important;
+    }
+
+    .gallery-side {
+        grid-column: span 12 !important; /* Khối ảnh phụ chiếm hết 12 cột ở dưới */
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important; /* Xếp 3 ảnh phụ nằm ngang song song */
+        gap: 1rem;
+    }
+
+    .gallery-item {
+        height: 180px !important;
+    }
+
+    /* Đảo ngược bố cục hàng: Đẩy khối card tính tiền lên trước nội dung chữ lịch trình */
+    .main-content .row {
+        display: flex !important;
+        flex-direction: column-reverse !important;
+    }
+
+    /* Hủy bỏ ghim sticky của card đặt tiền để tránh đè chữ khi cuộn trang */
+    .booking-card {
+        position: static !important;
+        width: 100% !important;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .navbar-custom {
+        padding: 1rem !important;
+    }
+    
+    .search-container {
+        display: none !important;
+    }
+
+    .gallery-main {
+        height: 300px !important;
+    }
+
+    .gallery-side {
+        grid-template-columns: repeat(2, 1fr) !important; /* Giảm còn 2 cột ảnh phụ */
+    }
+
+    
+
+    .itinerary-card {
+        flex-direction: column !important; /* Khối lịch trình bẻ dọc */
+        align-items: flex-start !important;
+        gap: 1rem;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.25rem !important;
+    }
+
+    .gallery-main {
+        height: 220px !important; 
+    }
+
+    .gallery-side {
+        display: none !important; 
+    }
+
+    .gallery-grid {
+        margin-bottom: 1.5rem !important;
+    }
+
+    .itinerary-item {
+        padding-left: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    .booking-card {
+        padding: 1.5rem !important; 
+    }
+}
