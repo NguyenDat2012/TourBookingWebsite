@@ -276,20 +276,20 @@ footer {
 }
 @media (max-width: 992px) {
     .gallery-grid {
-        height: auto !important; /* Phá bỏ chiều cao cứng 800px gây đè hình */
-        grid-template-columns: 1fr !important; /* Đưa lưới ảnh về 1 cột dọc */
+        height: auto !important; 
+        grid-template-columns: 1fr !important; 
         gap: 1rem;
     }
 
     .gallery-main {
-        grid-column: span 12 !important; /* Ảnh chính chiếm hết 12 cột */
+        grid-column: span 12 !important; 
         height: 400px !important;
     }
 
     .gallery-side {
-        grid-column: span 12 !important; /* Khối ảnh phụ chiếm hết 12 cột ở dưới */
+        grid-column: span 12 !important; 
         display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important; /* Xếp 3 ảnh phụ nằm ngang song song */
+        grid-template-columns: repeat(3, 1fr) !important; 
         gap: 1rem;
     }
 
@@ -297,13 +297,13 @@ footer {
         height: 180px !important;
     }
 
-    /* Đảo ngược bố cục hàng: Đẩy khối card tính tiền lên trước nội dung chữ lịch trình */
+   
     .main-content .row {
         display: flex !important;
         flex-direction: column-reverse !important;
     }
 
-    /* Hủy bỏ ghim sticky của card đặt tiền để tránh đè chữ khi cuộn trang */
+   
     .booking-card {
         position: static !important;
         width: 100% !important;
@@ -327,13 +327,13 @@ footer {
     }
 
     .gallery-side {
-        grid-template-columns: repeat(2, 1fr) !important; /* Giảm còn 2 cột ảnh phụ */
+        grid-template-columns: repeat(2, 1fr) !important;
     }
 
     
 
     .itinerary-card {
-        flex-direction: column !important; /* Khối lịch trình bẻ dọc */
+        flex-direction: column !important;
         align-items: flex-start !important;
         gap: 1rem;
     }

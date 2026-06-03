@@ -235,7 +235,7 @@ footer {
     vertical-align: middle;
 }
 @media (max-width: 992px) {
-    /* Đảo phần tóm tắt đơn hàng lên trước hoặc xếp dọc tự nhiên thay vì chia 2 cột */
+   
     .checkout-container {
         display: flex;
         flex-direction: column;
@@ -250,14 +250,14 @@ footer {
 }
 
 @media (max-width: 768px) {
-    /* Ép các ô chọn phương thức thanh toán (Visa, MoMo, Ngân hàng) xếp hàng dọc để dễ click */
+    
     .payment-options {
         display: grid;
         grid-template-columns: 1fr !important;
         gap: 12px !important;
     }
     
-    /* Ép các ô input nhập họ tên, email xếp chồng dọc thay vì nằm chung hàng ngang */
+    
     .form-row {
         display: flex;
         flex-direction: column;
