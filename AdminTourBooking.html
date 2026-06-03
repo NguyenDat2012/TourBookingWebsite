@@ -12,73 +12,78 @@
 </head>
 <body>
 <!-- Sidebar -->
-    <aside id="sidebar">
-        <div class="mb-5 px-3">
-            <h1 class="h5 mb-0 fw-black" style="color: var(--primary);">The Verdant Archive</h1>
-            <p class="text-uppercase small text-muted fw-bold mb-0" style="letter-spacing: 0.1em; font-size: 10px;">Management Portal</p>
-        </div>
-        <nav class="nav flex-column flex-grow-1">
-            <a class="nav-link" href="AdminDashboard.html">
-                <span class="material-symbols-outlined">dashboard</span> Dashboard
-            </a>
-            <a class="nav-link" href="#">
-                <span class="material-symbols-outlined">map</span> Manage Tours
-            </a>
-            <a class="nav-link active" href="#">
-                <span class="material-symbols-outlined">event_available</span> Bookings
-            </a>
-            
-        </nav>
-        <div class="mt-auto border-top pt-4 px-2">
-            <button class="btn btn-primary-custom w-100 mb-3 d-flex align-items-center justify-content-center gap-2">
-                <span class="material-symbols-outlined small">add</span> Create New Tour
-            </button>
-            <a class="nav-link py-2 small text-muted" href="#">
-                <span class="material-symbols-outlined">settings</span> Settings
-            </a>
-            <a class="nav-link py-2 small text-muted" href="#">
-                <span class="material-symbols-outlined">help_outline</span> Support
-            </a>
-        </div>
-    </aside>
+    <aside class="sidebar">
+    <div class="px-3 mb-5">
+        <h1 class="h5 fw-black text-primary mb-0" style="color: var(--primary) !important;">The Verdant Archive</h1>
+        <small class="text-uppercase fw-bold text-muted" style="letter-spacing: 2px; font-size: 10px;">Management Portal</small>
+    </div>
+    <nav class="flex-grow-1">
+        <a class="nav-link" href="AdminDashboard.html">
+            <span class="material-symbols-outlined">dashboard</span>
+            Dashboard
+        </a>
+        <a class="nav-link active" href="#">
+            <span class="material-symbols-outlined">event_available</span>
+            Bookings
+        </a>
+    </nav>
+    <button class="btn btn-create-tour shadow-sm">
+        <span class="material-symbols-outlined" style="font-size: 18px;">add</span>
+        Create New Tour
+    </button>
+    <div class="mt-4">
+        <a class="nav-link py-2 opacity-75" href="#">
+            <span class="material-symbols-outlined">settings</span>
+            Settings
+        </a>
+        <a class="nav-link py-2 opacity-75" href="#">
+            <span class="material-symbols-outlined">help_outline</span>
+            Support
+        </a>
+    </div>
+</aside>
     <main>
 <!-- Header -->
-        <header>
-            <div class="search-bar">
-                <span class="material-symbols-outlined text-muted">search</span>
-                <input placeholder="Search bookings, customers..." type="text"/>
+        <header class="top-app-bar">
+    <div class="d-flex align-items-center w-100 justify-content-between">
+        <div class="search-container">
+            <span class="material-symbols-outlined search-icon">search</span>
+            <input class="search-input" placeholder="Tìm kiếm hành trình, khách hàng..." type="text"/>
+        </div>
+        
+        <div class="d-flex align-items-center gap-4">
+            <div class="d-flex gap-3">
+                <button class="btn btn-link text-dark p-2 position-relative">
+                    <span class="material-symbols-outlined">notifications</span>
+                    <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle" style="margin-top: 12px; margin-left: -12px;"></span>
+                </button>
+                <button class="btn btn-link text-dark p-2">
+                    <span class="material-symbols-outlined">dark_mode</span>
+                </button>
             </div>
-            <div class="d-flex align-items-center gap-4">
-                <div class="d-flex align-items-center gap-3 border-end pe-4">
-                    <button class="btn p-0 text-muted position-relative">
-                        <span class="material-symbols-outlined">notifications</span>
-                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle"></span>
-                    </button>
-                    <button class="btn p-0 text-muted">
-                        <span class="material-symbols-outlined">dark_mode</span>
-                    </button>
-                </div>
-                <div class="dropdown" id="userProfile">
-                    <button class="btn d-flex align-items-center gap-2 border-0 p-0 shadow-none dropdown-toggle" 
-                    type="button" 
-                    data-bs-toggle="dropdown">
-                        <span class="material-symbols-outlined" style="font-size: 24px;">account_circle</span>
-                        <span id="navUserName" class="fw-bold small" style="font-size: 13px;"></span>
-                    </button>
+            
+            <div class="dropdown" id="userProfile">
+                <button class="btn d-flex align-items-center gap-2 border-0 p-0 shadow-none dropdown-toggle" 
+                        type="button" 
+                        data-bs-toggle="dropdown">
+                    <span class="material-symbols-outlined" style="font-size: 24px;">account_circle</span>
+                    <span id="navUserName" class="fw-bold small" style="font-size: 13px;"></span>
+                </button>
 
-                    <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2">
-                        <li>
-                            <a class="dropdown-item py-2 text-danger d-flex align-items-center gap-2" 
-                            href="javascript:void(0)" 
-                            onclick="logout()">
-                                <span class="material-symbols-outlined" style="font-size: 18px;">logout</span>
-                                <span>Đăng xuất</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2">
+                    <li>
+                        <a class="dropdown-item py-2 text-danger d-flex align-items-center gap-2" 
+                           href="javascript:void(0)" 
+                           onclick="logout()">
+                            <span class="material-symbols-outlined" style="font-size: 18px;">logout</span>
+                            <span>Đăng xuất</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </header>
+        </div>
+    </div>
+</header>
 <!-- Page Content -->
         <div class="container-fluid px-5 py-4">
 <!-- Stats Grid -->
