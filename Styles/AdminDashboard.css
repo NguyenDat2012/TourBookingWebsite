@@ -100,12 +100,14 @@ h1, h2, h3, h4, h5, .font-headline {
     font-size: 0.875rem;
 }
 
+/* Khung chứa ô tìm kiếm */
 .search-container {
     position: relative;
     max-width: 500px;
     width: 100%;
 }
 
+/* Ô input tìm kiếm bo tròn tinh tế */
 .search-input {
     background-color: var(--surface-container-low);
     border: none;
@@ -113,6 +115,13 @@ h1, h2, h3, h4, h5, .font-headline {
     padding: 10px 20px 10px 45px;
     font-size: 0.875rem;
     width: 100%;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.search-input:focus {
+    background-color: var(--surface-container-lowest);
+    box-shadow: 0 0 0 2px rgba(0, 105, 84, 0.15); /* Tạo viền mờ khi focus tương ứng màu primary */
 }
 
 .search-icon {

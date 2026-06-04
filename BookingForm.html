@@ -240,6 +240,9 @@
             setTimeout(() => {
                 alert('Đang chuyển hướng tới cổng thanh toán an toàn...');
                 this.innerText = 'Hoàn tất đặt tour';
+                setTimeout(function() {
+                    window.location.href = "index.html";
+                }, 800); 
             }, 1500);
         });
 
