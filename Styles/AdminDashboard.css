@@ -39,6 +39,7 @@ h1, h2, h3, h4, h5, .font-headline {
     flex-direction: column;
 }
 
+
 .main-content {
     margin-left: 260px;
     padding-top: 80px;
@@ -296,8 +297,38 @@ h1, h2, h3, h4, h5, .font-headline {
     opacity: 0.8;
 }
 
+/* --- MÀN HÌNH NHỎ (Dưới 991px): Ẩn sidebar và chuẩn bị hiệu ứng trượt --- */
 @media (max-width: 991px) {
-    .sidebar { transform: translateX(-100%); }
-    .main-content { margin-left: 0; }
-    .top-app-bar { width: 100%; }
+    .sidebar {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        z-index: 1060; /* Nằm đè lên trên thanh header và nội dung */
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* Lớp kích hoạt để đẩy sidebar trượt từ trái ra */
+    .sidebar.show-sidebar {
+        transform: translateX(0) !important;
+    }
+
+    /* Đảm bảo nội dung chính ăn hết màn hình khi sidebar ẩn */
+    .main-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+    
+    .top-app-bar {
+        left: 0 !important;
+        width: 100% !important;
+    }
+}
+
+/* --- MÀN HÌNH LỚN (Từ 992px trở lên): Sidebar cố định, ẩn nút menu toggle --- */
+@media (min-width: 992px) {
+    #sidebarToggle {
+        display: none !important; /* Máy tính lớn đã có sẵn sidebar nên ẩn nút này đi */
+    }
 }

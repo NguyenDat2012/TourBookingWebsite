@@ -62,17 +62,17 @@ h1, h2, h3, h4, .headline-font {
 }
 
 /* ==========================================================================
-   2. NAVIGATION BAR (Sửa lỗi căn giữa, ép sát 2 lề)
+   2. NAVIGATION BAR (Đã đồng bộ thông số theo index.css và giữ bộ khung căn lề)
    ========================================================================== */
 .navbar-editorial {
-    background-color: rgba(252, 249, 244, 0.85);
+    background-color: rgba(252, 249, 244, 0.8); /* Đồng bộ độ mờ 0.8 từ index */
     backdrop-filter: blur(20px);
-    box-shadow: var(--editorial-shadow);
+    box-shadow: 0 20px 40px rgba(28, 28, 25, 0.06); /* Đồng bộ đổ bóng shadow từ index */
     padding: 1rem 2rem;
-    transition: all 0.3s;
+    transition: all 0.3s ease; /* Thêm hiệu ứng 'ease' từ index */
 }
 
-/* Ép container bên trong navbar chia đều không gian ra hai bên lề */
+/* Ép container bên trong navbar chia đều không gian ra hai bên lề (Giữ nguyên để tránh vỡ layout) */
 .navbar-editorial .container,
 .navbar-editorial .container-fluid {
     display: flex !important;
@@ -82,51 +82,36 @@ h1, h2, h3, h4, .headline-font {
 }
 
 .brand-logo {
-    font-size: 1.5rem;
     font-weight: 800;
-    letter-spacing: -0.05em;
-    color: var(--primary);
+    color: var(--primary) !important; /* Thêm !important từ index */
+    letter-spacing: -1px; /* Đồng bộ độ thưa chữ -1px từ index */
+    font-size: 1.5rem;
     text-decoration: none;
 }
 
+/* Khung phụ trợ cho navbar-nav */
 .navbar-editorial .navbar-nav {
     display: flex !important;
-    flex-direction: row !important;
+    flex-direction: column !important;
     align-items: center !important;
     text-align: left !important;
 }
 
 .nav-link-editorial {
-    color: var(--on-surface-variant);
+    color: var(--on-surface-variant) !important; /* Thêm !important từ index */
     font-weight: 600;
     text-decoration: none;
-    transition: color 0.3s;
     margin: 0 1rem;
+    transition: color 0.3s;
 }
 
 .nav-link-editorial:hover {
-    color: var(--primary);
+    color: var(--primary) !important; /* Thêm !important từ index */
 }
 
 .nav-link-editorial.active {
-    color: var(--primary);
+    color: var(--primary) !important; /* Thêm !important từ index */
     border-bottom: 2px solid var(--primary);
-}
-
-.btn-book {
-    background: linear-gradient(to right, var(--primary), var(--primary-container));
-    color: var(--on-primary-container);
-    border: none;
-    border-radius: 9999px;
-    padding: 0.6rem 1.5rem;
-    font-weight: 700;
-    box-shadow: var(--editorial-shadow);
-    transition: transform 0.2s;
-}
-
-.btn-book:hover {
-    transform: scale(0.95);
-    color: var(--on-primary-container);
 }
 
 /* ==========================================================================

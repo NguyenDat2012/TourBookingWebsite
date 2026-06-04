@@ -20,40 +20,38 @@
     </div>
 
     <!-- Navbar -->
-<nav class="navbar navbar-editorial fixed-top">
-    <div class="container-fluid px-sm-5 px-4 d-flex justify-content-between align-items-center">
-        
-        <div class="d-flex align-items-center gap-5"> 
-            <a class="brand-logo" href="index.html">The Verdant Archive</a>
-            
-            <div class="d-none d-md-flex align-items-center gap-4">
-                <a class="nav-link-editorial active" href="ListTour.html">Điểm đến</a>
-                <a class="nav-link-editorial" href="#">Kế hoạch</a>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-editorial fixed-top">
+  <div class="container-fluid max-width-2xl px-lg-5">
+    <a class="brand-logo" href="index.html">The Verdant Archive</a>
+    <button class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link-editorial" href="ListTour.html">Điểm đến</a></li>
+        <li class="nav-item"><a class="nav-link-editorial" href="#">Kế hoạch</a></li>
+      </ul>
+      <div class="d-flex align-items-center">
+        <div id="authButtons" class="d-flex align-items-center">
+            <a class="nav-link-editorial me-3 " href="Login.html">Đăng nhập</a>
+            <a class="nav-link-editorial me-3 " href="Register.html">Đăng ký</a>
         </div>
 
-        <div class="d-flex align-items-center gap-4">
-            <div id="authButtons" class="d-flex align-items-center">
-                <a class="nav-link-editorial me-4 d-none d-lg-block" href="Login.html">Đăng nhập</a>
-                <a class="nav-link-editorial d-none d-lg-block" href="Register.html">Đăng ký</a>
-            </div>
-
-            <div id="userProfile" class="dropdown d-none">
-                <button class="btn d-flex align-items-center gap-2 dropdown-toggle border-0" type="button" data-bs-toggle="dropdown">
-                    <span class="material-symbols-outlined">account_circle</span>
-                    <span id="navUserName" class="fw-bold small">Tên người dùng</span>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end shadow border-0">
-                    <li>
-                        <a class="dropdown-item py-2 text-danger" href="javascript:void(0)" onclick="logout()">
-                            <span class="material-symbols-outlined align-middle me-2">logout</span>Đăng xuất
-                        </a>
-                    </li>
-                </ul>
-            </div>
+        <div id="userProfile" class="dropdown d-none">
+            <button class="btn d-flex align-items-center gap-2 dropdown-toggle border-0" type="button" data-bs-toggle="dropdown">
+                <span class="material-symbols-outlined">account_circle</span>
+                <span id="navUserName" class="fw-bold small">Tên người dùng</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow border-0">
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item py-2 text-danger" href="javascript:void(0)" onclick="logout()">
+                    <span class="material-symbols-outlined align-middle me-2">logout</span>Đăng xuất</a>
+                </li>
+            </ul>
         </div>
-
+      </div>
     </div>
+  </div>
 </nav>
 
     <!-- Main Content -->

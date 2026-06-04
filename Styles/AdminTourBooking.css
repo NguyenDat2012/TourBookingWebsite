@@ -39,19 +39,21 @@ h1, h2, h3, .font-headline {
     position: fixed;
     left: 0;
     top: 0;
-    background-color: var(--background-color);
+    background-color: var(--background); /* Thay đổi để ăn theo màu root của bạn */
     border-right: 1px solid rgba(0,0,0,0.05);
-    z-index: 1000;
+    z-index: 1040;
     box-shadow: 10px 0 30px rgba(28, 28, 25, 0.03);
     padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s ease-in-out;
 }
 
 .main-content {
     margin-left: 260px;
     padding-top: 80px;
     min-height: 100vh;
+    transition: margin-left 0.3s ease-in-out;
 }
 .nav-link {
     display: flex;
@@ -102,16 +104,20 @@ main {
     position: fixed;
     top: 0;
     right: 0;
-    width: calc(100% - 260px); /* Tự động tính toán trừ đi phần Sidebar 260px */
+    width: calc(100% - 260px);
     height: 80px;
     background-color: rgba(252, 249, 244, 0.8);
     backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px); /* Hỗ trợ trình duyệt Safari */
-    z-index: 999;
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 1030;
     display: flex;
     align-items: center;
     padding: 0 2rem;
-    transition: width 0.2s ease;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+#sidebarToggle {
+    display: none !important;
 }
 
 /* Khung chứa ô tìm kiếm */
@@ -163,8 +169,27 @@ main {
 }
 
 @media (max-width: 991px) {
-    .top-app-bar { 
-        width: 100%; 
+    #sidebarToggle {
+        display: inline-block !important; /* Hiện nút bấm mở menu */
+    }
+
+    .sidebar {
+        transform: translateX(-100%); /* Ẩn sidebar hoàn toàn về bên trái */
+        z-index: 1060; /* Đẩy hẳn lên trên cùng màn hình khi hiển thị */
+    }
+
+    /* Thêm class này bằng JS sẽ giúp trượt thanh Sidebar ra ngoài */
+    .sidebar.show-sidebar {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        margin-left: 0 !important; /* Đẩy nội dung chính tràn màn hình */
+    }
+
+    .top-app-bar {
+        width: 100% !important;
+        left: 0 !important;
     }
 }
 

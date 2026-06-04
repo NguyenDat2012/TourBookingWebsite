@@ -305,3 +305,102 @@ footer h5 {
 .footer-links li {
     color: var(--on-surface-variant);
 }
+
+.section-divider {
+    height: 2px;
+    flex-grow: 1;
+    background-color: var(--surface-container-highest);
+}
+
+@media (max-width: 992px) {
+    .gallery-grid {
+        height: auto !important; 
+        grid-template-columns: 1fr !important; 
+        gap: 1rem;
+    }
+
+    .gallery-main {
+        grid-column: span 12 !important; 
+        height: 400px !important;
+    }
+
+    .gallery-side {
+        grid-column: span 12 !important; 
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important; 
+        gap: 1rem;
+    }
+
+    .gallery-item {
+        height: 180px !important;
+    }
+
+   
+    .main-content .row {
+        display: flex !important;
+        flex-direction: column-reverse !important;
+    }
+
+   
+    .booking-card {
+        position: static !important;
+        width: 100% !important;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .navbar-custom {
+        padding: 1rem !important;
+    }
+    
+    .search-container {
+        display: none !important;
+    }
+
+    .gallery-main {
+        height: 300px !important;
+    }
+
+    .gallery-side {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    
+
+    .itinerary-card {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 1rem;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.25rem !important;
+    }
+
+    .gallery-main {
+        height: 220px !important; 
+    }
+
+    .gallery-side {
+        display: none !important; 
+    }
+
+    .gallery-grid {
+        margin-bottom: 1.5rem !important;
+    }
+
+    .itinerary-item {
+        padding-left: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    .booking-card {
+        padding: 1.5rem !important; 
+    }
+}
