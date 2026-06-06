@@ -515,7 +515,7 @@
             const matchDepart = !from || from === 'Tất cả' || cardDepart.includes(from);
             // Hiển thị hoặc ẩn thẻ tour dựa trên kết quả lọc
             const show = matchDest && matchDepart;
-            col.style.display = show ? '' : 'none';
+            col.style.display = show ? '' : 'none';// toán tử 3 ngôi để ẩn hoặc hiện card
             //nếu hiện thì tăng found
             if (show) found++;
         });
